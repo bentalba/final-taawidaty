@@ -37,7 +37,67 @@
 
 ## 📝 Complete Git History
 
-### Commit #1: `ed3fca5` (Latest - November 1, 2025)
+### Commit #8: `df23ff6` (Latest - November 1, 2025)
+**Title:** feat: Add monetization with strategic ad banner placements
+
+**What Changed:**
+- Created `AdBanner.tsx` component with Google AdSense integration
+- Created `PlaceholderAd` component for development/testing
+- Added 5 strategic ad placements throughout the website
+- Created comprehensive `MONETIZATION.md` documentation
+- Bilingual ad labels (Arabic/French)
+
+**Impact:**
+- Website ready for monetization
+- Revenue-generating capability
+- Professional ad placement strategy
+
+### Commit #7: `c89d61f` (November 1, 2025)
+**Title:** fix: Change default language to French with browser auto-detection
+
+**What Changed:**
+- Changed default language from Arabic to French
+- Added browser language auto-detection
+- Improved international accessibility
+- Updated `useLanguage.ts` hook
+
+**Impact:**
+- Better user experience for French-speaking users
+- Smart language detection based on browser settings
+- Maintains localStorage preferences
+
+### Commit #6: `092f8bc` (November 1, 2025)
+**Title:** feat: Implement CNSS insurance support with specific reimbursement rules
+
+**What Changed:**
+- Created CNSS medication database (5,709 medications)
+- Implemented CNSS-specific reimbursement rates (70%, 90%, 0%)
+- Updated `medicationsLoader.ts` with dual cache system
+- Modified `SearchInput.tsx` to accept insuranceType prop
+- Updated `Index.tsx` to pass insurance selection
+- Created `medications-cnss.d.ts` TypeScript definitions
+- Added `process_medications_cnss.py` data processor
+
+**Impact:**
+- Full dual insurance system support (CNOPS + CNSS)
+- Different reimbursement calculations per insurance type
+- Complete database segregation for accuracy
+
+### Commit #5: `d6f042f` (November 1, 2025)
+**Title:** docs: Add comprehensive project documentation
+
+**What Changed:**
+- Created `PROJECT_DOCUMENTATION.md` (460+ lines)
+- Documented all commits, features, and technical details
+- Added database statistics and file structure
+- Included development workflow and deployment guide
+
+**Impact:**
+- Complete project reference
+- Easy onboarding for new developers
+- Detailed technical documentation
+
+### Commit #4: `ed3fca5` (November 1, 2025)
 **Title:** feat: Add official CNOPS and CNSS logos with full integration
 
 **What Changed:**
@@ -174,40 +234,64 @@ Each medication contains:
 
 ## ✨ Features Implemented
 
-### 1. Three-Step User Flow
+### 1. Dual Insurance System
+- **CNOPS Support:** Full database with 5,709 medications
+- **CNSS Support:** Separate database with 5,709 medications
+- Different reimbursement rules per insurance type:
+  - CNOPS: 70% or 0% reimbursement
+  - CNSS: 70% standard, 90% for serious conditions, 0% non-reimbursable
+- Dynamic database loading based on insurance selection
+
+### 2. Three-Step User Flow
 1. **Step 1:** Insurance Selection (CNOPS or CNSS)
 2. **Step 2:** Medication Search with autocomplete
 3. **Step 3:** Reimbursement Results Display
 
-### 2. Bilingual Support
+### 3. Bilingual Support (i18n)
+- **French (Default):** Left-to-right standard layout
 - **Arabic (RTL):** Full right-to-left text direction
-- **French (LTR):** Left-to-right standard layout
+- Browser language auto-detection
+- LocalStorage preference persistence
 - Dynamic language toggle in header
+- All UI elements translated
 
-### 3. Search Functionality
-- Real-time search across 5,709+ medications
+### 4. Search Functionality
+- Real-time search across 5,709+ medications per insurance type
 - Searches by medication name or generic name (DCI)
 - Autocomplete with up to 50 results
 - Debounced search (300ms delay)
-- Async data loading for performance
+- Async data loading with dual cache system
+- Separate caches for CNOPS and CNSS
 
-### 4. Calculation Engine
+### 5. Calculation Engine
+- Insurance-type specific reimbursement calculation
 - Accurate reimbursement calculation
 - Patient cost calculation
 - Percentage coverage display
 - Real-time results
 
-### 5. Professional Branding
+### 6. Professional Branding
 - Official CNOPS logo integration
 - Official CNSS logo integration
-- Responsive logo display (96px and 48px)
+- Dynamic logo display based on insurance type
+- Responsive logo sizes (96px and 48px)
 - Error handling with emoji fallback
 
-### 6. User Experience
+### 7. Monetization Ready
+- 5 strategic ad banner placements
+- Google AdSense integration ready
+- PlaceholderAd component for testing
+- Bilingual ad labels
+- Responsive ad design
+- Complete setup documentation
+
+### 8. User Experience
 - Clean, modern UI with shadcn/ui components
 - Responsive design (mobile, tablet, desktop)
 - Loading states and animations
 - Error handling and validation
+- Smooth transitions between steps
+- Professional color scheme
 - Accessible (ARIA labels, keyboard navigation)
 
 ---
@@ -434,7 +518,9 @@ git push origin main                # Push to GitHub
 ## 📝 Future Enhancements (Optional)
 
 ### Potential Features
-- [ ] Add CNSS medication database
+- [x] Add CNSS medication database ✅
+- [x] Implement monetization strategy ✅
+- [x] Browser language auto-detection ✅
 - [ ] Implement backend API
 - [ ] Add user accounts
 - [ ] Save calculation history
@@ -444,15 +530,108 @@ git push origin main                # Push to GitHub
 - [ ] Add medication comparisons
 - [ ] Mobile app version
 - [ ] Admin dashboard for data updates
+- [ ] Cookie consent banner (required for AdSense)
+- [ ] Privacy Policy page
+- [ ] Terms of Service page
 
 ---
 
-## ✅ Project Status: COMPLETE ✅
+## ✅ Project Status: PRODUCTION READY ✅
 
-**Last Updated:** November 1, 2025  
-**Version:** 1.0.0  
-**Status:** Production Ready  
-**Deployment:** Pending
+**Last Updated:** November 2, 2025  
+**Version:** 2.0.0  
+**Status:** Production Ready with Monetization  
+**Deployment:** Ready for deployment
+
+### Recent Updates (Nov 1-2, 2025)
+- ✅ CNSS insurance support added
+- ✅ French as default language
+- ✅ Monetization infrastructure complete
+- ✅ Dual database system operational
+- ✅ All features tested and working
+
+---
+
+## 📦 Key Project Files
+
+### Documentation
+- **PROJECT_DOCUMENTATION.md** - This comprehensive documentation
+- **MONETIZATION.md** - Complete monetization setup guide
+- **README.md** - Quick start guide
+
+### Data Files
+- **medications-cnops.json** - 2.1 MB, 5,709 CNOPS medications
+- **medications-cnss.json** - 2.3 MB, 5,709 CNSS medications
+- **ref-des-medicaments-cnops-2014 (1).xlsx** - Original Excel source
+
+### Core Components
+- **Index.tsx** - Main calculator interface
+- **SearchInput.tsx** - Search with insurance-specific databases
+- **ResultCard.tsx** - Dynamic results display
+- **AdBanner.tsx** - Monetization component
+- **medicationsLoader.ts** - Dual cache data loader
+- **useLanguage.ts** - Language detection hook
+
+### Python Scripts
+- **process_medications.py** - CNOPS data processor
+- **process_medications_cnss.py** - CNSS data processor with specific rules
+
+### Configuration
+- **package.json** - Node dependencies (React 18, Vite 5, TypeScript, etc.)
+- **tsconfig.json** - TypeScript strict mode configuration
+- **tailwind.config.ts** - Custom color scheme and styling
+- **vite.config.ts** - Vite build configuration
+
+---
+
+## 🚀 Quick Start for New Laptop
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/salma1-create/dawa-calcul-plus.git
+cd dawa-calcul-plus
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run Development Server
+```bash
+npm run dev
+```
+
+### 4. Open in Browser
+Navigate to: http://localhost:8080/
+
+### 5. For Python Data Processing (Optional)
+```bash
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+pip install pandas openpyxl
+python process_medications.py
+```
+
+---
+
+## 📊 Project Statistics
+
+### Code Metrics
+- **Total Commits:** 8
+- **Lines of Documentation:** 550+
+- **TypeScript Files:** 50+
+- **React Components:** 45+
+- **Medications in Database:** 11,418 (5,709 × 2 insurance types)
+- **Supported Languages:** 2 (Arabic, French)
+- **Insurance Types:** 2 (CNOPS, CNSS)
+- **Ad Placements:** 5 strategic locations
+
+### File Sizes
+- **CNOPS Database:** 2.1 MB
+- **CNSS Database:** 2.3 MB
+- **Total JSON Data:** 4.4 MB
+- **Source Excel:** 5.9 MB
 
 ---
 
