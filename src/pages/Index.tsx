@@ -185,20 +185,24 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Insurance Selection */}
-          <div className="max-w-4xl mx-auto">
-            <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-8 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-              {t.calculator.selectInsurance}
-            </h3>
+          {/* Modern Insurance Selection */}
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className={`text-3xl font-bold text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                {t.calculator.selectInsurance}
+              </h3>
+              <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                {language === 'ar' ? 'اختر نظام التأمين الخاص بك لحساب استرداد نفقات الأدوية' : 'Choisissez votre régime d\'assurance pour calculer le remboursement'}
+              </p>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               <button
                 onClick={() => {
                   setInsurance('cnops');
                   setStep(2);
                 }}
-                className="group p-8 rounded-2xl border-2 border-slate-300 dark:border-border hover:border-primary-700 dark:hover:border-primary hover:bg-primary-50 dark:hover:bg-muted transition-all duration-300 shadow-soft hover:shadow-lg hover:scale-105 hover:-translate-y-1"
-              >
+                className="group relative p-8 rounded-3xl glass-card hover-lift hover-glow border-2 border-transparent hover:border-primary-200 dark:hover:border-primary transition-all duration-500 animate-slide-in-left"
                 <div className="flex justify-center mb-6">
                   <img 
                     src="/logos/cnops-logo.png" 
