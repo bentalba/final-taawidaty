@@ -214,11 +214,11 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
         <div
           dir={dir}
           className={cn(
-            "absolute z-50 w-full mt-2 bg-white rounded-xl shadow-strong border-2 border-slate-200 p-5",
+            "absolute z-50 w-full mt-2 bg-white dark:bg-card rounded-xl shadow-strong border-2 border-slate-200 dark:border-border p-5",
             dir === 'rtl' && 'text-right'
           )}
         >
-          <p className={`text-slate-500 ${language === 'ar' ? 'font-arabic' : ''}`}>
+          <p className={`text-slate-500 dark:text-muted-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'ar' ? 'لم يتم العثور على نتائج' : 'Aucun résultat trouvé'}
           </p>
         </div>
