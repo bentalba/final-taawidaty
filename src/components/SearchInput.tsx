@@ -159,7 +159,7 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
         />
 
         <div className={cn(
-          "absolute top-1/2 -translate-y-1/2 text-slate-400",
+          "absolute top-1/2 -translate-y-1/2 text-slate-400 dark:text-muted-foreground",
           dir === 'rtl' ? 'right-4' : 'left-4'
         )}>
           <Search className="w-6 h-6" />
@@ -170,7 +170,7 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
             "absolute top-1/2 -translate-y-1/2",
             dir === 'rtl' ? 'left-4' : 'right-4'
           )}>
-            <Loader2 className="w-6 h-6 text-primary-700 animate-spin" />
+            <Loader2 className="w-6 h-6 text-primary-700 dark:text-primary animate-spin" />
           </div>
         )}
       </div>
