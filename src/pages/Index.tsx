@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import LanguageToggle from '@/components/LanguageToggle';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import SearchInput from '@/components/SearchInput';
 import ResultCard from '@/components/ResultCard';
 import { PlaceholderAd } from '@/components/AdBanner';
