@@ -75,37 +75,37 @@ export default function ResultCard({
 
         {/* Breakdown */}
         <div className="space-y-4">
-          <div className="flex justify-between items-center pb-4 border-b-2 border-slate-200">
-            <span className={`text-slate-600 ${language === 'ar' ? 'font-arabic' : ''}`}>
+          <div className="flex justify-between items-center pb-4 border-b-2 border-slate-200 dark:border-border">
+            <span className={`text-slate-600 dark:text-muted-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
               {t.originalPrice}
             </span>
-            <span className="text-xl font-bold text-slate-900">
+            <span className="text-xl font-bold text-slate-900 dark:text-card-foreground">
               {formatCurrency(originalPrice)}
             </span>
           </div>
 
-          <div className="flex justify-between items-center pb-4 border-b-2 border-slate-200">
+          <div className="flex justify-between items-center pb-4 border-b-2 border-slate-200 dark:border-border">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-success-600" />
+              <CheckCircle2 className="w-5 h-5 text-success-600 dark:text-success-500" />
               <div>
-                <span className={`text-slate-600 ${language === 'ar' ? 'font-arabic' : ''}`}>
+                <span className={`text-slate-600 dark:text-muted-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
                   {t.reimbursement}
                 </span>
-                <span className={`text-sm text-success-600 font-semibold ${language === 'ar' ? 'mr-2 font-arabic' : 'ml-2'}`}>
+                <span className={`text-sm text-success-600 dark:text-success-500 font-semibold ${language === 'ar' ? 'mr-2 font-arabic' : 'ml-2'}`}>
                   ({percentageCovered}% {t.covered})
                 </span>
               </div>
             </div>
-            <span className="text-xl font-bold text-success-600">
+            <span className="text-xl font-bold text-success-600 dark:text-success-500">
               -{formatCurrency(reimbursementAmount)}
             </span>
           </div>
 
           <div className="flex justify-between items-center pt-2">
-            <span className={`text-lg font-black text-slate-900 ${language === 'ar' ? 'font-arabic' : ''}`}>
+            <span className={`text-lg font-black text-slate-900 dark:text-card-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
               {t.youPay}
             </span>
-            <span className="text-3xl font-black text-primary-700">
+            <span className="text-3xl font-black text-primary-700 dark:text-primary">
               {formatCurrency(patientPays)}
             </span>
           </div>
