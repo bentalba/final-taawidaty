@@ -130,26 +130,43 @@ export default function ResultCard({
         </div>
       </div>
 
-      {/* Savings Indicator */}
+          {/* Modern Savings Indicator */}
       {reimbursementAmount > 0 && (
-        <div className="bg-gradient-to-r from-success-50 to-success-100 dark:from-success-950 dark:to-success-900 border-2 border-success-600 dark:border-success-500 rounded-xl p-5 text-center shadow-soft animate-scale-in">
-          <div className="flex items-center justify-center gap-2">
-            <Sparkles className="w-6 h-6 text-success-700 dark:text-success-400" />
-            <p className={`text-success-700 dark:text-success-300 font-bold text-lg ${language === 'ar' ? 'font-arabic' : ''}`}>
-              {t.savings.replace('{amount}', formatCurrency(reimbursementAmount))}
-            </p>
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-success-400 to-emerald-400 rounded-2xl blur-lg opacity-30"></div>
+          <div className="relative glass-card border-2 border-success-200 dark:border-success-800 p-6 text-center animate-slide-up">
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-success-100 dark:bg-success-950 flex items-center justify-center animate-bounce-gentle">
+                <Sparkles className="w-6 h-6 text-success-600 dark:text-success-400" />
+              </div>
+              <div className="text-left">
+                <p className={`text-success-700 dark:text-success-300 font-bold text-lg ${language === 'ar' ? 'font-arabic' : ''}`}>
+                  {t.savings.replace('{amount}', formatCurrency(reimbursementAmount))}
+                </p>
+                <p className={`text-sm text-success-600 dark:text-success-400 ${language === 'ar' ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'تم توفير هذا المبلغ بفضل التأمين' : 'Économie grâce à votre assurance'}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Disclaimer */}
-      <div className="bg-warning-50 dark:bg-warning-950 border-l-4 border-warning-500 dark:border-warning-600 rounded-lg p-4">
-        <p className={`text-sm font-semibold text-warning-900 dark:text-warning-200 mb-2 ${language === 'ar' ? 'font-arabic' : ''}`}>
-          ⚠️ {translations[language].disclaimer.title}
-        </p>
-        <p className={`text-sm text-warning-800 dark:text-warning-300 ${language === 'ar' ? 'font-arabic' : ''}`}>
-          {translations[language].disclaimer.text}
-        </p>
+      {/* Modern Disclaimer */}
+      <div className="glass p-6 rounded-2xl border-l-4 border-warning-500 dark:border-warning-400">
+        <div className="flex items-start gap-3">
+          <div className="w-6 h-6 rounded-full bg-warning-100 dark:bg-warning-950 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span className="text-warning-600 dark:text-warning-400 text-sm font-bold">!</span>
+          </div>
+          <div>
+            <p className={`text-sm font-semibold text-warning-900 dark:text-warning-200 mb-2 ${language === 'ar' ? 'font-arabic' : ''}`}>
+              {translations[language].disclaimer.title}
+            </p>
+            <p className={`text-sm text-warning-800 dark:text-warning-300 leading-relaxed ${language === 'ar' ? 'font-arabic' : ''}`}>
+              {translations[language].disclaimer.text}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
