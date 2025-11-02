@@ -100,19 +100,22 @@ export default function Index() {
       {/* Hero Section */}
       {step === 1 && (
         <section className="px-4 py-16 md:py-24 max-w-6xl mx-auto text-center animate-fade-in">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full mb-6">
-              <Sparkles className="w-5 h-5 text-primary-700" />
-              <span className={`text-sm font-semibold text-primary-700 ${isRTL ? 'font-arabic' : ''}`}>
+          {/* Animated background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-50/20 via-transparent to-blue-50/20 dark:from-primary-950/20 dark:via-transparent dark:to-blue-950/20 -z-10"></div>
+
+          <div className="mb-8 relative">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 dark:bg-muted rounded-full mb-6 shadow-soft hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Sparkles className="w-5 h-5 text-primary-700 dark:text-primary animate-pulse" />
+              <span className={`text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
                 {t.app.subtitle}
               </span>
             </div>
           </div>
 
-          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-foreground mb-6 leading-tight ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
             {t.hero.title}
           </h2>
-          <p className={`text-xl md:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto ${isRTL ? 'font-arabic' : ''}`}>
+          <p className={`text-xl md:text-2xl text-slate-600 dark:text-muted-foreground mb-10 max-w-3xl mx-auto ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
             {t.hero.subtitle}
           </p>
 
