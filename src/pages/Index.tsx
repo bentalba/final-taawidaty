@@ -114,6 +114,41 @@ export default function Index() {
             ))}
           </div>
 
+          {/* FAQ Quick Access Banner */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="bg-gradient-to-r from-primary-50 to-blue-50 border-2 border-primary-200 rounded-xl p-6 shadow-md">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <HelpCircle className="w-6 h-6 text-primary-700" />
+                <h3 className={`text-xl font-bold text-slate-900 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'هل لديك أسئلة؟' : 'Vous avez des questions ?'}
+                </h3>
+              </div>
+              <p className={`text-slate-600 mb-4 text-center ${isRTL ? 'font-arabic' : ''}`}>
+                {language === 'ar' 
+                  ? 'تصفح أسئلتنا الشائعة حول استرجاع مصاريف الأدوية'
+                  : 'Consultez notre FAQ sur le remboursement des médicaments'}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button asChild variant="default" size="sm">
+                  <Link to="/faq-cnops" className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'أسئلة CNOPS' : 'FAQ CNOPS'}
+                    </span>
+                  </Link>
+                </Button>
+                <Button asChild variant="default" size="sm">
+                  <Link to="/faq-cnss" className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'أسئلة CNSS' : 'FAQ CNSS'}
+                    </span>
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
           {/* Insurance Selection */}
           <div className="max-w-4xl mx-auto">
             <h3 className={`text-2xl font-bold text-slate-900 mb-8 ${isRTL ? 'font-arabic' : ''}`}>
@@ -188,6 +223,49 @@ export default function Index() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </button>
+            </div>
+
+            {/* FAQ Help Cards */}
+            <div className="grid md:grid-cols-2 gap-4 mt-8">
+              <Link 
+                to="/faq-cnops"
+                className="p-4 rounded-xl border-2 border-slate-200 hover:border-primary-500 hover:bg-slate-50 transition-all group"
+              >
+                <div className="flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-primary-600 mt-1 group-hover:scale-110 transition-transform" />
+                  <div className="flex-1">
+                    <h4 className={`font-bold text-slate-900 mb-1 ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'أسئلة شائعة - CNOPS' : 'Questions fréquentes - CNOPS'}
+                    </h4>
+                    <p className={`text-sm text-slate-600 ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' 
+                        ? '15 سؤالاً حول استرجاع مصاريف الأدوية'
+                        : '15 questions sur le remboursement'}
+                    </p>
+                  </div>
+                  <ArrowRight className={`w-4 h-4 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all ${isRTL ? 'rotate-180' : ''}`} />
+                </div>
+              </Link>
+
+              <Link 
+                to="/faq-cnss"
+                className="p-4 rounded-xl border-2 border-slate-200 hover:border-primary-500 hover:bg-slate-50 transition-all group"
+              >
+                <div className="flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-primary-600 mt-1 group-hover:scale-110 transition-transform" />
+                  <div className="flex-1">
+                    <h4 className={`font-bold text-slate-900 mb-1 ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'أسئلة شائعة - CNSS' : 'Questions fréquentes - CNSS'}
+                    </h4>
+                    <p className={`text-sm text-slate-600 ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' 
+                        ? '15 سؤالاً حول استرجاع مصاريف الأدوية'
+                        : '15 questions sur le remboursement'}
+                    </p>
+                  </div>
+                  <ArrowRight className={`w-4 h-4 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all ${isRTL ? 'rotate-180' : ''}`} />
+                </div>
+              </Link>
             </div>
           </div>
 
