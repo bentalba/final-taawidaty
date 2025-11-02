@@ -49,7 +49,7 @@ const FaqCnss = () => {
         </div>
 
         {/* Modern FAQ Accordion */}
-        <div className="space-y-4 animate-fade-in">
+        <Accordion type="single" collapsible className="space-y-4 animate-fade-in">
           {faq.questions.map((faqItem: any, index: number) => (
             <AccordionItem
               key={index}
@@ -74,7 +74,7 @@ const FaqCnss = () => {
               </AccordionContent>
             </AccordionItem>
           ))}
-        </div>
+        </Accordion>
 
         {/* Modern CTA Section */}
         <div className="mt-16 text-center animate-slide-up">
