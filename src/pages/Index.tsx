@@ -213,7 +213,7 @@ export default function Index() {
                   setInsurance('cnss');
                   setStep(2);
                 }}
-                className="group p-8 rounded-2xl border-2 border-slate-300 hover:border-primary-700 hover:bg-primary-50 transition-all shadow-soft hover:shadow-lg"
+                className="group p-8 rounded-2xl border-2 border-slate-300 dark:border-border hover:border-primary-700 dark:hover:border-primary hover:bg-primary-50 dark:hover:bg-muted transition-all duration-300 shadow-soft hover:shadow-lg hover:scale-105 hover:-translate-y-1"
               >
                 <div className="flex justify-center mb-6">
                   <img 
