@@ -386,33 +386,106 @@
   }
 }
 
-/* Mobile touch optimizations */
+/* Modern mobile optimizations */
 @media (max-width: 768px) {
-  /* Ensure minimum touch target size of 44px */
+  /* Enhanced touch targets */
   button,
   [role="button"],
   input[type="submit"],
-  input[type="button"] {
+  input[type="button"],
+  a {
     min-height: 44px;
     min-width: 44px;
+    position: relative;
   }
 
-  /* Better touch spacing */
-  .touch-target-lg {
-    padding: 12px 24px;
+  /* Mobile-safe spacing */
+  .mobile-safe-spacing {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
   }
 
-  /* Improved mobile focus indicators */
-  button:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-  }
-
-  /* Better mobile tap feedback */
+  /* Better touch feedback */
   .mobile-tap-feedback:active {
-    transform: scale(0.98);
-    transition: transform 0.1s ease;
+    transform: scale(0.96);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Mobile focus indicators */
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  a:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  /* Mobile hover states */
+  @media (hover: none) {
+    .hover-lift:hover {
+      transform: none;
+    }
+
+    .hover-glow:hover {
+      box-shadow: initial;
+    }
+  }
+
+  /* Better mobile text scaling */
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+
+  /* Mobile glass adjustments */
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Mobile shadow optimization */
+  .shadow-floating {
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1), 0 2px 15px -3px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Better mobile animations */
+  .animate-slide-up {
+    animation: slideUpMobile 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Small mobile enhancements */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Compact mobile cards */
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  /* Better mobile buttons */
+  .mobile-full-width {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
