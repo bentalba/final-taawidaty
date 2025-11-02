@@ -109,11 +109,11 @@ export default function Index() {
       {/* Hero Section */}
       {step === 1 && (
         <section className="relative px-4 py-20 md:py-32 max-w-7xl mx-auto">
-          {/* Modern background with decorative elements */}
+          {/* Modern background with warm decorative elements */}
           <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-blue-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-200/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-amber-100/25 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
 
           <div className="relative z-10 text-center animate-slide-up">
             {/* Modern badge */}
