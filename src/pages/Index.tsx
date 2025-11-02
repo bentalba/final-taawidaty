@@ -181,6 +181,7 @@ export default function Index() {
                   setStep(2);
                 }}
                 className="group p-8 rounded-2xl border-2 border-slate-300 dark:border-border hover:border-primary-700 dark:hover:border-primary hover:bg-primary-50 dark:hover:bg-muted transition-all duration-300 shadow-soft hover:shadow-lg hover:scale-105 hover:-translate-y-1"
+              >
                 <div className="flex justify-center mb-6">
                   <img 
                     src="/logos/cnops-logo.png" 
