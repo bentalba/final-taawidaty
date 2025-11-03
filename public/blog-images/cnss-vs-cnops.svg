@@ -1,0 +1,20 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#purpleGrad)"/>
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">CNSS vs CNOPS</text>
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.9" text-anchor="middle">Quelle est la Différence?</text>
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="28" fill="white" opacity="0.8" text-anchor="middle">TAAWIDATY</text>
+  <g transform="translate(480, 320)">
+    <rect x="0" y="0" width="70" height="70" fill="none" stroke="white" stroke-width="6" rx="8"/>
+    <text x="35" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">1</text>
+  </g>
+  <g transform="translate(650, 320)">
+    <rect x="0" y="0" width="70" height="70" fill="none" stroke="white" stroke-width="6" rx="8"/>
+    <text x="35" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">2</text>
+  </g>
+</svg>

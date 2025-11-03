@@ -19,6 +19,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "next-themes";
 import { SEO } from "@/components/SEO";
 import Index from "./pages/Index";
+import Blog from "./pages/Blog";
+import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
+import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
+import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
 import FaqCnops from "./pages/FaqCnops";
 import FaqCnss from "./pages/FaqCnss";
 import NotFound from "./pages/NotFound";
@@ -36,6 +40,10 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/guide-remboursement-cnss" element={<GuideRemboursementCnss />} />
+              <Route path="/blog/guide-remboursement-cnops" element={<GuideRemboursementCnops />} />
+              <Route path="/blog/difference-cnss-cnops" element={<DifferenceCnssCnops />} />
               <Route path="/faq-cnops" element={<FaqCnops />} />
               <Route path="/faq-cnss" element={<FaqCnss />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -19,7 +19,7 @@ import SearchInput from '@/components/SearchInput';
 import ResultCard from '@/components/ResultCard';
 import { PlaceholderAd } from '@/components/AdBanner';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, Sparkles, HelpCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type InsuranceType = 'cnops' | 'cnss' | null;
@@ -194,6 +194,14 @@ export default function Index() {
                     <HelpCircle className="w-4 h-4" />
                     <span className={isRTL ? 'font-arabic' : ''}>
                       {language === 'ar' ? 'أسئلة CNSS' : 'FAQ CNSS'}
+                    </span>
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                  <Link to="/blog" className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'المدونة' : 'Blog'}
                     </span>
                   </Link>
                 </Button>

@@ -33,4 +33,44 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Index -->
+  <url>
+    <loc>https://taawidaty.ma/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post: CNSS Guide -->
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnss</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: CNOPS Guide -->
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: CNSS vs CNOPS Comparison -->
+  <url>
+    <loc>https://taawidaty.ma/blog/difference-cnss-cnops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
