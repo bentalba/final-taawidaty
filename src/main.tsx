@@ -11,6 +11,7 @@
  */
 
 import { createRoot } from "react-dom/client";
+import { HelmetProvider } from 'react-helmet-async';
 import App from "./App.tsx";
 import "./index.css";
 
@@ -35,7 +36,11 @@ if (!rootElement) {
     if (isDev) {
       console.log("Rendering App component");
     }
-    root.render(<App />);
+    root.render(
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    );
     if (isDev) {
       console.log("✓ App rendered successfully");
     }

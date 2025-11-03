@@ -17,6 +17,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "next-themes";
+import { SEO } from "@/components/SEO";
 import Index from "./pages/Index";
 import FaqCnops from "./pages/FaqCnops";
 import FaqCnss from "./pages/FaqCnss";
@@ -29,6 +30,7 @@ const App = () => (
     <LanguageProvider>
       <ThemeProvider defaultTheme="system" attribute="class">
         <TooltipProvider>
+          <SEO />
           <Toaster />
           <Sonner />
           <BrowserRouter>
