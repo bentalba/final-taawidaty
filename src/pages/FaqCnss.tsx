@@ -19,6 +19,13 @@ const FaqCnss = () => {
   const navigate = useNavigate();
   const isRTL = language === 'ar';
 
+  // Helper function to strip HTML tags safely
+  const stripHtml = (html: string): string => {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  };
+
   // Generate FAQ Schema
   const faqSchema = {
     "@context": "https://schema.org",
@@ -28,7 +35,7 @@ const FaqCnss = () => {
       "name": q.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": q.answer.replace(/<[^>]*>/g, '') // Strip HTML tags
+        "text": stripHtml(q.answer)
       }
     }))
   };
