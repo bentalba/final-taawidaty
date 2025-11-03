@@ -52,8 +52,8 @@ export function PlaceholderAd({
       style={{ minHeight: height }}
     >
       <div className="text-center p-4">
-        <p className="text-slate-400 font-semibold text-sm mb-2">{label}</p>
-        <p className="text-xs text-slate-400">
+        <p className="text-slate-600 dark:text-slate-400 font-semibold text-sm mb-2">{label}</p>
+        <p className="text-xs text-slate-600 dark:text-slate-400">
           Replace with actual ad code
         </p>
       </div>
