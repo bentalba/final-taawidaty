@@ -510,3 +510,57 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mobile Touch Target Optimization - Add to end of file */
+@media (max-width: 768px) {
+  /* Ensure all interactive elements meet 44x44px minimum touch target */
+  button, 
+  a, 
+  input, 
+  select,
+  [role="button"],
+  [role="link"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent automatic text size adjustment on mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Remove tap highlight for cleaner mobile UX */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  
+  /* Optimize touch scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Better focus states for touch devices */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid #7C3AED;
+    outline-offset: 2px;
+  }
+}
+
+/* Accessibility - Better focus indicators */
+*:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 2px;
+}
+
+/* Performance - GPU acceleration for animations */
+.animate-fade-in,
+.animate-slide-up,
+.glass-card {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
