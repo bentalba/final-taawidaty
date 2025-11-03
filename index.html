@@ -2,7 +2,16 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Mobile-specific Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Taawidaty">
+    <meta name="theme-color" content="#7C3AED">
     
     <!-- Primary Meta Tags -->
     <title>Calculateur Remboursement CNOPS CNSS Maroc | Taawidaty</title>
@@ -22,6 +31,7 @@
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/logos/TAAWIDATY.png" as="image" type="image/png">
 
     <!-- Load fonts with display=swap for better performance -->
     <link
@@ -40,8 +50,8 @@
     <meta property="og:title" content="Calculateur Remboursement CNOPS CNSS Maroc | Taawidaty">
     <meta property="og:description" content="Calculez instantanément votre remboursement médicaments CNOPS et CNSS au Maroc. Base de données 2025 des médicaments remboursables.">
     <meta property="og:image" content="https://taawidaty.ma/logos/TAAWIDATY.png">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fr_MA">
     <meta property="og:locale:alternate" content="ar_MA">
     <meta property="og:site_name" content="Taawidaty">
@@ -58,6 +68,11 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logos/TAAWIDATY.png" />
+    <link rel="apple-touch-icon" href="/logos/TAAWIDATY.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logos/TAAWIDATY.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Critical CSS for above-the-fold content -->
     <style>
@@ -97,20 +112,32 @@
       "description": "Calculateur de remboursement médicaments CNOPS et CNSS au Maroc",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript. Modern browser required.",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "MAD"
       },
       "inLanguage": ["fr-MA", "ar-MA"],
-      "publisher": {
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Moroccan residents with CNOPS or CNSS coverage",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "Morocco"
+        }
+      },
+      "provider": {
         "@type": "Organization",
         "name": "Taawidaty",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://taawidaty.ma/logos/TAAWIDATY.png"
-        }
-      }
+        "url": "https://taawidaty.ma"
+      },
+      "featureList": [
+        "Calculateur CNOPS",
+        "Calculateur CNSS",
+        "Base de données médicaments",
+        "Remboursement instantané"
+      ]
     }
     </script>
   </head>
