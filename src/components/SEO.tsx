@@ -59,7 +59,7 @@ export const SEO = ({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content="Taawidaty - Calculateur de remboursement CNOPS CNSS" />
 
-      {/* Language alternates */}
+      {/* Language alternates - All point to same URL as language switching is client-side */}
       <link rel="alternate" hreflang="fr" href="https://taawidaty.ma/" />
       <link rel="alternate" hreflang="ar" href="https://taawidaty.ma/" />
       <link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/" />
