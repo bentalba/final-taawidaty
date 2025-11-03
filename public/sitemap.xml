@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+
   <!-- Homepage - French primary -->
   <url>
     <loc>https://taawidaty.ma/</loc>
@@ -11,6 +11,26 @@
     <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- FAQ CNOPS -->
+  <url>
+    <loc>https://taawidaty.ma/faq-cnops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/faq-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/faq-cnops" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ CNSS -->
+  <url>
+    <loc>https://taawidaty.ma/faq-cnss</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/faq-cnss" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/faq-cnss" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
