@@ -27,8 +27,53 @@ export const SEO = ({
   keywords = 'calculateur remboursement cnops, cnss maroc, médicaments remboursables, remboursement médicaments maroc, cnops en ligne, assurance maladie maroc',
   lang = 'fr',
   canonical = 'https://taawidaty.ma',
-  image = 'https://taawidaty.ma/logos/TAAWIDATY.png'
+  image = 'https://taawidaty.ma/og-image.jpg'
 }: SEOProps) => {
+  // Organization Schema
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Taawidaty",
+    "url": "https://taawidaty.ma",
+    "logo": "https://taawidaty.ma/logos/TAAWIDATY.png",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "MA"
+    },
+    "areaServed": "MA",
+    "sameAs": []
+  };
+
+  // WebApplication Schema
+  const webAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Taawidaty",
+    "alternateName": "تعويضاتي",
+    "url": "https://taawidaty.ma",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "MAD"
+    },
+    "description": description,
+    "inLanguage": ["fr-MA", "ar-MA"],
+    "featureList": [
+      "Calculateur CNOPS",
+      "Calculateur CNSS",
+      "Base de données médicaments",
+      "Remboursement instantané"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Taawidaty",
+      "url": "https://taawidaty.ma"
+    }
+  };
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -64,28 +109,14 @@ export const SEO = ({
       <link rel="alternate" hreflang="ar" href="https://taawidaty.ma/" />
       <link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/" />
 
+      {/* Structured Data - Organization */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+
       {/* Structured Data - WebApplication */}
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Taawidaty",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "MAD"
-          },
-          "description": description,
-          "inLanguage": ["fr-MA", "ar-MA"],
-          "featureList": [
-            "Calculateur CNOPS",
-            "Calculateur CNSS",
-            "Base de données médicaments",
-            "Remboursement instantané"
-          ]
-        })}
+        {JSON.stringify(webAppSchema)}
       </script>
     </Helmet>
   );

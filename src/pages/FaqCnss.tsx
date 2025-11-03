@@ -5,6 +5,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+
+interface FaqQuestion {
+  question: string;
+  answer: string;
+}
 
 const FaqCnss = () => {
   const { language } = useLanguage();
@@ -13,8 +19,60 @@ const FaqCnss = () => {
   const navigate = useNavigate();
   const isRTL = language === 'ar';
 
+  // Helper function to strip HTML tags safely
+  const stripHtml = (html: string): string => {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  };
+
+  // Generate FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.questions.map((q: FaqQuestion) => ({
+      "@type": "Question",
+      "name": q.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": stripHtml(q.answer)
+      }
+    }))
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": language === 'ar' ? "الرئيسية" : "Accueil",
+        "item": "https://taawidaty.ma"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": faq.title,
+        "item": "https://taawidaty.ma/faq-cnss"
+      }
+    ]
+  };
+
   return (
-    <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-background to-card transition-colors duration-300">
+    <>
+      <Helmet>
+        <title>{faq.title}</title>
+        <meta name="description" content={faq.subtitle} />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-background to-card transition-colors duration-300">
       {/* Warm background elements */}
       <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary-100/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
@@ -50,7 +108,7 @@ const FaqCnss = () => {
 
         {/* Modern FAQ Accordion */}
         <Accordion type="single" collapsible className="space-y-4 animate-fade-in">
-          {faq.questions.map((faqItem: any, index: number) => (
+          {faq.questions.map((faqItem: FaqQuestion, index: number) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
@@ -101,6 +159,7 @@ const FaqCnss = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

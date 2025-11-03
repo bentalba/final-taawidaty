@@ -1,0 +1,21 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  <text x="50%" y="35%" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white">
+    TAAWIDATY
+  </text>
+  <text x="50%" y="48%" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" fill="white" opacity="0.95">
+    تعويضاتي
+  </text>
+  <text x="50%" y="68%" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="white" opacity="0.95">
+    Calculateur Remboursement
+  </text>
+  <text x="50%" y="78%" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="white" opacity="0.95">
+    CNOPS &amp; CNSS - Maroc
+  </text>
+</svg>
