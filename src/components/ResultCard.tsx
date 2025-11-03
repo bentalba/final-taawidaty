@@ -61,12 +61,18 @@ export default function ResultCard({
               </div>
             </div>
             <div className="w-16 h-16 rounded-2xl bg-white dark:bg-card p-3 shadow-floating">
-              <img
-                src={`/logos/${insuranceType}-logo.png`}
-                alt={`${insuranceType.toUpperCase()} Logo`}
-                className="h-full w-auto object-contain"
-                onError={(e) => e.currentTarget.style.display = 'none'}
-              />
+              <picture>
+                <source srcSet={`/logos/${insuranceType}-logo.webp`} type="image/webp" />
+                <img
+                  src={`/logos/${insuranceType}-logo.png`}
+                  alt={`${insuranceType.toUpperCase()} Logo`}
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  className="h-full w-auto object-contain"
+                  onError={(e) => e.currentTarget.style.display = 'none'}
+                />
+              </picture>
             </div>
           </div>
         </div>

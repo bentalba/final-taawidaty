@@ -78,18 +78,23 @@ export default function Index() {
   return (
     <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-orange-50/30 via-white to-amber-50/20 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
-      <header className="sticky top-0 z-50 transition-colors duration-300">
+      <header role="banner" className="sticky top-0 z-50 transition-colors duration-300">
         <div className="glass border-b border-white/20 dark:border-gray-800/20">
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-4">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                  <img
-                    src="/logos/TAAWIDATY.png"
-                    alt="Taawidaty logo"
-                    className="relative h-12 w-auto group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet="/logos/taawidaty-logo.webp" type="image/webp" />
+                    <img
+                      src="/logos/TAAWIDATY.png"
+                      alt="Taawidaty logo"
+                      width="48"
+                      height="48"
+                      className="relative h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </picture>
                 </div>
                 <h1 className={`text-2xl md:text-3xl font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.app.title}
@@ -106,6 +111,8 @@ export default function Index() {
         </div>
       </header>
 
+      {/* Main Content */}
+      <main role="main">
       {/* Hero Section */}
       {step === 1 && (
         <section className="relative px-4 py-20 md:py-32 max-w-7xl mx-auto">
@@ -219,19 +226,25 @@ export default function Index() {
                 <div className="relative z-10">
                   <div className="flex justify-center mb-8">
                     <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating group-hover:scale-110 transition-transform duration-300">
-                      <img
-                        src="/logos/cnops-logo.png"
-                        alt="CNOPS Logo"
-                        className="h-full w-auto object-contain"
-                        onError={(e) => {
-                          // Fallback to emoji if image not found
-                          e.currentTarget.style.display = 'none';
-                          const fallback = document.createElement('div');
-                          fallback.className = 'text-6xl flex items-center justify-center h-full';
-                          fallback.textContent = '🏥';
-                          e.currentTarget.parentElement?.appendChild(fallback);
-                        }}
-                      />
+                      <picture>
+                        <source srcSet="/logos/cnops-logo.webp" type="image/webp" />
+                        <img
+                          src="/logos/cnops-logo.png"
+                          alt="CNOPS Logo"
+                          width="140"
+                          height="140"
+                          loading="lazy"
+                          className="h-full w-auto object-contain"
+                          onError={(e) => {
+                            // Fallback to emoji if image not found
+                            e.currentTarget.style.display = 'none';
+                            const fallback = document.createElement('div');
+                            fallback.className = 'text-6xl flex items-center justify-center h-full';
+                            fallback.textContent = '🏥';
+                            e.currentTarget.parentElement?.appendChild(fallback);
+                          }}
+                        />
+                      </picture>
                     </div>
                   </div>
                   <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
@@ -260,19 +273,25 @@ export default function Index() {
                 <div className="relative z-10">
                   <div className="flex justify-center mb-8">
                     <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating group-hover:scale-110 transition-transform duration-300">
-                      <img
-                        src="/logos/cnss-logo.png"
-                        alt="CNSS Logo"
-                        className="h-full w-auto object-contain"
-                        onError={(e) => {
-                          // Fallback to emoji if image not found
-                          e.currentTarget.style.display = 'none';
-                          const fallback = document.createElement('div');
-                          fallback.className = 'text-6xl flex items-center justify-center h-full';
-                          fallback.textContent = '👷';
-                          e.currentTarget.parentElement?.appendChild(fallback);
-                        }}
-                      />
+                      <picture>
+                        <source srcSet="/logos/cnss-logo.webp" type="image/webp" />
+                        <img
+                          src="/logos/cnss-logo.png"
+                          alt="CNSS Logo"
+                          width="140"
+                          height="140"
+                          loading="lazy"
+                          className="h-full w-auto object-contain"
+                          onError={(e) => {
+                            // Fallback to emoji if image not found
+                            e.currentTarget.style.display = 'none';
+                            const fallback = document.createElement('div');
+                            fallback.className = 'text-6xl flex items-center justify-center h-full';
+                            fallback.textContent = '👷';
+                            e.currentTarget.parentElement?.appendChild(fallback);
+                          }}
+                        />
+                      </picture>
                     </div>
                   </div>
                   <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
@@ -466,9 +485,10 @@ export default function Index() {
           </div>
         </section>
       )}
+      </main>
 
       {/* Footer */}
-      <footer className="border-t bg-white dark:bg-card mt-20 transition-colors duration-300">
+      <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-20 transition-colors duration-300">
         {/* Ad Banner - Before Footer */}
         <div className="container mx-auto px-4 pt-8">
           <PlaceholderAd
