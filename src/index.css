@@ -530,8 +530,11 @@
     text-size-adjust: 100%;
   }
   
-  /* Remove tap highlight for cleaner mobile UX */
-  * {
+  /* Remove tap highlight for cleaner mobile UX on interactive elements */
+  button,
+  a,
+  [role="button"],
+  [role="link"] {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
