@@ -1,4 +1,12 @@
+# robots.txt for taawidaty.ma
+# Last updated: 2025-11-03
+
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://taawidaty.ma/sitemap.xml
+
+# DO NOT ADD ANY ADDITIONAL DIRECTIVES BELOW THIS LINE
+# Content-signal, AI-train, and other non-standard directives are NOT valid
+# and will cause SEO issues. Use ai.txt or other methods for AI blocking.

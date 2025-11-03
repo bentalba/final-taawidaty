@@ -1,0 +1,11 @@
+# AI Training Data Preferences
+# This file indicates preferences for AI/ML training data usage
+# Separate from robots.txt to avoid SEO issues
+
+# Spawning AI Disclosure
+User-agent: *
+Disallow: /
+
+# This tells AI crawlers not to use your content for training
+# Supported by: OpenAI, Anthropic, Google AI, and others
+# More info: https://site.spawning.ai/spawning-ai-txt
