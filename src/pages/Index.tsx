@@ -17,7 +17,6 @@ import LanguageToggle from '@/components/LanguageToggle';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import SearchInput from '@/components/SearchInput';
 import ResultCard from '@/components/ResultCard';
-import { PlaceholderAd } from '@/components/AdBanner';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -360,15 +359,6 @@ export default function Index() {
             </div>
           </div>
           </div>
-
-          {/* Ad Banner - Below Insurance Selection */}
-          <div className="mt-12 max-w-3xl mx-auto">
-            <PlaceholderAd
-              height="120px"
-              className="mb-4"
-              label={language === 'ar' ? 'إعلان' : 'Publicité'}
-            />
-          </div>
         </section>
       )}
 
@@ -411,14 +401,6 @@ export default function Index() {
               insuranceType={insurance!}
             />
 
-            {/* Ad Banner - Below Search Input */}
-            <div className="mt-8">
-              <PlaceholderAd 
-                height="100px"
-                label={language === 'ar' ? 'إعلان' : 'Publicité'}
-              />
-            </div>
-
             {medication && (
               <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-muted dark:to-muted border-2 border-primary-700 dark:border-primary rounded-xl animate-scale-in transition-all duration-300">
                 <p className={`text-sm text-primary-700 dark:text-primary mb-2 font-semibold ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
@@ -456,23 +438,7 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Ad Banner - Top of Results */}
-          <div className="mb-8">
-            <PlaceholderAd
-              height="120px"
-              label={language === 'ar' ? 'إعلان' : 'Publicité'}
-            />
-          </div>
-
           <ResultCard {...result} language={language} />
-
-          {/* Ad Banner - Below Results */}
-          <div className="mt-8">
-            <PlaceholderAd
-              height="250px"
-              label={language === 'ar' ? 'إعلان' : 'Publicité'}
-            />
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button
@@ -497,16 +463,8 @@ export default function Index() {
 
       {/* Footer */}
       <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-20 transition-colors duration-300">
-        {/* Ad Banner - Before Footer */}
-        <div className="container mx-auto px-4 pt-8">
-          <PlaceholderAd
-            height="120px"
-            label={language === 'ar' ? 'إعلان' : 'Publicité'}
-          />
-        </div>
-
         {/* FAQ Links */}
-        <div className="container mx-auto px-4 py-6 border-t dark:border-border">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
             <Button asChild variant="outline" className={`hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}>
               <Link to="/faq-cnops" className="flex items-center gap-2">

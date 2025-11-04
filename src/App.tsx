@@ -25,6 +25,8 @@ import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
 import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
 import FaqCnops from "./pages/FaqCnops";
 import FaqCnss from "./pages/FaqCnss";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import MedicalDisclaimer from "./pages/MedicalDisclaimer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +48,8 @@ const App = () => (
               <Route path="/blog/difference-cnss-cnops" element={<DifferenceCnssCnops />} />
               <Route path="/faq-cnops" element={<FaqCnops />} />
               <Route path="/faq-cnss" element={<FaqCnss />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
