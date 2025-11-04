@@ -41,7 +41,7 @@ export default function Blog() {
         lang={language}
       />
 
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         <div className="container mx-auto px-4 py-12 max-w-7xl">
           <BlogBreadcrumb items={breadcrumbItems} />
 

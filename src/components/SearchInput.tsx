@@ -190,12 +190,15 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
               key={result.id}
               onClick={() => handleSelect(result)}
               className={cn(
-                `w-full px-5 py-4 text-left transition-colors
+                `search-result-item w-full px-5 py-4 text-left transition-colors
                 hover:bg-primary-50 dark:hover:bg-muted focus:bg-primary-50 dark:focus:bg-muted focus:outline-none
                 border-b border-slate-100 dark:border-border last:border-b-0`,
                 selectedIndex === index && 'bg-primary-50 dark:bg-muted',
                 dir === 'rtl' && 'text-right'
               )}
+              style={{
+                animationDelay: `${index * 30}ms`
+              }}
             >
               <div className={`font-bold text-slate-900 dark:text-card-foreground mb-1 ${language === 'ar' ? 'font-arabic' : ''}`}>
                 {result.name}

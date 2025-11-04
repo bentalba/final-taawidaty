@@ -547,7 +547,7 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-red-50/30 to-white dark:from-background dark:to-card">
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-red-50/30 via-white to-orange-50/20 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
         <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
           <div className="container mx-auto px-4 py-4">

@@ -75,7 +75,7 @@ export default function Index() {
   };
 
   return (
-    <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-orange-50/30 via-white to-amber-50/20 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
+    <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
       <header role="banner" className="sticky top-0 z-50 transition-colors duration-300">
         <div className="glass border-b border-white/20 dark:border-gray-800/20">

@@ -72,7 +72,7 @@ const FaqCnops = () => {
           {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-background to-card transition-colors duration-300">
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Warm background elements */}
       <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary-100/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>

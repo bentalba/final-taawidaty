@@ -664,7 +664,7 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-blue-50/30 via-white to-cyan-50/20 dark:from-background dark:to-card">
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
         <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
           <div className="container mx-auto px-4 py-4">

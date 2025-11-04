@@ -1,5 +1,6 @@
 import { translations } from '@/lib/translations';
 import { CheckCircle2, Sparkles } from 'lucide-react';
+import CountUp from './CountUp';
 
 interface ResultCardProps {
   originalPrice: number;
@@ -121,7 +122,12 @@ export default function ResultCard({
               </div>
             </div>
             <span className="text-xl font-bold text-success-600 dark:text-success-400">
-              -{formatCurrency(reimbursementAmount)}
+              -<CountUp
+                from={0}
+                to={reimbursementAmount}
+                duration={1.5}
+                formatter={formatCurrency}
+              />
             </span>
           </div>
 
@@ -147,7 +153,15 @@ export default function ResultCard({
               </div>
               <div className="text-left">
                 <p className={`text-success-700 dark:text-success-300 font-bold text-lg ${language === 'ar' ? 'font-arabic' : ''}`}>
-                  {t.savings.replace('{amount}', formatCurrency(reimbursementAmount))}
+                  {t.savings.split('{amount}')[0]}
+                  <CountUp
+                    from={0}
+                    to={reimbursementAmount}
+                    duration={1.5}
+                    formatter={formatCurrency}
+                    className="inline-block"
+                  />
+                  {t.savings.split('{amount}')[1]}
                 </p>
                 <p className={`text-sm text-success-600 dark:text-success-400 ${language === 'ar' ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'تم توفير هذا المبلغ بفضل التأمين' : 'Économie grâce à votre assurance'}
