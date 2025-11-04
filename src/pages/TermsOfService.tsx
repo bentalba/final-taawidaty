@@ -20,13 +20,13 @@ export default function TermsOfService() {
     fr: {
       title: 'Conditions d\'Utilisation',
       subtitle: 'Taawidaty.ma',
-      lastUpdated: 'Dernière mise à jour : 5 novembre 2025',
+      lastUpdated: 'Dernière mise à jour : 4 novembre 2025',
       backButton: 'Retour à l\'accueil'
     },
     ar: {
       title: 'شروط الاستخدام',
       subtitle: 'Taawidaty.ma',
-      lastUpdated: 'آخر تحديث: 5 نوفمبر 2025',
+      lastUpdated: 'آخر تحديث: 4 نوفمبر 2025',
       backButton: 'العودة إلى الصفحة الرئيسية'
     }
   };
@@ -36,7 +36,7 @@ export default function TermsOfService() {
   // French content
   const frenchContent = `# Conditions d'Utilisation - Taawidaty.ma
 
-**Dernière mise à jour : 5 novembre 2025**
+**Dernière mise à jour : 4 novembre 2025**
 
 ## 1. Acceptation des Conditions
 
@@ -419,7 +419,7 @@ Adresse : 1890 bir rami sud 14093, Kenitra, Maroc
 
 EN UTILISANT TAAWIDATY.MA, VOUS RECONNAISSEZ AVOIR LU, COMPRIS ET ACCEPTÉ D'ÊTRE LIÉ PAR CES CONDITIONS D'UTILISATION.
 
-**Date de dernière révision : 5 novembre 2025**
+**Date de dernière révision : 4 novembre 2025**
 
 ---
 
@@ -446,7 +446,7 @@ EN UTILISANT TAAWIDATY.MA, VOUS RECONNAISSEZ AVOIR LU, COMPRIS ET ACCEPTÉ D'ÊT
   // Arabic content
   const arabicContent = `# شروط الاستخدام - Taawidaty.ma
 
-**آخر تحديث: 5 نوفمبر 2025**
+**آخر تحديث: 4 نوفمبر 2025**
 
 ## 1. قبول الشروط
 
@@ -829,7 +829,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 
 باستخدام TAAWIDATY.MA، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بشروط الاستخدام هذه.
 
-**تاريخ آخر مراجعة: 5 نوفمبر 2025**
+**تاريخ آخر مراجعة: 4 نوفمبر 2025**
 
 ---
 

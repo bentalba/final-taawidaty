@@ -30,6 +30,7 @@ import MedicalDisclaimer from "./pages/MedicalDisclaimer";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import TermsOfService from "./pages/TermsOfService";
+import EditorialPolicy from "./pages/EditorialPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/editorial-policy" element={<EditorialPolicy />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
