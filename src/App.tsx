@@ -27,6 +27,9 @@ import FaqCnops from "./pages/FaqCnops";
 import FaqCnss from "./pages/FaqCnss";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import MedicalDisclaimer from "./pages/MedicalDisclaimer";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +53,9 @@ const App = () => (
               <Route path="/faq-cnss" element={<FaqCnss />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

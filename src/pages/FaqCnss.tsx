@@ -103,6 +103,15 @@ const FaqCnss = () => {
             <p className={`text-lg text-slate-600 dark:text-muted-foreground max-w-2xl mx-auto ${isRTL ? 'font-arabic' : ''}`}>
               {faq.subtitle}
             </p>
+            {/* Last Updated & Author */}
+            <div className={`mt-6 text-sm text-slate-500 dark:text-muted-foreground space-y-1 ${isRTL ? 'font-arabic' : ''}`}>
+              <p>
+                {language === 'ar' ? 'آخر تحديث: 5 نوفمبر 2025' : 'Dernière mise à jour : 5 novembre 2025'}
+              </p>
+              <p>
+                {language === 'ar' ? 'بواسطة: B.ZAKARIA' : 'Par : B.ZAKARIA'}
+              </p>
+            </div>
           </div>
         </div>
 
