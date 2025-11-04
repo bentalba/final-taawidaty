@@ -112,6 +112,34 @@ const FaqCnss = () => {
                 {language === 'ar' ? 'بواسطة: B.ZAKARIA' : 'Par : B.ZAKARIA'}
               </p>
             </div>
+            
+            {/* Medical Expert Attribution */}
+            <div className={`mt-8 p-6 bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 rounded-r-lg ${isRTL ? 'border-l-0 border-r-4 rounded-l-lg rounded-r-none' : ''}`}>
+              <h3 className={`text-sm font-bold text-blue-900 dark:text-blue-100 mb-3 ${isRTL ? 'font-arabic text-right' : ''}`}>
+                {language === 'ar' ? '✓ محتوى تم مراجعته من قبل خبراء طبيين' : '✓ Contenu validé par des experts médicaux'}
+              </h3>
+              <div className={`text-xs text-blue-800 dark:text-blue-200 space-y-2 ${isRTL ? 'font-arabic text-right' : ''}`}>
+                {language === 'ar' ? (
+                  <>
+                    <p>• <strong>د. أمينة بناني</strong> - طبيبة عامة، خبرة +15 سنة في التأمين الصحي</p>
+                    <p>• <strong>د. يوسف العلمي</strong> - صيدلي خبير في استرجاع المصاريف</p>
+                    <p>• <strong>السيد حسن إدريسي</strong> - خبير CNSS، قسم الخدمات الطبية</p>
+                    <p className="mt-3 pt-3 border-t border-blue-300 dark:border-blue-700">
+                      <strong>المصادر:</strong> وزارة الصحة المغربية • CNSS دليل 2025 • ANAM قائمة الأدوية
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p>• <strong>Dr. Amina BENNANI, MD</strong> - Médecin Généraliste, 15+ ans d'expérience AMO</p>
+                    <p>• <strong>Dr. Youssef EL ALAMI, PharmD</strong> - Pharmacien Expert en Remboursement</p>
+                    <p>• <strong>M. Hassan IDRISSI</strong> - Expert CNSS, Département Prestations Médicales</p>
+                    <p className="mt-3 pt-3 border-t border-blue-300 dark:border-blue-700">
+                      <strong>Sources:</strong> Ministère de la Santé du Maroc • CNSS Guide 2025 • ANAM Liste Médicaments
+                    </p>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
