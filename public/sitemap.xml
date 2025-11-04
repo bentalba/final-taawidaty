@@ -73,4 +73,64 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://taawidaty.ma/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/privacy-policy" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Medical Disclaimer -->
+  <url>
+    <loc>https://taawidaty.ma/medical-disclaimer</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/medical-disclaimer" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/medical-disclaimer" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://taawidaty.ma/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/about-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/about-us" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://taawidaty.ma/contact-us</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/contact-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/contact-us" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://taawidaty.ma/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/terms-of-service" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Editorial Policy -->
+  <url>
+    <loc>https://taawidaty.ma/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/editorial-policy" />
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

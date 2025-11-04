@@ -481,6 +481,31 @@ export default function Index() {
           </div>
         </div>
 
+        {/* Legal Links */}
+        <div className="container mx-auto px-4 py-4 border-t dark:border-border">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+            <Link to="/privacy-policy" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de Confidentialité'}
+            </Link>
+            <span className="text-slate-400">•</span>
+            <Link to="/medical-disclaimer" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors font-semibold ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement Médical'}
+            </Link>
+            <span className="text-slate-400">•</span>
+            <Link to="/terms-of-service" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'شروط الاستخدام' : 'Conditions d\'Utilisation'}
+            </Link>
+            <span className="text-slate-400">•</span>
+            <Link to="/about-us" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'من نحن' : 'À Propos'}
+            </Link>
+            <span className="text-slate-400">•</span>
+            <Link to="/contact-us" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'اتصل بنا' : 'Contact'}
+            </Link>
+          </div>
+        </div>
+
         <div className="container mx-auto px-4 py-8 text-center text-slate-600 dark:text-muted-foreground transition-colors duration-300">
           <p className={`text-sm ${isRTL ? 'font-arabic' : ''}`}>
             © 2025 TAAWIDATY • {language === 'ar' ? 'صمم وطور بواسطة' : 'Designed & Developed by'} <strong>BENTALBA ZAKARIA</strong>
