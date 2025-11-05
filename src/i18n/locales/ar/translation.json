@@ -1,0 +1,138 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "finish": "إنهاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق"
+  },
+  "hero": {
+    "title": "ادفع فقط حصتك من الأدوية",
+    "subtitle": "احسب فوراً تعويض التأمين الصحي لأي دواء في المغرب",
+    "cta": "ابدأ الحساب",
+    "trustBadge": "خدمة رسمية • AMO المغرب"
+  },
+  "insurance": {
+    "cnops": {
+      "title": "CNOPS",
+      "subtitle": "الموظفون والقطاع العام",
+      "coverage": "تغطية تصل إلى 90%",
+      "medications": "أكثر من 8000 دواء",
+      "processing": "التعويض في 15 يوماً"
+    },
+    "cnss": {
+      "title": "CNSS",
+      "subtitle": "موظفو القطاع الخاص",
+      "coverage": "تغطية قياسية 70%",
+      "medications": "أدوية أساسية",
+      "network": "شبكة وطنية"
+    },
+    "selectTitle": "اختر نوع التأمين الخاص بك"
+  },
+  "search": {
+    "placeholder": "ابحث عن دواء (Doliprane، Augmentin...)",
+    "noResults": "لم يتم العثور على أدوية",
+    "suggestions": "أدوية يتم البحث عنها بشكل متكرر",
+    "aria": {
+      "label": "البحث عن دواء",
+      "help": "استخدم الأسهم لأعلى ولأسفل للتنقل، Enter للاختيار"
+    }
+  },
+  "calculator": {
+    "steps": {
+      "medication": "الدواء",
+      "insurance": "التأمين",
+      "personal": "الاتصال",
+      "preferences": "التفضيلات"
+    },
+    "medication": {
+      "title": "ما الدواء الذي تبحث عنه؟",
+      "quantity": "الكمية",
+      "duration": "مدة العلاج (أيام)",
+      "selected": "الدواء المحدد"
+    },
+    "insurance": {
+      "title": "نوع التأمين الخاص بك",
+      "number": "رقم المؤمن عليه",
+      "chronicDisease": "مرض مزمن (ALD)",
+      "chronicDiseaseHelp": "استفد من تغطية إضافية إذا كنت تعاني من حالة طويلة الأمد"
+    },
+    "personal": {
+      "title": "معلومات الاتصال الخاصة بك",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "region": "المنطقة",
+      "optional": "(اختياري)"
+    },
+    "preferences": {
+      "title": "التفضيلات",
+      "receiveAlerts": "تلقي تنبيهات حول تغييرات الأسعار",
+      "saveHistory": "حفظ سجل حساباتي",
+      "shareData": "مشاركة بياناتي بشكل مجهول لتحسين الخدمة"
+    }
+  },
+  "results": {
+    "title": "تعويضك",
+    "subtitle": "التوفير المحقق",
+    "totalCost": "السعر الإجمالي",
+    "reimbursement": "التعويض",
+    "youPay": "تدفع",
+    "coverage": "معدل التغطية",
+    "annualSavings": "التوفير السنوي المقدر",
+    "processingTime": "وقت المعالجة",
+    "nextRefill": "التجديد التالي",
+    "download": "تحميل PDF",
+    "share": "مشاركة",
+    "newCalculation": "حساب جديد",
+    "breakdown": "تفاصيل الحساب",
+    "insurancePays": "تأمينك يعوض",
+    "officialData": "بيانات رسمية",
+    "lastUpdate": "آخر تحديث",
+    "confidential": "السرية",
+    "secure": "آمن 100%"
+  },
+  "stats": {
+    "calculationsPerformed": "الحسابات المنجزة",
+    "accuracy": "دقة مضمونة",
+    "avgTime": "الوقت المتوسط",
+    "free": "مجاني تماماً"
+  },
+  "footer": {
+    "company": "حول تعويضاتي",
+    "description": "خدمة رسمية لحساب تعويضات الأدوية للتأمين الصحي الإجباري في المغرب.",
+    "certifiedData": "بيانات معتمدة AMO 2024",
+    "usefulLinks": "روابط مفيدة",
+    "medications": "قائمة الأدوية",
+    "pharmacies": "الصيدليات المعتمدة",
+    "guide": "دليل التعويضات",
+    "faq": "الأسئلة الشائعة",
+    "legal": "قانوني",
+    "privacy": "الخصوصية",
+    "terms": "شروط الاستخدام",
+    "cookies": "ملفات تعريف الارتباط",
+    "contact": "اتصل",
+    "email": "contact@taawidaty.ma",
+    "phone": "+212 5 20 123 456",
+    "hours": "الإثنين - الجمعة: 9 صباحاً - 6 مساءً",
+    "copyright": "© 2024 تعويضاتي. جميع الحقوق محفوظة. البيانات بناءً على الأسعار الرسمية لـ AMO."
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "invalidPhone": "رقم هاتف مغربي غير صالح",
+    "minQuantity": "يجب أن تكون الكمية 1 على الأقل",
+    "maxQuantity": "لا يمكن أن تتجاوز الكمية 1000",
+    "minDuration": "يجب أن تكون المدة يوماً واحداً على الأقل",
+    "maxDuration": "لا يمكن أن تتجاوز المدة 365 يوماً",
+    "selectMedication": "يرجى تحديد دواء",
+    "selectInsurance": "يرجى تحديد نوع التأمين",
+    "selectRegion": "المنطقة مطلوبة"
+  }
+}

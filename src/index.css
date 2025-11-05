@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RTL Direction Transition */
+.direction-transition * {
+  transition: margin 0.3s ease, padding 0.3s ease !important;
+}
+
 @layer base {
   :root {
     /* Medical Blue Primary Palette - Warmer tones */
