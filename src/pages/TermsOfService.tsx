@@ -10,6 +10,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
+import { FormattedContent } from '@/components/FormattedText';
 
 export default function TermsOfService() {
   const { language } = useLanguage();
@@ -889,9 +890,9 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
         <main className="container mx-auto px-4 py-8 max-w-4xl">
           <div className="bg-white dark:bg-card rounded-lg shadow-lg p-8">
             <div className="prose prose-blue dark:prose-invert max-w-none">
-              <pre className="whitespace-pre-wrap font-sans text-base leading-relaxed">
+              <FormattedContent className="font-sans text-base leading-relaxed">
                 {language === 'ar' ? arabicContent : frenchContent}
-              </pre>
+              </FormattedContent>
             </div>
           </div>
         </main>
