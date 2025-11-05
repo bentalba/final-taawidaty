@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Search, Loader2 } from 'lucide-react';
+import { motion, useInView } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { loadMedications } from '@/data/medicationsLoader';
 
@@ -176,7 +177,11 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
       </div>
 
       {isOpen && results.length > 0 && (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
           dir={dir}
           className={cn(
             `absolute z-50 w-full mt-2
@@ -186,8 +191,11 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
           )}
         >
           {results.map((result, index) => (
-            <button
+            <motion.button
               key={result.id}
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.2, delay: index * 0.03 }}
               onClick={() => handleSelect(result)}
               className={cn(
                 `search-result-item w-full px-5 py-4 text-left transition-colors
@@ -196,9 +204,6 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
                 selectedIndex === index && 'bg-primary-50 dark:bg-muted',
                 dir === 'rtl' && 'text-right'
               )}
-              style={{
-                animationDelay: `${index * 30}ms`
-              }}
             >
               <div className={`font-bold text-slate-900 dark:text-card-foreground mb-1 ${language === 'ar' ? 'font-arabic' : ''}`}>
                 {result.name}
@@ -208,9 +213,9 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
                   {result.dci} {result.dosage && `• ${result.dosage}`}
                 </div>
               )}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {isOpen && !isLoading && query.length >= 2 && results.length === 0 && (

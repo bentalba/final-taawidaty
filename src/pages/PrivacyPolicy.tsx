@@ -10,6 +10,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
+import { FormattedContent } from '@/components/FormattedText';
 
 export default function PrivacyPolicy() {
   const { language } = useLanguage();
@@ -482,25 +483,25 @@ Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.`
         {/* Content */}
         <main className="container mx-auto px-4 py-8 max-w-4xl">
           <div className="bg-white dark:bg-card rounded-lg shadow-lg p-8">
-            <p className="text-lg text-foreground mb-8 leading-relaxed">
+            <FormattedContent className="text-lg text-foreground mb-8 leading-relaxed">
               {current.intro}
-            </p>
+            </FormattedContent>
 
             {current.sections.map((section, index) => (
               <section key={index} className="mb-8">
                 <h2 className="text-2xl font-bold text-primary-700 dark:text-primary mb-4">
-                  {section.title}
+                  <FormattedContent>{section.title}</FormattedContent>
                 </h2>
-                <div className="text-foreground leading-relaxed whitespace-pre-line">
+                <FormattedContent className="text-foreground leading-relaxed">
                   {section.content}
-                </div>
+                </FormattedContent>
               </section>
             ))}
 
             <div className="mt-12 p-6 bg-primary-50 dark:bg-muted rounded-lg border-l-4 border-primary-700">
-              <p className="text-foreground leading-relaxed whitespace-pre-line">
+              <FormattedContent className="text-foreground leading-relaxed">
                 {current.footer}
-              </p>
+              </FormattedContent>
             </div>
           </div>
         </main>

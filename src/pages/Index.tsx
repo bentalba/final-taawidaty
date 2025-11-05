@@ -20,6 +20,7 @@ import ResultCard from '@/components/ResultCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 type InsuranceType = 'cnops' | 'cnss' | null;
 
@@ -44,6 +45,7 @@ interface CalculationResult {
 export default function Index() {
   const { language, toggleLanguage, isRTL } = useLanguage();
   const t = translations[language];
+  const scrolled = useScrollPosition();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [insurance, setInsurance] = useState<InsuranceType>(null);
   const [medication, setMedication] = useState<Medication | null>(null);
@@ -77,13 +79,13 @@ export default function Index() {
   return (
     <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
-      <header role="banner" className="sticky top-0 z-50 transition-colors duration-300">
-        <div className="glass border-b border-white/20 dark:border-gray-800/20">
-          <div className="container mx-auto px-4 py-4">
+      <header role="banner" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-card/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
+        <div className={`glass border-b border-white/20 dark:border-gray-800/20 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+          <div className="container mx-auto px-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-4">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300 ${scrolled ? 'opacity-50' : 'opacity-100'}`}></div>
                   <picture>
                     <source srcSet="/logos/taawidaty-logo.webp" type="image/webp" />
                     <img
@@ -91,11 +93,11 @@ export default function Index() {
                       alt="Taawidaty logo"
                       width="48"
                       height="48"
-                      className="relative h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+                      className={`relative w-auto group-hover:scale-105 transition-all duration-300 ${scrolled ? 'h-8' : 'h-12'}`}
                     />
                   </picture>
                 </div>
-                <h1 className={`text-2xl md:text-3xl font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                <h1 className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
                   {t.app.title}
                 </h1>
               </div>
@@ -314,49 +316,6 @@ export default function Index() {
                 </div>
               </button>
             </div>
-
-            {/* FAQ Help Cards */}
-            <div className="grid md:grid-cols-2 gap-4 mt-8">
-              <Link 
-                to="/faq-cnops"
-                className="p-4 rounded-xl border-2 border-slate-200 hover:border-primary-500 hover:bg-slate-50 transition-all group"
-              >
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-primary-600 mt-1 group-hover:scale-110 transition-transform" />
-                  <div className="flex-1">
-                    <h4 className={`font-bold text-slate-900 mb-1 ${isRTL ? 'font-arabic' : ''}`}>
-                      {language === 'ar' ? 'أسئلة شائعة - CNOPS' : 'Questions fréquentes - CNOPS'}
-                    </h4>
-                    <p className={`text-sm text-slate-600 ${isRTL ? 'font-arabic' : ''}`}>
-                      {language === 'ar' 
-                        ? '15 سؤالاً حول استرجاع مصاريف الأدوية'
-                        : '15 questions sur le remboursement'}
-                    </p>
-                  </div>
-                  <ArrowRight className={`w-4 h-4 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all ${isRTL ? 'rotate-180' : ''}`} />
-                </div>
-              </Link>
-
-              <Link 
-                to="/faq-cnss"
-                className="p-4 rounded-xl border-2 border-slate-200 hover:border-primary-500 hover:bg-slate-50 transition-all group"
-              >
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-primary-600 mt-1 group-hover:scale-110 transition-transform" />
-                  <div className="flex-1">
-                    <h4 className={`font-bold text-slate-900 mb-1 ${isRTL ? 'font-arabic' : ''}`}>
-                      {language === 'ar' ? 'أسئلة شائعة - CNSS' : 'Questions fréquentes - CNSS'}
-                    </h4>
-                    <p className={`text-sm text-slate-600 ${isRTL ? 'font-arabic' : ''}`}>
-                      {language === 'ar' 
-                        ? '15 سؤالاً حول استرجاع مصاريف الأدوية'
-                        : '15 questions sur le remboursement'}
-                    </p>
-                  </div>
-                  <ArrowRight className={`w-4 h-4 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all ${isRTL ? 'rotate-180' : ''}`} />
-                </div>
-              </Link>
-            </div>
           </div>
           </div>
         </section>
@@ -463,26 +422,8 @@ export default function Index() {
 
       {/* Footer */}
       <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-20 transition-colors duration-300">
-        {/* FAQ Links */}
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-            <Button asChild variant="outline" className={`hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}>
-              <Link to="/faq-cnops" className="flex items-center gap-2">
-                <HelpCircle className="w-4 h-4" />
-                <span>{language === 'ar' ? 'أسئلة متكررة CNOPS' : 'FAQ CNOPS'}</span>
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className={`hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}>
-              <Link to="/faq-cnss" className="flex items-center gap-2">
-                <HelpCircle className="w-4 h-4" />
-                <span>{language === 'ar' ? 'أسئلة متكررة CNSS' : 'FAQ CNSS'}</span>
-              </Link>
-            </Button>
-          </div>
-        </div>
-
         {/* Legal Links */}
-        <div className="container mx-auto px-4 py-4 border-t dark:border-border">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
             <Link to="/privacy-policy" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
               {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de Confidentialité'}
