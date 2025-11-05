@@ -1,0 +1,138 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer"
+  },
+  "hero": {
+    "title": "Ne payez que votre part des médicaments",
+    "subtitle": "Calculez instantanément le remboursement de l'assurance maladie pour n'importe quel médicament au Maroc",
+    "cta": "Commencer le calcul",
+    "trustBadge": "Service officiel • AMO Maroc"
+  },
+  "insurance": {
+    "cnops": {
+      "title": "CNOPS",
+      "subtitle": "Fonctionnaires et secteur public",
+      "coverage": "Couverture jusqu'à 90%",
+      "medications": "Plus de 8000 médicaments",
+      "processing": "Remboursement sous 15 jours"
+    },
+    "cnss": {
+      "title": "CNSS",
+      "subtitle": "Employés du secteur privé",
+      "coverage": "Couverture standard 70%",
+      "medications": "Médicaments essentiels",
+      "network": "Réseau national"
+    },
+    "selectTitle": "Sélectionnez votre type d'assurance"
+  },
+  "search": {
+    "placeholder": "Rechercher un médicament (Doliprane, Augmentin...)",
+    "noResults": "Aucun médicament trouvé",
+    "suggestions": "Médicaments fréquemment recherchés",
+    "aria": {
+      "label": "Recherche de médicament",
+      "help": "Utilisez les flèches haut et bas pour naviguer, Entrée pour sélectionner"
+    }
+  },
+  "calculator": {
+    "steps": {
+      "medication": "Médicament",
+      "insurance": "Assurance",
+      "personal": "Contact",
+      "preferences": "Préférences"
+    },
+    "medication": {
+      "title": "Quel médicament recherchez-vous?",
+      "quantity": "Quantité",
+      "duration": "Durée du traitement (jours)",
+      "selected": "Médicament sélectionné"
+    },
+    "insurance": {
+      "title": "Votre type d'assurance",
+      "number": "Numéro d'assuré",
+      "chronicDisease": "Maladie chronique (ALD)",
+      "chronicDiseaseHelp": "Bénéficiez d'une couverture majorée si vous souffrez d'une affection de longue durée"
+    },
+    "personal": {
+      "title": "Vos informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "region": "Région",
+      "optional": "(optionnel)"
+    },
+    "preferences": {
+      "title": "Préférences",
+      "receiveAlerts": "Recevoir des alertes sur les changements de prix",
+      "saveHistory": "Enregistrer l'historique de mes calculs",
+      "shareData": "Partager mes données de manière anonyme pour améliorer le service"
+    }
+  },
+  "results": {
+    "title": "Votre remboursement",
+    "subtitle": "Économie réalisée",
+    "totalCost": "Prix total",
+    "reimbursement": "Remboursement",
+    "youPay": "Vous payez",
+    "coverage": "Taux de couverture",
+    "annualSavings": "Économie annuelle estimée",
+    "processingTime": "Délai de traitement",
+    "nextRefill": "Prochain renouvellement",
+    "download": "Télécharger PDF",
+    "share": "Partager",
+    "newCalculation": "Nouveau calcul",
+    "breakdown": "Détail du calcul",
+    "insurancePays": "Votre assurance rembourse",
+    "officialData": "Données officielles",
+    "lastUpdate": "Mise à jour",
+    "confidential": "Confidentialité",
+    "secure": "100% sécurisé"
+  },
+  "stats": {
+    "calculationsPerformed": "Calculs effectués",
+    "accuracy": "Précision garantie",
+    "avgTime": "Temps moyen",
+    "free": "Totalement gratuit"
+  },
+  "footer": {
+    "company": "À propos de TAAWIDATY",
+    "description": "Service officiel de calcul des remboursements de médicaments pour l'Assurance Maladie Obligatoire au Maroc.",
+    "certifiedData": "Données certifiées AMO 2024",
+    "usefulLinks": "Liens utiles",
+    "medications": "Liste des médicaments",
+    "pharmacies": "Pharmacies agréées",
+    "guide": "Guide des remboursements",
+    "faq": "FAQ",
+    "legal": "Légal",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Cookies",
+    "contact": "Contact",
+    "email": "contact@taawidaty.ma",
+    "phone": "+212 5 20 123 456",
+    "hours": "Lun - Ven: 9h - 18h",
+    "copyright": "© 2024 TAAWIDATY. Tous droits réservés. Données basées sur les tarifs officiels AMO."
+  },
+  "errors": {
+    "required": "Ce champ est requis",
+    "invalidEmail": "Email invalide",
+    "invalidPhone": "Numéro de téléphone marocain invalide",
+    "minQuantity": "La quantité doit être au moins 1",
+    "maxQuantity": "La quantité ne peut pas dépasser 1000",
+    "minDuration": "La durée doit être au moins 1 jour",
+    "maxDuration": "La durée ne peut pas dépasser 365 jours",
+    "selectMedication": "Veuillez sélectionner un médicament",
+    "selectInsurance": "Veuillez sélectionner un type d'assurance",
+    "selectRegion": "Région requise"
+  }
+}

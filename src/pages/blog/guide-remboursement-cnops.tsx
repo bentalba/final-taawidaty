@@ -65,7 +65,7 @@ export default function GuideRemboursementCnops() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         <article className="container mx-auto px-4 py-12 max-w-4xl">
           <BlogBreadcrumb items={breadcrumbItems} />
 
