@@ -10,6 +10,7 @@ import { ArrowLeft, Users, Target, Shield, Award, Heart, CheckCircle } from 'luc
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SEO } from '@/components/SEO';
+import { FormattedContent } from '@/components/FormattedText';
 
 export default function AboutUs() {
   const { language } = useLanguage();
@@ -814,9 +815,9 @@ bugs@taawidaty.ma
                     {section.title}
                   </h2>
                 </div>
-                <div className="text-foreground leading-relaxed whitespace-pre-line">
+                <FormattedContent className="text-foreground leading-relaxed">
                   {section.content}
-                </div>
+                </FormattedContent>
               </section>
             ))}
           </div>

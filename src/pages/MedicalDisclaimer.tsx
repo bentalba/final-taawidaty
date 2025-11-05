@@ -10,6 +10,7 @@ import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SEO } from '@/components/SEO';
+import { FormattedContent } from '@/components/FormattedText';
 
 export default function MedicalDisclaimer() {
   const { language } = useLanguage();
@@ -634,16 +635,16 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
                 <h2 className="text-2xl font-bold text-primary-700 dark:text-primary mb-4">
                   {section.title}
                 </h2>
-                <div className="text-foreground leading-relaxed whitespace-pre-line">
+                <FormattedContent className="text-foreground leading-relaxed">
                   {section.content}
-                </div>
+                </FormattedContent>
               </section>
             ))}
 
             <div className="mt-12 p-6 bg-red-50 dark:bg-red-950/20 rounded-lg border-l-4 border-red-600">
-              <p className="text-foreground font-bold leading-relaxed whitespace-pre-line">
+              <FormattedContent className="text-foreground font-bold leading-relaxed">
                 {current.footer}
-              </p>
+              </FormattedContent>
             </div>
           </div>
         </main>

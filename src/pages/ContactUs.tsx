@@ -10,6 +10,7 @@ import { ArrowLeft, Mail, MessageSquare, Bug, Lightbulb, Shield, Scale, AlertCir
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SEO } from '@/components/SEO';
+import { FormattedContent } from '@/components/FormattedText';
 
 export default function ContactUs() {
   const { language } = useLanguage();
@@ -26,6 +27,7 @@ export default function ContactUs() {
         {
           title: 'Moyens de Contact',
           icon: 'mail',
+          email: 'contact@taawidaty.ma',
           content: `**📧 Email - Notre moyen de contact principal**
 
 Nous répondons à tous les emails dans les délais indiqués ci-dessous. Veuillez inclure autant de détails que possible pour nous aider à vous répondre efficacement.`
@@ -760,9 +762,9 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
                     )}
                   </div>
                 </div>
-                <div className="text-foreground leading-relaxed whitespace-pre-line">
+                <FormattedContent className="text-foreground leading-relaxed">
                   {section.content}
-                </div>
+                </FormattedContent>
               </section>
             ))}
           </div>
