@@ -1,89 +1,131 @@
 /**
  * TAAWIDATY - Moroccan Medication Reimbursement Calculator
- * 
- * @author BENTALBA ZAKARIA
- * @copyright 2025 BENTALBA ZAKARIA
- * @description SEO Component for improved search engine visibility
- * 
- * NOTE: The name "TAAWIDATY" (تعويضاتي) is proprietary and protected.
- * The code is open source (MIT License), but the brand name cannot be used
- * in derivative works without explicit permission.
+ *
+ * SEO component centralizing meta tags, Open Graph data, alternate language
+ * links, and structured data. Designed to be flexible per page while
+ * providing sensible defaults for the whole app.
  */
 
 import { Helmet } from 'react-helmet-async';
 
+type SupportedLang = 'fr' | 'ar' | 'en';
+
+interface AlternateLink {
+  hreflang: string;
+  href: string;
+}
+
+interface StructuredData {
+  [key: string]: unknown;
+}
+
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
-  lang?: 'fr' | 'ar' | 'en';
+  keywords?: string | string[];
+  lang?: SupportedLang;
   canonical?: string;
   image?: string;
+  alternates?: AlternateLink[];
+  noindex?: boolean;
+  structuredData?: StructuredData[];
 }
 
-export const SEO = ({ 
+const FALLBACK_CANONICAL = 'https://taawidaty.ma';
+const FALLBACK_IMAGE = 'https://taawidaty.ma/og-image.jpg';
+const FALLBACK_KEYWORDS = [
+  'calculateur remboursement cnops',
+  'calculateur remboursement cnss',
+  'médicaments remboursables maroc',
+  'assurance maladie obligatoire',
+  'taawidaty'
+];
+
+const localeMap: Record<SupportedLang, string> = {
+  fr: 'fr_MA',
+  ar: 'ar_MA',
+  en: 'en_US'
+};
+
+export const SEO = ({
   title = 'Calculateur Remboursement CNOPS CNSS Maroc | Taawidaty',
   description = 'Calculez instantanément votre remboursement médicaments CNOPS et CNSS au Maroc. Base de données complète des médicaments remboursables 2025. Gratuit et rapide.',
-  keywords = 'calculateur remboursement cnops, cnss maroc, médicaments remboursables, remboursement médicaments maroc, cnops en ligne, assurance maladie maroc',
-  lang = 'fr',
-  canonical = 'https://taawidaty.ma',
-  image = 'https://taawidaty.ma/og-image.jpg'
+  keywords = FALLBACK_KEYWORDS,
+  lang,
+  canonical = FALLBACK_CANONICAL,
+  image = FALLBACK_IMAGE,
+  alternates,
+  noindex = false,
+  structuredData = []
 }: SEOProps) => {
-  // Organization Schema
+  const normalizedKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+
+  const normalizedAlternates = (alternates && alternates.length > 0
+    ? alternates
+    : [
+        { hreflang: 'fr', href: canonical },
+        { hreflang: 'ar', href: canonical },
+        { hreflang: 'x-default', href: canonical }
+      ]).filter((alternate, index, array) =>
+        alternate.href && alternate.hreflang &&
+        array.findIndex((item) => item.hreflang === alternate.hreflang && item.href === alternate.href) === index
+      );
+
+  const ogLocale = lang ? localeMap[lang] ?? lang : undefined;
+  const robotsValue = noindex ? 'noindex, nofollow' : 'index, follow';
+
   const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Taawidaty",
-    "url": "https://taawidaty.ma",
-    "logo": "https://taawidaty.ma/logos/TAAWIDATY.png",
-    "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "MA"
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Taawidaty',
+    url: 'https://taawidaty.ma',
+    logo: 'https://taawidaty.ma/logos/TAAWIDATY.png',
+    description,
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'MA'
     },
-    "areaServed": "MA",
-    "sameAs": []
+    areaServed: 'MA',
+    sameAs: [] as string[]
   };
 
-  // WebApplication Schema
   const webAppSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Taawidaty",
-    "alternateName": "تعويضاتي",
-    "url": "https://taawidaty.ma",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "MAD"
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Taawidaty',
+    alternateName: 'تعويضاتي',
+    url: 'https://taawidaty.ma',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'MAD'
     },
-    "description": description,
-    "inLanguage": ["fr-MA", "ar-MA"],
-    "featureList": [
-      "Calculateur CNOPS",
-      "Calculateur CNSS",
-      "Base de données médicaments",
-      "Remboursement instantané"
+    description,
+    inLanguage: ['fr-MA', 'ar-MA'],
+    featureList: [
+      'Calculateur CNOPS',
+      'Calculateur CNSS',
+      'Base de données médicaments',
+      'Remboursement instantané'
     ],
-    "provider": {
-      "@type": "Organization",
-      "name": "Taawidaty",
-      "url": "https://taawidaty.ma"
+    provider: {
+      '@type': 'Organization',
+      name: 'Taawidaty',
+      url: 'https://taawidaty.ma'
     }
   };
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <html lang={lang} />
+      {lang && <html lang={lang} />}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {normalizedKeywords && <meta name="keywords" content={normalizedKeywords} />}
+      <meta name="robots" content={robotsValue} />
       <link rel="canonical" href={canonical} />
 
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={title} />
@@ -93,10 +135,10 @@ export const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Taawidaty" />
-      <meta property="og:locale" content="fr_MA" />
+      {ogLocale && <meta property="og:locale" content={ogLocale} />}
+      <meta property="og:locale:alternate" content="fr_MA" />
       <meta property="og:locale:alternate" content="ar_MA" />
 
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonical} />
       <meta name="twitter:title" content={title} />
@@ -104,20 +146,22 @@ export const SEO = ({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content="Taawidaty - Calculateur de remboursement CNOPS CNSS" />
 
-      {/* Language alternates - All point to same URL as language switching is client-side */}
-      <link rel="alternate" hreflang="fr" href="https://taawidaty.ma/" />
-      <link rel="alternate" hreflang="ar" href="https://taawidaty.ma/" />
-      <link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/" />
+      {normalizedAlternates.map((alternate) => (
+        <link
+          key={`${alternate.hreflang}-${alternate.href}`}
+          rel="alternate"
+          hreflang={alternate.hreflang}
+          href={alternate.href}
+        />
+      ))}
 
-      {/* Structured Data - Organization */}
-      <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </script>
-
-      {/* Structured Data - WebApplication */}
-      <script type="application/ld+json">
-        {JSON.stringify(webAppSchema)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(webAppSchema)}</script>
+      {structuredData.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 };

@@ -8,8 +8,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
+import { SEO } from '@/components/SEO';
 
 export default function MedicalDisclaimer() {
   const { language } = useLanguage();
@@ -538,14 +538,51 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
   };
 
   const current = content[language];
+  const pageUrl = 'https://taawidaty.ma/medical-disclaimer';
+  const metaDescription = language === 'ar'
+    ? 'اقرأ الإشعار الطبي الرسمي لمنصة تعويضاتي وتعرف على حدود استخدام المعلومات الصحية والتعليمية المقدمة.'
+    : 'Consultez l\'avertissement médical officiel de Taawidaty et comprenez les limites d\'usage des informations de santé fournies.';
+  const metaKeywords = language === 'ar'
+    ? [
+        'تحذير طبي تعويضاتي',
+        'سياسة طبية Taawidaty',
+        'مسؤولية تعويضات الأدوية',
+        'معلومات طبية المغرب',
+        'CNSS CNOPS تحذير'
+      ]
+    : [
+        'avertissement médical taawidaty',
+        'disclaimer médical maroc',
+        'responsabilite remboursement medicaments',
+        'politique sante taawidaty',
+        'cnss cnops avertissement'
+      ];
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: language === 'ar' ? 'الإشعار الطبي - تعويضاتي' : 'Avertissement Médical - Taawidaty',
+      description: metaDescription,
+      url: pageUrl,
+      inLanguage: language,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Taawidaty',
+        url: 'https://taawidaty.ma'
+      }
+    }
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>{current.title} - Taawidaty</title>
-        <meta name="description" content={current.mainWarning} />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <SEO
+        title={`${current.title} - Taawidaty`}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={pageUrl}
+        lang={language}
+        structuredData={structuredData}
+      />
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-red-50/30 via-white to-orange-50/20 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}

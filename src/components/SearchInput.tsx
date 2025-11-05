@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
+import type { KeyboardEvent } from 'react';
 import { Search, Loader2 } from 'lucide-react';
-import { motion, useInView } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { loadMedications } from '@/data/medicationsLoader';
 
@@ -34,6 +35,9 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  const listboxId = useId();
+  const activeOptionId = isOpen && selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined;
   const dir = language === 'ar' ? 'rtl' : 'ltr';
 
   useEffect(() => {
@@ -107,25 +111,42 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
     return () => clearTimeout(searchTimer);
   }, [query, insuranceType]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isOpen || results.length === 0) return;
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (!isOpen || results.length === 0) {
+      return;
+    }
 
-    switch (e.key) {
+    switch (event.key) {
       case 'ArrowDown':
-        e.preventDefault();
-        setSelectedIndex(prev => (prev < results.length - 1 ? prev + 1 : prev));
+        event.preventDefault();
+        setSelectedIndex((prev) => (prev < results.length - 1 ? prev + 1 : prev === -1 ? 0 : prev));
         break;
       case 'ArrowUp':
-        e.preventDefault();
-        setSelectedIndex(prev => (prev > 0 ? prev - 1 : 0));
+        event.preventDefault();
+        setSelectedIndex((prev) => (prev > 0 ? prev - 1 : results.length - 1));
+        break;
+      case 'Home':
+        event.preventDefault();
+        setSelectedIndex(0);
+        break;
+      case 'End':
+        event.preventDefault();
+        setSelectedIndex(results.length - 1);
         break;
       case 'Enter':
-        e.preventDefault();
-        if (selectedIndex >= 0) {
-          handleSelect(results[selectedIndex]);
+        event.preventDefault();
+        {
+          const option = selectedIndex >= 0 ? results[selectedIndex] : results[0];
+          if (option) {
+            handleSelect(option);
+          }
         }
         break;
       case 'Escape':
+        setIsOpen(false);
+        setSelectedIndex(-1);
+        break;
+      case 'Tab':
         setIsOpen(false);
         break;
     }
@@ -135,19 +156,41 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
     setQuery(result.name);
     setIsOpen(false);
     onSelect(result);
+    setSelectedIndex(-1);
   };
+
+  const dropdownInitial = prefersReducedMotion ? undefined : { opacity: 0, y: -10 };
+  const dropdownAnimate = { opacity: 1, y: 0 };
+  const dropdownTransition = prefersReducedMotion ? { duration: 0 } : { duration: 0.2 };
+  const itemInitial = prefersReducedMotion ? undefined : { scale: 0.95, opacity: 0 };
+  const itemAnimate = { scale: 1, opacity: 1 };
+  const itemTransition = (index: number) => (prefersReducedMotion ? { duration: 0 } : { duration: 0.2, delay: index * 0.03 });
 
   return (
     <div ref={wrapperRef} className="relative w-full">
       <div className="relative">
         <input
-          type="text"
+          type="search"
           dir={dir}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && setIsOpen(true)}
           placeholder={placeholder}
+          role="combobox"
+          aria-label={placeholder}
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          aria-expanded={isOpen}
+          aria-controls={isOpen ? listboxId : undefined}
+          aria-activedescendant={activeOptionId}
+          aria-busy={isLoading}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="none"
+          spellCheck={false}
+          inputMode="search"
+          enterKeyHint="search"
           className={cn(
             `w-full px-5 py-4 text-lg rounded-xl
             border-2 border-slate-300 dark:border-border
@@ -178,10 +221,12 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
 
       {isOpen && results.length > 0 && (
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
+          role="listbox"
+          id={listboxId}
+          aria-label={placeholder}
+          initial={dropdownInitial}
+          animate={dropdownAnimate}
+          transition={dropdownTransition}
           dir={dir}
           className={cn(
             `absolute z-50 w-full mt-2
@@ -193,10 +238,15 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
           {results.map((result, index) => (
             <motion.button
               key={result.id}
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.2, delay: index * 0.03 }}
+              type="button"
+              role="option"
+              id={`${listboxId}-option-${index}`}
+              aria-selected={selectedIndex === index}
+              initial={itemInitial}
+              animate={itemAnimate}
+              transition={itemTransition(index)}
               onClick={() => handleSelect(result)}
+              onMouseEnter={() => setSelectedIndex(index)}
               className={cn(
                 `search-result-item w-full px-5 py-4 text-left transition-colors
                 hover:bg-primary-50 dark:hover:bg-muted focus:bg-primary-50 dark:focus:bg-muted focus:outline-none
@@ -220,6 +270,8 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
 
       {isOpen && !isLoading && query.length >= 2 && results.length === 0 && (
         <div
+          role="status"
+          aria-live="polite"
           dir={dir}
           className={cn(
             "absolute z-50 w-full mt-2 bg-white dark:bg-card rounded-xl shadow-strong border-2 border-slate-200 dark:border-border p-5",

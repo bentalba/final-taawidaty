@@ -10,17 +10,19 @@
  * in derivative works without explicit permission.
  */
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import LanguageToggle from '@/components/LanguageToggle';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import SearchInput from '@/components/SearchInput';
 import ResultCard from '@/components/ResultCard';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { loadMedications } from '@/data/medicationsLoader';
 
 type InsuranceType = 'cnops' | 'cnss' | null;
 
@@ -43,8 +45,48 @@ interface CalculationResult {
 }
 
 export default function Index() {
-  const { language, toggleLanguage, isRTL } = useLanguage();
+  const { language, isRTL } = useLanguage();
   const t = translations[language];
+  const heroTitleSegments = useMemo(() => {
+    const words = t.hero.title.split(' ');
+    return {
+      leading: words.slice(0, -1).join(' '),
+      trailing: words.slice(-1)[0] ?? ''
+    };
+  }, [t.hero.title]);
+  const metaTitle = language === 'ar'
+    ? 'حاسبة تعويض CNOPS وCNSS في المغرب - تعويضاتي'
+    : 'Calculateur Remboursement CNOPS & CNSS Maroc 2025 | Taawidaty';
+  const metaDescription = t.hero.subtitle;
+  const metaKeywords = language === 'ar'
+    ? [
+        'حساب تعويض CNOPS',
+        'حساب تعويض CNSS',
+        'مصاريف الأدوية المغرب',
+        'تعويض الأدوية CNOPS CNSS',
+        'تعويضاتي'
+      ]
+    : [
+        'remboursement cnops',
+        'remboursement cnss',
+        'calculateur médicaments maroc',
+        'base de données médicaments remboursables',
+        'taawidaty'
+      ];
+  const structuredData = useMemo(() => [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Taawidaty',
+      url: 'https://taawidaty.ma',
+      inLanguage: language === 'ar' ? 'ar-MA' : 'fr-MA',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://taawidaty.ma/?query={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    }
+  ], [language]);
   const scrolled = useScrollPosition();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [insurance, setInsurance] = useState<InsuranceType>(null);
@@ -76,8 +118,45 @@ export default function Index() {
     setResult(null);
   };
 
+  useEffect(() => {
+    if (step !== 2 || !insurance) {
+      return;
+    }
+
+    let isCancelled = false;
+
+    const prefetch = async () => {
+      try {
+        await loadMedications(insurance);
+        const alternate = insurance === 'cnops' ? 'cnss' : 'cnops';
+        loadMedications(alternate).catch(() => {
+          /* optional prefetch failure is safe to ignore */
+        });
+      } catch (error) {
+        if (!isCancelled) {
+          console.error('Failed to prefetch medications', error);
+        }
+      }
+    };
+
+    prefetch();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [insurance, step]);
+
   return (
-    <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
+    <>
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        lang={language}
+        canonical="https://taawidaty.ma"
+        structuredData={structuredData}
+      />
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
       <header role="banner" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-card/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
         <div className={`glass border-b border-white/20 dark:border-gray-800/20 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
@@ -139,10 +218,10 @@ export default function Index() {
             {/* Modern heading with gradient text */}
             <h2 className={`text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
               <span className="text-gradient-modern block mb-2">
-                {t.hero.title.split(' ').slice(0, -1).join(' ')}
+                {heroTitleSegments.leading}
               </span>
               <span className="text-primary-600 dark:text-primary">
-                {t.hero.title.split(' ').slice(-1)[0]}
+                {heroTitleSegments.trailing}
               </span>
             </h2>
 
@@ -456,6 +535,7 @@ export default function Index() {
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }

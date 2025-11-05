@@ -8,8 +8,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
+import { SEO } from '@/components/SEO';
 
 export default function EditorialPolicy() {
   const { language } = useLanguage();
@@ -838,14 +838,51 @@ Taawidaty.ma هي **قاعدة بيانات معلوماتية** تجمع الم
   };
 
   const current = content[language];
+  const pageUrl = 'https://taawidaty.ma/editorial-policy';
+  const metaDescription = language === 'ar'
+    ? 'اطلع على السياسة التحريرية لمنصة تعويضاتي وكيفية إعداد المحتوى الطبي والتعليمي الخاص بالمنصة.'
+    : 'Découvrez la politique éditoriale de Taawidaty et notre approche de publication des contenus santé et remboursement.';
+  const metaKeywords = language === 'ar'
+    ? [
+        'سياسة تحرير تعويضاتي',
+        'مبادئ المحتوى الطبي',
+        'شفافية منصة Taawidaty',
+        'مصداقية محتوى CNSS CNOPS',
+        'قواعد التحرير الصحي'
+      ]
+    : [
+        'politique editoriale taawidaty',
+        'lignes directrices contenu sante',
+        'transparence taawidaty',
+        'fiabilite contenu cnss cnops',
+        'charte editoriale sante'
+      ];
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: language === 'ar' ? 'السياسة التحريرية - تعويضاتي' : 'Politique Éditoriale - Taawidaty',
+      description: metaDescription,
+      url: pageUrl,
+      inLanguage: language,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Taawidaty',
+        url: 'https://taawidaty.ma'
+      }
+    }
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>{current.title} - {current.subtitle}</title>
-        <meta name="description" content="Politique éditoriale de Taawidaty.ma - Transparence sur nos processus de création et vérification du contenu" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <SEO
+        title={`${current.title} - ${current.subtitle}`}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={pageUrl}
+        lang={language}
+        structuredData={structuredData}
+      />
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}

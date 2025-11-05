@@ -8,9 +8,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { FormattedContent } from '@/components/FormattedText';
+import { SEO } from '@/components/SEO';
 
 export default function TermsOfService() {
   const { language } = useLanguage();
@@ -33,6 +33,40 @@ export default function TermsOfService() {
   };
 
   const current = content[language];
+  const pageUrl = 'https://taawidaty.ma/terms-of-service';
+  const metaDescription = language === 'ar'
+    ? 'اكتشف شروط استخدام منصة تعويضاتي وخدماتها التعليمية حول تعويضات الأدوية في المغرب.'
+    : 'Consultez les conditions d\'utilisation complètes de Taawidaty, la plateforme marocaine dédiée aux remboursements de médicaments.';
+  const metaKeywords = language === 'ar'
+    ? [
+        'شروط استخدام تعويضاتي',
+        'سياسة Taawidaty',
+        'قواعد موقع التعويضات',
+        'تعويضات الأدوية المغرب',
+        'خدمة Taawidaty CNSS CNOPS'
+      ]
+    : [
+        'conditions utilisation taawidaty',
+        'politique taawidaty',
+        'remboursement medicaments maroc',
+        'regles service cnss cnops',
+        'site remboursement taawidaty'
+      ];
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: language === 'ar' ? 'شروط الاستخدام - تعويضاتي' : 'Conditions d\'Utilisation - Taawidaty',
+      description: metaDescription,
+      url: pageUrl,
+      inLanguage: language,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Taawidaty',
+        url: 'https://taawidaty.ma'
+      }
+    }
+  ];
 
   // French content
   const frenchContent = `# Conditions d'Utilisation - Taawidaty.ma
@@ -856,11 +890,14 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 
   return (
     <>
-      <Helmet>
-        <title>{current.title} - {current.subtitle}</title>
-        <meta name="description" content="Conditions d'utilisation complètes pour Taawidaty.ma - Base de données de médicaments au Maroc" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <SEO
+        title={`${current.title} - ${current.subtitle}`}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={pageUrl}
+        lang={language}
+        structuredData={structuredData}
+      />
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}

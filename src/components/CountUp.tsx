@@ -1,103 +1,74 @@
-import { useEffect, useRef, useState } from 'react';import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
+interface CountUpProps {
+  to: number;
+  from?: number;
+  duration?: number;
+  className?: string;
+  formatter?: (value: number) => string;
+}
 
+/**
+ * Animates a numeric value from `from` to `to` using requestAnimationFrame.
+ * Falls back to the final value instantly when the animation already ran
+ * within the same session (keeps the UI snappy when navigating back).
+ */
+export default function CountUp({
+  to,
+  from = 0,
+  duration = 1.5,
+  className = '',
+  formatter
+}: CountUpProps) {
+  const [value, setValue] = useState(from);
+  const frameRef = useRef<number>();
+  const startTimeRef = useRef<number | null>(null);
 
-export default function CountUp({export default function CountUp({
+  useEffect(() => {
+    if (!Number.isFinite(from) || !Number.isFinite(to) || duration <= 0) {
+      setValue(to);
+      return;
+    }
 
-  to,  to,
+    const hasSessionStorage = typeof window !== 'undefined' && typeof sessionStorage !== 'undefined';
+    const sessionKey = `countup-${from}-${to}-${duration}`;
 
-  from = 0,  from = 0,
+    if (hasSessionStorage && sessionStorage.getItem(sessionKey)) {
+      setValue(to);
+      return;
+    }
 
-  duration = 1.5,  duration = 1.5,
+    const animate = (timestamp: number) => {
+      if (startTimeRef.current === null) {
+        startTimeRef.current = timestamp;
+      }
 
-  className = '',  className = '',
+      const elapsed = timestamp - startTimeRef.current;
+      const progress = Math.min(elapsed / (duration * 1000), 1);
+      const nextValue = from + (to - from) * progress;
+      setValue(nextValue);
 
-  formatter,  formatter,
+      if (progress < 1) {
+        frameRef.current = requestAnimationFrame(animate);
+      } else if (hasSessionStorage) {
+        sessionStorage.setItem(sessionKey, 'true');
+      }
+    };
 
-}: {}: {
+    frameRef.current = requestAnimationFrame(animate);
 
-  to: number;  to: number;
+    return () => {
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+      }
+      frameRef.current = undefined;
+      startTimeRef.current = null;
+    };
+  }, [from, to, duration]);
 
-  from?: number;  from?: number;
+  const displayValue = formatter
+    ? formatter(value)
+    : new Intl.NumberFormat(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
 
-  duration?: number;  duration?: number;
-
-  className?: string;  className?: string;
-
-  formatter?: (value: number) => string;  formatter?: (value: number) => string;
-
-}) {}) {
-
-  const [count, setCount] = useState(from);  const [count, setCount] = useState(from);
-
-  const [hasAnimated, setHasAnimated] = useState(false);  const [hasAnimated, setHasAnimated] = useState(false);
-
-  const ref = useRef<HTMLSpanElement>(null);  const ref = useRef<HTMLSpanElement>(null);
-
-
-
-  useEffect(() => {  useEffect(() => {
-
-    // Check if already animated in this session    // Check if already animated in this session
-
-    const sessionKey = `countup-${to}-${from}`;    const sessionKey = `countup-${to}-${from}`;
-
-    if (sessionStorage.getItem(sessionKey) || hasAnimated) {    if (sessionStorage.getItem(sessionKey) || hasAnimated) {
-
-      setCount(to);      setCount(to);
-
-      return;      return;
-
-    }    }
-
-
-
-    // CSS-based counting animation    // CSS-based counting animation
-
-    const increment = (to - from) / (duration * 60); // 60fps    const increment = (to - from) / (duration * 60); // 60fps
-
-    let current = from;    let current = from;
-
-    const timer = setInterval(() => {    const timer = setInterval(() => {
-
-      current += increment;      current += increment;
-
-      if (current >= to) {      if (current >= to) {
-
-        current = to;        current = to;
-
-        clearInterval(timer);        clearInterval(timer);
-
-        sessionStorage.setItem(sessionKey, 'true');        sessionStorage.setItem(sessionKey, 'true');
-
-        setHasAnimated(true);        setHasAnimated(true);
-
-      }      }
-
-      setCount(current);      setCount(current);
-
-    }, 1000 / 60);    }, 1000 / 60);
-
-
-
-    return () => clearInterval(timer);    return () => clearInterval(timer);
-
-  }, [to, from, duration, hasAnimated]);  }, [to, from, duration, hasAnimated]);
-
-
-
-  const displayValue = formatter ? formatter(count) : count.toFixed(2);  const displayValue = formatter ? formatter(count) : count.toFixed(2);
-
-
-
-  return (  return (
-
-    <span ref={ref} className={className}>    <span ref={ref} className={className}>
-
-      {displayValue}      {displayValue}
-
-    </span>    </span>
-
-  );  );
-
-}}
+  return <span className={className}>{displayValue}</span>;
+}

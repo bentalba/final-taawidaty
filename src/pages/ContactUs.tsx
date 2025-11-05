@@ -8,8 +8,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowLeft, Mail, MessageSquare, Bug, Lightbulb, Shield, Scale, AlertCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
+import { SEO } from '@/components/SEO';
 
 export default function ContactUs() {
   const { language } = useLanguage();
@@ -642,6 +642,41 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
   };
 
   const current = content[language];
+  const pageUrl = 'https://taawidaty.ma/contact-us';
+  const metaDescription = language === 'ar'
+    ? 'تواصل مع تعويضاتي للحصول على دعم شخصي حول تعويضات CNSS وCNOPS والإجابة عن أسئلتك بسرعة.'
+    : 'Contactez Taawidaty pour obtenir un accompagnement personnalisé sur vos remboursements CNSS et CNOPS et des réponses rapides à vos questions.';
+  const metaKeywords = language === 'ar'
+    ? [
+        'اتصل تعويضاتي',
+        'دعم تعويض cnss',
+        'مساندة تعويض cnops',
+        'خدمة زبناء التعويضات',
+        'أسئلة تعويض CNSS CNOPS'
+      ]
+    : [
+        'contact taawidaty',
+        'assistance remboursement cnss',
+        'support remboursement cnops',
+        'contact assurance santé maroc',
+        'questions remboursement cnss cnops'
+      ];
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: language === 'ar' ? 'اتصل بمنصة تعويضاتي' : 'Contact Taawidaty',
+      description: metaDescription,
+      url: pageUrl,
+      mainEntity: {
+        '@type': 'Organization',
+        name: 'Taawidaty',
+        email: 'contact@taawidaty.ma',
+        telephone: '+212661112233',
+        sameAs: ['https://www.linkedin.com/company/taawidaty']
+      }
+    }
+  ];
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -658,11 +693,14 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
 
   return (
     <>
-      <Helmet>
-        <title>{current.title} - Taawidaty</title>
-        <meta name="description" content={current.intro} />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <SEO
+        title={`${current.title} - Taawidaty`}
+        description={metaDescription}
+        keywords={metaKeywords}
+        canonical={pageUrl}
+        lang={language}
+        structuredData={structuredData}
+      />
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}

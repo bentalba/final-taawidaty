@@ -8,7 +8,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { FormattedContent } from '@/components/FormattedText';
 
@@ -16,6 +16,7 @@ export default function PrivacyPolicy() {
   const { language } = useLanguage();
   const navigate = useNavigate();
   const isRTL = language === 'ar';
+  const canonical = 'https://taawidaty.ma/privacy-policy';
 
   const content = {
     fr: {
@@ -450,14 +451,32 @@ Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.`
   };
 
   const current = content[language];
+  const metaTitle = `${current.title} | Taawidaty`;
+  const metaDescription = current.intro;
+  const metaKeywords = language === 'ar'
+    ? ['سياسة الخصوصية', 'حماية البيانات', 'تعويضاتي']
+    : ['politique de confidentialité', 'protection des données', 'taawidaty'];
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: current.title,
+      url: canonical,
+      inLanguage: language === 'ar' ? 'ar-MA' : 'fr-MA',
+      description: current.intro
+    }
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>{current.title} - Taawidaty</title>
-        <meta name="description" content={current.intro} />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        lang={language}
+        canonical={canonical}
+        structuredData={structuredData}
+      />
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}

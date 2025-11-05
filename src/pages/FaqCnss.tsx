@@ -5,7 +5,18 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/SEO';
+
+const STRIP_HTML_REGEX = /<[^>]+>/g;
+
+const stripHtmlSafely = (html: string): string => {
+  if (typeof window === 'undefined') {
+    return html.replace(STRIP_HTML_REGEX, '');
+  }
+  const tmp = window.document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+};
 
 interface FaqQuestion {
   question: string;
@@ -18,13 +29,12 @@ const FaqCnss = () => {
   const faq = faqData[language].cnss;
   const navigate = useNavigate();
   const isRTL = language === 'ar';
-
-  // Helper function to strip HTML tags safely
-  const stripHtml = (html: string): string => {
-    const tmp = document.createElement('div');
-    tmp.innerHTML = html;
-    return tmp.textContent || tmp.innerText || '';
-  };
+  const canonical = 'https://taawidaty.ma/faq-cnss';
+  const metaTitle = `${faq.title} | Taawidaty`;
+  const metaDescription = faq.subtitle;
+  const metaKeywords = language === 'ar'
+    ? ['أسئلة شائعة CNSS', 'تعويض CNSS', 'استرجاع CNSS']
+    : ['faq cnss', 'remboursement cnss', 'questions cnss'];
 
   // Generate FAQ Schema
   const faqSchema = {
@@ -35,7 +45,7 @@ const FaqCnss = () => {
       "name": q.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": stripHtml(q.answer)
+        "text": stripHtmlSafely(q.answer)
       }
     }))
   };
@@ -62,16 +72,14 @@ const FaqCnss = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{faq.title}</title>
-        <meta name="description" content={faq.subtitle} />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-      </Helmet>
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        keywords={metaKeywords}
+        lang={language}
+        canonical={canonical}
+        structuredData={[faqSchema, breadcrumbSchema]}
+      />
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Warm background elements */}
       <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
