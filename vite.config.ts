@@ -2,10 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode }: { mode: string }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -13,21 +12,15 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(), 
     mode === "development" && componentTagger(),
-    mode === 'analyze' && visualizer({
-      open: true,
-      filename: 'dist/stats.html',
-      gzipSize: true,
-      brotliSize: true,
-    }),
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve("./src"),
     },
   },
   build: {
     cssCodeSplit: true,
-    sourcemap: mode === 'development',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -37,8 +30,9 @@ export default defineConfig(({ mode }) => ({
           'animation-vendor': ['framer-motion'],
           'i18n-vendor': ['react-i18next', 'i18next'],
         },
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.').at(1);
+        assetFileNames: (assetInfo: any) => {
+          const name = assetInfo.name || '';
+          let extType = name.split('.').at(1) || 'asset';
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'img';
           } else if (/woff|woff2/.test(extType)) {
@@ -49,17 +43,6 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
       }
-    },
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production',
-        pure_funcs: mode === 'production' ? ['console.log', 'console.info', 'console.debug'] : [],
-      },
-      format: {
-        comments: false,
-      },
     },
     target: 'es2015',
     cssMinify: true,
