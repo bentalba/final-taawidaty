@@ -5,17 +5,19 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import BaseLayout from '@/layouts/BaseLayout';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, Cookie, BarChart, Target, Settings, Info, AlertCircle } from 'lucide-react';
+import { Shield, Cookie, BarChart, Target, Settings, Info, AlertCircle, ArrowLeft } from 'lucide-react';
 import { updateConsent, getConsentState } from '@/utils/consentManager';
 
 export default function CookiePreferences() {
   const { language } = useLanguage();
+  const navigate = useNavigate();
+  const isRTL = language === 'ar';
   const [analyticsConsent, setAnalyticsConsent] = useState(false);
   const [adsConsent, setAdsConsent] = useState(false);
   const [functionalConsent, setFunctionalConsent] = useState(true); // Always true - essential
@@ -160,15 +162,35 @@ export default function CookiePreferences() {
 
   const currentState = getConsentState();
 
-  return (
-    <BaseLayout>
-      <Helmet>
-        <title>{t.title} - TAAWIDATY</title>
-        <meta name="description" content={t.description} />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+  const metaTitle = language === 'ar' ? 'تفضيلات ملفات تعريف الارتباط - TAAWIDATY' : 'Préférences de Cookies - TAAWIDATY';
+  const metaDescription = t.description;
 
-      <div className={`min-h-screen py-20 ${language === 'ar' ? 'rtl' : 'ltr'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
+  return (
+    <>
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        lang={language}
+        canonical="https://taawidaty.ma/cookie-preferences"
+      />
+
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
+        {/* Header */}
+        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+          <div className="container mx-auto px-4 py-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate(-1)}
+              className="gap-2"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {language === 'ar' ? 'رجوع' : 'Retour'}
+            </Button>
+          </div>
+        </header>
+
+        <div className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Header */}
           <div className="text-center mb-12">
@@ -377,7 +399,8 @@ export default function CookiePreferences() {
             </Card>
           </div>
         </div>
+        </div>
       </div>
-    </BaseLayout>
+    </>
   );
 }
