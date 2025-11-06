@@ -7,44 +7,100 @@ import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { Search, Pill, AlertTriangle, Check, Zap, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Fuse from 'fuse.js';
-import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { analytics } from '@/lib/analytics';
 import { Skeleton } from '@/components/ui/EnhancedComponents';
+import { loadMedications } from '@/data/medicationsLoader';
 
-interface Medication {
-  id: string;
+interface SearchResult {
+  id: number;
   name: string;
-  genericName: string;
-  dosage: string;
-  form: 'tablet' | 'capsule' | 'syrup' | 'injection';
+  dci?: string;
+  dosage?: string;
   ppv: number;
-  reimbursementRate: {
-    cnops: number;
-    cnss: number;
-  };
-  safetyLevel: 'safe' | 'warning' | 'restricted';
-  requiresPrescription: boolean;
+  base_remb: number;
+  taux_remb: number;
+  forme?: string;
+  presentation?: string;
 }
 
 interface MedicationSearchEnhancedProps {
-  medications: Medication[];
-  onSelect: (medication: Medication) => void;
+  placeholder: string;
+  onSelect: (medication: SearchResult) => void;
+  language: 'ar' | 'fr';
   insuranceType: 'cnops' | 'cnss';
 }
 
+// Separate caches for each insurance type
+let cnopsCache: SearchResult[] | null = null;
+let cnssCache: SearchResult[] | null = null;
+
 export function MedicationSearchEnhanced({
-  medications,
+  placeholder,
   onSelect,
+  language,
   insuranceType,
 }: MedicationSearchEnhancedProps) {
-  const { t } = useTranslation();
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [isSearching, setIsSearching] = useState(false);
+  const [medications, setMedications] = useState<SearchResult[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const searchTimeout = useRef<NodeJS.Timeout>();
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Load medications on mount and when insurance type changes
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        // Get the appropriate cache for this insurance type
+        const currentCache = insuranceType === 'cnss' ? cnssCache : cnopsCache;
+
+        // Load medications if not cached
+        if (!currentCache) {
+          const data = await loadMedications(insuranceType);
+          const mappedData = data.map((med: any) => ({
+            id: med.id,
+            name: med.name,
+            dci: med.dci,
+            dosage: med.dosage,
+            ppv: med.ppv,
+            base_remb: med.prix_br,
+            taux_remb: med.taux_remb,
+            forme: med.forme,
+            presentation: med.presentation
+          }));
+
+          // Store in appropriate cache
+          if (insuranceType === 'cnss') {
+            cnssCache = mappedData;
+          } else {
+            cnopsCache = mappedData;
+          }
+
+          setMedications(mappedData);
+        } else {
+          setMedications(currentCache);
+        }
+      } catch (error) {
+        console.error('Error loading medications:', error);
+      }
+    };
+
+    loadData();
+  }, [insuranceType]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsFocused(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Fuzzy search configuration
   const fuse = useMemo(
@@ -52,7 +108,7 @@ export function MedicationSearchEnhanced({
       new Fuse(medications, {
         keys: [
           { name: 'name', weight: 0.6 },
-          { name: 'genericName', weight: 0.4 },
+          { name: 'dci', weight: 0.4 },
           { name: 'dosage', weight: 0.2 },
         ],
         threshold: 0.3,
@@ -65,24 +121,12 @@ export function MedicationSearchEnhanced({
 
   // Search results with filtering
   const results = useMemo(() => {
-    if (!query.trim()) return [];
+    if (!query.trim() || query.length < 2) return [];
 
     const searchResults = fuse.search(query).slice(0, 8);
 
-    return searchResults
-      .map((r) => ({ ...r.item, score: r.score }))
-      .filter((med) => {
-        return med.reimbursementRate[insuranceType] > 0;
-      })
-      .sort((a, b) => {
-        if (a.safetyLevel === b.safetyLevel) {
-          return (a.score || 0) - (b.score || 0);
-        }
-        if (a.safetyLevel === 'safe') return -1;
-        if (b.safetyLevel === 'safe') return 1;
-        return 0;
-      });
-  }, [query, fuse, insuranceType]);
+    return searchResults.map((r) => r.item);
+  }, [query, fuse]);
 
   // Handle query change with debounce
   const handleQueryChange = (value: string) => {
@@ -132,9 +176,11 @@ export function MedicationSearchEnhanced({
   }, [selectedIndex]);
 
   const handleSelect = useCallback(
-    (medication: Medication, position: number) => {
+    (medication: SearchResult, position: number) => {
       // Track selection analytics
-      analytics.trackMedicationSelect(medication.id, medication.name, position);
+      if (analytics?.trackMedicationSelect) {
+        analytics.trackMedicationSelect(medication.id.toString(), medication.name, position);
+      }
 
       onSelect(medication);
       setQuery('');
@@ -146,26 +192,10 @@ export function MedicationSearchEnhanced({
 
   // Track search analytics
   useEffect(() => {
-    if (query && results.length > 0 && !isSearching) {
+    if (query && results.length > 0 && !isSearching && analytics?.trackSearch) {
       analytics.trackSearch(query, results.length);
     }
   }, [query, results.length, isSearching]);
-
-  const getSafetyIcon = (safety: Medication['safetyLevel']) => {
-    switch (safety) {
-      case 'safe':
-        return <Check className="w-4 h-4 text-success-green" />;
-      case 'warning':
-        return <AlertTriangle className="w-4 h-4 text-yellow-500 animate-pulse-subtle" />;
-      case 'restricted':
-        return (
-          <AlertTriangle
-            className="w-4 h-4 text-red-500 animate-pulse"
-            data-testid="warning-icon"
-          />
-        );
-    }
-  };
 
   const quickSuggestions = [
     'Doliprane',
@@ -176,8 +206,10 @@ export function MedicationSearchEnhanced({
     'Efferalgan',
   ];
 
+  const dir = language === 'ar' ? 'rtl' : 'ltr';
+
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto" dir={dir}>
       {/* Search Input */}
       <motion.div
         animate={{
@@ -210,9 +242,12 @@ export function MedicationSearchEnhanced({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 200)}
           onKeyDown={handleKeyDown}
-          placeholder={t('search.placeholder', 'Rechercher un médicament...')}
-          className="w-full pl-12 pr-4 py-4 text-lg bg-transparent border-none outline-none rounded-2xl"
-          aria-label={t('search.aria.label')}
+          placeholder={placeholder}
+          className={cn(
+            "w-full py-4 text-lg bg-transparent border-none outline-none rounded-2xl",
+            language === 'ar' ? 'pr-12 pl-4 font-arabic text-right' : 'pl-12 pr-4'
+          )}
+          aria-label={placeholder}
           aria-describedby="search-help"
           aria-autocomplete="list"
           aria-controls="search-results"
@@ -242,7 +277,7 @@ export function MedicationSearchEnhanced({
       </motion.div>
 
       <div id="search-help" className="sr-only">
-        {t('search.aria.help')}
+        {language === 'ar' ? 'البحث عن الأدوية' : 'Rechercher un médicament'}
       </div>
 
       {/* Search Results Dropdown */}
@@ -254,9 +289,9 @@ export function MedicationSearchEnhanced({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-            className="absolute top-full mt-3 w-full bg-white rounded-2xl shadow-2xl border border-neutral-100 overflow-hidden z-50 max-h-96 overflow-y-auto"
+            className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-2xl border border-neutral-100 dark:border-border overflow-hidden z-50 max-h-96 overflow-y-auto"
             role="listbox"
-            aria-label={t('search.aria.label')}
+            aria-label={placeholder}
           >
             {results.map((medication, index) => (
               <motion.button
@@ -296,46 +331,43 @@ export function MedicationSearchEnhanced({
                   className="flex-shrink-0 relative z-10"
                   whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
                 >
-                  <Pill
-                    className={cn(
-                      'w-6 h-6',
-                      medication.safetyLevel === 'safe' && 'text-success-green',
-                      medication.safetyLevel === 'warning' && 'text-yellow-500',
-                      medication.safetyLevel === 'restricted' && 'text-red-500'
-                    )}
-                  />
+                  <Pill className="w-6 h-6 text-trust-blue" />
                 </motion.div>
 
                 {/* Medication Info */}
                 <div className="flex-1 min-w-0 relative z-10">
-                  <div className="flex items-center gap-2 mb-1">
-                    <p className="font-semibold text-neutral-900 truncate">
-                      {medication.name}
-                    </p>
-                    {getSafetyIcon(medication.safetyLevel)}
-                  </div>
-                  <p className="text-sm text-neutral-600 truncate">
-                    {medication.genericName} • {medication.dosage} •{' '}
-                    {medication.form}
+                  <p className={cn(
+                    "font-semibold text-neutral-900 dark:text-foreground truncate mb-1",
+                    language === 'ar' && 'font-arabic'
+                  )}>
+                    {medication.name}
                   </p>
+                  {medication.dci && (
+                    <p className={cn(
+                      "text-sm text-neutral-600 dark:text-muted-foreground truncate",
+                      language === 'ar' && 'font-arabic'
+                    )}>
+                      {medication.dci}{medication.dosage && ` • ${medication.dosage}`}
+                    </p>
+                  )}
                 </div>
 
                 {/* Price & Coverage */}
                 <div className="flex-shrink-0 text-right relative z-10">
                   <motion.p
-                    className="font-semibold text-trust-blue"
+                    className="font-semibold text-trust-blue dark:text-primary"
                     whileHover={{ scale: 1.1 }}
                   >
                     {medication.ppv} MAD
                   </motion.p>
                   <motion.div
-                    className="flex items-center gap-1 text-sm text-success-green"
+                    className="flex items-center gap-1 text-sm text-success-green justify-end"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.05 + 0.2 }}
                   >
                     <TrendingUp className="w-3 h-3" />
-                    <span>{medication.reimbursementRate[insuranceType]}%</span>
+                    <span>{medication.taux_remb}%</span>
                   </motion.div>
                 </div>
               </motion.button>
@@ -372,11 +404,14 @@ export function MedicationSearchEnhanced({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full mt-3 w-full bg-white rounded-2xl shadow-xl border border-neutral-100 p-4 z-40"
+          className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-xl border border-neutral-100 dark:border-border p-4 z-40"
         >
-          <p className="text-sm font-medium text-neutral-600 mb-3 flex items-center gap-2">
+          <p className={cn(
+            "text-sm font-medium text-neutral-600 dark:text-muted-foreground mb-3 flex items-center gap-2",
+            language === 'ar' && 'font-arabic'
+          )}>
             <Zap className="w-4 h-4" />
-            {t('search.suggestions', 'Médicaments populaires')}
+            {language === 'ar' ? 'أدوية شائعة' : 'Médicaments populaires'}
           </p>
           <div className="grid grid-cols-2 gap-2">
             {quickSuggestions.map((med, index) => (
@@ -401,25 +436,31 @@ export function MedicationSearchEnhanced({
       )}
 
       {/* No Results */}
-      {query && results.length === 0 && !isSearching && (
+      {query && query.length >= 2 && results.length === 0 && !isSearching && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full mt-3 w-full bg-white rounded-2xl shadow-xl border border-neutral-100 p-6 z-40 text-center"
+          className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-xl border border-neutral-100 dark:border-border p-6 z-40 text-center"
         >
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 200 }}
-            className="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-3"
+            className="w-16 h-16 bg-neutral-100 dark:bg-muted rounded-full flex items-center justify-center mx-auto mb-3"
           >
             <Search className="w-8 h-8 text-neutral-400" />
           </motion.div>
-          <p className="text-neutral-600 font-medium mb-1">
-            Aucun résultat trouvé
+          <p className={cn(
+            "text-neutral-600 dark:text-muted-foreground font-medium mb-1",
+            language === 'ar' && 'font-arabic'
+          )}>
+            {language === 'ar' ? 'لم يتم العثور على نتائج' : 'Aucun résultat trouvé'}
           </p>
-          <p className="text-sm text-neutral-500">
-            Essayez avec un autre nom de médicament
+          <p className={cn(
+            "text-sm text-neutral-500 dark:text-muted-foreground",
+            language === 'ar' && 'font-arabic'
+          )}>
+            {language === 'ar' ? 'حاول باسم دواء آخر' : 'Essayez avec un autre nom de médicament'}
           </p>
         </motion.div>
       )}

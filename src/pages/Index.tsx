@@ -15,10 +15,12 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import LanguageToggle from '@/components/LanguageToggle';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import SearchInput from '@/components/SearchInput';
+import { MedicationSearchEnhanced } from '@/components/medication/MedicationSearchEnhanced';
 import ResultCard from '@/components/ResultCard';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
+import { SuccessCelebration } from '@/components/ui/Confetti';
+import { EnhancedCard } from '@/components/ui/EnhancedComponents';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -92,6 +94,7 @@ export default function Index() {
   const [insurance, setInsurance] = useState<InsuranceType>(null);
   const [medication, setMedication] = useState<Medication | null>(null);
   const [result, setResult] = useState<CalculationResult | null>(null);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const calculateReimbursement = () => {
     if (!medication || !insurance) return;
@@ -109,6 +112,9 @@ export default function Index() {
     });
 
     setStep(3);
+
+    // Show confetti celebration
+    setShowConfetti(true);
   };
 
   const reset = () => {
@@ -116,6 +122,7 @@ export default function Index() {
     setInsurance(null);
     setMedication(null);
     setResult(null);
+    setShowConfetti(false);
   };
 
   useEffect(() => {
@@ -301,99 +308,97 @@ export default function Index() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <button
+              <EnhancedCard
                 onClick={() => {
                   setInsurance('cnops');
                   setStep(2);
                 }}
-                className="group relative p-8 rounded-3xl glass-card hover-lift hover-glow border-2 border-transparent hover:border-primary-200 dark:hover:border-primary transition-all duration-500 animate-slide-in-left"
+                hoverable={true}
+                glowOnHover={true}
+                animateOnMount={true}
+                delay={0}
+                className="cursor-pointer p-8 animate-slide-in-left"
               >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="relative z-10">
-                  <div className="flex justify-center mb-8">
-                    <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating group-hover:scale-110 transition-transform duration-300">
-                      <picture>
-                        <source srcSet="/logos/cnops-logo.webp" type="image/webp" />
-                        <img
-                          src="/logos/cnops-logo.png"
-                          alt="CNOPS Logo"
-                          width="140"
-                          height="140"
-                          loading="lazy"
-                          className="h-full w-auto object-contain"
-                          onError={(e) => {
-                            // Fallback to emoji if image not found
-                            e.currentTarget.style.display = 'none';
-                            const fallback = document.createElement('div');
-                            fallback.className = 'text-6xl flex items-center justify-center h-full';
-                            fallback.textContent = '🏥';
-                            e.currentTarget.parentElement?.appendChild(fallback);
-                          }}
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
-                    {t.calculator.cnops}
-                  </h3>
-                  <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                    {t.calculator.cnopsDesc}
-                  </p>
-                  <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
-                    <span>{t.hero.cta}</span>
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <div className="flex justify-center mb-8">
+                  <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating transition-transform duration-300 hover:scale-110">
+                    <picture>
+                      <source srcSet="/logos/cnops-logo.webp" type="image/webp" />
+                      <img
+                        src="/logos/cnops-logo.png"
+                        alt="CNOPS Logo"
+                        width="140"
+                        height="140"
+                        loading="lazy"
+                        className="h-full w-auto object-contain"
+                        onError={(e) => {
+                          // Fallback to emoji if image not found
+                          e.currentTarget.style.display = 'none';
+                          const fallback = document.createElement('div');
+                          fallback.className = 'text-6xl flex items-center justify-center h-full';
+                          fallback.textContent = '🏥';
+                          e.currentTarget.parentElement?.appendChild(fallback);
+                        }}
+                      />
+                    </picture>
                   </div>
                 </div>
-              </button>
+                <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
+                  {t.calculator.cnops}
+                </h3>
+                <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                  {t.calculator.cnopsDesc}
+                </p>
+                <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
+                  <span>{t.hero.cta}</span>
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </div>
+              </EnhancedCard>
 
-              <button
+              <EnhancedCard
                 onClick={() => {
                   setInsurance('cnss');
                   setStep(2);
                 }}
-                className="group relative p-8 rounded-3xl glass-card hover-lift hover-glow border-2 border-transparent hover:border-primary-200 dark:hover:border-primary transition-all duration-500 animate-slide-in-right"
+                hoverable={true}
+                glowOnHover={true}
+                animateOnMount={true}
+                delay={0.1}
+                className="cursor-pointer p-8 animate-slide-in-right"
               >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="relative z-10">
-                  <div className="flex justify-center mb-8">
-                    <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating group-hover:scale-110 transition-transform duration-300">
-                      <picture>
-                        <source srcSet="/logos/cnss-logo.webp" type="image/webp" />
-                        <img
-                          src="/logos/cnss-logo.png"
-                          alt="CNSS Logo"
-                          width="140"
-                          height="140"
-                          loading="lazy"
-                          className="h-full w-auto object-contain"
-                          onError={(e) => {
-                            // Fallback to emoji if image not found
-                            e.currentTarget.style.display = 'none';
-                            const fallback = document.createElement('div');
-                            fallback.className = 'text-6xl flex items-center justify-center h-full';
-                            fallback.textContent = '👷';
-                            e.currentTarget.parentElement?.appendChild(fallback);
-                          }}
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
-                    {t.calculator.cnss}
-                  </h3>
-                  <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                    {t.calculator.cnssDesc}
-                  </p>
-                  <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
-                    <span>{t.hero.cta}</span>
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <div className="flex justify-center mb-8">
+                  <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating transition-transform duration-300 hover:scale-110">
+                    <picture>
+                      <source srcSet="/logos/cnss-logo.webp" type="image/webp" />
+                      <img
+                        src="/logos/cnss-logo.png"
+                        alt="CNSS Logo"
+                        width="140"
+                        height="140"
+                        loading="lazy"
+                        className="h-full w-auto object-contain"
+                        onError={(e) => {
+                          // Fallback to emoji if image not found
+                          e.currentTarget.style.display = 'none';
+                          const fallback = document.createElement('div');
+                          fallback.className = 'text-6xl flex items-center justify-center h-full';
+                          fallback.textContent = '👷';
+                          e.currentTarget.parentElement?.appendChild(fallback);
+                        }}
+                      />
+                    </picture>
                   </div>
                 </div>
-              </button>
+                <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
+                  {t.calculator.cnss}
+                </h3>
+                <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                  {t.calculator.cnssDesc}
+                </p>
+                <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
+                  <span>{t.hero.cta}</span>
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </div>
+              </EnhancedCard>
             </div>
           </div>
           </div>
@@ -432,7 +437,7 @@ export default function Index() {
               </p>
             </div>
 
-            <SearchInput
+            <MedicationSearchEnhanced
               placeholder={t.calculator.searchPlaceholder}
               onSelect={(selected) => setMedication(selected as Medication)}
               language={language}
@@ -536,6 +541,13 @@ export default function Index() {
         </div>
       </footer>
       </div>
+
+      {/* Confetti Celebration */}
+      <SuccessCelebration
+        show={showConfetti}
+        message={language === 'ar' ? '🎉 تم الحساب بنجاح!' : '🎉 Calcul terminé !'}
+        onComplete={() => setShowConfetti(false)}
+      />
     </>
   );
 }
