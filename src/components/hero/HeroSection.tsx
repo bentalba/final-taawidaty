@@ -34,10 +34,16 @@ function InsuranceCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.5 }}
       onClick={onSelect}
+      whileHover={{
+        scale: 1.02,
+        y: -4,
+        transition: { type: "spring", stiffness: 400, damping: 17 }
+      }}
+      whileTap={{ scale: 0.98 }}
       className={cn(
         "relative group w-full text-left",
         "bg-white rounded-2xl p-6 border-2 transition-all duration-300",
-        "hover:shadow-medium hover:-translate-y-1",
+        "hover:shadow-strong",
         "focus:outline-none focus:ring-2 focus:ring-trust-blue focus:ring-offset-2",
         isSelected
           ? "border-trust-blue shadow-glow-blue"
@@ -72,16 +78,17 @@ function InsuranceCard({
       )}
 
       {/* Icon */}
-      <div
+      <motion.div
         className={cn(
           "w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-colors",
           isSelected
             ? "bg-trust-blue text-white"
             : "bg-trust-blue/10 text-trust-blue group-hover:bg-trust-blue/20"
         )}
+        whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
       >
         <Icon className="w-7 h-7" />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <h3 className="text-xl font-bold text-neutral-900 mb-1">{title}</h3>
