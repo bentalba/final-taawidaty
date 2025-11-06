@@ -195,7 +195,7 @@ export default function Index() {
                       alt="Taawidaty logo"
                       width="48"
                       height="48"
-                      className={`relative w-auto group-hover:scale-105 transition-all duration-300 ${scrolled ? 'h-8' : 'h-12'}`}
+                      className={`relative group-hover:scale-105 transition-all duration-300 aspect-square ${scrolled ? 'h-8 w-8' : 'h-12 w-12'}`}
                     />
                   </picture>
                 </div>
@@ -321,7 +321,7 @@ export default function Index() {
                 <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.calculator.cnopsDesc}
                 </p>
-                <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
+                <div className={`flex items-center justify-center gap-3 text-primary-700 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
                   <span>{t.hero.cta}</span>
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
@@ -367,7 +367,7 @@ export default function Index() {
                 <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.calculator.cnssDesc}
                 </p>
-                <div className={`flex items-center justify-center gap-3 text-primary-600 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
+                <div className={`flex items-center justify-center gap-3 text-primary-700 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
                   <span>{t.hero.cta}</span>
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>

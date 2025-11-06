@@ -332,8 +332,14 @@ class Analytics {
 
   /**
    * Send event to custom backend
+   * Disabled: No analytics backend configured
    */
   private async sendToBackend(event: AnalyticsEvent): Promise<void> {
+    // Analytics backend is not configured - skip API call
+    // TODO: Enable this when backend analytics endpoint is ready
+    return;
+
+    /* Commented out until backend is configured
     if (process.env.NODE_ENV !== 'production') return;
 
     try {
@@ -355,6 +361,7 @@ class Analytics {
       // Silent fail for analytics
       console.debug('Analytics backend error:', error);
     }
+    */
   }
 }
 
