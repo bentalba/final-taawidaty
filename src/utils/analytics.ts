@@ -388,14 +388,38 @@ export function setUserProperties(properties: {
 
 /**
  * Consent management (GDPR/Cookie compliance)
+ * Updated for Google Consent Mode v2 and IAB TCF compliance
  */
 export function updateConsent(granted: boolean) {
   if (typeof window === 'undefined' || !(window as any).gtag) return;
 
   (window as any).gtag('consent', 'update', {
-    analytics_storage: granted ? 'granted' : 'denied',
-    ad_storage: granted ? 'granted' : 'denied',
+    'analytics_storage': granted ? 'granted' : 'denied',
+    'ad_storage': granted ? 'granted' : 'denied',
+    'ad_user_data': granted ? 'granted' : 'denied',
+    'ad_personalization': granted ? 'granted' : 'denied',
+    'personalization_storage': granted ? 'granted' : 'denied',
   });
+}
+
+/**
+ * Check if analytics consent has been granted
+ */
+export function hasAnalyticsConsent(): boolean {
+  if (typeof window === 'undefined') return false;
+
+  const consentState = localStorage.getItem('gdpr_consent_analytics');
+  return consentState === 'true';
+}
+
+/**
+ * Check if ads consent has been granted
+ */
+export function hasAdsConsent(): boolean {
+  if (typeof window === 'undefined') return false;
+
+  const consentState = localStorage.getItem('gdpr_consent_ads');
+  return consentState === 'true';
 }
 
 // Type augmentation for window

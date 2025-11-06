@@ -20,6 +20,9 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "next-themes";
 import { SEO } from "@/components/SEO";
 import { PageTransition } from "@/components/transitions/PageTransition";
+import { ConsentBanner } from "@/components/ConsentBanner";
+import { useEffect } from "react";
+import { initializeConsent } from "@/utils/consentManager";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
@@ -33,6 +36,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import TermsOfService from "./pages/TermsOfService";
 import EditorialPolicy from "./pages/EditorialPolicy";
+import CookiePreferences from "./pages/CookiePreferences";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +60,7 @@ function AnimatedRoutes() {
         <Route path="/contact-us" element={<PageTransition><ContactUs /></PageTransition>} />
         <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
         <Route path="/editorial-policy" element={<PageTransition><EditorialPolicy /></PageTransition>} />
+        <Route path="/cookie-preferences" element={<PageTransition><CookiePreferences /></PageTransition>} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
@@ -63,21 +68,29 @@ function AnimatedRoutes() {
   );
 }
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <ThemeProvider defaultTheme="system" attribute="class">
-        <TooltipProvider>
-          <SEO />
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <AnimatedRoutes />
-          </BrowserRouter>
-        </TooltipProvider>
-      </ThemeProvider>
-    </LanguageProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Initialize consent management on app mount
+  useEffect(() => {
+    initializeConsent();
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <ThemeProvider defaultTheme="system" attribute="class">
+          <TooltipProvider>
+            <SEO />
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <AnimatedRoutes />
+              <ConsentBanner />
+            </BrowserRouter>
+          </TooltipProvider>
+        </ThemeProvider>
+      </LanguageProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

@@ -616,6 +616,10 @@ export default function Index() {
               {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de Confidentialité'}
             </Link>
             <span className="text-slate-400">•</span>
+            <Link to="/cookie-preferences" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+              {language === 'ar' ? 'تفضيلات ملفات تعريف الارتباط' : 'Préférences Cookies'}
+            </Link>
+            <span className="text-slate-400">•</span>
             <Link to="/medical-disclaimer" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors font-semibold ${isRTL ? 'font-arabic' : ''}`}>
               {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement Médical'}
             </Link>
