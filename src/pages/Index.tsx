@@ -11,6 +11,7 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import LanguageToggle from '@/components/LanguageToggle';
@@ -21,7 +22,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
-import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
@@ -92,25 +93,40 @@ export default function Index() {
   const scrolled = useScrollPosition();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [insurance, setInsurance] = useState<InsuranceType>(null);
-  const [medication, setMedication] = useState<Medication | null>(null);
-  const [result, setResult] = useState<CalculationResult | null>(null);
+  const [medications, setMedications] = useState<Medication[]>([]);
+  const [results, setResults] = useState<CalculationResult[]>([]);
   const [showConfetti, setShowConfetti] = useState(false);
 
+  const addMedication = (medication: Medication) => {
+    // Check if medication already added
+    if (medications.find(m => m.id === medication.id)) {
+      return;
+    }
+    setMedications(prev => [...prev, medication]);
+  };
+
+  const removeMedication = (medicationId: number) => {
+    setMedications(prev => prev.filter(m => m.id !== medicationId));
+  };
+
   const calculateReimbursement = () => {
-    if (!medication || !insurance) return;
+    if (medications.length === 0 || !insurance) return;
 
-    const reimbursement = (medication.base_remb * medication.taux_remb) / 100;
-    const patientPays = Math.max(0, medication.ppv - reimbursement);
+    const calculatedResults = medications.map(medication => {
+      const reimbursement = (medication.base_remb * medication.taux_remb) / 100;
+      const patientPays = Math.max(0, medication.ppv - reimbursement);
 
-    setResult({
-      originalPrice: medication.ppv,
-      reimbursementAmount: reimbursement,
-      patientPays,
-      percentageCovered: medication.taux_remb,
-      insuranceType: insurance,
-      medicationName: medication.name
+      return {
+        originalPrice: medication.ppv,
+        reimbursementAmount: reimbursement,
+        patientPays,
+        percentageCovered: medication.taux_remb,
+        insuranceType: insurance,
+        medicationName: medication.name
+      };
     });
 
+    setResults(calculatedResults);
     setStep(3);
 
     // Show confetti celebration
@@ -120,8 +136,8 @@ export default function Index() {
   const reset = () => {
     setStep(1);
     setInsurance(null);
-    setMedication(null);
-    setResult(null);
+    setMedications([]);
+    setResults([]);
     setShowConfetti(false);
   };
 
@@ -439,25 +455,57 @@ export default function Index() {
 
             <MedicationSearchEnhanced
               placeholder={t.calculator.searchPlaceholder}
-              onSelect={(selected) => setMedication(selected as Medication)}
+              onSelect={(selected) => addMedication(selected as Medication)}
               language={language}
               insuranceType={insurance!}
             />
 
-            {medication && (
-              <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-muted dark:to-muted border-2 border-primary-700 dark:border-primary rounded-xl animate-scale-in transition-all duration-300">
-                <p className={`text-sm text-primary-700 dark:text-primary mb-2 font-semibold ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                  {t.calculator.selected}
-                </p>
-                <p className={`text-xl font-black text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                  {medication.name}
-                </p>
+            {/* Selected Medications List */}
+            {medications.length > 0 && (
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                    <ShoppingCart className="w-5 h-5" />
+                    {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  {medications.map((med, index) => (
+                    <motion.div
+                      key={med.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ delay: index * 0.05 }}
+                      className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                    >
+                      <div className="flex-1">
+                        <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                          {med.name}
+                        </p>
+                        <p className="text-sm text-slate-600 dark:text-muted-foreground">
+                          {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
+                        </p>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => removeMedication(med.id)}
+                        className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
+                      >
+                        <X className="w-5 h-5" />
+                      </Button>
+                    </motion.div>
+                  ))}
+                </div>
+
                 <Button
                   onClick={calculateReimbursement}
                   size="lg"
                   className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
                 >
-                  {t.calculator.calculate}
+                  {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
                   <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
                 </Button>
               </div>
@@ -467,8 +515,8 @@ export default function Index() {
       )}
 
       {/* Step 3: Results */}
-      {step === 3 && result && (
-        <section className="px-4 py-16 max-w-5xl mx-auto">
+      {step === 3 && results.length > 0 && (
+        <section className="px-4 py-16 max-w-6xl mx-auto">
           {/* Progress Indicator */}
           <div className="max-w-md mx-auto mb-8">
             <div className="flex items-center justify-center gap-2">
@@ -481,7 +529,59 @@ export default function Index() {
             </p>
           </div>
 
-          <ResultCard {...result} language={language} />
+          {/* Individual Results */}
+          <div className="space-y-6 mb-8">
+            {results.map((result, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <ResultCard {...result} language={language} />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Total Summary */}
+          {results.length > 1 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: results.length * 0.1 + 0.2 }}
+              className="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-700 dark:to-blue-700 rounded-2xl p-8 shadow-2xl text-white mb-8"
+            >
+              <h3 className={`text-2xl font-black mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+                {language === 'ar' ? 'المجموع الكلي' : 'Total Général'}
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                    {language === 'ar' ? 'السعر الإجمالي' : 'Prix Total'}
+                  </p>
+                  <p className="text-3xl font-black">
+                    {results.reduce((sum, r) => sum + r.originalPrice, 0).toFixed(2)} MAD
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                    {language === 'ar' ? 'التعويض الإجمالي' : 'Remboursement Total'}
+                  </p>
+                  <p className="text-3xl font-black">
+                    {results.reduce((sum, r) => sum + r.reimbursementAmount, 0).toFixed(2)} MAD
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                    {language === 'ar' ? 'المبلغ المتبقي' : 'Reste à Payer'}
+                  </p>
+                  <p className="text-3xl font-black">
+                    {results.reduce((sum, r) => sum + r.patientPays, 0).toFixed(2)} MAD
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button
@@ -492,12 +592,15 @@ export default function Index() {
               {t.calculator.newCalc}
             </Button>
             <Button
-              onClick={() => setStep(2)}
+              onClick={() => {
+                setStep(2);
+                setShowConfetti(false);
+              }}
               variant="outline"
               size="lg"
               className={`text-lg hover:scale-105 hover:bg-slate-100 dark:hover:bg-muted transition-all duration-200 ${isRTL ? 'font-arabic' : ''}`}
             >
-              {t.calculator.changeMed}
+              {language === 'ar' ? 'إضافة المزيد من الأدوية' : 'Ajouter plus de médicaments'}
             </Button>
           </div>
         </section>

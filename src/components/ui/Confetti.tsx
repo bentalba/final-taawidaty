@@ -124,47 +124,5 @@ export function SuccessCelebration({
     }
   }, [show, onComplete]);
 
-  return (
-    <>
-      <Confetti active={show} />
-
-      <AnimatePresence>
-        {show && (
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-            className="fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none"
-          >
-            <motion.div
-              className="bg-white rounded-3xl shadow-2xl p-8 text-center"
-              animate={{
-                scale: [1, 1.1, 1],
-              }}
-              transition={{
-                duration: 0.5,
-                repeat: 2,
-                ease: 'easeInOut',
-              }}
-            >
-              <motion.div
-                className="text-6xl mb-4"
-                animate={{
-                  rotate: [0, -10, 10, -10, 0],
-                }}
-                transition={{
-                  duration: 0.5,
-                  repeat: 3,
-                }}
-              >
-                🎉
-              </motion.div>
-              <p className="text-2xl font-bold text-neutral-900">{message}</p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
+  return <Confetti active={show} />;
 }
