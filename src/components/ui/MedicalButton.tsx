@@ -1,7 +1,14 @@
 import { motion, useSpring } from 'framer-motion';
-import { ButtonHTMLAttributes, useState, forwardRef } from 'react';
+import { ButtonHTMLAttributes, useState, forwardRef, useRef } from 'react';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+interface Ripple {
+  x: number;
+  y: number;
+  size: number;
+  id: number;
+}
 
 interface MedicalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'danger' | 'success';
@@ -9,6 +16,8 @@ interface MedicalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   breathing?: boolean;
   pulseOnSuccess?: boolean;
   loading?: boolean;
+  ripple?: boolean;
+  glow?: boolean;
 }
 
 export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
@@ -20,14 +29,50 @@ export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
       breathing = false,
       pulseOnSuccess = false,
       loading = false,
+      ripple = true,
+      glow = false,
       disabled,
       className,
+      onClick,
       ...props
     },
     ref
   ) => {
     const [isSuccess, setIsSuccess] = useState(false);
+    const [ripples, setRipples] = useState<Ripple[]>([]);
     const scale = useSpring(1, { stiffness: 400, damping: 17 });
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    const createRipple = (event: React.MouseEvent<HTMLButtonElement>) => {
+      if (!ripple || disabled || loading) return;
+
+      const button = buttonRef.current;
+      if (!button) return;
+
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = event.clientX - rect.left - size / 2;
+      const y = event.clientY - rect.top - size / 2;
+
+      const newRipple: Ripple = {
+        x,
+        y,
+        size,
+        id: Date.now(),
+      };
+
+      setRipples((prev) => [...prev, newRipple]);
+
+      // Remove ripple after animation
+      setTimeout(() => {
+        setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
+      }, 600);
+    };
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      createRipple(e);
+      onClick?.(e);
+    };
 
     const handleInteraction = {
       onMouseDown: () => !loading && !disabled && scale.set(0.95),
@@ -54,7 +99,15 @@ export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
 
     return (
       <motion.button
-        ref={ref}
+        ref={(node) => {
+          buttonRef.current = node;
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+        }}
+        onClick={handleClick}
         className={cn(
           'rounded-xl font-semibold transition-all duration-200',
           'focus:outline-none focus:ring-4 focus:ring-opacity-50 focus:ring-trust-blue',
@@ -63,6 +116,7 @@ export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
           sizeClasses[size],
           variantClasses[variant],
           breathing && 'animate-breathe',
+          glow && 'shadow-glow hover:shadow-glow-blue',
           pulseOnSuccess && isSuccess && 'animate-pulse',
           loading && 'cursor-wait',
           className
@@ -73,6 +127,23 @@ export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
         whileTap={{ scale: loading || disabled ? 1 : 0.95 }}
         {...props}
       >
+        {/* Ripple Effects */}
+        {ripples.map((ripple) => (
+          <motion.span
+            key={ripple.id}
+            className="absolute rounded-full bg-white/30 pointer-events-none"
+            style={{
+              left: ripple.x,
+              top: ripple.y,
+              width: ripple.size,
+              height: ripple.size,
+            }}
+            initial={{ scale: 0, opacity: 1 }}
+            animate={{ scale: 2, opacity: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          />
+        ))}
+
         {/* Loading State */}
         {loading && (
           <motion.div
@@ -84,7 +155,19 @@ export const MedicalButton = forwardRef<HTMLButtonElement, MedicalButtonProps>(
           </motion.div>
         )}
 
-        <span className={cn(loading && 'invisible')}>{children}</span>
+        {/* Shimmer on hover */}
+        {!loading && !disabled && (
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+            initial={{ x: '-100%' }}
+            whileHover={{
+              x: '100%',
+              transition: { duration: 0.6, ease: 'linear' },
+            }}
+          />
+        )}
+
+        <span className={cn('relative z-10', loading && 'invisible')}>{children}</span>
       </motion.button>
     );
   }
