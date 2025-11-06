@@ -45,9 +45,9 @@ export function EnhancedCard({
       whileTap={isClickable ? { scale: 0.98 } : undefined}
       onClick={onClick}
       className={cn(
-        'relative bg-white rounded-2xl border border-neutral-200 p-6',
+        'relative bg-white dark:bg-card rounded-2xl border border-neutral-200 dark:border-border p-6',
         'transition-all duration-300',
-        hoverable && 'hover:shadow-strong hover:border-trust-blue/30',
+        hoverable && 'hover:shadow-strong hover:border-trust-blue/30 dark:hover:border-primary/50',
         glowOnHover && 'hover:shadow-glow',
         isClickable && 'cursor-pointer',
         className

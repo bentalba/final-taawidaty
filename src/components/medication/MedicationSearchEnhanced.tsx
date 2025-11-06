@@ -217,7 +217,7 @@ export function MedicationSearchEnhanced({
           borderColor: isFocused ? 'rgb(0, 119, 190)' : 'rgb(229, 229, 229)',
         }}
         whileHover={{ scale: 1.01 }}
-        className="relative bg-white rounded-2xl border-2 transition-colors duration-200 shadow-medium hover:shadow-strong"
+        className="relative bg-white dark:bg-card rounded-2xl border-2 border-neutral-200 dark:border-border transition-colors duration-200 shadow-medium hover:shadow-strong"
       >
         {/* Search Icon with Animation */}
         <motion.div
@@ -229,7 +229,10 @@ export function MedicationSearchEnhanced({
             rotate: { duration: 1, repeat: isSearching ? Infinity : 0, ease: 'linear' },
             scale: { duration: 0.5, repeat: isSearching ? Infinity : 0 },
           }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"
+          className={cn(
+            "absolute top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500",
+            language === 'ar' ? 'right-4' : 'left-4'
+          )}
         >
           <Search className="w-5 h-5" />
         </motion.div>
@@ -244,7 +247,7 @@ export function MedicationSearchEnhanced({
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           className={cn(
-            "w-full py-4 text-lg bg-transparent border-none outline-none rounded-2xl",
+            "w-full py-4 text-lg bg-transparent border-none outline-none rounded-2xl text-slate-900 dark:text-foreground placeholder:text-slate-400 dark:placeholder:text-muted-foreground",
             language === 'ar' ? 'pr-12 pl-4 font-arabic text-right' : 'pl-12 pr-4'
           )}
           aria-label={placeholder}
@@ -267,10 +270,13 @@ export function MedicationSearchEnhanced({
                 setQuery('');
                 inputRef.current?.focus();
               }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-neutral-200 hover:bg-neutral-300 flex items-center justify-center transition-colors"
+              className={cn(
+                "absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center transition-colors",
+                language === 'ar' ? 'left-4' : 'right-4'
+              )}
               aria-label="Clear search"
             >
-              <span className="text-neutral-600 text-sm">×</span>
+              <span className="text-neutral-600 dark:text-neutral-300 text-sm">×</span>
             </motion.button>
           )}
         </AnimatePresence>
@@ -424,9 +430,13 @@ export function MedicationSearchEnhanced({
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   setQuery(med);
-                  inputRef.current?.focus();
+                  // Trigger search manually
+                  handleQueryChange(med);
                 }}
-                className="px-3 py-2 text-sm bg-neutral-100 hover:bg-trust-blue-light rounded-lg transition-colors text-neutral-700 text-left"
+                className={cn(
+                  "px-3 py-2 text-sm bg-neutral-100 dark:bg-neutral-800 hover:bg-trust-blue-light dark:hover:bg-primary-900/50 rounded-lg transition-colors text-neutral-700 dark:text-neutral-300",
+                  language === 'ar' ? 'text-right font-arabic' : 'text-left'
+                )}
               >
                 {med}
               </motion.button>

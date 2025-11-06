@@ -253,51 +253,8 @@ export default function Index() {
             ))}
           </div>
 
-          {/* FAQ Quick Access Banner */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="bg-gradient-to-r from-primary-50 to-blue-50 border-2 border-primary-200 rounded-xl p-6 shadow-md">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <HelpCircle className="w-6 h-6 text-primary-700" />
-                <h3 className={`text-xl font-bold text-slate-900 ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'هل لديك أسئلة؟' : 'Vous avez des questions ?'}
-                </h3>
-              </div>
-              <p className={`text-slate-600 mb-4 text-center ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' 
-                  ? 'تصفح أسئلتنا الشائعة حول استرجاع مصاريف الأدوية'
-                  : 'Consultez notre FAQ sur le remboursement des médicaments'}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button asChild variant="default" size="sm">
-                  <Link to="/faq-cnops" className="flex items-center gap-2">
-                    <HelpCircle className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'أسئلة CNOPS' : 'FAQ CNOPS'}
-                    </span>
-                  </Link>
-                </Button>
-                <Button asChild variant="default" size="sm">
-                  <Link to="/faq-cnss" className="flex items-center gap-2">
-                    <HelpCircle className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'أسئلة CNSS' : 'FAQ CNSS'}
-                    </span>
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="sm">
-                  <Link to="/blog" className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'المدونة' : 'Blog'}
-                    </span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-
           {/* Modern Insurance Selection */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto mb-12">
             <div className="text-center mb-12">
               <h3 className={`text-3xl font-bold text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                 {t.calculator.selectInsurance}
@@ -399,6 +356,49 @@ export default function Index() {
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
               </EnhancedCard>
+            </div>
+          </div>
+
+          {/* FAQ Quick Access Banner */}
+          <div className="max-w-2xl mx-auto mt-16">
+            <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/50 dark:to-blue-950/50 border-2 border-primary-200 dark:border-primary-800 rounded-xl p-6 shadow-md transition-colors duration-300">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <HelpCircle className="w-6 h-6 text-primary-700 dark:text-primary-400" />
+                <h3 className={`text-xl font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'هل لديك أسئلة؟' : 'Vous avez des questions ?'}
+                </h3>
+              </div>
+              <p className={`text-slate-600 dark:text-muted-foreground mb-4 text-center ${isRTL ? 'font-arabic' : ''}`}>
+                {language === 'ar'
+                  ? 'تصفح أسئلتنا الشائعة حول استرجاع مصاريف الأدوية'
+                  : 'Consultez notre FAQ sur le remboursement des médicaments'}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button asChild variant="default" size="sm">
+                  <Link to="/faq-cnops" className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'أسئلة CNOPS' : 'FAQ CNOPS'}
+                    </span>
+                  </Link>
+                </Button>
+                <Button asChild variant="default" size="sm">
+                  <Link to="/faq-cnss" className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'أسئلة CNSS' : 'FAQ CNSS'}
+                    </span>
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                  <Link to="/blog" className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'المدونة' : 'Blog'}
+                    </span>
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
           </div>
