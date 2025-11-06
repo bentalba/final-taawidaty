@@ -31,7 +31,9 @@ const FaqCnss = () => {
   const isRTL = language === 'ar';
   const canonical = 'https://taawidaty.ma/faq-cnss';
   const metaTitle = `${faq.title} | Taawidaty`;
-  const metaDescription = faq.subtitle;
+  const metaDescription = language === 'ar'
+    ? 'دليل كامل لتعويض CNSS (AMO) للأدوية بالمغرب 2025: معدلات الاسترداد، الشروط، الوثائق المطلوبة. معلومات موثقة من متخصصين. احصل على جميع الإجابات الآن!'
+    : 'Guide complet du remboursement CNSS (AMO) des médicaments au Maroc 2025 : taux de remboursement, conditions, documents requis. Informations certifiées par des professionnels. Obtenez toutes les réponses !';
   const metaKeywords = language === 'ar'
     ? ['أسئلة شائعة CNSS', 'تعويض CNSS', 'استرجاع CNSS']
     : ['faq cnss', 'remboursement cnss', 'questions cnss'];

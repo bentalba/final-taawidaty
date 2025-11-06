@@ -31,7 +31,9 @@ const FaqCnops = () => {
   const isRTL = language === 'ar';
   const canonical = 'https://taawidaty.ma/faq-cnops';
   const metaTitle = `${faq.title} | Taawidaty`;
-  const metaDescription = faq.subtitle;
+  const metaDescription = language === 'ar'
+    ? 'إجابات شاملة عن تعويض CNOPS للأدوية في المغرب 2025: النسب، الشروط، الإجراءات. محتوى موثق من خبراء طبيين. اكتشف كل ما تحتاج معرفته عن استرداد الأدوية.'
+    : 'Réponses complètes sur le remboursement CNOPS des médicaments au Maroc 2025 : taux, conditions, procédures. Contenu validé par des experts médicaux. Tout ce que vous devez savoir.';
   const metaKeywords = language === 'ar'
     ? ['أسئلة شائعة CNOPS', 'تعويض CNOPS', 'استرجاع CNOPS']
     : ['faq cnops', 'remboursement cnops', 'questions cnops'];

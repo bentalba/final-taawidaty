@@ -60,7 +60,9 @@ export default function Index() {
   const metaTitle = language === 'ar'
     ? 'حاسبة تعويض CNOPS وCNSS في المغرب - تعويضاتي'
     : 'Calculateur Remboursement CNOPS & CNSS Maroc 2025 | Taawidaty';
-  const metaDescription = t.hero.subtitle;
+  const metaDescription = language === 'ar'
+    ? 'احسب تعويض أدويتك من CNOPS أو CNSS فوراً. قاعدة بيانات شاملة للأدوية المسترجعة 2025. معلومات رسمية محدثة، حساب دقيق، مجاني 100٪. اكتشف المبلغ الذي ستسترده قبل الشراء!'
+    : 'Calculez instantanément votre remboursement CNOPS ou CNSS pour tous vos médicaments. Base de données complète 2025, calculs précis, 100% gratuit. Découvrez combien vous serez remboursé avant d\'acheter !';
   const metaKeywords = language === 'ar'
     ? [
         'حساب تعويض CNOPS',
