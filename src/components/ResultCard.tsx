@@ -7,7 +7,6 @@ interface ResultCardProps {
   reimbursementAmount: number;
   patientPays: number;
   percentageCovered: number;
-  insuranceType: 'cnops' | 'cnss';
   medicationName: string;
   language: 'ar' | 'fr';
 }
@@ -17,7 +16,6 @@ export default function ResultCard({
   reimbursementAmount,
   patientPays,
   percentageCovered,
-  insuranceType,
   medicationName,
   language
 }: ResultCardProps) {
@@ -51,29 +49,9 @@ export default function ResultCard({
               <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-2 font-medium ${language === 'ar' ? 'font-arabic' : ''}`}>
                 {t.medication}
               </p>
-              <p className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${language === 'ar' ? 'font-arabic' : ''}`}>
+              <p className={`text-xl font-bold text-slate-900 dark:text-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
                 {medicationName}
               </p>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-primary-500 animate-pulse"></div>
-                <span className="text-sm font-semibold text-primary-600 dark:text-primary">
-                  {insuranceType.toUpperCase()}
-                </span>
-              </div>
-            </div>
-            <div className="w-16 h-16 rounded-2xl bg-white dark:bg-card p-3 shadow-floating">
-              <picture>
-                <source srcSet={`/logos/${insuranceType}-logo.webp`} type="image/webp" />
-                <img
-                  src={`/logos/${insuranceType}-logo.png`}
-                  alt={`${insuranceType.toUpperCase()} Logo`}
-                  width="64"
-                  height="64"
-                  loading="lazy"
-                  className="h-full w-auto object-contain"
-                  onError={(e) => e.currentTarget.style.display = 'none'}
-                />
-              </picture>
             </div>
           </div>
         </div>

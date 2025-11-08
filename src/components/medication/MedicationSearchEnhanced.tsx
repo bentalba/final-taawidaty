@@ -28,18 +28,15 @@ interface MedicationSearchEnhancedProps {
   placeholder: string;
   onSelect: (medication: SearchResult) => void;
   language: 'ar' | 'fr';
-  insuranceType: 'cnops' | 'cnss';
 }
 
-// Separate caches for each insurance type
-let cnopsCache: SearchResult[] | null = null;
-let cnssCache: SearchResult[] | null = null;
+// Medication data cache (CNSS and CNOPS have same rates)
+let medicationsCache: SearchResult[] | null = null;
 
 export function MedicationSearchEnhanced({
   placeholder,
   onSelect,
   language,
-  insuranceType,
 }: MedicationSearchEnhancedProps) {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
@@ -50,16 +47,13 @@ export function MedicationSearchEnhanced({
   const searchTimeout = useRef<NodeJS.Timeout>();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Load medications on mount and when insurance type changes
+  // Load medications on mount (same rates for all insurance types)
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Get the appropriate cache for this insurance type
-        const currentCache = insuranceType === 'cnss' ? cnssCache : cnopsCache;
-
         // Load medications if not cached
-        if (!currentCache) {
-          const data = await loadMedications(insuranceType);
+        if (!medicationsCache) {
+          const data = await loadMedications('cnops'); // Use cnops as default (rates are same)
           const mappedData = data.map((med: any) => ({
             id: med.id,
             name: med.name,
@@ -72,16 +66,10 @@ export function MedicationSearchEnhanced({
             presentation: med.presentation
           }));
 
-          // Store in appropriate cache
-          if (insuranceType === 'cnss') {
-            cnssCache = mappedData;
-          } else {
-            cnopsCache = mappedData;
-          }
-
+          medicationsCache = mappedData;
           setMedications(mappedData);
         } else {
-          setMedications(currentCache);
+          setMedications(medicationsCache);
         }
       } catch (error) {
         console.error('Error loading medications:', error);
@@ -89,7 +77,7 @@ export function MedicationSearchEnhanced({
     };
 
     loadData();
-  }, [insuranceType]);
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {

@@ -27,8 +27,6 @@ import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
 
-type InsuranceType = 'cnops' | 'cnss' | null;
-
 interface Medication {
   id: number;
   name: string;
@@ -43,7 +41,6 @@ interface CalculationResult {
   reimbursementAmount: number;
   patientPays: number;
   percentageCovered: number;
-  insuranceType: 'cnops' | 'cnss';
   medicationName: string;
 }
 
@@ -94,7 +91,6 @@ export default function Index() {
   ], [language]);
   const scrolled = useScrollPosition();
   const [step, setStep] = useState<1 | 2 | 3>(1);
-  const [insurance, setInsurance] = useState<InsuranceType>(null);
   const [medications, setMedications] = useState<Medication[]>([]);
   const [results, setResults] = useState<CalculationResult[]>([]);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -112,7 +108,7 @@ export default function Index() {
   };
 
   const calculateReimbursement = () => {
-    if (medications.length === 0 || !insurance) return;
+    if (medications.length === 0) return;
 
     const calculatedResults = medications.map(medication => {
       const reimbursement = (medication.base_remb * medication.taux_remb) / 100;
@@ -123,7 +119,6 @@ export default function Index() {
         reimbursementAmount: reimbursement,
         patientPays,
         percentageCovered: medication.taux_remb,
-        insuranceType: insurance,
         medicationName: medication.name
       };
     });
@@ -137,14 +132,13 @@ export default function Index() {
 
   const reset = () => {
     setStep(1);
-    setInsurance(null);
     setMedications([]);
     setResults([]);
     setShowConfetti(false);
   };
 
   useEffect(() => {
-    if (step !== 2 || !insurance) {
+    if (step !== 2) {
       return;
     }
 
@@ -152,11 +146,8 @@ export default function Index() {
 
     const prefetch = async () => {
       try {
-        await loadMedications(insurance);
-        const alternate = insurance === 'cnops' ? 'cnss' : 'cnops';
-        loadMedications(alternate).catch(() => {
-          /* optional prefetch failure is safe to ignore */
-        });
+        // Load medications data (CNSS and CNOPS have same rates)
+        await loadMedications('cnops');
       } catch (error) {
         if (!isCancelled) {
           console.error('Failed to prefetch medications', error);
@@ -169,7 +160,7 @@ export default function Index() {
     return () => {
       isCancelled = true;
     };
-  }, [insurance, step]);
+  }, [step]);
 
   return (
     <>
@@ -345,18 +336,17 @@ export default function Index() {
         </section>
       )}
 
-      {/* Step 2: Insurance Selection & Medication Search */}
+      {/* Step 2: Medication Search */}
       {step === 2 && (
         <section className="px-4 py-16 max-w-4xl mx-auto animate-fade-in">
           {/* Progress Indicator */}
           <div className="max-w-md mx-auto mb-8">
             <div className="flex items-center justify-center gap-2">
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
-              <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
               <div className="h-2 w-full bg-slate-300 dark:border rounded-full transition-all duration-500"></div>
             </div>
             <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'الخطوة 2 من 3' : 'Étape 2 sur 3'}
+              {language === 'ar' ? 'الخطوة 1 من 2' : 'Étape 1 sur 2'}
             </p>
           </div>
 
@@ -370,120 +360,69 @@ export default function Index() {
                 ← {t.calculator.back}
               </Button>
               
-              {/* Insurance Selection if not selected */}
-              {!insurance ? (
-                <>
-                  <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                    {t.calculator.selectInsurance}
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <button
-                      onClick={() => setInsurance('cnops')}
-                      className="p-6 border-2 border-slate-200 dark:border-border rounded-xl hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-all duration-300 text-left group"
-                    >
-                      <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                        {t.calculator.cnops}
-                      </h3>
-                      <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                        {t.calculator.cnopsDesc}
-                      </p>
-                    </button>
-                    <button
-                      onClick={() => setInsurance('cnss')}
-                      className="p-6 border-2 border-slate-200 dark:border-border rounded-xl hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-all duration-300 text-left group"
-                    >
-                      <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                        {t.calculator.cnss}
-                      </h3>
-                      <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                        {t.calculator.cnssDesc}
-                      </p>
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                    {t.calculator.searchMed}
-                  </h2>
-                  <div className="flex items-center gap-2 mb-4">
-                    <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                      {insurance === 'cnops' ? t.calculator.cnops : t.calculator.cnss}
-                    </p>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setInsurance(null)}
-                      className="text-xs"
-                    >
-                      {language === 'ar' ? 'تغيير' : 'Changer'}
-                    </Button>
-                  </div>
-                </>
-              )}
+              <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                {t.calculator.searchMed}
+              </h2>
             </div>
 
-            {insurance && (
-              <>
-                <MedicationSearchEnhanced
-                  placeholder={t.calculator.searchPlaceholder}
-                  onSelect={(selected) => addMedication(selected as Medication)}
-                  language={language}
-                  insuranceType={insurance}
-                />
+            <>
+              <MedicationSearchEnhanced
+                placeholder={t.calculator.searchPlaceholder}
+                onSelect={(selected) => addMedication(selected as Medication)}
+                language={language}
+              />
 
-                {/* Selected Medications List */}
-                {medications.length > 0 && (
-                  <div className="mt-8 space-y-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
-                        <ShoppingCart className="w-5 h-5" />
-                        {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
-                      </h3>
-                    </div>
-
-                    <div className="space-y-3">
-                      {medications.map((med, index) => (
-                        <motion.div
-                          key={med.id}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: 20 }}
-                          transition={{ delay: index * 0.05 }}
-                          className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
-                        >
-                          <div className="flex-1">
-                            <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                              {med.name}
-                            </p>
-                            <p className="text-sm text-slate-600 dark:text-muted-foreground">
-                              {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
-                            </p>
-                          </div>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => removeMedication(med.id)}
-                            className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
-                          >
-                            <X className="w-5 h-5" />
-                          </Button>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <Button
-                      onClick={calculateReimbursement}
-                      size="lg"
-                      className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
-                    >
-                      {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
-                      <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
-                    </Button>
+              {/* Selected Medications List */}
+              {medications.length > 0 && (
+                <div className="mt-8 space-y-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                      <ShoppingCart className="w-5 h-5" />
+                      {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
+                    </h3>
                   </div>
-                )}
-              </>
-            )}
+
+                  <div className="space-y-3">
+                    {medications.map((med, index) => (
+                      <motion.div
+                        key={med.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ delay: index * 0.05 }}
+                        className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                      >
+                        <div className="flex-1">
+                          <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                            {med.name}
+                          </p>
+                          <p className="text-sm text-slate-600 dark:text-muted-foreground">
+                            {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
+                          </p>
+                        </div>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => removeMedication(med.id)}
+                          className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
+                        >
+                          <X className="w-5 h-5" />
+                        </Button>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <Button
+                    onClick={calculateReimbursement}
+                    size="lg"
+                    className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
+                  >
+                    {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
+                    <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
+                  </Button>
+                </div>
+              )}
+            </>
           </div>
         </section>
       )}
@@ -496,10 +435,9 @@ export default function Index() {
             <div className="flex items-center justify-center gap-2">
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
-              <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
             </div>
             <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'الخطوة 3 من 3' : 'Étape 3 sur 3'}
+              {language === 'ar' ? 'الخطوة 2 من 2' : 'Étape 2 sur 2'}
             </p>
           </div>
 

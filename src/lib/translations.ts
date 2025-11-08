@@ -6,7 +6,7 @@ export const translations = {
     },
     hero: {
       title: 'احسب تعويض أدويتك بسهولة',
-      subtitle: 'اكتشف المبلغ الذي ستسترده من CNOPS أو CNSS (AMO) فوراً',
+      subtitle: 'اكتشف المبلغ الذي ستسترده من تأمينك الصحي فوراً',
       cta: 'احسب الآن',
       trustOfficial: 'بيانات رسمية محدثة',
       trustInstant: 'نتائج فورية',
@@ -15,16 +15,12 @@ export const translations = {
     howItWorks: {
       title: 'كيف يعمل؟',
       step1: {
-        title: 'اختر نوع التأمين',
-        description: 'CNOPS للموظفين العموميين أو CNSS (AMO) للقطاع الخاص'
-      },
-      step2: {
         title: 'ابحث عن الدواء',
         description: 'اكتب اسم الدواء الذي تبحث عنه'
       },
-      step3: {
+      step2: {
         title: 'احصل على النتيجة',
-        description: 'شاهد المبلغ المغطى وما ستدفعه'
+        description: 'شاهد المبلغ المغطى من تأمينك وما ستدفعه'
       }
     },
     calculator: {
@@ -82,7 +78,7 @@ export const translations = {
     },
     hero: {
       title: 'Calculez facilement le remboursement de vos médicaments',
-      subtitle: 'Découvrez instantanément combien vous serez remboursé par la CNOPS ou la CNSS (AMO)',
+      subtitle: 'Découvrez instantanément combien vous serez remboursé par votre assurance/mutuelle',
       cta: 'Calculer maintenant',
       trustOfficial: 'Données officielles à jour',
       trustInstant: 'Résultats instantanés',
@@ -91,16 +87,12 @@ export const translations = {
     howItWorks: {
       title: 'Comment ça marche ?',
       step1: {
-        title: 'Choisissez votre assurance',
-        description: 'CNOPS pour les fonctionnaires ou CNSS (AMO) pour le secteur privé'
-      },
-      step2: {
         title: 'Recherchez le médicament',
         description: 'Tapez le nom du médicament que vous cherchez'
       },
-      step3: {
+      step2: {
         title: 'Obtenez le résultat',
-        description: 'Voyez le montant couvert et ce que vous paierez'
+        description: 'Voyez le montant couvert par votre assurance et ce que vous paierez'
       }
     },
     calculator: {
@@ -122,10 +114,10 @@ export const translations = {
       medication: 'Médicament',
       insurance: 'Assurance',
       originalPrice: 'Prix original',
-      reimbursement: 'Montant remboursé',
+      reimbursement: 'Montant remboursé par votre assurance',
       youPay: 'Vous payez',
       covered: 'Couvert',
-      savings: 'Vous économisez {amount} avec l\'assurance !'
+      savings: 'Vous économisez {amount} avec votre assurance !'
     },
     disclaimer: {
       title: 'Avertissement important',
