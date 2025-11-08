@@ -5,7 +5,7 @@ export const translations = {
       subtitle: 'احسب تعويض الأدوية في ثوانٍ'
     },
     hero: {
-      title: 'احسب تعويض أدويتك بسهولة',
+      title: 'تمن؟ التعويض؟ قلب و عرف دابا.',
       subtitle: 'احسب التعويض من التأمين أو تحقق من أسعار الأدوية في المغرب',
       cta: 'احسب الآن',
       trustOfficial: 'بيانات رسمية محدثة',
@@ -77,7 +77,7 @@ export const translations = {
       subtitle: 'Calculez le remboursement de vos médicaments en secondes'
     },
     hero: {
-      title: 'Calculez facilement le remboursement de vos médicaments',
+      title: 'Prix ? Remboursement ? La réponse instantanée.',
       subtitle: 'Calculez votre remboursement mutuelle ou vérifiez les prix des médicaments au Maroc',
       cta: 'Calculer maintenant',
       trustOfficial: 'Données officielles à jour',
