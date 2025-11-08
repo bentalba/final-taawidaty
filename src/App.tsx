@@ -37,6 +37,7 @@ import ContactUs from "./pages/ContactUs";
 import TermsOfService from "./pages/TermsOfService";
 import EditorialPolicy from "./pages/EditorialPolicy";
 import CookiePreferences from "./pages/CookiePreferences";
+import PriceChecker from "./pages/PriceChecker";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageTransition><Index /></PageTransition>} />
+        <Route path="/prix-medicaments" element={<PageTransition><PriceChecker /></PageTransition>} />
         <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
         <Route path="/blog/guide-remboursement-cnss" element={<PageTransition><GuideRemboursementCnss /></PageTransition>} />
         <Route path="/blog/guide-remboursement-cnops" element={<PageTransition><GuideRemboursementCnops /></PageTransition>} />

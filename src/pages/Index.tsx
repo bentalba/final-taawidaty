@@ -308,8 +308,7 @@ export default function Index() {
                 delay={0.1}
                 className="p-8 text-center cursor-pointer group"
                 onClick={() => {
-                  // Will implement price checker route
-                  alert(language === 'ar' ? 'قريباً...' : 'Bientôt disponible...');
+                  window.location.href = '/prix-medicaments';
                 }}
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">

@@ -22,6 +22,10 @@ interface SearchResult {
   taux_remb: number;
   forme?: string;
   presentation?: string;
+  barcode?: string | null;
+  ph?: number;
+  prix_br_ph?: number;
+  classe_therapeutique?: string;
 }
 
 interface MedicationSearchEnhancedProps {
@@ -63,7 +67,11 @@ export function MedicationSearchEnhanced({
             base_remb: med.prix_br,
             taux_remb: med.taux_remb,
             forme: med.forme,
-            presentation: med.presentation
+            presentation: med.presentation,
+            barcode: med.barcode,
+            ph: med.ph,
+            prix_br_ph: med.prix_br_ph,
+            classe_therapeutique: med.classe_therapeutique
           }));
 
           medicationsCache = mappedData;
@@ -98,6 +106,7 @@ export function MedicationSearchEnhanced({
           { name: 'name', weight: 0.6 },
           { name: 'dci', weight: 0.4 },
           { name: 'dosage', weight: 0.2 },
+          { name: 'barcode', weight: 0.8 }, // High weight for exact barcode matches
         ],
         threshold: 0.3,
         distance: 50,
@@ -342,6 +351,11 @@ export function MedicationSearchEnhanced({
                       language === 'ar' && 'font-arabic'
                     )}>
                       {medication.dci}{medication.dosage && ` • ${medication.dosage}`}
+                    </p>
+                  )}
+                  {medication.barcode && (
+                    <p className="text-xs text-neutral-500 dark:text-muted-foreground/80 truncate font-mono mt-0.5">
+                      {medication.barcode}
                     </p>
                   )}
                 </div>

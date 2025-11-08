@@ -1,5 +1,5 @@
 import { translations } from '@/lib/translations';
-import { CheckCircle2, Sparkles } from 'lucide-react';
+import { CheckCircle2, Sparkles, Barcode } from 'lucide-react';
 import CountUp from './CountUp';
 
 interface ResultCardProps {
@@ -9,6 +9,7 @@ interface ResultCardProps {
   percentageCovered: number;
   medicationName: string;
   language: 'ar' | 'fr';
+  barcode?: string | null;
 }
 
 export default function ResultCard({
@@ -17,7 +18,8 @@ export default function ResultCard({
   patientPays,
   percentageCovered,
   medicationName,
-  language
+  language,
+  barcode
 }: ResultCardProps) {
   const t = translations[language].results;
   const dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -52,6 +54,14 @@ export default function ResultCard({
               <p className={`text-xl font-bold text-slate-900 dark:text-foreground ${language === 'ar' ? 'font-arabic' : ''}`}>
                 {medicationName}
               </p>
+              {barcode && (
+                <div className="flex items-center gap-2 mt-2">
+                  <Barcode className="w-4 h-4 text-slate-500 dark:text-muted-foreground" />
+                  <p className="text-xs text-slate-500 dark:text-muted-foreground font-mono">
+                    {barcode}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
