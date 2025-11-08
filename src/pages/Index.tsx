@@ -22,6 +22,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
+import GradientText from '@/components/ui/GradientText';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -47,6 +48,48 @@ interface CalculationResult {
 export default function Index() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
+  
+  // Custom hero title rendering with animated words
+  const renderHeroTitle = () => {
+    if (language === 'ar') {
+      // Arabic: "تمن؟ التعويض؟ قلب و عرف دابا."
+      // Animate: "دابا"
+      return (
+        <>
+          <span className="text-gradient-modern block mb-2">
+            تمن؟ التعويض؟ قلب و عرف{' '}
+          </span>
+          <GradientText
+            colors={['#0077be', '#40ffaa', '#4079ff', '#40ffaa', '#0077be']}
+            animationSpeed={3}
+            showBorder={false}
+            className="inline-block"
+          >
+            دابا.
+          </GradientText>
+        </>
+      );
+    } else {
+      // French: "Prix ? Remboursement ? La réponse instantanée."
+      // Animate: "instantanée"
+      return (
+        <>
+          <span className="text-gradient-modern block mb-2">
+            Prix ? Remboursement ? La réponse{' '}
+          </span>
+          <GradientText
+            colors={['#0077be', '#40ffaa', '#4079ff', '#40ffaa', '#0077be']}
+            animationSpeed={3}
+            showBorder={false}
+            className="inline-block"
+          >
+            instantanée.
+          </GradientText>
+        </>
+      );
+    }
+  };
+
   const heroTitleSegments = useMemo(() => {
     const words = t.hero.title.split(' ');
     return {
@@ -233,12 +276,7 @@ export default function Index() {
 
             {/* Modern heading with gradient text */}
             <h2 className={`text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
-              <span className="text-gradient-modern block mb-2">
-                {heroTitleSegments.leading}
-              </span>
-              <span className="text-primary-600 dark:text-primary">
-                {heroTitleSegments.trailing}
-              </span>
+              {renderHeroTitle()}
             </h2>
 
             {/* Modern subtitle */}
