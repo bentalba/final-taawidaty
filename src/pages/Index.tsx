@@ -271,110 +271,32 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Modern Insurance Selection */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <div className="text-center mb-12">
-              <h3 className={`text-3xl font-bold text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                {t.calculator.selectInsurance}
+          {/* Simplified Start Button */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <EnhancedCard
+              hoverable={true}
+              glowOnHover={true}
+              animateOnMount={true}
+              delay={0}
+              className="p-12 text-center"
+            >
+              <h3 className={`text-4xl font-bold text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                {language === 'ar' ? 'ابدأ حساب التعويض الآن' : 'Commencez votre estimation maintenant'}
               </h3>
-              <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' ? 'اختر نظام التأمين الخاص بك لحساب استرداد نفقات الأدوية' : 'Choisissez votre régime d\'assurance pour calculer le remboursement'}
+              <p className={`text-lg text-slate-600 dark:text-muted-foreground mb-8 ${isRTL ? 'font-arabic' : ''}`}>
+                {language === 'ar' 
+                  ? 'احسب تعويض أدويتك من CNOPS أو CNSS في ثوانٍ' 
+                  : 'Calculez votre remboursement CNOPS ou CNSS en quelques secondes'}
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <EnhancedCard
-                onClick={() => {
-                  setInsurance('cnops');
-                  setStep(2);
-                }}
-                hoverable={true}
-                glowOnHover={true}
-                animateOnMount={true}
-                delay={0}
-                className="cursor-pointer p-8 animate-slide-in-left"
+              <Button
+                size="lg"
+                onClick={() => setStep(2)}
+                className="group text-xl px-12 py-8 rounded-2xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300"
               >
-                <div className="flex justify-center mb-8">
-                  <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating transition-transform duration-300 hover:scale-110">
-                    <picture>
-                      <source srcSet="/logos/cnops-logo.webp" type="image/webp" />
-                      <img
-                        src="/logos/cnops-logo.png"
-                        alt="CNOPS Logo"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        className="h-full w-auto object-contain"
-                        onError={(e) => {
-                          // Fallback to emoji if image not found
-                          e.currentTarget.style.display = 'none';
-                          const fallback = document.createElement('div');
-                          fallback.className = 'text-6xl flex items-center justify-center h-full';
-                          fallback.textContent = '🏥';
-                          e.currentTarget.parentElement?.appendChild(fallback);
-                        }}
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
-                  {t.calculator.cnops}
-                </h3>
-                <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                  {t.calculator.cnopsDesc}
-                </p>
-                <div className={`flex items-center justify-center gap-3 text-primary-700 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
-                  <span>{t.hero.cta}</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </div>
-              </EnhancedCard>
-
-              <EnhancedCard
-                onClick={() => {
-                  setInsurance('cnss');
-                  setStep(2);
-                }}
-                hoverable={true}
-                glowOnHover={true}
-                animateOnMount={true}
-                delay={0.1}
-                className="cursor-pointer p-8 animate-slide-in-right"
-              >
-                <div className="flex justify-center mb-8">
-                  <div className="w-32 h-32 rounded-2xl bg-white dark:bg-card p-6 shadow-floating transition-transform duration-300 hover:scale-110">
-                    <picture>
-                      <source srcSet="/logos/cnss-logo.webp" type="image/webp" />
-                      <img
-                        src="/logos/cnss-logo.png"
-                        alt="CNSS Logo"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        className="h-full w-auto object-contain"
-                        onError={(e) => {
-                          // Fallback to emoji if image not found
-                          e.currentTarget.style.display = 'none';
-                          const fallback = document.createElement('div');
-                          fallback.className = 'text-6xl flex items-center justify-center h-full';
-                          fallback.textContent = '👷';
-                          e.currentTarget.parentElement?.appendChild(fallback);
-                        }}
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <h3 className="text-3xl font-black text-slate-900 dark:text-foreground mb-4 transition-colors duration-300">
-                  {t.calculator.cnss}
-                </h3>
-                <p className={`text-slate-600 dark:text-muted-foreground mb-6 leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                  {t.calculator.cnssDesc}
-                </p>
-                <div className={`flex items-center justify-center gap-3 text-primary-700 dark:text-primary font-bold text-lg ${isRTL ? 'font-arabic' : ''} transition-all duration-300 group-hover:gap-4`}>
-                  <span>{t.hero.cta}</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </div>
-              </EnhancedCard>
-            </div>
+                <span className={isRTL ? 'font-arabic' : ''}>{t.hero.cta}</span>
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+              </Button>
+            </EnhancedCard>
           </div>
 
           {/* FAQ Quick Access Banner */}
@@ -423,7 +345,7 @@ export default function Index() {
         </section>
       )}
 
-      {/* Step 2: Medication Search */}
+      {/* Step 2: Insurance Selection & Medication Search */}
       {step === 2 && (
         <section className="px-4 py-16 max-w-4xl mx-auto animate-fade-in">
           {/* Progress Indicator */}
@@ -447,70 +369,120 @@ export default function Index() {
               >
                 ← {t.calculator.back}
               </Button>
-              <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                {t.calculator.searchMed}
-              </h2>
-              <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                {insurance === 'cnops' ? t.calculator.cnops : t.calculator.cnss}
-              </p>
+              
+              {/* Insurance Selection if not selected */}
+              {!insurance ? (
+                <>
+                  <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                    {t.calculator.selectInsurance}
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <button
+                      onClick={() => setInsurance('cnops')}
+                      className="p-6 border-2 border-slate-200 dark:border-border rounded-xl hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-all duration-300 text-left group"
+                    >
+                      <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.calculator.cnops}
+                      </h3>
+                      <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.calculator.cnopsDesc}
+                      </p>
+                    </button>
+                    <button
+                      onClick={() => setInsurance('cnss')}
+                      className="p-6 border-2 border-slate-200 dark:border-border rounded-xl hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950/30 transition-all duration-300 text-left group"
+                    >
+                      <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.calculator.cnss}
+                      </h3>
+                      <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.calculator.cnssDesc}
+                      </p>
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                    {t.calculator.searchMed}
+                  </h2>
+                  <div className="flex items-center gap-2 mb-4">
+                    <p className={`text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                      {insurance === 'cnops' ? t.calculator.cnops : t.calculator.cnss}
+                    </p>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setInsurance(null)}
+                      className="text-xs"
+                    >
+                      {language === 'ar' ? 'تغيير' : 'Changer'}
+                    </Button>
+                  </div>
+                </>
+              )}
             </div>
 
-            <MedicationSearchEnhanced
-              placeholder={t.calculator.searchPlaceholder}
-              onSelect={(selected) => addMedication(selected as Medication)}
-              language={language}
-              insuranceType={insurance!}
-            />
+            {insurance && (
+              <>
+                <MedicationSearchEnhanced
+                  placeholder={t.calculator.searchPlaceholder}
+                  onSelect={(selected) => addMedication(selected as Medication)}
+                  language={language}
+                  insuranceType={insurance}
+                />
 
-            {/* Selected Medications List */}
-            {medications.length > 0 && (
-              <div className="mt-8 space-y-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
-                    <ShoppingCart className="w-5 h-5" />
-                    {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
-                  </h3>
-                </div>
+                {/* Selected Medications List */}
+                {medications.length > 0 && (
+                  <div className="mt-8 space-y-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                        <ShoppingCart className="w-5 h-5" />
+                        {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
+                      </h3>
+                    </div>
 
-                <div className="space-y-3">
-                  {medications.map((med, index) => (
-                    <motion.div
-                      key={med.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                    <div className="space-y-3">
+                      {medications.map((med, index) => (
+                        <motion.div
+                          key={med.id}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 20 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                        >
+                          <div className="flex-1">
+                            <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                              {med.name}
+                            </p>
+                            <p className="text-sm text-slate-600 dark:text-muted-foreground">
+                              {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
+                            </p>
+                          </div>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => removeMedication(med.id)}
+                            className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
+                          >
+                            <X className="w-5 h-5" />
+                          </Button>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <Button
+                      onClick={calculateReimbursement}
+                      size="lg"
+                      className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
                     >
-                      <div className="flex-1">
-                        <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                          {med.name}
-                        </p>
-                        <p className="text-sm text-slate-600 dark:text-muted-foreground">
-                          {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
-                        </p>
-                      </div>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => removeMedication(med.id)}
-                        className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
-                      >
-                        <X className="w-5 h-5" />
-                      </Button>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <Button
-                  onClick={calculateReimbursement}
-                  size="lg"
-                  className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
-                >
-                  {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
-                  <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
-                </Button>
-              </div>
+                      {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
+                      <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
+                    </Button>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </section>
@@ -641,9 +613,19 @@ export default function Index() {
         </div>
 
         <div className="container mx-auto px-4 py-8 text-center text-slate-600 dark:text-muted-foreground transition-colors duration-300">
-          <p className={`text-sm ${isRTL ? 'font-arabic' : ''}`}>
-            © 2025 TAAWIDATY • {language === 'ar' ? 'صمم وطور بواسطة' : 'Designed & Developed by'} <strong>BENTALBA ZAKARIA</strong>
+          <p className={`text-sm mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+            © 2025 TAAWIDATY • {language === 'ar' ? 'جميع الحقوق محفوظة' : 'Tous droits réservés'}
           </p>
+          
+          {/* Official Disclaimer */}
+          <div className={`max-w-4xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-200 dark:border-amber-800 rounded-lg mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              {language === 'ar' 
+                ? 'موقع taawidaty.ma هو خدمة خاصة ومستقلة، دون أي انتماء أو ارتباط بالصندوق الوطني للضمان الاجتماعي (CNSS) أو الصندوق الوطني لمنظمات الاحتياط الاجتماعي (CNOPS). نحن لسنا موقعًا رسميًا للـ CNSS أو CNOPS.'
+                : 'taawidaty.ma est un service privé et indépendant, sans aucune affiliation avec la CNSS ou la CNOPS. Nous ne sommes pas un site officiel de la CNSS ou de la CNOPS.'}
+            </p>
+          </div>
+          
           <p className={`text-xs mt-2 ${isRTL ? 'font-arabic' : ''}`}>
             {t.disclaimer.text}
           </p>

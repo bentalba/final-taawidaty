@@ -79,29 +79,6 @@ Nous ne sommes affiliés à aucune compagnie d'assurance, pharmacie ou laboratoi
 Au-delà du calcul, nous fournissons des informations pour aider les patients à comprendre le système de santé marocain.`
         },
         {
-          title: 'Notre Équipe',
-          icon: 'users',
-          content: `**BENTALBA ZAKARIA - Fondateur & Développeur**
-Ingénieur en informatique passionné par l'utilisation de la technologie pour résoudre des problèmes concrets qui affectent la vie quotidienne des Marocains.
-
-**Spécialisation :**
-- Développement d'applications web
-- Analyse et traitement de données
-- Design d'interfaces utilisateur accessibles
-
-**Formation :**
-- Ingénierie informatique
-- Développement web full-stack
-- Science des données
-
-**Contact professionnel :**
-Email : bentalba@taawidaty.ma
-LinkedIn : [Profil à venir]
-
-**Notre engagement :**
-En tant que fondateur, je m'engage personnellement à maintenir la qualité et la précision des informations fournies. Chaque mise à jour est vérifiée contre les sources officielles.`
-        },
-        {
           title: 'Nos Sources de Données',
           icon: 'checkCircle',
           content: `Toutes nos informations proviennent de sources officielles et publiques :
@@ -321,7 +298,7 @@ bugs@taawidaty.ma
 - Code source : Licence MIT (open source)
 - Nom "Taawidaty" : Marque protégée
 - Données : Dérivées de sources publiques officielles
-- Contenu : © 2025 BENTALBA ZAKARIA`
+- Contenu : © 2025 Taawidaty`
         },
         {
           title: 'Feuille de Route',
@@ -359,7 +336,7 @@ Vos suggestions sont les bienvenues pour orienter nos développements futurs !`
 
 Fait avec ❤️ pour faciliter l'accès aux soins de santé.
 
-© 2025 BENTALBA ZAKARIA - Tous droits réservés sur la marque "Taawidaty"
+© 2025 Taawidaty - Tous droits réservés
 Code source disponible sous licence MIT`
     },
     ar: {

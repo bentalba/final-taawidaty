@@ -88,7 +88,44 @@ Taawidaty.ma est une base de données éducative en ligne qui fournit des inform
 
 **Important : Ce site est exclusivement informatif et éducatif. Il ne remplace pas les conseils, diagnostics ou traitements médicaux professionnels.**
 
-## 3. Avertissement Médical
+## 3. AVERTISSEMENT OFFICIEL
+
+### 3.1 Service Privé et Indépendant
+
+**taawidaty.ma est un service privé et indépendant, sans aucune affiliation avec la CNSS (Caisse Nationale de Sécurité Sociale) ou la CNOPS (Caisse Nationale des Organismes de Prévoyance Sociale).**
+
+Nous ne sommes pas un site officiel de la CNSS ou de la CNOPS. Notre service est fourni par une entité privée distincte et séparée de ces organismes gouvernementaux.
+
+### 3.2 Objectif du Service
+
+Taawidaty.ma est une plateforme éducative conçue pour :
+
+- Fournir des informations générales sur les médicaments commercialisés au Maroc
+- Aider les utilisateurs à comprendre les politiques de remboursement des médicaments
+- Offrir des estimations indicatives des taux de remboursement potentiels
+- Faciliter l'accès à l'information pharmaceutique publique
+
+### 3.3 Aucune Garantie Officielle
+
+Les informations et estimations fournies sur ce site :
+
+- Sont basées sur des données publiquement disponibles et peuvent contenir des erreurs
+- Ne constituent pas une garantie de remboursement par la CNSS ou la CNOPS
+- Ne remplacent pas les communications officielles de ces organismes
+- Doivent être vérifiées auprès de votre organisme d'assurance pour toute décision officielle
+
+### 3.4 Marques Déposées
+
+Les noms "CNSS" et "CNOPS" sont des marques déposées appartenant respectivement à la Caisse Nationale de Sécurité Sociale et à la Caisse Nationale des Organismes de Prévoyance Sociale du Maroc. L'utilisation de ces noms sur ce site est uniquement à des fins informatives et de référence, et n'implique aucune affiliation, parrainage ou approbation de notre part par ces organismes.
+
+### 3.5 Contact Officiel
+
+Pour toute information officielle ou demande de remboursement, veuillez contacter directement :
+
+- **CNSS** : [www.cnss.ma](http://www.cnss.ma)
+- **CNOPS** : [www.cnops.org.ma](http://www.cnops.org.ma)
+
+## 4. Avertissement Médical
 
 ### 3.1 Nature du Contenu
 
@@ -112,9 +149,9 @@ Vous devez toujours :
 
 L'utilisation de ce site ne crée aucune relation médecin-patient, pharmacien-patient ou autre relation professionnelle de santé entre vous et Taawidaty.ma ou ses contributeurs.
 
-## 4. Exactitude des Informations
+## 5. Exactitude des Informations
 
-### 4.1 Efforts de Précision
+### 5.1 Efforts de Précision
 
 Nous nous efforçons de fournir des informations exactes, à jour et fiables. Cependant :
 
@@ -123,7 +160,7 @@ Nous nous efforçons de fournir des informations exactes, à jour et fiables. Ce
 - Les informations peuvent ne pas être complètes ou exhaustives
 - Les informations peuvent ne pas s'appliquer à votre situation personnelle
 
-### 4.2 Non-Garantie
+### 5.2 Non-Garantie
 
 Nous ne garantissons pas que les informations sur ce site sont :
 
@@ -132,13 +169,13 @@ Nous ne garantissons pas que les informations sur ce site sont :
 - À jour au moment de votre consultation
 - Applicables à votre situation spécifique
 
-### 4.3 Vérification Indépendante
+### 5.3 Vérification Indépendante
 
 Vous êtes responsable de vérifier toute information avec votre professionnel de santé avant de prendre des décisions médicales.
 
-## 5. Utilisation Autorisée
+## 6. Utilisation Autorisée
 
-### 5.1 Droits d'Utilisation
+### 6.1 Droits d'Utilisation
 
 Vous êtes autorisé à :
 
@@ -147,7 +184,7 @@ Vous êtes autorisé à :
 - Lire et partager nos articles éducatifs (avec attribution appropriée)
 - Utiliser les outils de recherche et de comparaison
 
-### 5.2 Restrictions d'Utilisation
+### 6.2 Restrictions d'Utilisation
 
 Vous n'êtes PAS autorisé à :
 
@@ -159,13 +196,13 @@ Vous n'êtes PAS autorisé à :
 - Utiliser le site pour des activités illégales ou frauduleuses
 - Vendre, prescrire ou distribuer des médicaments via ce site
 
-## 6. Interdiction de Vente de Médicaments
+## 7. Interdiction de Vente de Médicaments
 
-### 6.1 Site Informatif Uniquement
+### 7.1 Site Informatif Uniquement
 
 Taawidaty.ma est strictement un site d'information. Nous ne vendons, ne distribuons, ni ne prescrivons AUCUN médicament.
 
-### 6.2 Obtention Légale de Médicaments
+### 7.2 Obtention Légale de Médicaments
 
 Les médicaments sur ordonnance doivent être obtenus uniquement :
 
@@ -173,13 +210,13 @@ Les médicaments sur ordonnance doivent être obtenus uniquement :
 - Avec une prescription valide d'un médecin agréé
 - En conformité avec la législation marocaine sur les médicaments
 
-### 6.3 Mise en Garde
+### 7.3 Mise en Garde
 
 L'achat de médicaments auprès de sources non autorisées peut être dangereux et illégal.
 
-## 7. Propriété Intellectuelle
+## 8. Propriété Intellectuelle
 
-### 7.1 Contenu Protégé
+### 8.1 Contenu Protégé
 
 Tout le contenu de Taawidaty.ma, incluant mais sans s'y limiter :
 
@@ -191,17 +228,17 @@ Tout le contenu de Taawidaty.ma, incluant mais sans s'y limiter :
 
 est protégé par les lois marocaines et internationales sur la propriété intellectuelle et appartient à Taawidaty.ma ou à ses concédants de licence.
 
-### 7.2 Droits Réservés
+### 8.2 Droits Réservés
 
 Tous les droits non expressément accordés dans ces Conditions sont réservés.
 
-### 7.3 Attribution des Sources
+### 8.3 Attribution des Sources
 
 Lorsque nous citons des sources externes (FDA, OMS, Ministère de la Santé du Maroc, études médicales), ces contenus appartiennent à leurs propriétaires respectifs et sont utilisés conformément aux principes de citation académique et éducative.
 
-## 8. Contenu Généré par l'Utilisateur
+## 9. Contenu Généré par l'Utilisateur
 
-### 8.1 Commentaires et Contributions
+### 9.1 Commentaires et Contributions
 
 Si nous permettons aux utilisateurs de soumettre des commentaires ou des contributions :
 
@@ -209,7 +246,7 @@ Si nous permettons aux utilisateurs de soumettre des commentaires ou des contrib
 - Vous nous accordez une licence mondiale, non exclusive, libre de droits pour utiliser, reproduire et afficher votre contenu
 - Vous garantissez que votre contenu ne viole aucun droit de tiers
 
-### 8.2 Contenu Interdit
+### 9.2 Contenu Interdit
 
 Vous ne pouvez pas soumettre de contenu qui :
 
@@ -219,30 +256,30 @@ Vous ne pouvez pas soumettre de contenu qui :
 - Fait la promotion de médicaments de manière inappropriée
 - Contient des informations médicales fausses ou dangereuses
 
-### 8.3 Modération
+### 9.3 Modération
 
 Nous nous réservons le droit de modérer, modifier ou supprimer tout contenu utilisateur qui viole ces conditions ou nos politiques.
 
-## 9. Liens vers des Sites Tiers
+## 10. Liens vers des Sites Tiers
 
-### 9.1 Présence de Liens
+### 10.1 Présence de Liens
 
 Notre site peut contenir des liens vers des sites web tiers (organisations médicales, institutions pharmaceutiques, sites gouvernementaux).
 
-### 9.2 Non-Responsabilité
+### 10.2 Non-Responsabilité
 
 - Ces liens sont fournis pour votre commodité
 - Nous ne contrôlons pas ces sites tiers
 - Nous ne sommes pas responsables de leur contenu, politiques ou pratiques
 - L'inclusion d'un lien ne constitue pas une approbation
 
-### 9.3 Utilisation à Vos Risques
+### 10.3 Utilisation à Vos Risques
 
 Vous accédez aux sites tiers à vos propres risques et devez consulter leurs conditions d'utilisation et politiques de confidentialité.
 
-## 10. Limitation de Responsabilité
+## 11. Limitation de Responsabilité
 
-### 10.1 Exclusion de Garanties
+### 11.1 Exclusion de Garanties
 
 DANS LA MESURE MAXIMALE PERMISE PAR LA LOI MAROCAINE, TAAWIDATY.MA EST FOURNI "TEL QUEL" ET "SELON DISPONIBILITÉ" SANS GARANTIES D'AUCUNE SORTE, EXPRESSES OU IMPLICITES.
 
@@ -253,7 +290,7 @@ Nous déclinons toute garantie concernant :
 - L'absence d'erreurs ou de virus
 - Les résultats obtenus de l'utilisation du site
 
-### 10.2 Exclusion de Responsabilité pour Dommages
+### 11.2 Exclusion de Responsabilité pour Dommages
 
 DANS LA MESURE MAXIMALE PERMISE PAR LA LOI, TAAWIDATY.MA, SES PROPRIÉTAIRES, EMPLOYÉS, CONTRIBUTEURS OU AFFILIÉS NE SERONT PAS RESPONSABLES DE :
 
@@ -263,11 +300,11 @@ DANS LA MESURE MAXIMALE PERMISE PAR LA LOI, TAAWIDATY.MA, SES PROPRIÉTAIRES, EM
 - Décisions médicales prises sur la base des informations du site
 - Erreurs ou omissions dans le contenu du site
 
-### 10.3 Juridictions sans Limitation
+### 11.3 Juridictions sans Limitation
 
 Certaines juridictions ne permettent pas l'exclusion de certaines garanties ou limitations de responsabilité. Dans ces juridictions, notre responsabilité sera limitée au maximum permis par la loi.
 
-## 11. Indemnisation
+## 12. Indemnisation
 
 Vous acceptez d'indemniser et de dégager de toute responsabilité Taawidaty.ma, ses propriétaires, employés, contributeurs et affiliés contre toute réclamation, perte, responsabilité, coût ou dépense (incluant les honoraires d'avocat raisonnables) résultant de :
 
@@ -276,13 +313,13 @@ Vous acceptez d'indemniser et de dégager de toute responsabilité Taawidaty.ma,
 - Votre violation de droits de tiers
 - Tout contenu que vous soumettez au site
 
-## 12. Vie Privée et Protection des Données
+## 13. Vie Privée et Protection des Données
 
-### 12.1 Politique de Confidentialité
+### 13.1 Politique de Confidentialité
 
 Votre utilisation du site est également régie par notre Politique de Confidentialité, qui est incorporée par référence dans ces Conditions.
 
-### 12.2 Collecte de Données
+### 13.2 Collecte de Données
 
 Nous collectons et utilisons vos données personnelles conformément à :
 
@@ -290,13 +327,13 @@ Nous collectons et utilisons vos données personnelles conformément à :
 - La loi marocaine n°09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel
 - Le cas échéant, le Règlement Général sur la Protection des Données (RGPD) de l'UE
 
-### 12.3 Cookies
+### 13.3 Cookies
 
 Nous utilisons des cookies et technologies similaires. Consultez notre Politique de Cookies pour plus d'informations.
 
-## 13. Modifications du Service et des Conditions
+## 14. Modifications du Service et des Conditions
 
-### 13.1 Droit de Modification
+### 20.1 Droit de Modification
 
 Nous nous réservons le droit, à notre seule discrétion, de :
 
@@ -304,24 +341,24 @@ Nous nous réservons le droit, à notre seule discrétion, de :
 - Modifier, suspendre ou interrompre tout aspect du site
 - Mettre à jour le contenu médical et pharmaceutique
 
-### 13.2 Notification des Modifications
+### 20.2 Notification des Modifications
 
 Les modifications importantes seront :
 
 - Publiées sur cette page avec une nouvelle "Date de Mise à Jour"
 - Notifiées par e-mail aux utilisateurs enregistrés (si applicable)
 
-### 13.3 Acceptation des Modifications
+### 20.3 Acceptation des Modifications
 
 Votre utilisation continue du site après les modifications constitue votre acceptation des nouvelles conditions. Si vous n'acceptez pas les modifications, vous devez cesser d'utiliser le site.
 
-## 14. Résiliation
+## 15. Résiliation
 
-### 14.1 Résiliation par l'Utilisateur
+### 20.1 Résiliation par l'Utilisateur
 
 Vous pouvez cesser d'utiliser le site à tout moment.
 
-### 14.2 Résiliation par Taawidaty.ma
+### 20.2 Résiliation par Taawidaty.ma
 
 Nous pouvons, à notre seule discrétion, suspendre ou résilier votre accès au site si :
 
@@ -329,16 +366,16 @@ Nous pouvons, à notre seule discrétion, suspendre ou résilier votre accès au
 - Votre utilisation du site est jugée inappropriée ou illégale
 - Requis par la loi ou par une ordonnance judiciaire
 
-### 14.3 Effets de la Résiliation
+### 20.3 Effets de la Résiliation
 
 Après résiliation :
 
 - Votre droit d'accès au site cesse immédiatement
 - Les dispositions qui, par nature, doivent survivre (limitation de responsabilité, propriété intellectuelle, indemnisation) restent en vigueur
 
-## 15. Conformité Légale au Maroc
+## 16. Conformité Légale au Maroc
 
-### 15.1 Législation Applicable
+### 20.1 Législation Applicable
 
 Taawidaty.ma opère en conformité avec :
 
@@ -347,7 +384,7 @@ Taawidaty.ma opère en conformité avec :
 - La Loi 17-04 portant Code du Médicament et de la Pharmacie
 - Les normes de la Commission Nationale de Contrôle de la Protection des Données à Caractère Personnel (CNDP)
 
-### 15.2 Informations Réglementaires
+### 20.2 Informations Réglementaires
 
 Les informations sur les médicaments sont basées sur :
 
@@ -355,9 +392,9 @@ Les informations sur les médicaments sont basées sur :
 - Les données d'enregistrement des médicaments au Maroc
 - Les sources internationales reconnues (FDA, EMA, OMS)
 
-## 16. Publicité (Future)
+## 17. Publicité (Future)
 
-### 16.1 Publicité Prévue
+### 20.1 Publicité Prévue
 
 À l'avenir, Taawidaty.ma pourra afficher de la publicité, incluant :
 
@@ -365,7 +402,7 @@ Les informations sur les médicaments sont basées sur :
 - Des publicités de tiers
 - Du contenu sponsorisé
 
-### 16.2 Séparation du Contenu Publicitaire
+### 20.2 Séparation du Contenu Publicitaire
 
 Lorsque des publicités seront présentes :
 
@@ -373,7 +410,7 @@ Lorsque des publicités seront présentes :
 - Le contenu éditorial restera indépendant du contenu publicitaire
 - Nous ne permettrons pas de publicités pour des produits ou services illégaux
 
-### 16.3 Politique de Publicité Responsable
+### 20.3 Politique de Publicité Responsable
 
 Nous nous engageons à :
 
@@ -381,9 +418,9 @@ Nous nous engageons à :
 - Ne pas faire la promotion de médicaments sur ordonnance directement aux consommateurs de manière inappropriée
 - Maintenir des standards éthiques dans toute publicité
 
-## 17. Accès International
+## 18. Accès International
 
-### 17.1 Contenu Spécifique au Maroc
+### 20.1 Contenu Spécifique au Maroc
 
 Bien que le site soit accessible mondialement, le contenu est spécifiquement conçu pour :
 
@@ -391,55 +428,55 @@ Bien que le site soit accessible mondialement, le contenu est spécifiquement co
 - Le système de santé marocain
 - Les médicaments commercialisés au Maroc
 
-### 17.2 Restrictions d'Exportation
+### 20.2 Restrictions d'Exportation
 
 Certaines informations ou fonctionnalités peuvent être soumises aux lois sur l'exportation et les sanctions internationales.
 
-### 17.3 Conformité Locale
+### 20.3 Conformité Locale
 
 Si vous accédez au site depuis l'extérieur du Maroc, vous êtes responsable du respect des lois locales de votre juridiction.
 
-## 18. Droit Applicable et Juridiction
+## 19. Droit Applicable et Juridiction
 
-### 18.1 Loi Marocaine
+### 20.1 Loi Marocaine
 
 Ces Conditions d'Utilisation sont régies et interprétées conformément aux lois du Royaume du Maroc, sans égard à ses principes de conflits de lois.
 
-### 18.2 Juridiction Compétente
+### 20.2 Juridiction Compétente
 
 Tout litige découlant de ou en relation avec ces Conditions sera soumis à la juridiction exclusive des tribunaux de Kenitra, Maroc.
 
-### 18.3 Renonciation au Jury
+### 20.3 Renonciation au Jury
 
 Dans la mesure permise par la loi, les parties renoncent à tout droit à un procès devant jury.
 
-## 19. Dispositions Générales
+## 20. Dispositions Générales
 
-### 19.1 Accord Intégral
+### 20.1 Accord Intégral
 
 Ces Conditions d'Utilisation, conjointement avec notre Politique de Confidentialité et notre Avertissement Médical, constituent l'intégralité de l'accord entre vous et Taawidaty.ma concernant l'utilisation du site.
 
-### 19.2 Divisibilité
+### 20.2 Divisibilité
 
 Si une disposition de ces Conditions est jugée invalide ou inapplicable, les autres dispositions resteront pleinement en vigueur et applicables.
 
-### 19.3 Renonciation
+### 20.3 Renonciation
 
 L'échec de Taawidaty.ma à faire respecter un droit ou une disposition de ces Conditions ne constitue pas une renonciation à ce droit ou à cette disposition.
 
-### 19.4 Cession
+### 20.4 Cession
 
 Vous ne pouvez pas céder vos droits ou obligations en vertu de ces Conditions sans notre consentement écrit préalable. Nous pouvons céder nos droits et obligations sans restriction.
 
-### 19.5 Titres
+### 20.5 Titres
 
 Les titres des sections sont fournis pour la commodité uniquement et n'ont aucune valeur juridique ou contractuelle.
 
-### 19.6 Langue
+### 20.6 Langue
 
 En cas de conflit entre les versions française et arabe de ces Conditions, la version française prévaudra.
 
-## 20. Contact
+## 21. Contact
 
 Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter :
 
@@ -498,7 +535,44 @@ Taawidaty.ma هي قاعدة بيانات تعليمية عبر الإنترنت
 
 **مهم: هذا الموقع للأغراض الإعلامية والتعليمية فقط. لا يحل محل المشورة الطبية المهنية أو التشخيص أو العلاج.**
 
-## 3. تحذير طبي
+## 3. تحذير رسمي
+
+### 3.1 خدمة خاصة ومستقلة
+
+**موقع taawidaty.ma هو خدمة خاصة ومستقلة، دون أي انتماء أو ارتباط بالصندوق الوطني للضمان الاجتماعي (CNSS) أو الصندوق الوطني لمنظمات الاحتياط الاجتماعي (CNOPS).**
+
+نحن لسنا موقعاً رسمياً للصندوق الوطني للضمان الاجتماعي أو الصندوق الوطني لمنظمات الاحتياط الاجتماعي. يتم توفير خدمتنا من قبل كيان خاص متميز ومنفصل عن هذه المؤسسات الحكومية.
+
+### 3.2 الغرض من الخدمة
+
+Taawidaty.ma هي منصة تعليمية مصممة من أجل:
+
+- تقديم معلومات عامة حول الأدوية المتاحة تجارياً في المغرب
+- مساعدة المستخدمين على فهم سياسات استرداد تكاليف الأدوية
+- تقديم تقديرات إرشادية لمعدلات الاسترداد المحتملة
+- تسهيل الوصول إلى المعلومات الصيدلانية العامة
+
+### 3.3 عدم وجود ضمان رسمي
+
+المعلومات والتقديرات المقدمة على هذا الموقع:
+
+- تستند إلى بيانات متاحة للجمهور ويمكن أن تحتوي على أخطاء
+- لا تشكل ضماناً للاسترداد من قبل الصندوق الوطني للضمان الاجتماعي أو الصندوق الوطني لمنظمات الاحتياط الاجتماعي
+- لا تحل محل التواصل الرسمي من هذه المؤسسات
+- يجب التحقق منها مع مؤسسة التأمين الخاصة بك لأي قرار رسمي
+
+### 3.4 العلامات التجارية المسجلة
+
+أسماء "CNSS" و "CNOPS" هي علامات تجارية مسجلة تنتمي على التوالي إلى الصندوق الوطني للضمان الاجتماعي والصندوق الوطني لمنظمات الاحتياط الاجتماعي في المغرب. استخدام هذه الأسماء على هذا الموقع هو لأغراض إعلامية ومرجعية فقط، ولا يعني أي انتماء أو رعاية أو موافقة من جانبنا من قبل هذه المؤسسات.
+
+### 3.5 الاتصال الرسمي
+
+لأي معلومات رسمية أو طلب استرداد، يرجى الاتصال مباشرة:
+
+- **CNSS** : [www.cnss.ma](http://www.cnss.ma)
+- **CNOPS** : [www.cnops.org.ma](http://www.cnops.org.ma)
+
+## 4. تحذير طبي
 
 ### 3.1 طبيعة المحتوى
 
@@ -522,9 +596,9 @@ Taawidaty.ma هي قاعدة بيانات تعليمية عبر الإنترنت
 
 استخدام هذا الموقع لا ينشئ أي علاقة طبيب-مريض أو صيدلي-مريض أو أي علاقة مهنية صحية أخرى بينك وبين Taawidaty.ma أو مساهميه.
 
-## 4. دقة المعلومات
+## 5. دقة المعلومات
 
-### 4.1 جهود الدقة
+### 5.1 جهود الدقة
 
 نبذل جهوداً لتقديم معلومات دقيقة ومحدثة وموثوقة. ومع ذلك:
 
@@ -533,7 +607,7 @@ Taawidaty.ma هي قاعدة بيانات تعليمية عبر الإنترنت
 - قد لا تكون المعلومات كاملة أو شاملة
 - قد لا تنطبق المعلومات على حالتك الشخصية
 
-### 4.2 عدم الضمان
+### 5.2 عدم الضمان
 
 نحن لا نضمن أن المعلومات الموجودة على هذا الموقع:
 
@@ -542,13 +616,13 @@ Taawidaty.ma هي قاعدة بيانات تعليمية عبر الإنترنت
 - محدثة في وقت استشارتك
 - قابلة للتطبيق على وضعك المحدد
 
-### 4.3 التحقق المستقل
+### 5.3 التحقق المستقل
 
 أنت مسؤول عن التحقق من أي معلومات مع أخصائي الرعاية الصحية الخاص بك قبل اتخاذ قرارات طبية.
 
-## 5. الاستخدام المسموح به
+## 6. الاستخدام المسموح به
 
-### 5.1 حقوق الاستخدام
+### 6.1 حقوق الاستخدام
 
 يُسمح لك بـ:
 
@@ -557,25 +631,25 @@ Taawidaty.ma هي قاعدة بيانات تعليمية عبر الإنترنت
 - قراءة ومشاركة مقالاتنا التعليمية (مع الإسناد المناسب)
 - استخدام أدوات البحث والمقارنة
 
-### 5.2 قيود الاستخدام
+### 6.2 قيود الاستخدام
 
 لا يُسمح لك بـ:
 
 - نسخ أو إعادة إنتاج أو إعادة نشر محتوى الموقع دون إذن كتابي
 - استخدام الموقع لأغراض تجارية دون موافقتنا المسبقة
-- استخراج المحتوى تلقائياً (scraping) من قاعدة البيانات الخاصة بنا
+- استخراج المحتوى تلقائياً (scraping) من قاعدة بياناتنا
 - إعادة توزيع معلوماتنا على منصات أخرى دون إذن
 - تعديل أو تغيير محتوى الموقع
 - استخدام الموقع لأنشطة غير قانونية أو احتيالية
 - بيع أو وصف أو توزيع الأدوية عبر هذا الموقع
 
-## 6. حظر بيع الأدوية
+## 7. حظر بيع الأدوية
 
-### 6.1 موقع معلوماتي فقط
+### 7.1 موقع إعلامي فقط
 
-Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا نوزع ولا نصف أي أدوية.
+Taawidaty.ma هو موقع إعلامي بحت. نحن لا نبيع ولا نوزع ولا نصف أي أدوية.
 
-### 6.2 الحصول القانوني على الأدوية
+### 7.2 الحصول القانوني على الأدوية
 
 يجب الحصول على الأدوية الموصوفة طبياً فقط من:
 
@@ -583,13 +657,13 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - بوصفة طبية صالحة من طبيب مرخص
 - بما يتوافق مع التشريعات المغربية الخاصة بالأدوية
 
-### 6.3 تحذير
+### 7.3 تحذير
 
 شراء الأدوية من مصادر غير مصرح بها يمكن أن يكون خطيراً وغير قانوني.
 
-## 7. الملكية الفكرية
+## 8. الملكية الفكرية
 
-### 7.1 المحتوى المحمي
+### 8.1 المحتوى المحمي
 
 جميع محتويات Taawidaty.ma، بما في ذلك على سبيل المثال لا الحصر:
 
@@ -601,17 +675,17 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 
 محمية بموجب قوانين الملكية الفكرية المغربية والدولية وهي ملك لـ Taawidaty.ma أو مانحي التراخيص.
 
-### 7.2 حقوق محفوظة
+### 8.2 حقوق محفوظة
 
 جميع الحقوق غير الممنوحة صراحة في هذه الشروط محفوظة.
 
-### 7.3 إسناد المصادر
+### 8.3 إسناد المصادر
 
 عندما نستشهد بمصادر خارجية (إدارة الغذاء والدواء الأمريكية، منظمة الصحة العالمية، وزارة الصحة المغربية، الدراسات الطبية)، فإن هذه المحتويات تنتمي إلى أصحابها المعنيين وتُستخدم وفقاً لمبادئ الاستشهاد الأكاديمي والتعليمي.
 
-## 8. المحتوى الذي ينشئه المستخدم
+## 9. المحتوى الذي ينشئه المستخدم
 
-### 8.1 التعليقات والمساهمات
+### 9.1 التعليقات والمساهمات
 
 إذا سمحنا للمستخدمين بتقديم تعليقات أو مساهمات:
 
@@ -619,7 +693,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - تمنحنا ترخيصاً عالمياً غير حصري ومجانياً لاستخدام وإعادة إنتاج وعرض المحتوى الخاص بك
 - تضمن أن المحتوى الخاص بك لا يخرق حقوق الطرف الثالث
 
-### 8.2 المحتوى المحظور
+### 9.2 المحتوى المحظور
 
 لا يمكنك تقديم محتوى:
 
@@ -629,30 +703,30 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - يروج للأدوية بشكل غير لائق
 - يحتوي على معلومات طبية كاذبة أو خطيرة
 
-### 8.3 الإشراف
+### 9.3 الإشراف
 
 نحتفظ بالحق في الإشراف على أي محتوى مستخدم أو تعديله أو حذفه إذا انتهك هذه الشروط أو سياساتنا.
 
-## 9. روابط إلى مواقع الطرف الثالث
+## 10. روابط إلى مواقع الطرف الثالث
 
-### 9.1 وجود الروابط
+### 10.1 وجود الروابط
 
 قد يحتوي موقعنا على روابط إلى مواقع ويب تابعة لطرف ثالث (منظمات طبية، مؤسسات صيدلانية، مواقع حكومية).
 
-### 9.2 عدم المسؤولية
+### 10.2 عدم المسؤولية
 
 - هذه الروابط مقدمة لراحتك
 - نحن لا نتحكم في مواقع الطرف الثالث هذه
 - نحن غير مسؤولين عن محتواها أو سياساتها أو ممارساتها
 - تضمين رابط لا يشكل تأييداً
 
-### 9.3 الاستخدام على مسؤوليتك الخاصة
+### 10.3 الاستخدام على مسؤوليتك الخاصة
 
 أنت تصل إلى مواقع الطرف الثالث على مسؤوليتك الخاصة ويجب عليك الرجوع إلى شروط الاستخدام وسياسات الخصوصية الخاصة بها.
 
-## 10. تحديد المسؤولية
+## 11. تحديد المسؤولية
 
-### 10.1 استبعاد الضمانات
+### 11.1 استبعاد الضمانات
 
 إلى أقصى حد يسمح به القانون المغربي، يتم توفير TAAWIDATY.MA "كما هو" و"حسب التوافر" دون ضمانات من أي نوع، صريحة أو ضمنية.
 
@@ -663,7 +737,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - خلو الموقع من الأخطاء أو الفيروسات
 - النتائج التي تم الحصول عليها من استخدام الموقع
 
-### 10.2 استبعاد المسؤولية عن الأضرار
+### 11.2 استبعاد المسؤولية عن الأضرار
 
 إلى أقصى حد يسمح به القانون، لن يكون TAAWIDATY.MA أو مالكوه أو موظفوه أو مساهموه أو الشركات التابعة له مسؤولين عن:
 
@@ -673,11 +747,11 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - القرارات الطبية المتخذة بناءً على معلومات الموقع
 - الأخطاء أو الإغفالات في محتوى الموقع
 
-### 10.3 الولايات القضائية بدون قيود
+### 11.3 الولايات القضائية بدون قيود
 
 بعض الولايات القضائية لا تسمح باستبعاد بعض الضمانات أو قيود المسؤولية. في هذه الولايات القضائية، ستقتصر مسؤوليتنا على الحد الأقصى المسموح به بموجب القانون.
 
-## 11. التعويض
+## 12. التعويض
 
 أنت توافق على تعويض وإعفاء Taawidaty.ma ومالكيه وموظفيه ومساهميه والشركات التابعة له من المسؤولية عن أي مطالبة أو خسارة أو مسؤولية أو تكلفة أو نفقات (بما في ذلك أتعاب المحاماة المعقولة) الناتجة عن:
 
@@ -686,13 +760,13 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - انتهاكك لحقوق الطرف الثالث
 - أي محتوى تقدمه إلى الموقع
 
-## 12. الخصوصية وحماية البيانات
+## 13. الخصوصية وحماية البيانات
 
-### 12.1 سياسة الخصوصية
+### 13.1 سياسة الخصوصية
 
 يخضع استخدامك للموقع أيضاً لسياسة الخصوصية الخاصة بنا، والتي يتم دمجها بالإشارة في هذه الشروط.
 
-### 12.2 جمع البيانات
+### 13.2 جمع البيانات
 
 نجمع ونستخدم بياناتك الشخصية وفقاً لـ:
 
@@ -700,11 +774,11 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - القانون المغربي رقم 09-08 المتعلق بحماية الأشخاص الطبيعيين تجاه معالجة البيانات ذات الطابع الشخصي
 - عند الاقتضاء، اللائحة العامة لحماية البيانات (GDPR) للاتحاد الأوروبي
 
-### 12.3 ملفات تعريف الارتباط
+### 13.3 ملفات تعريف الارتباط
 
 نستخدم ملفات تعريف الارتباط (Cookies) وتقنيات مماثلة. راجع سياسة ملفات تعريف الارتباط الخاصة بنا لمزيد من المعلومات.
 
-## 13. تعديلات الخدمة والشروط
+## 14. تعديلات الخدمة والشروط
 
 ### 13.1 حق التعديل
 
@@ -725,13 +799,13 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 
 يشكل استمرار استخدامك للموقع بعد التعديلات قبولك للشروط الجديدة. إذا كنت لا توافق على التعديلات، يجب عليك التوقف عن استخدام الموقع.
 
-## 14. الإنهاء
+## 15. الإنهاء
 
-### 14.1 الإنهاء من قبل المستخدم
+### 20.1 الإنهاء من قبل المستخدم
 
 يمكنك التوقف عن استخدام الموقع في أي وقت.
 
-### 14.2 الإنهاء من قبل Taawidaty.ma
+### 20.2 الإنهاء من قبل Taawidaty.ma
 
 يمكننا، وفقاً لتقديرنا الخاص، تعليق أو إنهاء وصولك إلى الموقع إذا:
 
@@ -739,16 +813,16 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - تم اعتبار استخدامك للموقع غير لائق أو غير قانوني
 - مطلوب بموجب القانون أو أمر قضائي
 
-### 14.3 آثار الإنهاء
+### 20.3 آثار الإنهاء
 
 بعد الإنهاء:
 
 - يتوقف حقك في الوصول إلى الموقع فوراً
 - تظل الأحكام التي، بطبيعتها، يجب أن تستمر (تحديد المسؤولية، الملكية الفكرية، التعويض) سارية المفعول
 
-## 15. الامتثال القانوني في المغرب
+## 16. الامتثال القانوني في المغرب
 
-### 15.1 التشريعات المطبقة
+### 20.1 التشريعات المطبقة
 
 يعمل Taawidaty.ma بما يتوافق مع:
 
@@ -757,7 +831,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - القانون 17-04 بشأن قانون الأدوية والصيدلة
 - معايير اللجنة الوطنية لمراقبة حماية البيانات الشخصية (CNDP)
 
-### 15.2 المعلومات التنظيمية
+### 20.2 المعلومات التنظيمية
 
 تستند المعلومات حول الأدوية إلى:
 
@@ -765,9 +839,9 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - بيانات تسجيل الأدوية في المغرب
 - المصادر الدولية المعترف بها (إدارة الغذاء والدواء، وكالة الأدوية الأوروبية، منظمة الصحة العالمية)
 
-## 16. الإعلانات (مستقبلاً)
+## 17. الإعلانات (مستقبلاً)
 
-### 16.1 الإعلانات المخطط لها
+### 20.1 الإعلانات المخطط لها
 
 في المستقبل، قد يعرض Taawidaty.ma إعلانات، بما في ذلك:
 
@@ -775,7 +849,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - إعلانات الطرف الثالث
 - محتوى مدعوم
 
-### 16.2 فصل المحتوى الإعلاني
+### 20.2 فصل المحتوى الإعلاني
 
 عندما تكون الإعلانات موجودة:
 
@@ -783,7 +857,7 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - سيظل المحتوى التحريري مستقلاً عن المحتوى الإعلاني
 - لن نسمح بالإعلان عن منتجات أو خدمات غير قانونية
 
-### 16.3 سياسة الإعلان المسؤول
+### 20.3 سياسة الإعلان المسؤول
 
 نلتزم بـ:
 
@@ -791,9 +865,9 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - عدم الترويج للأدوية الموصوفة طبياً مباشرة للمستهلكين بطريقة غير لائقة
 - الحفاظ على المعايير الأخلاقية في أي إعلان
 
-## 17. الوصول الدولي
+## 18. الوصول الدولي
 
-### 17.1 محتوى خاص بالمغرب
+### 20.1 محتوى خاص بالمغرب
 
 على الرغم من أن الموقع يمكن الوصول إليه عالمياً، فإن المحتوى مصمم خصيصاً لـ:
 
@@ -801,55 +875,55 @@ Taawidaty.ma هو موقع معلوماتي بحت. نحن لا نبيع ولا 
 - نظام الرعاية الصحية المغربي
 - الأدوية المتاحة تجارياً في المغرب
 
-### 17.2 قيود التصدير
+### 20.2 قيود التصدير
 
 قد تخضع بعض المعلومات أو الميزات لقوانين التصدير والعقوبات الدولية.
 
-### 17.3 الامتثال المحلي
+### 20.3 الامتثال المحلي
 
 إذا كنت تصل إلى الموقع من خارج المغرب، فأنت مسؤول عن الامتثال للقوانين المحلية في ولايتك القضائية.
 
-## 18. القانون المطبق والولاية القضائية
+## 19. القانون المطبق والولاية القضائية
 
-### 18.1 القانون المغربي
+### 20.1 القانون المغربي
 
 تخضع شروط الاستخدام هذه وتُفسر وفقاً لقوانين المملكة المغربية، دون اعتبار لمبادئ تنازع القوانين.
 
-### 18.2 الولاية القضائية المختصة
+### 20.2 الولاية القضائية المختصة
 
 سيتم إحالة أي نزاع ناشئ عن أو يتعلق بهذه الشروط إلى الولاية القضائية الحصرية لمحاكم القنيطرة، المغرب.
 
-### 18.3 التنازل عن هيئة المحلفين
+### 20.3 التنازل عن هيئة المحلفين
 
 إلى أقصى حد يسمح به القانون، تتنازل الأطراف عن أي حق في محاكمة أمام هيئة محلفين.
 
 ## 19. أحكام عامة
 
-### 19.1 الاتفاق الكامل
+### 20.1 الاتفاق الكامل
 
 تشكل شروط الاستخدام هذه، جنباً إلى جنب مع سياسة الخصوصية والتحذير الطبي الخاصين بنا، الاتفاق الكامل بينك وبين Taawidaty.ma فيما يتعلق باستخدام الموقع.
 
-### 19.2 قابلية الفصل
+### 20.2 قابلية الفصل
 
 إذا تم اعتبار أي حكم من هذه الشروط غير صالح أو غير قابل للتنفيذ، فستظل الأحكام الأخرى سارية المفعول وقابلة للتنفيذ بالكامل.
 
-### 19.3 التنازل
+### 20.3 التنازل
 
 فشل Taawidaty.ma في إنفاذ حق أو حكم من هذه الشروط لا يشكل تنازلاً عن ذلك الحق أو الحكم.
 
-### 19.4 التنازل عن الحقوق
+### 20.4 التنازل عن الحقوق
 
 لا يمكنك التنازل عن حقوقك أو التزاماتك بموجب هذه الشروط دون موافقتنا الكتابية المسبقة. يمكننا التنازل عن حقوقنا والتزاماتنا دون قيود.
 
-### 19.5 العناوين
+### 20.5 العناوين
 
 تُقدم عناوين الأقسام للراحة فقط وليس لها قيمة قانونية أو تعاقدية.
 
-### 19.6 اللغة
+### 20.6 اللغة
 
 في حالة وجود تعارض بين النسختين الفرنسية والعربية من هذه الشروط، ستسود النسخة الفرنسية.
 
-## 20. الاتصال
+## 21. الاتصال
 
 لأي أسئلة تتعلق بشروط الاستخدام هذه، يرجى الاتصال بنا:
 
