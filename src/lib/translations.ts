@@ -6,7 +6,7 @@ export const translations = {
     },
     hero: {
       title: 'احسب تعويض أدويتك بسهولة',
-      subtitle: 'اكتشف المبلغ الذي ستسترده من تأمينك الصحي فوراً',
+      subtitle: 'احسب التعويض من التأمين أو تحقق من أسعار الأدوية في المغرب',
       cta: 'احسب الآن',
       trustOfficial: 'بيانات رسمية محدثة',
       trustInstant: 'نتائج فورية',
@@ -78,7 +78,7 @@ export const translations = {
     },
     hero: {
       title: 'Calculez facilement le remboursement de vos médicaments',
-      subtitle: 'Découvrez instantanément combien vous serez remboursé par votre mutuelle',
+      subtitle: 'Calculez votre remboursement mutuelle ou vérifiez les prix des médicaments au Maroc',
       cta: 'Calculer maintenant',
       trustOfficial: 'Données officielles à jour',
       trustInstant: 'Résultats instantanés',

@@ -24,7 +24,10 @@ import {
   Barcode,
   Package,
   Info,
-  ShoppingCart
+  ShoppingCart,
+  X,
+  Plus,
+  Calculator
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -46,6 +49,7 @@ export default function PriceChecker() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
   const scrolled = useScrollPosition();
+  const [medications, setMedications] = useState<Medication[]>([]);
   const [selectedMedication, setSelectedMedication] = useState<Medication | null>(null);
 
   const metaTitle = language === 'ar'
@@ -64,6 +68,32 @@ export default function PriceChecker() {
       maximumFractionDigits: 2
     }).format(amount);
   };
+
+  const addMedication = (medication: Medication) => {
+    // Check if medication already added
+    if (medications.find(m => m.id === medication.id)) {
+      return;
+    }
+    setMedications(prev => [...prev, medication]);
+    setSelectedMedication(medication);
+  };
+
+  const removeMedication = (medicationId: number) => {
+    setMedications(prev => prev.filter(m => m.id !== medicationId));
+    // If removing the selected medication, clear selection
+    if (selectedMedication?.id === medicationId) {
+      setSelectedMedication(medications.length > 1 ? medications[0] : null);
+    }
+  };
+
+  const clearAll = () => {
+    setMedications([]);
+    setSelectedMedication(null);
+  };
+
+  // Calculate totals
+  const totalPPV = medications.reduce((sum, med) => sum + med.ppv, 0);
+  const totalPH = medications.reduce((sum, med) => sum + (med.ph || 0), 0);
 
   return (
     <>
@@ -156,12 +186,119 @@ export default function PriceChecker() {
             
             <MedicationSearchEnhanced
               placeholder={language === 'ar' ? 'ابحث عن دواء...' : 'Rechercher un médicament...'}
-              onSelect={(med) => setSelectedMedication(med as Medication)}
+              onSelect={(med) => addMedication(med as Medication)}
               language={language}
             />
+
+            {/* Selected Medications List */}
+            {medications.length > 0 && (
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                    <ShoppingCart className="w-5 h-5" />
+                    {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
+                  </h3>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={clearAll}
+                    className="text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950"
+                  >
+                    <span className={isRTL ? 'font-arabic' : ''}>
+                      {language === 'ar' ? 'مسح الكل' : 'Tout effacer'}
+                    </span>
+                  </Button>
+                </div>
+
+                <div className="space-y-3">
+                  {medications.map((med, index) => (
+                    <motion.div
+                      key={med.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ delay: index * 0.05 }}
+                      className={`flex items-center justify-between p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                        selectedMedication?.id === med.id
+                          ? 'bg-green-50 dark:bg-green-950/30 border-green-300 dark:border-green-700'
+                          : 'bg-slate-50 dark:bg-slate-900/30 border-slate-200 dark:border-slate-700 hover:border-green-200 dark:hover:border-green-800'
+                      }`}
+                      onClick={() => setSelectedMedication(med)}
+                    >
+                      <div className="flex-1">
+                        <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                          {med.name}
+                        </p>
+                        <p className="text-sm text-slate-600 dark:text-muted-foreground">
+                          {formatCurrency(med.ppv)}
+                          {med.ph && ` • ${language === 'ar' ? 'المستشفى' : 'Hôpital'}: ${formatCurrency(med.ph)}`}
+                        </p>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          removeMedication(med.id);
+                        }}
+                        className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
+                      >
+                        <X className="w-5 h-5" />
+                      </Button>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Total Price Card */}
+                {medications.length > 1 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-2 border-green-300 dark:border-green-700 rounded-xl"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                          <Calculator className="w-6 h-6 text-green-600 dark:text-green-400" />
+                        </div>
+                        <div>
+                          <p className={`text-sm text-slate-600 dark:text-muted-foreground font-medium ${isRTL ? 'font-arabic' : ''}`}>
+                            {language === 'ar' ? 'المجموع الكلي' : 'Total général'}
+                          </p>
+                          <p className="text-xs text-slate-500 dark:text-muted-foreground">
+                            {medications.length} {language === 'ar' ? 'أدوية' : 'médicaments'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center p-3 bg-white/50 dark:bg-slate-900/30 rounded-lg">
+                        <span className={`font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>
+                          {language === 'ar' ? 'المجموع (صيدلية)' : 'Total pharmacie'}
+                        </span>
+                        <span className="text-2xl font-black text-green-700 dark:text-green-400">
+                          {formatCurrency(totalPPV)}
+                        </span>
+                      </div>
+                      {totalPH > 0 && (
+                        <div className="flex justify-between items-center p-3 bg-white/50 dark:bg-slate-900/30 rounded-lg">
+                          <span className={`font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>
+                            {language === 'ar' ? 'المجموع (مستشفى)' : 'Total hôpital'}
+                          </span>
+                          <span className="text-2xl font-black text-blue-700 dark:text-blue-400">
+                            {formatCurrency(totalPH)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            )}
           </EnhancedCard>
 
-          {/* Results Card */}
+          {/* Individual Medication Details */}
           <AnimatePresence mode="wait">
             {selectedMedication && (
               <motion.div
@@ -171,9 +308,17 @@ export default function PriceChecker() {
                 transition={{ duration: 0.3 }}
               >
                 <EnhancedCard className="p-8">
+                  {/* Section Header */}
+                  <div className="mb-6">
+                    <h3 className={`text-xl font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                      <Info className="w-5 h-5" />
+                      {language === 'ar' ? 'تفاصيل الدواء' : 'Détails du médicament'}
+                    </h3>
+                  </div>
+
                   {/* Medication Header */}
                   <div className="border-b border-slate-200 dark:border-border pb-6 mb-6">
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="mb-4">
                       <div className="flex-1">
                         <h3 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                           {selectedMedication.name}
@@ -184,16 +329,6 @@ export default function PriceChecker() {
                           </p>
                         )}
                       </div>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => setSelectedMedication(null)}
-                        className="flex-shrink-0"
-                      >
-                        <span className={isRTL ? 'font-arabic' : ''}>
-                          {language === 'ar' ? 'مسح' : 'Effacer'}
-                        </span>
-                      </Button>
                     </div>
 
                     {/* Additional Info */}

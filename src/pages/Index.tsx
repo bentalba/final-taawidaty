@@ -242,25 +242,9 @@ export default function Index() {
             </h2>
 
             {/* Modern subtitle */}
-            <p className={`text-xl md:text-2xl text-slate-600 dark:text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+            <p className={`text-xl md:text-2xl text-slate-600 dark:text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
               {t.hero.subtitle}
             </p>
-
-          {/* Modern Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-8 mb-16">
-            {[
-              { icon: CheckCircle2, text: t.hero.trustOfficial },
-              { icon: CheckCircle2, text: t.hero.trustInstant },
-              { icon: CheckCircle2, text: t.hero.trustFree }
-            ].map((item, index) => (
-              <div key={index} className="group flex items-center gap-3 p-3 rounded-2xl glass-card hover-lift">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
-                  <item.icon className="w-5 h-5 text-success-600 dark:text-success-400" />
-                </div>
-                <span className={`text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
-              </div>
-            ))}
-          </div>
 
           {/* Two Options Cards */}
           <div className="max-w-5xl mx-auto mb-12">
@@ -268,7 +252,7 @@ export default function Index() {
               {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               {/* Card 1: Reimbursement Calculator */}
               <EnhancedCard
                 hoverable={true}
@@ -278,8 +262,12 @@ export default function Index() {
                 className="p-8 text-center cursor-pointer group"
                 onClick={() => setStep(2)}
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="w-8 h-8 text-white" />
+                <div className="mx-auto mb-6 relative w-24 h-24">
+                  <img 
+                    src="/logos/remboursement-logo.png" 
+                    alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
@@ -311,8 +299,12 @@ export default function Index() {
                   window.location.href = '/prix-medicaments';
                 }}
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Search className="w-8 h-8 text-white" />
+                <div className="mx-auto mb-6 relative w-24 h-24">
+                  <img 
+                    src="/logos/price-check-logo.png" 
+                    alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
@@ -334,6 +326,22 @@ export default function Index() {
                 </Button>
               </EnhancedCard>
             </div>
+
+          {/* Modern Trust Badges - Moved Below Cards */}
+          <div className="flex flex-wrap justify-center gap-8 mb-16">
+            {[
+              { icon: CheckCircle2, text: t.hero.trustOfficial },
+              { icon: CheckCircle2, text: t.hero.trustInstant },
+              { icon: CheckCircle2, text: t.hero.trustFree }
+            ].map((item, index) => (
+              <div key={index} className="group flex items-center gap-3 p-3 rounded-2xl glass-card hover-lift">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
+                  <item.icon className="w-5 h-5 text-success-600 dark:text-success-400" />
+                </div>
+                <span className={`text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
+              </div>
+            ))}
+          </div>
           </div>
 
           {/* FAQ Quick Access Banner */}
