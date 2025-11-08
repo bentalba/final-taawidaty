@@ -142,7 +142,7 @@ export default function ResultCard({
                   {t.savings.split('{amount}')[1]}
                 </p>
                 <p className={`text-sm text-success-600 dark:text-success-400 ${language === 'ar' ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'تم توفير هذا المبلغ بفضل التأمين' : 'Économie grâce à votre assurance'}
+                  {language === 'ar' ? 'تم توفير هذا المبلغ بفضل التأمين' : 'Économie grâce à votre mutuelle'}
                 </p>
               </div>
             </div>

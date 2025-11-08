@@ -78,7 +78,7 @@ export const translations = {
     },
     hero: {
       title: 'Calculez facilement le remboursement de vos médicaments',
-      subtitle: 'Découvrez instantanément combien vous serez remboursé par votre assurance/mutuelle',
+      subtitle: 'Découvrez instantanément combien vous serez remboursé par votre mutuelle',
       cta: 'Calculer maintenant',
       trustOfficial: 'Données officielles à jour',
       trustInstant: 'Résultats instantanés',
@@ -92,11 +92,11 @@ export const translations = {
       },
       step2: {
         title: 'Obtenez le résultat',
-        description: 'Voyez le montant couvert par votre assurance et ce que vous paierez'
+        description: 'Voyez le montant couvert par votre mutuelle et ce que vous paierez'
       }
     },
     calculator: {
-      selectInsurance: 'Choisissez votre type d\'assurance',
+      selectInsurance: 'Choisissez votre type de mutuelle',
       cnops: 'CNOPS',
       cnopsDesc: 'Caisse Nationale des Organismes de Prévoyance Sociale - Fonctionnaires',
       cnss: 'CNSS (AMO)',
@@ -112,16 +112,16 @@ export const translations = {
     results: {
       title: 'Résultat du calcul',
       medication: 'Médicament',
-      insurance: 'Assurance',
+      insurance: 'Mutuelle',
       originalPrice: 'Prix original',
-      reimbursement: 'Montant remboursé par votre assurance',
+      reimbursement: 'Montant remboursé par votre mutuelle',
       youPay: 'Vous payez',
       covered: 'Couvert',
-      savings: 'Vous économisez {amount} avec votre assurance !'
+      savings: 'Vous économisez {amount} avec votre mutuelle !'
     },
     disclaimer: {
       title: 'Avertissement important',
-      text: 'Cet outil est fourni à titre indicatif uniquement. Les montants réels peuvent varier. Veuillez consulter votre pharmacie ou votre caisse d\'assurance pour des informations précises.'
+      text: 'Cet outil est fourni à titre indicatif uniquement. Les montants réels peuvent varier. Veuillez consulter votre pharmacie ou votre mutuelle pour des informations précises.'
     },
     faq: {
       cnops: {

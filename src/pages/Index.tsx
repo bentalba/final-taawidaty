@@ -22,7 +22,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
-import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
@@ -55,11 +55,11 @@ export default function Index() {
     };
   }, [t.hero.title]);
   const metaTitle = language === 'ar'
-    ? 'حاسبة تعويض CNOPS وCNSS في المغرب - تعويضاتي'
-    : 'Calculateur Remboursement CNOPS & CNSS Maroc 2025 | Taawidaty';
+    ? 'حاسبة تعويض وأسعار الأدوية في المغرب - تعويضاتي'
+    : 'Calculateur Remboursement & Prix Médicaments Maroc 2025 | Taawidaty';
   const metaDescription = language === 'ar'
-    ? 'احسب تعويض أدويتك من CNOPS أو CNSS فوراً. قاعدة بيانات شاملة للأدوية المسترجعة 2025. معلومات رسمية محدثة، حساب دقيق، مجاني 100٪. اكتشف المبلغ الذي ستسترده قبل الشراء!'
-    : 'Calculez instantanément votre remboursement CNOPS ou CNSS pour tous vos médicaments. Base de données complète 2025, calculs précis, 100% gratuit. Découvrez combien vous serez remboursé avant d\'acheter !';
+    ? 'احسب تعويض أدويتك من التأمين الصحي فوراً أو تحقق من أسعار الأدوية. قاعدة بيانات شاملة 2025. معلومات رسمية محدثة، حساب دقيق، مجاني 100٪!'
+    : 'Calculez instantanément votre remboursement mutuelle ou vérifiez le prix des médicaments. Base de données complète 2025, calculs précis, 100% gratuit !';
   const metaKeywords = language === 'ar'
     ? [
         'حساب تعويض CNOPS',
@@ -262,32 +262,79 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Simplified Start Button */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <EnhancedCard
-              hoverable={true}
-              glowOnHover={true}
-              animateOnMount={true}
-              delay={0}
-              className="p-12 text-center"
-            >
-              <h3 className={`text-4xl font-bold text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                {language === 'ar' ? 'ابدأ حساب التعويض الآن' : 'Commencez votre estimation maintenant'}
-              </h3>
-              <p className={`text-lg text-slate-600 dark:text-muted-foreground mb-8 ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' 
-                  ? 'احسب تعويض أدويتك من CNOPS أو CNSS في ثوانٍ' 
-                  : 'Calculez votre remboursement CNOPS ou CNSS en quelques secondes'}
-              </p>
-              <Button
-                size="lg"
+          {/* Two Options Cards */}
+          <div className="max-w-5xl mx-auto mb-12">
+            <h3 className={`text-3xl font-bold text-slate-900 dark:text-foreground mb-8 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+              {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Card 1: Reimbursement Calculator */}
+              <EnhancedCard
+                hoverable={true}
+                glowOnHover={true}
+                animateOnMount={true}
+                delay={0}
+                className="p-8 text-center cursor-pointer group"
                 onClick={() => setStep(2)}
-                className="group text-xl px-12 py-8 rounded-2xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300"
               >
-                <span className={isRTL ? 'font-arabic' : ''}>{t.hero.cta}</span>
-                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-              </Button>
-            </EnhancedCard>
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
+                </h4>
+                <p className={`text-slate-600 dark:text-muted-foreground mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' 
+                    ? 'احسب المبلغ الذي ستسترده من التأمين الصحي الخاص بك'
+                    : 'Calculez combien votre mutuelle va vous rembourser'}
+                </p>
+                <Button
+                  size="lg"
+                  className="w-full group-hover:shadow-xl transition-all duration-300"
+                >
+                  <span className={isRTL ? 'font-arabic' : ''}>
+                    {language === 'ar' ? 'ابدأ الحساب' : 'Commencer'}
+                  </span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </Button>
+              </EnhancedCard>
+
+              {/* Card 2: Price Checker */}
+              <EnhancedCard
+                hoverable={true}
+                glowOnHover={true}
+                animateOnMount={true}
+                delay={0.1}
+                className="p-8 text-center cursor-pointer group"
+                onClick={() => {
+                  // Will implement price checker route
+                  alert(language === 'ar' ? 'قريباً...' : 'Bientôt disponible...');
+                }}
+              >
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Search className="w-8 h-8 text-white" />
+                </div>
+                <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
+                </h4>
+                <p className={`text-slate-600 dark:text-muted-foreground mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' 
+                    ? 'تحقق من سعر أي دواء في المغرب'
+                    : 'Vérifiez le prix de n\'importe quel médicament'}
+                </p>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full group-hover:shadow-xl transition-all duration-300"
+                >
+                  <span className={isRTL ? 'font-arabic' : ''}>
+                    {language === 'ar' ? 'تحقق من السعر' : 'Vérifier'}
+                  </span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </Button>
+              </EnhancedCard>
+            </div>
           </div>
 
           {/* FAQ Quick Access Banner */}
