@@ -1,6 +1,7 @@
 /**
  * Sitemap Generator for Taawidaty
  * Generates sitemap.xml with all medication URLs for SEO
+ * Also creates bing-urls.txt for Bing Webmaster Tools
  * Run with: node generate-sitemap.mjs
  */
 
@@ -11,7 +12,7 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const BASE_URL = 'https://taawidaty.ma';
+const BASE_URL = 'https://dev.taawidaty-site.pages.dev'; // Update to your production domain
 
 function generateMedicationSlug(name) {
   return name
@@ -119,10 +120,36 @@ function generateSitemap() {
   const sitemapPath = join(__dirname, 'public/sitemap.xml');
   writeFileSync(sitemapPath, sitemap);
 
+  // Generate Bing URL list (plain text file)
+  let bingUrls = `# Bing Webmaster Tools URL List
+# Generated: ${new Date().toISOString()}
+# Total URLs: ${topMedications.length + 4}
+
+# Main Pages
+${BASE_URL}/
+${BASE_URL}/prix-medicaments
+${BASE_URL}/faq-cnops
+${BASE_URL}/faq-cnss
+
+# Medication Pages (Top ${topMedications.length})
+`;
+
+  topMedications.forEach(medication => {
+    const slug = generateMedicationSlug(medication.name);
+    bingUrls += `${BASE_URL}/prix/${slug}\n`;
+  });
+
+  const bingUrlsPath = join(__dirname, 'public/bing-urls.txt');
+  writeFileSync(bingUrlsPath, bingUrls);
+
   console.log(`✅ Sitemap generated successfully!`);
   console.log(`📊 Total URLs: ${topMedications.length + 4}`);
   console.log(`📝 Medications indexed: ${topMedications.length}`);
-  console.log(`📄 File: ${sitemapPath}`);
+  console.log(`📄 Sitemap: ${sitemapPath}`);
+  console.log(`📄 Bing URLs: ${bingUrlsPath}`);
+  console.log(`\n🔗 Submit to:`);
+  console.log(`   Google: https://search.google.com/search-console`);
+  console.log(`   Bing: https://www.bing.com/webmasters`);
 }
 
 // Run the generator

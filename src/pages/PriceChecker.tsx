@@ -116,14 +116,14 @@ export default function PriceChecker() {
   const seoDescription = selectedMedication
     ? generateMetaDescription(selectedMedication)
     : language === 'ar'
-    ? 'ابحث عن أسعار الأدوية الرسمية في المغرب. قارن أسعار الصيدليات والمستشفيات. احسب التعويض من CNOPS و CNSS.'
-    : 'Recherchez les prix officiels des médicaments au Maroc. Comparez les prix pharmacie et hôpital. Calculez votre remboursement CNOPS et CNSS.';
+    ? 'ابحث عن أسعار الأدوية الرسمية في المغرب. قارن أسعار الصيدليات والمستشفيات. احسب التعويض من التأمين الصحي.'
+    : 'Recherchez les prix officiels des médicaments au Maroc. Comparez les prix pharmacie et hôpital. Calculez votre remboursement assurance santé.';
 
   const seoKeywords = selectedMedication
     ? generateKeywords(selectedMedication)
     : language === 'ar'
-    ? 'أسعار الأدوية, أسعار الأدوية المغرب, سعر الدواء, صيدلية المغرب, CNOPS, CNSS'
-    : 'prix médicaments maroc, prix pharmacie, prix médicaments, doliprane prix, paracétamol prix, médicaments maroc, CNOPS, CNSS';
+    ? 'أسعار الأدوية, أسعار الأدوية المغرب, سعر الدواء, صيدلية المغرب, التأمين الصحي'
+    : 'prix médicaments maroc, prix pharmacie, prix médicaments, doliprane prix, paracétamol prix, médicaments maroc, assurance santé';
 
   // Generate structured data for search engines
   const structuredData = selectedMedication

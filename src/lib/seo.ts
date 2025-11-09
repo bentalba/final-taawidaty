@@ -88,7 +88,7 @@ export function generateMedicationStructuredData(medication: Medication) {
       {
         '@type': 'MedicalWebPage',
         'name': `Prix ${medication.name} - Information Médicament Maroc`,
-        'description': `Consultez le prix officiel du ${medication.name} au Maroc. Prix pharmacie (PPV): ${medication.ppv} MAD${medication.ph ? `, Prix hôpital: ${medication.ph} MAD` : ''}. Informations sur le remboursement CNOPS et CNSS.`,
+        'description': `Consultez le prix officiel du ${medication.name} au Maroc. Prix pharmacie (PPV): ${medication.ppv} MAD${medication.ph ? `, Prix hôpital: ${medication.ph} MAD` : ''}. Calculez votre remboursement assurance santé instantanément.`,
         'mainEntity': {
           '@type': 'Drug',
           'name': medication.name,
@@ -122,7 +122,7 @@ export function generateMedicationStructuredData(medication: Medication) {
         'name': 'Taawidaty',
         'url': baseUrl,
         'logo': `${baseUrl}/logos/logo.svg`,
-        'description': 'Calculateur de remboursement CNOPS et CNSS pour les médicaments au Maroc. Trouvez les prix officiels des médicaments.',
+        'description': 'Calculateur de remboursement assurance santé et prix des médicaments au Maroc. Trouvez les prix officiels et calculez votre remboursement instantanément.',
         'contactPoint': {
           '@type': 'ContactPoint',
           'contactType': 'customer service',
@@ -142,7 +142,7 @@ export function generateMetaDescription(medication: Medication): string {
   const dosage = medication.dosage ? ` ${medication.dosage}` : '';
   const forme = medication.forme ? ` ${medication.forme}` : '';
   
-  return `Prix ${medication.name}${dosage}${forme}: ${price}. Comparez les prix en pharmacie et hôpital au Maroc. Calculez votre remboursement CNOPS/CNSS.`;
+  return `Prix ${medication.name}${dosage}${forme}: ${price}. Comparez prix pharmacie et hôpital au Maroc. Calculez votre remboursement assurance santé.`;
 }
 
 /**
@@ -166,8 +166,8 @@ export function generateKeywords(medication: Medication): string {
     'médicament maroc',
     'prix médicament',
     'pharmacie maroc',
-    'remboursement cnops',
-    'remboursement cnss'
+    'remboursement assurance santé',
+    'calculateur remboursement'
   ];
 
   if (medication.dci) {
@@ -238,10 +238,10 @@ export function generateFAQStructuredData(medication: Medication) {
       },
       {
         '@type': 'Question',
-        'name': `Le ${medication.name} est-il remboursé par la CNOPS?`,
+        'name': `Le ${medication.name} est-il remboursé par l'assurance santé?`,
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': `Utilisez notre calculateur de remboursement pour vérifier si le ${medication.name} est remboursé par la CNOPS et calculer le montant de votre remboursement.`
+          'text': `Utilisez notre calculateur de remboursement pour vérifier si le ${medication.name} est remboursé par votre assurance santé et calculer le montant de votre remboursement.`
         }
       },
       {

@@ -101,21 +101,23 @@ export default function Index() {
     ? 'حاسبة تعويض وأسعار الأدوية في المغرب - تعويضاتي'
     : 'Calculateur Remboursement & Prix Médicaments Maroc 2025 | Taawidaty';
   const metaDescription = language === 'ar'
-    ? 'احسب تعويض أدويتك من التأمين الصحي فوراً أو تحقق من أسعار الأدوية. قاعدة بيانات شاملة 2025. معلومات رسمية محدثة، حساب دقيق، مجاني 100٪!'
-    : 'Calculez instantanément votre remboursement mutuelle ou vérifiez le prix des médicaments. Base de données complète 2025, calculs précis, 100% gratuit !';
+    ? 'احسب تعويض أدويتك من التأمين الصحي الإجباري فوراً أو تحقق من أسعار الأدوية الرسمية. قاعدة بيانات شاملة +10,000 دواء. حساب دقيق، مجاني 100٪!'
+    : 'Calculez instantanément votre remboursement assurance santé ou consultez les prix officiels des médicaments au Maroc. +10,000 médicaments référencés. Rapide, précis et 100% gratuit !';
   const metaKeywords = language === 'ar'
     ? [
-        'حساب تعويض CNOPS',
-        'حساب تعويض CNSS',
-        'مصاريف الأدوية المغرب',
-        'تعويض الأدوية CNOPS CNSS',
+        'حساب تعويض الأدوية',
+        'أسعار الأدوية المغرب',
+        'تعويض التأمين الصحي',
+        'صيدلية المغرب',
+        'حاسبة التعويض',
         'تعويضاتي'
       ]
     : [
-        'remboursement cnops',
-        'remboursement cnss',
-        'calculateur médicaments maroc',
-        'base de données médicaments remboursables',
+        'calculateur remboursement médicaments',
+        'prix médicaments maroc',
+        'remboursement assurance santé',
+        'pharmacie maroc prix',
+        'base médicaments maroc',
         'taawidaty'
       ];
   const structuredData = useMemo(() => [

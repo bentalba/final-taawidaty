@@ -19,7 +19,8 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:sitemap": "node generate-sitemap.mjs"
+    "generate:sitemap": "node generate-sitemap.mjs",
+    "generate:urls": "node generate-url-list.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
