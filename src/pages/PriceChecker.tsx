@@ -16,6 +16,14 @@ import { MedicationSearchEnhanced } from '@/components/medication/MedicationSear
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
+import {
+  generateMedicationStructuredData,
+  generateMetaDescription,
+  generatePageTitle,
+  generateKeywords,
+  generateFAQStructuredData,
+  generateBreadcrumbStructuredData
+} from '@/lib/seo';
 import { 
   ArrowLeft, 
   Search, 
@@ -98,17 +106,46 @@ export default function PriceChecker() {
   const totalPPV = medications.reduce((sum, med) => sum + med.ppv, 0);
   const totalPH = medications.reduce((sum, med) => sum + (med.ph || 0), 0);
 
+  // Dynamic SEO based on selected medication
+  const seoTitle = selectedMedication
+    ? generatePageTitle(selectedMedication)
+    : language === 'ar'
+    ? 'أسعار الأدوية في المغرب | تعويضاتي'
+    : 'Prix des Médicaments au Maroc | Taawidaty';
+
+  const seoDescription = selectedMedication
+    ? generateMetaDescription(selectedMedication)
+    : language === 'ar'
+    ? 'ابحث عن أسعار الأدوية الرسمية في المغرب. قارن أسعار الصيدليات والمستشفيات. احسب التعويض من CNOPS و CNSS.'
+    : 'Recherchez les prix officiels des médicaments au Maroc. Comparez les prix pharmacie et hôpital. Calculez votre remboursement CNOPS et CNSS.';
+
+  const seoKeywords = selectedMedication
+    ? generateKeywords(selectedMedication)
+    : language === 'ar'
+    ? 'أسعار الأدوية, أسعار الأدوية المغرب, سعر الدواء, صيدلية المغرب, CNOPS, CNSS'
+    : 'prix médicaments maroc, prix pharmacie, prix médicaments, doliprane prix, paracétamol prix, médicaments maroc, CNOPS, CNSS';
+
+  // Generate structured data for search engines
+  const structuredData = selectedMedication
+    ? [
+        generateMedicationStructuredData(selectedMedication),
+        generateFAQStructuredData(selectedMedication),
+        generateBreadcrumbStructuredData(selectedMedication)
+      ]
+    : [];
+
   return (
     <>
       <SEO
-        title={metaTitle}
-        description={metaDescription}
-        keywords={language === 'ar' 
-          ? ['أسعار الأدوية', 'أسعار الأدوية المغرب', 'سعر الدواء', 'صيدلية المغرب']
-          : ['prix médicaments', 'prix médicaments maroc', 'pharmacie maroc', 'prix pharmacie']
-        }
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
         lang={language}
-        canonical="https://taawidaty.ma/prix-medicaments"
+        canonical={selectedMedication 
+          ? `https://taawidaty.ma/prix/${selectedMedication.name.toLowerCase().replace(/\s+/g, '-')}`
+          : 'https://taawidaty.ma/prix-medicaments'
+        }
+        structuredData={structuredData}
       />
       
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
