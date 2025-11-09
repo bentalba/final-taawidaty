@@ -12,7 +12,7 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const BASE_URL = 'https://dev.taawidaty-site.pages.dev'; // Update to your production domain
+const BASE_URL = 'https://taawidaty.ma'; // Production domain
 
 function generateMedicationSlug(name) {
   return name
