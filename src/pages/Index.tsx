@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/button';
 import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
 import GradientText from '@/components/ui/GradientText';
+import { CNSSDisclaimer } from '@/components/ui/CNSSDisclaimer';
 import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -217,6 +218,10 @@ export default function Index() {
         canonical="https://taawidaty.ma"
         structuredData={structuredData}
       />
+      
+      {/* CNSS Disclaimer Popup - Shows on first visit */}
+      <CNSSDisclaimer />
+      
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
       <header role="banner" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-card/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
