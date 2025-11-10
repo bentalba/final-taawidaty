@@ -39,7 +39,7 @@ export function CNSSDisclaimer({ onClose }: CNSSDisclaimerProps) {
 
   const handleRedirect = () => {
     localStorage.setItem('hasSeenCNSSDisclaimer', 'true');
-    window.open('https://www.cnss.ma', '_blank');
+    window.open('https://taawidaty.cnss.ma/', '_blank');
     setIsOpen(false);
   };
 
