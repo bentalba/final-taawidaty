@@ -168,9 +168,9 @@ export default function PriceChecker() {
                       />
                     </picture>
                   </Link>
-                  <h1 className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
+                  <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
                     {language === 'ar' ? 'التحقق من الأسعار' : 'Vérification Prix'}
-                  </h1>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
@@ -200,9 +200,9 @@ export default function PriceChecker() {
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 shadow-lg mb-4 md:mb-6">
               <Search className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-foreground mb-3 md:mb-4 px-4 ${isRTL ? 'font-arabic' : ''}`}>
+            <h1 className={`text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-foreground mb-3 md:mb-4 px-4 ${isRTL ? 'font-arabic' : ''}`}>
               {language === 'ar' ? 'التحقق من أسعار الأدوية' : 'Vérifier le prix des médicaments'}
-            </h2>
+            </h1>
             <p className={`text-base md:text-lg text-slate-600 dark:text-muted-foreground max-w-2xl mx-auto px-4 ${isRTL ? 'font-arabic' : ''}`}>
               {language === 'ar' 
                 ? 'ابحث عن أي دواء للحصول على سعره الرسمي في الصيدليات والمستشفيات المغربية'

@@ -242,9 +242,9 @@ export default function Index() {
                     />
                   </picture>
                 </div>
-                <h1 className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
+                <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
                   {t.app.title}
-                </h1>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
@@ -281,10 +281,10 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Modern heading with gradient text */}
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+            {/* Main heading - H1 for SEO */}
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
               {renderHeroTitle()}
-            </h2>
+            </h1>
 
             {/* Modern subtitle */}
             <p className={`text-lg md:text-xl text-slate-600 dark:text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
