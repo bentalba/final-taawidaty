@@ -242,9 +242,9 @@ export default function Index() {
                     />
                   </picture>
                 </div>
-                <h1 className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
+                <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
                   {t.app.title}
-                </h1>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
@@ -281,10 +281,10 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Modern heading with gradient text */}
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+            {/* Main heading - H1 for SEO */}
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
               {renderHeroTitle()}
-            </h2>
+            </h1>
 
             {/* Modern subtitle */}
             <p className={`text-lg md:text-xl text-slate-600 dark:text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
@@ -308,11 +308,18 @@ export default function Index() {
                 onClick={() => setStep(2)}
               >
                 <div className="mx-auto mb-4 relative w-20 h-20">
-                  <img 
-                    src="/logos/remboursement-logo.png" 
-                    alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet="/logos/remboursement-logo.webp" type="image/webp" />
+                    <img 
+                      src="/logos/remboursement-logo.png" 
+                      alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </div>
                 <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
@@ -345,11 +352,18 @@ export default function Index() {
                 }}
               >
                 <div className="mx-auto mb-4 relative w-20 h-20">
-                  <img 
-                    src="/logos/price-check-logo.png" 
-                    alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet="/logos/price-check-logo.webp" type="image/webp" />
+                    <img 
+                      src="/logos/price-check-logo.png" 
+                      alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </div>
                 <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
