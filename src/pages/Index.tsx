@@ -308,11 +308,18 @@ export default function Index() {
                 onClick={() => setStep(2)}
               >
                 <div className="mx-auto mb-4 relative w-20 h-20">
-                  <img 
-                    src="/logos/remboursement-logo.png" 
-                    alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet="/logos/remboursement-logo.webp" type="image/webp" />
+                    <img 
+                      src="/logos/remboursement-logo.png" 
+                      alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </div>
                 <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
@@ -345,11 +352,18 @@ export default function Index() {
                 }}
               >
                 <div className="mx-auto mb-4 relative w-20 h-20">
-                  <img 
-                    src="/logos/price-check-logo.png" 
-                    alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet="/logos/price-check-logo.webp" type="image/webp" />
+                    <img 
+                      src="/logos/price-check-logo.png" 
+                      alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </div>
                 <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}

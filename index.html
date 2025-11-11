@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    
+    <!-- Preload Critical Assets (WebP for modern browsers) -->
+    <link rel="preload" href="/logos/remboursement-logo.webp" as="image" type="image/webp">
+    <link rel="preload" href="/logos/price-check-logo.webp" as="image" type="image/webp">
+
     <!-- Google Consent Mode v2 - MUST load before any Google tags -->
     <script>
       // Initialize Google Consent Mode v2 with default denied state
