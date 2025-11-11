@@ -639,62 +639,32 @@ npm run preview
 *Designed & Developed with ❤️ in Morocco*
 
 - **Total Medications**: 8,111# Run ESLint
-
 </div>
 
-- **CNOPS Database**: 8,111 entriesnpm run lint
-
----
 
 - **CNSS Database**: Comprehensive coverage```
-
-## 🙏 Acknowledgments
-
-- **Data Sources**: Official Moroccan government databases
-
 - **Moroccan Government** - Official medication data
 
-- **CNOPS** - Insurance guidelines- **Update Frequency**: Quarterly---
-
-- **CNSS** - Social security information
 
 - **Open Source Community** - Amazing tools
 
-- **Users** - Valuable feedback
-
-### Data Fields## 📁 Project Structure
-
 ---
 
-- Medication name (brand & generic)
 
 ## 📞 Support
-
 - DCI (International Nonproprietary Name)```
 
-### 🌐 Website
 
 [https://taawidaty.ma](https://taawidaty.ma)- PPV (Pharmacy Public Price)dawa-calcul-plus/
 
-
-
-### 📧 Contact- PH (Hospital Price)├── public/
-
 - **Support**: support@taawidaty.ma
 
-- **Business**: contact@taawidaty.ma- Reimbursement rates (CNOPS/CNSS)│   ├── logos/
 
-
-
-### 🐛 Bug Reports- Barcode / EAN code│   │   └── TAAWIDATY.png          # Main logo
 
 Found a bug? Open an issue with:
 
 - Description- Presentation & dosage│   └── robots.txt                  # SEO configuration
 
-- Steps to reproduce
-
-- Expected vs actual behavior├── src/
 
 - Screenshots
 
