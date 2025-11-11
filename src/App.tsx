@@ -28,8 +28,6 @@ import Blog from "./pages/Blog";
 import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
 import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
 import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
-import FaqCnops from "./pages/FaqCnops";
-import FaqCnss from "./pages/FaqCnss";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import MedicalDisclaimer from "./pages/MedicalDisclaimer";
 import AboutUs from "./pages/AboutUs";
@@ -54,8 +52,6 @@ function AnimatedRoutes() {
         <Route path="/blog/guide-remboursement-cnss" element={<PageTransition><GuideRemboursementCnss /></PageTransition>} />
         <Route path="/blog/guide-remboursement-cnops" element={<PageTransition><GuideRemboursementCnops /></PageTransition>} />
         <Route path="/blog/difference-cnss-cnops" element={<PageTransition><DifferenceCnssCnops /></PageTransition>} />
-        <Route path="/faq-cnops" element={<PageTransition><FaqCnops /></PageTransition>} />
-        <Route path="/faq-cnss" element={<PageTransition><FaqCnss /></PageTransition>} />
         <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
         <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />

@@ -82,16 +82,26 @@ def generate_sitemap_index():
     # Sort medications by price (higher price = more searched)
     medications_sorted = sorted(medications, key=lambda m: m.get('ppv', 0), reverse=True)
     
-    # Prepare all URLs
+    # Prepare all URLs - Main Pages
     all_urls = [
         {'loc': f'{BASE_URL}/', 'changefreq': 'daily', 'priority': '1.0'},
         {'loc': f'{BASE_URL}/prix-medicaments', 'changefreq': 'weekly', 'priority': '0.9'},
-        {'loc': f'{BASE_URL}/faq-cnops', 'changefreq': 'monthly', 'priority': '0.7'},
-        {'loc': f'{BASE_URL}/faq-cnss', 'changefreq': 'monthly', 'priority': '0.7'},
+        {'loc': f'{BASE_URL}/blog', 'changefreq': 'weekly', 'priority': '0.8'},
+        {'loc': f'{BASE_URL}/blog/guide-remboursement-cnss', 'changefreq': 'monthly', 'priority': '0.7'},
+        {'loc': f'{BASE_URL}/blog/guide-remboursement-cnops', 'changefreq': 'monthly', 'priority': '0.7'},
+        {'loc': f'{BASE_URL}/blog/difference-cnss-cnops', 'changefreq': 'monthly', 'priority': '0.7'},
+        {'loc': f'{BASE_URL}/privacy-policy', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/medical-disclaimer', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/about-us', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/contact-us', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/terms-of-service', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/editorial-policy', 'changefreq': 'monthly', 'priority': '0.5'},
+        {'loc': f'{BASE_URL}/cookie-preferences', 'changefreq': 'monthly', 'priority': '0.4'},
     ]
     
-    # Add medication URLs
-    for medication in medications_sorted[:5000]:
+    # Add ALL medication URLs (no limit!)
+    print(f"\n💊 Adding all {len(medications_sorted)} medications to sitemap...")
+    for medication in medications_sorted:
         slug = generate_medication_slug(medication['name'])
         priority = '0.8' if medication.get('ppv', 0) > 100 else '0.6'
         all_urls.append({

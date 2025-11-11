@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://taawidaty.ma/</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/" />
@@ -11,31 +11,103 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix-medicaments</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix-medicaments" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix-medicaments" />
   </url>
   <url>
-    <loc>https://taawidaty.ma/faq-cnops</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/faq-cnops" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/faq-cnops" />
+    <loc>https://taawidaty.ma/blog</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog" />
   </url>
   <url>
-    <loc>https://taawidaty.ma/faq-cnss</loc>
-    <lastmod>2025-11-09</lastmod>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnss</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/faq-cnss" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/faq-cnss" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnops</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/difference-cnss-cnops</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/privacy-policy</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/medical-disclaimer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/medical-disclaimer" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/medical-disclaimer" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/about-us</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/about-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/about-us" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/contact-us</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/contact-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/contact-us" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/terms-of-service</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/terms-of-service" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/editorial-policy</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/editorial-policy" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/cookie-preferences</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/cookie-preferences" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/cookie-preferences" />
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/evrysdi-075-mg-ml-poudre-pour-solution-buvable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/evrysdi-075-mg-ml-poudre-pour-solution-buvable" />
@@ -43,7 +115,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hemlibra-150-mg-1-ml-solution-pour-injection-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hemlibra-150-mg-1-ml-solution-pour-injection-sous-cutanee" />
@@ -51,7 +123,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/enspryng-120-mg-1-ml-solution-injectable-en-seringue-pre-rempli-de-1-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/enspryng-120-mg-1-ml-solution-injectable-en-seringue-pre-rempli-de-1-ml" />
@@ -59,7 +131,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-200-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-200-g-comprime-pellicule" />
@@ -67,7 +139,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hemlibra-105-mg-07-ml-solution-pour-injection-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hemlibra-105-mg-07-ml-solution-pour-injection-sous-cutanee" />
@@ -75,7 +147,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/phesgo-1200-mg-600-mg-15ml-solution-injectable-par-voie-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/phesgo-1200-mg-600-mg-15ml-solution-injectable-par-voie-sous-cutanee" />
@@ -83,7 +155,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cabometyx-20-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cabometyx-20-mg-comprime-pellicule" />
@@ -91,7 +163,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cabometyx-40-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cabometyx-40-mg-comprime-pellicule" />
@@ -99,7 +171,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cabometyx-60-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cabometyx-60-mg-comprime-pellicule" />
@@ -107,7 +179,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imbruvica-140-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imbruvica-140-mg-gelule" />
@@ -115,7 +187,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/alecensa-150-mg-gelules</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/alecensa-150-mg-gelules" />
@@ -123,7 +195,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/talzenna-1-mg-gelule-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/talzenna-1-mg-gelule-en-flacon" />
@@ -131,7 +203,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ocrevus-300-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ocrevus-300-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -139,7 +211,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tecentriq-1200-mg-20-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tecentriq-1200-mg-20-ml-solution-a-diluer-pour-perfusion" />
@@ -147,7 +219,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lorbrena-100-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lorbrena-100-mg-comprime-pellicule" />
@@ -155,7 +227,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sutent</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sutent" />
@@ -163,7 +235,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sutent</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sutent" />
@@ -171,7 +243,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sutent</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sutent" />
@@ -179,7 +251,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xalkori-200-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xalkori-200-mg-gelule" />
@@ -187,7 +259,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xalkori-250-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xalkori-250-mg-gelule" />
@@ -195,7 +267,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fabrazyme-35-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fabrazyme-35-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -203,7 +275,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hemlibra-60-mg-04-ml-solution-pour-injection-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hemlibra-60-mg-04-ml-solution-pour-injection-sous-cutanee" />
@@ -211,7 +283,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/phesgo-600-mg-600-mg-10-ml-solution-injectable-par-voie-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/phesgo-600-mg-600-mg-10-ml-solution-injectable-par-voie-sous-cutanee" />
@@ -219,7 +291,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xtandi-40-mg-capsule-molle</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xtandi-40-mg-capsule-molle" />
@@ -227,7 +299,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/jakavi-15-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/jakavi-15-mg-comprime-pellicule" />
@@ -235,7 +307,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/jakavi-20-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/jakavi-20-mg-comprime-pellicule" />
@@ -243,7 +315,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-1000-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-1000-g-comprime-pellicule" />
@@ -251,7 +323,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-1200-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-1200-g-comprime-pellicule" />
@@ -259,7 +331,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-1400-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-1400-g-comprime-pellicule" />
@@ -267,7 +339,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-1600-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-1600-g-comprime-pellicule" />
@@ -275,7 +347,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-200-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-200-g-comprime-pellicule" />
@@ -283,7 +355,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-400-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-400-g-comprime-pellicule" />
@@ -291,7 +363,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-600-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-600-g-comprime-pellicule" />
@@ -299,7 +371,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uptravi-800-g-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uptravi-800-g-comprime-pellicule" />
@@ -307,7 +379,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/inlyta-5-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/inlyta-5-mg-comprime-pellicule" />
@@ -315,7 +387,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novoseven-240-kui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novoseven-240-kui" />
@@ -323,7 +395,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tecentriq-840-mg-14-ml-solution-a-diluer-pour-perfusion-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tecentriq-840-mg-14-ml-solution-a-diluer-pour-perfusion-en-flacon" />
@@ -331,7 +403,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/stivarga-40-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/stivarga-40-mg-comprime-pellicule" />
@@ -339,7 +411,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/stelara-130-mg-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/stelara-130-mg-solution-a-diluer-pour-perfusion" />
@@ -347,7 +419,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/opsumit-10-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/opsumit-10-mg-comprime-pellicule" />
@@ -355,7 +427,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gazyva-1000-mg-40-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gazyva-1000-mg-40-ml-solution-a-diluer-pour-perfusion" />
@@ -363,7 +435,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/perjeta-420-mg-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/perjeta-420-mg-solution-pour-perfusion" />
@@ -371,7 +443,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/stelara-90-mg-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/stelara-90-mg-solution-a-diluer-pour-perfusion" />
@@ -379,7 +451,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/blincyto-35-g-poudre-lyophilisee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/blincyto-35-g-poudre-lyophilisee" />
@@ -387,7 +459,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/erleada-60-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/erleada-60-mg-comprime-pellicule" />
@@ -395,7 +467,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/stelara-45-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/stelara-45-mg-solution-injectable" />
@@ -403,7 +475,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ofev-150-mg-capsule-molle</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ofev-150-mg-capsule-molle" />
@@ -411,7 +483,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-100-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-100-mg-gelule" />
@@ -419,7 +491,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-125-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-125-mg-gelule" />
@@ -427,7 +499,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-75-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-75-mg-gelule" />
@@ -435,7 +507,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-100-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-100-mg-comprime-pellicule" />
@@ -443,7 +515,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-125-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-125-mg-comprime-pellicule" />
@@ -451,7 +523,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ibrance-75-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ibrance-75-mg-comprime-pellicule" />
@@ -459,7 +531,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kisqali-200-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kisqali-200-mg-comprime-pellicule" />
@@ -467,7 +539,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/verzenios-100-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/verzenios-100-mg-comprime-pellicule" />
@@ -475,7 +547,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/verzenios-150-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/verzenios-150-mg-comprime-pellicule" />
@@ -483,7 +555,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/verzenios-50-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/verzenios-50-mg-comprime-pellicule" />
@@ -491,7 +563,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/jevtana-60-mg-15-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/jevtana-60-mg-15-ml-solution-a-diluer-pour-perfusion" />
@@ -499,7 +571,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/votrient-400-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/votrient-400-mg" />
@@ -507,7 +579,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lonsurf-20-mg-819-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lonsurf-20-mg-819-mg-comprime-pellicule" />
@@ -515,7 +587,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nexavar</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nexavar" />
@@ -523,7 +595,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nexavar</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nexavar" />
@@ -531,7 +603,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pemorial-100-mg-25-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pemorial-100-mg-25-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -539,7 +611,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/glivec</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/glivec" />
@@ -547,7 +619,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/glivec</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/glivec" />
@@ -555,7 +627,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/glivec</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/glivec" />
@@ -563,7 +635,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mavenclad-10-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mavenclad-10-mg-comprime" />
@@ -571,7 +643,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tremfya-100-mg-solution-injectable-en-stylo-pre-rempli</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tremfya-100-mg-solution-injectable-en-stylo-pre-rempli" />
@@ -579,7 +651,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revlimid-25-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revlimid-25-mg-gelule" />
@@ -587,7 +659,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/josuni-50-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/josuni-50-mg-gelule" />
@@ -595,7 +667,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sovidex-50-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sovidex-50-mg-gelule" />
@@ -603,7 +675,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/darzalex-20-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/darzalex-20-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -611,7 +683,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/giotrif-20-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/giotrif-20-mg-comprime-pellicule" />
@@ -619,7 +691,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/giotrif-30-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/giotrif-30-mg-comprime-pellicule" />
@@ -627,7 +699,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/giotrif-40-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/giotrif-40-mg-comprime-pellicule" />
@@ -635,7 +707,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenangio-25-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenangio-25-mg-gelule" />
@@ -643,7 +715,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hirzolid-600-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hirzolid-600-mg-comprime-pellicule" />
@@ -651,7 +723,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/elpex-70-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/elpex-70-mg-comprime-pellicule" />
@@ -659,7 +731,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revlimid-15-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revlimid-15-mg-gelule" />
@@ -667,7 +739,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/elpex-50-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/elpex-50-mg-comprime-pellicule" />
@@ -675,7 +747,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vectibix-20-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vectibix-20-mg-ml-solution-pour-perfusion" />
@@ -683,7 +755,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revlimid-10-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revlimid-10-mg-gelule" />
@@ -691,7 +763,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenangio-15-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenangio-15-mg-gelule" />
@@ -699,7 +771,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/litak-10-mg-5ml-solution-injectable-pour-injection-ou-perfusion-iv-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/litak-10-mg-5ml-solution-injectable-pour-injection-ou-perfusion-iv-en-flacon" />
@@ -707,7 +779,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lonsurf-15-mg-614-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lonsurf-15-mg-614-mg-comprime-pellicule" />
@@ -715,7 +787,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hemlibra-30-mg-ml-solution-pour-injection-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hemlibra-30-mg-ml-solution-pour-injection-sous-cutanee" />
@@ -723,7 +795,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revlimid-5-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revlimid-5-mg-gelule" />
@@ -731,7 +803,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenangio-10-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenangio-10-mg-gelule" />
@@ -739,7 +811,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/iressa-250-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/iressa-250-mg-comprime-pellicule" />
@@ -747,7 +819,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cerezyme-400-ui-poudre-sterile-lyophilisee-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cerezyme-400-ui-poudre-sterile-lyophilisee-pour-perfusion" />
@@ -755,7 +827,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/jakavi-5-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/jakavi-5-mg-comprime-pellicule" />
@@ -763,7 +835,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenvima-10-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenvima-10-mg-gelule" />
@@ -771,7 +843,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenvima-4-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenvima-4-mg-gelule" />
@@ -779,7 +851,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lenangio-5-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lenangio-5-mg-gelule" />
@@ -787,7 +859,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zelboraf-240-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zelboraf-240-mg-comprime-pellicule" />
@@ -795,7 +867,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/visudyne</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/visudyne" />
@@ -803,7 +875,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revolade-50mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revolade-50mg" />
@@ -811,7 +883,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/talzenna-025-mg-gelule-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/talzenna-025-mg-gelule-en-flacon" />
@@ -819,7 +891,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tysabri-300-mg-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tysabri-300-mg-solution-a-diluer-pour-perfusion" />
@@ -827,7 +899,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novoseven-120-kui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novoseven-120-kui" />
@@ -835,7 +907,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/votrient-200-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/votrient-200-mg" />
@@ -843,7 +915,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mabthera</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mabthera" />
@@ -851,7 +923,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mabthera</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mabthera" />
@@ -859,7 +931,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-120-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-120-mg" />
@@ -867,7 +939,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-120-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-120-mg" />
@@ -875,7 +947,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lorbrena-25-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lorbrena-25-mg-comprime-pellicule" />
@@ -883,7 +955,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/avastin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/avastin" />
@@ -891,7 +963,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/avastin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/avastin" />
@@ -899,7 +971,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ofev-100-mg-capsule-molle</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ofev-100-mg-capsule-molle" />
@@ -907,7 +979,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kyprolis-60-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kyprolis-60-mg-poudre-pour-solution-injectable" />
@@ -915,7 +987,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gluscan-600-mbq-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gluscan-600-mbq-injectable" />
@@ -923,7 +995,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novoseven-rt-100-kui-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novoseven-rt-100-kui-poudre-et-solvant-pour-solution-injectable" />
@@ -931,7 +1003,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/papillio-100-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/papillio-100-mg-gelule" />
@@ -939,7 +1011,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/papillio-125-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/papillio-125-mg-gelule" />
@@ -947,7 +1019,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/papillio-75-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/papillio-75-mg-gelule" />
@@ -955,7 +1027,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gilenya-05-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gilenya-05-mg-gelule" />
@@ -963,7 +1035,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/alimta</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/alimta" />
@@ -971,7 +1043,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/alimta</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/alimta" />
@@ -979,7 +1051,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/alimta</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/alimta" />
@@ -987,7 +1059,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/afinitor-5-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/afinitor-5-mg-comprime" />
@@ -995,7 +1067,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-90-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-90-mg" />
@@ -1003,7 +1075,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-90-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-90-mg" />
@@ -1011,7 +1083,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cosentyx-150-mg-solution-injectable-en-stylo-prerempli</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cosentyx-150-mg-solution-injectable-en-stylo-prerempli" />
@@ -1019,7 +1091,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zytiga-250-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zytiga-250-mg-comprime" />
@@ -1027,7 +1099,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ambisome-50-mg-pour-pour-dispersion-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ambisome-50-mg-pour-pour-dispersion-a-diluer-pour-perfusion" />
@@ -1035,7 +1107,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tykerb</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tykerb" />
@@ -1043,7 +1115,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tykerb</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tykerb" />
@@ -1051,7 +1123,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/methotrexate-mylan-100mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/methotrexate-mylan-100mgml" />
@@ -1059,7 +1131,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/methotrexate-mylan-100mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/methotrexate-mylan-100mgml" />
@@ -1067,7 +1139,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/metalyse-10000-ui-pdi-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/metalyse-10000-ui-pdi-poudre-et-solvant-pour-solution-injectable" />
@@ -1075,7 +1147,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/votrient-400-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/votrient-400-mg" />
@@ -1083,7 +1155,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zytiga-500-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zytiga-500-mg-comprime-pellicule" />
@@ -1091,7 +1163,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/abiranat-250-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/abiranat-250-mg-comprime" />
@@ -1099,7 +1171,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/abiraterone-gt-250-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/abiraterone-gt-250-mg-comprime" />
@@ -1107,7 +1179,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/dysport</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/dysport" />
@@ -1115,7 +1187,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebif-44-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebif-44-g" />
@@ -1123,7 +1195,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebif-44-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebif-44-g" />
@@ -1131,7 +1203,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/taltz-80-mg-ml-solution-injectable-de-1-ml-a-usage-sous-cutane-en-auto-injecteur-prerempli-a-usage-unique</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/taltz-80-mg-ml-solution-injectable-de-1-ml-a-usage-sous-cutane-en-auto-injecteur-prerempli-a-usage-unique" />
@@ -1139,7 +1211,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ozurdex-700-g-implant-intravitreen-avec-applicateur</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ozurdex-700-g-implant-intravitreen-avec-applicateur" />
@@ -1147,7 +1219,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sutent-125-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sutent-125-mg-gelule" />
@@ -1155,7 +1227,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/josuni-25-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/josuni-25-mg-gelule" />
@@ -1163,7 +1235,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/avonex-30-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/avonex-30-g" />
@@ -1171,7 +1243,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/avonex-30g05ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/avonex-30g05ml" />
@@ -1179,7 +1251,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zelva-500-mg-solution-a-diluer-pour-perfusion-iv</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zelva-500-mg-solution-a-diluer-pour-perfusion-iv" />
@@ -1187,7 +1259,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ypeva-400-mg-solution-a-diluer-pour-perfusion-iv</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ypeva-400-mg-solution-a-diluer-pour-perfusion-iv" />
@@ -1195,7 +1267,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-60mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-60mg" />
@@ -1203,7 +1275,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-60mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-60mg" />
@@ -1211,7 +1283,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tarceva-150-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tarceva-150-mg-comprime-pellicule" />
@@ -1219,7 +1291,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-150-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-150-g-solution-injectable" />
@@ -1227,7 +1299,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gefla-250-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gefla-250-mg-comprime-pellicule" />
@@ -1235,7 +1307,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/thyrogen-09-mg-poudre-lyophilisee-pour-solution-injectable-im</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/thyrogen-09-mg-poudre-lyophilisee-pour-solution-injectable-im" />
@@ -1243,7 +1315,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/trevicta-350-mg-suspension-injectable-a-liberation-prolongee-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/trevicta-350-mg-suspension-injectable-a-liberation-prolongee-p" />
@@ -1251,7 +1323,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/simponi-50-mg-seringue-pre-remplie</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/simponi-50-mg-seringue-pre-remplie" />
@@ -1259,7 +1331,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hertraz-440-mg-poudre-et-solvant-pour-solution-a-diluer</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hertraz-440-mg-poudre-et-solvant-pour-solution-a-diluer" />
@@ -1267,7 +1339,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/herzuma-440-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/herzuma-440-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -1275,7 +1347,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/trazuva-440-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/trazuva-440-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -1283,7 +1355,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aubagio-14-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aubagio-14-mg-comprime-pellicule" />
@@ -1291,7 +1363,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/curosurf-240-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/curosurf-240-mg" />
@@ -1299,7 +1371,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/curosurf-240-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/curosurf-240-mg" />
@@ -1307,7 +1379,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/trevicta-525-mg-suspension-injectable-a-liberation-prolongee-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/trevicta-525-mg-suspension-injectable-a-liberation-prolongee-p" />
@@ -1315,7 +1387,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/betaferon-250-g-ml-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/betaferon-250-g-ml-injectable" />
@@ -1323,7 +1395,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebif-44-g-05-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebif-44-g-05-ml-solution-injectable" />
@@ -1331,7 +1403,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/avonex-30-g-05-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/avonex-30-g-05-ml-solution-injectable" />
@@ -1339,7 +1411,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gardasil</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gardasil" />
@@ -1347,7 +1419,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/simdax-225-mg-ml-solution-a-diluer-pour-perfusion-iv</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/simdax-225-mg-ml-solution-a-diluer-pour-perfusion-iv" />
@@ -1355,7 +1427,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eylea-40-mg-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eylea-40-mg-ml-solution-injectable" />
@@ -1363,7 +1435,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lonsurf-20-mg-819-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lonsurf-20-mg-819-mg-comprime-pellicule" />
@@ -1371,7 +1443,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zaltrap-25-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zaltrap-25-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -1379,7 +1451,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aldurazyme-100-u-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aldurazyme-100-u-ml-solution-pour-perfusion" />
@@ -1387,7 +1459,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/benefix-1000-ui-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/benefix-1000-ui-poudre-et-solvant-pour-solution-injectable" />
@@ -1395,7 +1467,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebif-22-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebif-22-g" />
@@ -1403,7 +1475,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebif-22-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebif-22-g" />
@@ -1411,7 +1483,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cimzia-200-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cimzia-200-mg-solution-injectable" />
@@ -1419,7 +1491,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kogenate-1000-ui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kogenate-1000-ui" />
@@ -1427,7 +1499,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/caelyx-pegylated-liposomal-2-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/caelyx-pegylated-liposomal-2-mg-ml-solution-pour-perfusion" />
@@ -1435,7 +1507,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/trevicta-263-mg-suspension-injectable-a-liberation-prolongee-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/trevicta-263-mg-suspension-injectable-a-liberation-prolongee-p" />
@@ -1443,7 +1515,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revolade-50mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revolade-50mg" />
@@ -1451,7 +1523,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revolade-25mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revolade-25mg" />
@@ -1459,7 +1531,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novoseven-60-kui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novoseven-60-kui" />
@@ -1467,7 +1539,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mirata-150-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mirata-150-mg-comprime-pellicule" />
@@ -1475,7 +1547,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rinvoq-15-mg-comprime-a-liberation-prolongee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rinvoq-15-mg-comprime-a-liberation-prolongee" />
@@ -1483,7 +1555,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kogenate-fs-bayer-1000-ui-poudre-pour-preparation-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kogenate-fs-bayer-1000-ui-poudre-pour-preparation-injectable" />
@@ -1491,7 +1563,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xeljanz-5-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xeljanz-5-mg-comprime-pellicule" />
@@ -1499,7 +1571,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/herceptin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/herceptin" />
@@ -1507,7 +1579,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/inlyta-1-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/inlyta-1-mg-comprime-pellicule" />
@@ -1515,7 +1587,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/actemra-162-mg-09-ml-solution-pour-injection-sous-cutanee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/actemra-162-mg-09-ml-solution-pour-injection-sous-cutanee" />
@@ -1523,7 +1595,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fulphila-6-mg-06-ml-solution-injectable-pour-injection-sous-cutanee-de-06-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fulphila-6-mg-06-ml-solution-injectable-pour-injection-sous-cutanee-de-06-ml" />
@@ -1531,7 +1603,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/neulastim-6-mg-06-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/neulastim-6-mg-06-ml-solution-injectable" />
@@ -1539,7 +1611,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/arwacide-solution-concentree-acide-hemodialyse</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/arwacide-solution-concentree-acide-hemodialyse" />
@@ -1547,7 +1619,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lucentis-10-mg-ml-ampoule-injectable-de-03-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lucentis-10-mg-ml-ampoule-injectable-de-03-ml" />
@@ -1555,7 +1627,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-30-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-30-mg" />
@@ -1563,7 +1635,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatuline-lp-30-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatuline-lp-30-mg" />
@@ -1571,7 +1643,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-100-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-100-g-solution-injectable" />
@@ -1579,7 +1651,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novoseven-rt-50-kui-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novoseven-rt-50-kui-poudre-et-solvant-pour-solution-injectable" />
@@ -1587,7 +1659,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temodal</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temodal" />
@@ -1595,7 +1667,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temodal</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temodal" />
@@ -1603,7 +1675,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temodal</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temodal" />
@@ -1611,7 +1683,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temodal</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temodal" />
@@ -1619,7 +1691,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/refacto-af-1000-ui-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/refacto-af-1000-ui-injectable" />
@@ -1627,7 +1699,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nplat-250-g-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nplat-250-g-poudre-pour-solution-injectable" />
@@ -1635,7 +1707,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cresemba-100-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cresemba-100-mg-gelule" />
@@ -1643,7 +1715,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/remicade</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/remicade" />
@@ -1651,7 +1723,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/enbrel-50-mg-solution-injectable-en-seringues-pre-rempli</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/enbrel-50-mg-solution-injectable-en-seringues-pre-rempli" />
@@ -1659,7 +1731,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/humira-40-mg-08-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/humira-40-mg-08-ml-solution-injectable" />
@@ -1667,7 +1739,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/enbrel-50-mg-solution-injectable-en-stylo-pre-rempli</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/enbrel-50-mg-solution-injectable-en-stylo-pre-rempli" />
@@ -1675,7 +1747,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pemetrexed-zenith-500-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pemetrexed-zenith-500-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -1683,7 +1755,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pemitra-500-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pemitra-500-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -1691,7 +1763,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/epclusa-400-mg-100-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epclusa-400-mg-100-mg-comprime-pellicule" />
@@ -1699,7 +1771,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/myozyme-50-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myozyme-50-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -1707,7 +1779,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lonsurf-15-mg-614-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lonsurf-15-mg-614-mg-comprime-pellicule" />
@@ -1715,7 +1787,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/dialysol-acide-concentre-liquide-dhemodialyse</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/dialysol-acide-concentre-liquide-dhemodialyse" />
@@ -1723,7 +1795,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/decapeptyl-lp-225-mg-suspension-injectable-a-liberation-prolongee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/decapeptyl-lp-225-mg-suspension-injectable-a-liberation-prolongee" />
@@ -1731,7 +1803,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/velcade-35-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/velcade-35-mg-poudre-pour-solution-injectable" />
@@ -1739,7 +1811,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vabysmo-288-mg-024-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vabysmo-288-mg-024-ml-solution-injectable" />
@@ -1747,7 +1819,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/bort-spal-35-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/bort-spal-35-mg-poudre-pour-solution-injectable" />
@@ -1755,7 +1827,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/veelbore-35-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/veelbore-35-mg-poudre-pour-solution-injectable" />
@@ -1763,7 +1835,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/paraplatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/paraplatine" />
@@ -1771,7 +1843,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/paraplatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/paraplatine" />
@@ -1779,7 +1851,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/paraplatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/paraplatine" />
@@ -1787,7 +1859,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/copegus</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/copegus" />
@@ -1795,7 +1867,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/copegus</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/copegus" />
@@ -1803,7 +1875,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/votrient-200-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/votrient-200-mg" />
@@ -1811,7 +1883,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rhesonativ-625-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rhesonativ-625-uiml" />
@@ -1819,7 +1891,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rhesonativ-625-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rhesonativ-625-uiml" />
@@ -1827,7 +1899,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eprex-10000-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eprex-10000-uiml" />
@@ -1835,7 +1907,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eprex-10000-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eprex-10000-uiml" />
@@ -1843,7 +1915,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eprex-10000-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eprex-10000-uiml" />
@@ -1851,7 +1923,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude" />
@@ -1859,7 +1931,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude" />
@@ -1867,7 +1939,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude" />
@@ -1875,7 +1947,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude" />
@@ -1883,7 +1955,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude" />
@@ -1891,7 +1963,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/octagam-50-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/octagam-50-mg-ml-solution-pour-perfusion" />
@@ -1899,7 +1971,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/actemra-400-mg-20-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/actemra-400-mg-20-ml-solution-a-diluer-pour-perfusion" />
@@ -1907,7 +1979,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/baraclude-05-mg-comprime-retire-du-marche</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/baraclude-05-mg-comprime-retire-du-marche" />
@@ -1915,7 +1987,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-80-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-80-g-solution-injectable" />
@@ -1923,7 +1995,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/josuni-125-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/josuni-125-mg-gelule" />
@@ -1931,7 +2003,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/darzalex-20-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/darzalex-20-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -1939,7 +2011,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eprex-10-000-ui-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eprex-10-000-ui-ml-solution-injectable" />
@@ -1947,7 +2019,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cyramza-10-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cyramza-10-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -1955,7 +2027,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nepexto-50-mg-ml-solution-injectable-en-stylo-preremplie</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nepexto-50-mg-ml-solution-injectable-en-stylo-preremplie" />
@@ -1963,7 +2035,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fibryga-1-g-poudre-et-solvant-pour-solution-injectable-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fibryga-1-g-poudre-et-solvant-pour-solution-injectable-pour-perfusion" />
@@ -1971,7 +2043,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novantrone</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novantrone" />
@@ -1979,7 +2051,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novantrone</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novantrone" />
@@ -1987,7 +2059,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/novantrone</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/novantrone" />
@@ -1995,7 +2067,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zevtera-500-mg-poudre-pour-solution-a-diluer-pour-perfusion-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zevtera-500-mg-poudre-pour-solution-a-diluer-pour-perfusion-en-flacon" />
@@ -2003,7 +2075,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fludara</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fludara" />
@@ -2011,7 +2083,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fludara</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fludara" />
@@ -2019,7 +2091,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fludara</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fludara" />
@@ -2027,7 +2099,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fludara</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fludara" />
@@ -2035,7 +2107,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/repatha-140-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/repatha-140-mg-solution-injectable" />
@@ -2043,7 +2115,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/azantax</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/azantax" />
@@ -2051,7 +2123,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/amgevita-40-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/amgevita-40-mg-solution-injectable" />
@@ -2059,7 +2131,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kovaltry-1000-ui-poudre-en-flacon-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kovaltry-1000-ui-poudre-en-flacon-et-solvant-pour-solution-injectable" />
@@ -2067,7 +2139,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/myborte-35-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myborte-35-mg-poudre-pour-solution-injectable" />
@@ -2075,7 +2147,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/typhim-vi</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/typhim-vi" />
@@ -2083,7 +2155,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/faslodex-250-mg-solution-injectable-voie-im</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/faslodex-250-mg-solution-injectable-voie-im" />
@@ -2091,7 +2163,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vectibix-20-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vectibix-20-mg-ml-solution-pour-perfusion" />
@@ -2099,7 +2171,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/podoxred-500-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/podoxred-500-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -2107,7 +2179,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/curosurf-120-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/curosurf-120-mg" />
@@ -2115,7 +2187,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/curosurf-120-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/curosurf-120-mg" />
@@ -2123,7 +2195,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kidrolase</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kidrolase" />
@@ -2131,7 +2203,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kidrolase</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kidrolase" />
@@ -2139,7 +2211,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/epotin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epotin" />
@@ -2147,7 +2219,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/epotin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epotin" />
@@ -2155,7 +2227,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/myhep-all-400-mg-100-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myhep-all-400-mg-100-mg-comprime-pellicule" />
@@ -2163,7 +2235,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/remsima-100-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/remsima-100-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -2171,7 +2243,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zelva-100-mg-solution-a-diluer-pour-perfusion-iv</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zelva-100-mg-solution-a-diluer-pour-perfusion-iv" />
@@ -2179,7 +2251,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/yuflyma-40-mg-04-ml-solution-injectable-en-stylo-pre-rempli</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/yuflyma-40-mg-04-ml-solution-injectable-en-stylo-pre-rempli" />
@@ -2187,7 +2259,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revatio-20-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revatio-20-mg-gelule" />
@@ -2195,7 +2267,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lipodox-50-mg-25-ml-concentre-pour-solution-pour-perfusion-iv-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lipodox-50-mg-25-ml-concentre-pour-solution-pour-perfusion-iv-en-flacon" />
@@ -2203,7 +2275,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/halaven-044-mg-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/halaven-044-mg-ml-solution-injectable" />
@@ -2211,7 +2283,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zaltrap-25-mg-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zaltrap-25-mg-ml-solution-a-diluer-pour-perfusion" />
@@ -2219,7 +2291,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-60-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-60-g-solution-injectable" />
@@ -2227,7 +2299,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kogenate-500-ui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kogenate-500-ui" />
@@ -2235,7 +2307,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/enbrel-25-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/enbrel-25-mg-solution-injectable" />
@@ -2243,7 +2315,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cresemba-200-mg-poudre-pour-solution-a-diluer</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cresemba-200-mg-poudre-pour-solution-a-diluer" />
@@ -2251,7 +2323,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/benefix-500-ui-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/benefix-500-ui-poudre-et-solvant-pour-solution-injectable" />
@@ -2259,7 +2331,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/bonefos-800-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/bonefos-800-mg" />
@@ -2267,7 +2339,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imatinib-cooper</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imatinib-cooper" />
@@ -2275,7 +2347,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imatinib-cooper</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imatinib-cooper" />
@@ -2283,7 +2355,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imatec</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imatec" />
@@ -2291,7 +2363,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/litak-10-mg-5ml-solution-injectable-pour-injection-ou-perfusion-iv-en-flacon-de-20-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/litak-10-mg-5ml-solution-injectable-pour-injection-ou-perfusion-iv-en-flacon-de-20-ml" />
@@ -2299,7 +2371,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zyvoxid-600-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zyvoxid-600-mg-comprime-pellicule" />
@@ -2307,7 +2379,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zyvoxid-2-mg-ml-solution-pour-perfusion-en-poche</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zyvoxid-2-mg-ml-solution-pour-perfusion-en-poche" />
@@ -2315,7 +2387,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebetol</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebetol" />
@@ -2323,7 +2395,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebetol</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebetol" />
@@ -2331,7 +2403,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rebetol</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rebetol" />
@@ -2339,7 +2411,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/caelyx-pegylated-liposomal-2-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/caelyx-pegylated-liposomal-2-mg-ml-solution-pour-perfusion" />
@@ -2347,7 +2419,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xeloda</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xeloda" />
@@ -2355,7 +2427,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/omnitrope-5-mg-15-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/omnitrope-5-mg-15-ml-solution-injectable" />
@@ -2363,7 +2435,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/revolade-25mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/revolade-25mg" />
@@ -2371,7 +2443,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nuwiq-500-ui-boite-dun-flacon-de-poudre-et-une-seringue-pre-remplie-de-solvant</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nuwiq-500-ui-boite-dun-flacon-de-poudre-et-une-seringue-pre-remplie-de-solvant" />
@@ -2379,7 +2451,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/octanate-100-ui-ml-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/octanate-100-ui-ml-poudre-et-solvant-pour-solution-injectable" />
@@ -2387,7 +2459,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/decapeptyl-lp</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/decapeptyl-lp" />
@@ -2395,7 +2467,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/decapeptyl-lp</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/decapeptyl-lp" />
@@ -2403,7 +2475,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xgeva-120-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xgeva-120-mg-solution-injectable" />
@@ -2411,7 +2483,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gonal-f900</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gonal-f900" />
@@ -2419,7 +2491,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gonal-f900</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gonal-f900" />
@@ -2427,7 +2499,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uft</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uft" />
@@ -2435,7 +2507,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uft</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uft" />
@@ -2443,7 +2515,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uft</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uft" />
@@ -2451,7 +2523,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/uft</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/uft" />
@@ -2459,7 +2531,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/granocyte-34</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/granocyte-34" />
@@ -2467,7 +2539,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-50-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-50-g-solution-injectable" />
@@ -2475,7 +2547,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tegozol-250-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tegozol-250-mg-gelule" />
@@ -2483,7 +2555,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temozolomide-zenith-250-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temozolomide-zenith-250-mg-gelule" />
@@ -2491,7 +2563,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zoladex-108-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zoladex-108-mg" />
@@ -2499,7 +2571,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/levofloxacine-normon-5-mg-ml-solution-injectable-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/levofloxacine-normon-5-mg-ml-solution-injectable-pour-perfusion" />
@@ -2507,7 +2579,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tygacil-50-mg-poudre-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tygacil-50-mg-poudre-pour-perfusion" />
@@ -2515,7 +2587,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hertraz-150-mg-poudre-et-solvant-pour-solution-a-diluer</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hertraz-150-mg-poudre-et-solvant-pour-solution-a-diluer" />
@@ -2523,7 +2595,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/trazuva-150-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/trazuva-150-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -2531,7 +2603,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/herzuma-150-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/herzuma-150-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
@@ -2539,7 +2611,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cytomib-35-mg-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cytomib-35-mg-poudre-pour-solution-injectable" />
@@ -2547,7 +2619,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ciproject-2-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ciproject-2-mg-ml-solution-pour-perfusion" />
@@ -2555,7 +2627,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vidaza-25-mg-ml-poudre-pour-suspension-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vidaza-25-mg-ml-poudre-pour-suspension-injectable" />
@@ -2563,7 +2635,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatostatine" />
@@ -2571,7 +2643,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatostatine" />
@@ -2579,7 +2651,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatostatine" />
@@ -2587,7 +2659,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/somatostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/somatostatine" />
@@ -2595,7 +2667,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/botox</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/botox" />
@@ -2603,7 +2675,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lexus</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lexus" />
@@ -2611,7 +2683,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lexus</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lexus" />
@@ -2619,7 +2691,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/taxotere-80-mg2-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/taxotere-80-mg2-ml" />
@@ -2627,7 +2699,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/viraferonpeg-150-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/viraferonpeg-150-g" />
@@ -2635,7 +2707,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/exjade</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/exjade" />
@@ -2643,7 +2715,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/exjade</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/exjade" />
@@ -2651,7 +2723,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aclasta-5-mg-100-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aclasta-5-mg-100-ml-solution-pour-perfusion" />
@@ -2659,7 +2731,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/decapeptyl-lp-1125-mg-suspension-injectable-en-im</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/decapeptyl-lp-1125-mg-suspension-injectable-en-im" />
@@ -2667,7 +2739,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imatinib-zenith-400-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imatinib-zenith-400-mg-comprime-pellicule" />
@@ -2675,7 +2747,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sophos-400-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sophos-400-mg-comprime-pellicule" />
@@ -2683,7 +2755,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ssb-400-mg-comprime</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ssb-400-mg-comprime" />
@@ -2691,7 +2763,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/bondronat</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/bondronat" />
@@ -2699,7 +2771,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/albutein-20-solution-pour-perfusion-intraveineuse</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/albutein-20-solution-pour-perfusion-intraveineuse" />
@@ -2707,7 +2779,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/bondronat-6mg6ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/bondronat-6mg6ml" />
@@ -2715,7 +2787,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/bondronat-6mg6ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/bondronat-6mg6ml" />
@@ -2723,7 +2795,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ypeva-100-mg-solution-a-diluer-pour-perfusion-iv</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ypeva-100-mg-solution-a-diluer-pour-perfusion-iv" />
@@ -2731,7 +2803,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eranfu-250-mg-5-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eranfu-250-mg-5-ml-solution-injectable" />
@@ -2739,7 +2811,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/rilutek-50-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/rilutek-50-mg-comprime-pellicule" />
@@ -2747,7 +2819,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/opavir-1-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/opavir-1-mg-comprime-pellicule" />
@@ -2755,7 +2827,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oka-docetaxel</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oka-docetaxel" />
@@ -2763,7 +2835,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oka-docetaxel</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oka-docetaxel" />
@@ -2771,7 +2843,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nepexto-25-mg-05-ml-solution-injectable-en-seringue-preremplie</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nepexto-25-mg-05-ml-solution-injectable-en-seringue-preremplie" />
@@ -2779,7 +2851,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/clairyg-50-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/clairyg-50-mg-ml-solution-pour-perfusion" />
@@ -2787,7 +2859,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tegeline-50-mg-ml-poudre-et-solvant-pour-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tegeline-50-mg-ml-poudre-et-solvant-pour-solution-pour-perfusion" />
@@ -2795,7 +2867,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/actemra-200-mg-10-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/actemra-200-mg-10-ml-solution-a-diluer-pour-perfusion" />
@@ -2803,7 +2875,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/opavir-05-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/opavir-05-mg-comprime-pellicule" />
@@ -2811,7 +2883,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandostatine" />
@@ -2819,7 +2891,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandostatine" />
@@ -2827,7 +2899,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandostatine</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandostatine" />
@@ -2835,7 +2907,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/dysport-500-unites-speywood-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/dysport-500-unites-speywood-poudre-pour-solution-injectable" />
@@ -2843,7 +2915,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/spravato-28-mg-solution-pour-pulverisation-nasale-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/spravato-28-mg-solution-pour-pulverisation-nasale-p" />
@@ -2851,7 +2923,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/octaplex-500-ui-poudre-et-solvant-pour-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/octaplex-500-ui-poudre-et-solvant-pour-solution-pour-perfusion" />
@@ -2859,7 +2931,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-40-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-40-g-solution-injectable" />
@@ -2867,7 +2939,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xeplion-150-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xeplion-150-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p" />
@@ -2875,7 +2947,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/epotin-4000-ui-solution-pour-usage-parenteral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epotin-4000-ui-solution-pour-usage-parenteral" />
@@ -2883,7 +2955,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/carboplatine-aguettant-450-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-aguettant-450-mg" />
@@ -2891,7 +2963,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zometa</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zometa" />
@@ -2899,7 +2971,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ondansetron-normon-8-mg-4-ml-solution-injectable-en-ampoule-de-4-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ondansetron-normon-8-mg-4-ml-solution-injectable-en-ampoule-de-4-ml" />
@@ -2907,7 +2979,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ciproject-2-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ciproject-2-mg-ml-solution-pour-perfusion" />
@@ -2915,7 +2987,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pegasys</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pegasys" />
@@ -2923,7 +2995,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pegasys</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pegasys" />
@@ -2931,7 +3003,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-cooper-80-mg</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-cooper-80-mg" />
@@ -2939,7 +3011,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-hospira-10-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-hospira-10-mgml" />
@@ -2947,7 +3019,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-hospira-10-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-hospira-10-mgml" />
@@ -2955,7 +3027,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-hospira-10-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-hospira-10-mgml" />
@@ -2963,7 +3035,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kovaltry-500-ui-poudre-en-flacon-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kovaltry-500-ui-poudre-en-flacon-et-solvant-pour-solution-injectable" />
@@ -2971,7 +3043,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/deferox-500-mg-comprime-dispersible</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/deferox-500-mg-comprime-dispersible" />
@@ -2979,7 +3051,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-zenith-80-mg-2-ml-solution-a-diluer-et-solvant-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-zenith-80-mg-2-ml-solution-a-diluer-et-solvant-pour-perfusion" />
@@ -2987,7 +3059,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/admoxel-80-mg-2-ml-solution-a-diluer-et-solvant-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/admoxel-80-mg-2-ml-solution-a-diluer-et-solvant-pour-perfusion" />
@@ -2995,7 +3067,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/doce-spal-l80-80-mg-4-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/doce-spal-l80-80-mg-4-ml-solution-a-diluer-pour-perfusion" />
@@ -3003,7 +3075,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/viraferonpeg-120-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/viraferonpeg-120-g" />
@@ -3011,7 +3083,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ledertrexate</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ledertrexate" />
@@ -3019,7 +3091,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ledertrexate</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ledertrexate" />
@@ -3027,7 +3099,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/dysport-300-unites-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/dysport-300-unites-poudre-pour-solution-injectable" />
@@ -3035,7 +3107,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/combivir</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/combivir" />
@@ -3043,7 +3115,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/anzatax</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/anzatax" />
@@ -3051,7 +3123,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/anzatax</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/anzatax" />
@@ -3059,7 +3131,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/anzatax</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/anzatax" />
@@ -3067,7 +3139,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/anzatax</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/anzatax" />
@@ -3075,7 +3147,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/risperdalconsta-lp-50mg2ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/risperdalconsta-lp-50mg2ml" />
@@ -3083,7 +3155,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docewin-80-mg2-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docewin-80-mg2-ml" />
@@ -3091,7 +3163,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/docetaxel-sun-80-mg-2-ml-concentre-pour-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/docetaxel-sun-80-mg-2-ml-concentre-pour-solution-pour-perfusion" />
@@ -3099,7 +3171,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/methotrexate-bellon-h</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/methotrexate-bellon-h" />
@@ -3107,7 +3179,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ferriprox-500-mg-comprime-pellicule-secable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ferriprox-500-mg-comprime-pellicule-secable" />
@@ -3115,7 +3187,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/streptase-1500-000-ui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/streptase-1500-000-ui" />
@@ -3123,7 +3195,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/orgalutran</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/orgalutran" />
@@ -3131,7 +3203,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/erbitux-5-mg-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/erbitux-5-mg-ml-solution-pour-perfusion" />
@@ -3139,7 +3211,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/immunoglobuline-normale-iv-lfb-cnts-50-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/immunoglobuline-normale-iv-lfb-cnts-50-mgml" />
@@ -3147,7 +3219,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/immunoglobuline-normale-iv-lfb-cnts-50-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/immunoglobuline-normale-iv-lfb-cnts-50-mgml" />
@@ -3155,7 +3227,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zarex</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zarex" />
@@ -3163,7 +3235,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zarex</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zarex" />
@@ -3171,7 +3243,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/prolia-60-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/prolia-60-mg-solution-injectable" />
@@ -3179,7 +3251,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/keppra</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/keppra" />
@@ -3187,7 +3259,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/keppra</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/keppra" />
@@ -3195,7 +3267,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/keppra</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/keppra" />
@@ -3203,7 +3275,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/myfortic-360-mg-comprime-pellicule-gastro-resistant</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myfortic-360-mg-comprime-pellicule-gastro-resistant" />
@@ -3211,7 +3283,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zerit</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zerit" />
@@ -3219,7 +3291,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zerit</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zerit" />
@@ -3227,7 +3299,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fampyra-10-mg-comprime-pellicule-a-liberation-prolongee</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fampyra-10-mg-comprime-pellicule-a-liberation-prolongee" />
@@ -3235,7 +3307,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3243,7 +3315,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3251,7 +3323,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3259,7 +3331,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oliplat</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oliplat" />
@@ -3267,7 +3339,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxaplatine-mylan-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxaplatine-mylan-5-mgml" />
@@ -3275,7 +3347,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oliplat</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oliplat" />
@@ -3283,7 +3355,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3291,7 +3363,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3299,7 +3371,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxaplatine-mylan-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxaplatine-mylan-5-mgml" />
@@ -3307,7 +3379,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eloxatine-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eloxatine-5-mgml" />
@@ -3315,7 +3387,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/aranesp-30-g-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/aranesp-30-g-solution-injectable" />
@@ -3323,7 +3395,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/saizen-clickeazy</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/saizen-clickeazy" />
@@ -3331,7 +3403,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/saizen-clickeazy</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/saizen-clickeazy" />
@@ -3339,7 +3411,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mitoxantrone-ebewe</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mitoxantrone-ebewe" />
@@ -3347,7 +3419,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/mitoxantrone-ebewe</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/mitoxantrone-ebewe" />
@@ -3355,7 +3427,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/kogenate-250-ui</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/kogenate-250-ui" />
@@ -3363,7 +3435,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vfend</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vfend" />
@@ -3371,7 +3443,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vfend</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vfend" />
@@ -3379,7 +3451,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/vfend</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/vfend" />
@@ -3387,7 +3459,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/pacli-spal-l-300-300-mg-50-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pacli-spal-l-300-300-mg-50-ml-solution-a-diluer-pour-perfusion" />
@@ -3395,7 +3467,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/lipodox-20-mg-10-ml-concentre-pour-solution-pour-perfusion-iv-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/lipodox-20-mg-10-ml-concentre-pour-solution-pour-perfusion-iv-en-flacon" />
@@ -3403,7 +3475,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/agrastat-50-g-ml-solution-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/agrastat-50-g-ml-solution-pour-perfusion" />
@@ -3411,7 +3483,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/viraferonpeg-100-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/viraferonpeg-100-g" />
@@ -3419,7 +3491,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/risperdalconsta-lp-375mg2ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/risperdalconsta-lp-375mg2ml" />
@@ -3427,7 +3499,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/cemivil-400-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/cemivil-400-mg-comprime-pellicule" />
@@ -3435,7 +3507,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xeplion-100-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xeplion-100-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p" />
@@ -3443,7 +3515,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/prograf</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/prograf" />
@@ -3451,7 +3523,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/prograf</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/prograf" />
@@ -3459,7 +3531,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/prograf</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/prograf" />
@@ -3467,7 +3539,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/prograf</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/prograf" />
@@ -3475,7 +3547,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/neoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/neoral" />
@@ -3483,7 +3555,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/neoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/neoral" />
@@ -3491,7 +3563,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/neoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/neoral" />
@@ -3499,7 +3571,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/neoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/neoral" />
@@ -3507,7 +3579,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/shingrix-une-dose05-ml-de-vaccin-poudre-et-suspension-pour-suspension-injectable-v</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/shingrix-une-dose05-ml-de-vaccin-poudre-et-suspension-pour-suspension-injectable-v" />
@@ -3515,7 +3587,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/botox-100-unites-allergan-poudre-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/botox-100-unites-allergan-poudre-pour-solution-injectable" />
@@ -3523,7 +3595,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/capecitabine-accord-500-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/capecitabine-accord-500-mg-comprime-pellicule" />
@@ -3531,7 +3603,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/dirogite-500-mg-comprime-enrobe</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/dirogite-500-mg-comprime-enrobe" />
@@ -3539,7 +3611,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xepine-500-mg-comprime-pellicule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xepine-500-mg-comprime-pellicule" />
@@ -3547,7 +3619,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hepsera</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hepsera" />
@@ -3555,7 +3627,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/hepsera</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/hepsera" />
@@ -3563,7 +3635,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/azacitea-100-mg-poudre-pour-injection-en-flacon</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/azacitea-100-mg-poudre-pour-injection-en-flacon" />
@@ -3571,7 +3643,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/winduza-100-mg-poudre-pour-suspension-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/winduza-100-mg-poudre-pour-suspension-injectable" />
@@ -3579,7 +3651,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ciprofloxacine-mylan-400-mg200-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ciprofloxacine-mylan-400-mg200-ml" />
@@ -3587,7 +3659,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xylatin-100</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xylatin-100" />
@@ -3595,7 +3667,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxaliplatine-mylan-5-mg-ml-poudre-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxaliplatine-mylan-5-mg-ml-poudre-pour-perfusion" />
@@ -3603,7 +3675,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxiplat-100-mg-20-ml-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxiplat-100-mg-20-ml-solution-a-diluer-pour-perfusion" />
@@ -3611,7 +3683,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxalisin-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxalisin-5-mgml" />
@@ -3619,7 +3691,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/oxalisin-5-mgml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/oxalisin-5-mgml" />
@@ -3627,7 +3699,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/facteur-viii-de-coagulation-humain-cnts-100-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/facteur-viii-de-coagulation-humain-cnts-100-uiml" />
@@ -3635,7 +3707,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/glypressin-01-mg-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/glypressin-01-mg-solution-injectable" />
@@ -3643,7 +3715,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/arixtra-10-mg08-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/arixtra-10-mg08-ml" />
@@ -3651,7 +3723,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/arixtra-5-mg04-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/arixtra-5-mg04-ml" />
@@ -3659,7 +3731,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gemcitabine-hospira-2-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gemcitabine-hospira-2-g" />
@@ -3667,7 +3739,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/ondansetron-normon-4-mg-2ml-solution-injectable-en-ampoule-de-2-ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/ondansetron-normon-4-mg-2ml-solution-injectable-en-ampoule-de-2-ml" />
@@ -3675,7 +3747,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/octanate-50-ui-ml-poudre-et-solvant-pour-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/octanate-50-ui-ml-poudre-et-solvant-pour-solution-injectable" />
@@ -3683,7 +3755,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandimmun</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandimmun" />
@@ -3691,7 +3763,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandimmun</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandimmun" />
@@ -3699,7 +3771,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandimmun</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandimmun" />
@@ -3707,7 +3779,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/sandimmun</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/sandimmun" />
@@ -3715,7 +3787,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gonal-f450</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gonal-f450" />
@@ -3723,7 +3795,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/gonal-f450</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/gonal-f450" />
@@ -3731,7 +3803,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/verorab-05-ml-1-dose-25-ui-vaccin-atirabique-inactive-poudre-et-solvant-pour-suspension-injectable-v</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/verorab-05-ml-1-dose-25-ui-vaccin-atirabique-inactive-poudre-et-solvant-pour-suspension-injectable-v" />
@@ -3739,7 +3811,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nivestim-48-mu-05-ml-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nivestim-48-mu-05-ml-injectable" />
@@ -3747,7 +3819,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/tomudex</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/tomudex" />
@@ -3755,7 +3827,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/eprex-10-000-ui-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/eprex-10-000-ui-ml-solution-injectable" />
@@ -3763,7 +3835,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/orgalutran-025-mg-05-ml-solution-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/orgalutran-025-mg-05-ml-solution-injectable" />
@@ -3771,7 +3843,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/viraferonpeg-80-g</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/viraferonpeg-80-g" />
@@ -3779,7 +3851,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imusporin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imusporin" />
@@ -3787,7 +3859,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imusporin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imusporin" />
@@ -3795,7 +3867,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/imusporin</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/imusporin" />
@@ -3803,7 +3875,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/fasturtec-15-mg-ml-poudre-pour-preparation-injectable</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/fasturtec-15-mg-ml-poudre-pour-preparation-injectable" />
@@ -3811,7 +3883,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/temozolomide-zenith-100-mg-gelule</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/temozolomide-zenith-100-mg-gelule" />
@@ -3819,7 +3891,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3827,7 +3899,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3835,7 +3907,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3843,7 +3915,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3851,7 +3923,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3859,7 +3931,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3867,7 +3939,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/equoral</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/equoral" />
@@ -3875,7 +3947,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zorifort-250-mg-comprime-dispersible</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zorifort-250-mg-comprime-dispersible" />
@@ -3883,7 +3955,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/xeplion-75-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/xeplion-75-mg-suspension-injectable-a-liberation-prolongee-en-seringue-pre-remplie-p" />
@@ -3891,7 +3963,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nitroglicerine-pht-25mg5ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nitroglicerine-pht-25mg5ml" />
@@ -3899,7 +3971,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/nitroglicerine-pht-25mg5ml</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/nitroglicerine-pht-25mg5ml" />
@@ -3907,7 +3979,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zofran</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
@@ -3915,7 +3987,7 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zofran</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
@@ -3923,82 +3995,10 @@
   </url>
   <url>
     <loc>https://taawidaty.ma/prix/zofran</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/zofran" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/zofran</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/zofran" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/epivir</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epivir" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/epivir" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/epivir</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epivir" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/epivir" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
   </url>
 </urlset>

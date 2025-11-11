@@ -17,3 +17,9 @@ Sitemap: https://taawidaty.ma/sitemap-8.xml
 Sitemap: https://taawidaty.ma/sitemap-9.xml
 Sitemap: https://taawidaty.ma/sitemap-10.xml
 Sitemap: https://taawidaty.ma/sitemap-11.xml
+Sitemap: https://taawidaty.ma/sitemap-12.xml
+Sitemap: https://taawidaty.ma/sitemap-13.xml
+Sitemap: https://taawidaty.ma/sitemap-14.xml
+Sitemap: https://taawidaty.ma/sitemap-15.xml
+Sitemap: https://taawidaty.ma/sitemap-16.xml
+Sitemap: https://taawidaty.ma/sitemap-17.xml

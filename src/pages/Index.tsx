@@ -24,7 +24,7 @@ import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
 import GradientText from '@/components/ui/GradientText';
 import { CNSSDisclaimer } from '@/components/ui/CNSSDisclaimer';
-import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, BookOpen, X, Plus, ShoppingCart, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, X, Plus, ShoppingCart, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
@@ -261,7 +261,7 @@ export default function Index() {
       <main role="main">
       {/* Hero Section */}
       {step === 1 && (
-        <section className="relative px-4 py-20 md:py-32 max-w-7xl mx-auto">
+        <section className="relative px-4 py-12 md:py-16 max-w-7xl mx-auto">
           {/* Modern background with warm decorative elements */}
           <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
@@ -270,7 +270,7 @@ export default function Index() {
 
           <div className="relative z-10 text-center animate-slide-up">
             {/* Modern badge */}
-            <div className="mb-12 inline-flex items-center">
+            <div className="mb-6 inline-flex items-center">
               <div className="glass px-6 py-3 rounded-full shadow-glow hover-lift">
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
@@ -282,54 +282,54 @@ export default function Index() {
             </div>
 
             {/* Modern heading with gradient text */}
-            <h2 className={`text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
               {renderHeroTitle()}
             </h2>
 
             {/* Modern subtitle */}
-            <p className={`text-xl md:text-2xl text-slate-600 dark:text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+            <p className={`text-lg md:text-xl text-slate-600 dark:text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
               {t.hero.subtitle}
             </p>
 
           {/* Two Options Cards */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <h3 className={`text-3xl font-bold text-slate-900 dark:text-foreground mb-8 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+          <div className="max-w-5xl mx-auto mb-8">
+            <h3 className={`text-2xl md:text-3xl font-bold text-slate-900 dark:text-foreground mb-6 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
               {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Card 1: Reimbursement Calculator */}
               <EnhancedCard
                 hoverable={true}
                 glowOnHover={true}
                 animateOnMount={true}
                 delay={0}
-                className="p-8 text-center cursor-pointer group"
+                className="p-6 text-center cursor-pointer group"
                 onClick={() => setStep(2)}
               >
-                <div className="mx-auto mb-6 relative w-24 h-24">
+                <div className="mx-auto mb-4 relative w-20 h-20">
                   <img 
                     src="/logos/remboursement-logo.png" 
                     alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
+                <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
                 </h4>
-                <p className={`text-slate-600 dark:text-muted-foreground mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+                <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' 
                     ? 'احسب المبلغ الذي ستسترده من التأمين الصحي الخاص بك'
                     : 'Calculez combien votre mutuelle va vous rembourser'}
                 </p>
                 <Button
-                  size="lg"
+                  size="default"
                   className="w-full group-hover:shadow-xl transition-all duration-300"
                 >
                   <span className={isRTL ? 'font-arabic' : ''}>
                     {language === 'ar' ? 'ابدأ الحساب' : 'Commencer'}
                   </span>
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </EnhancedCard>
 
@@ -339,97 +339,54 @@ export default function Index() {
                 glowOnHover={true}
                 animateOnMount={true}
                 delay={0.1}
-                className="p-8 text-center cursor-pointer group"
+                className="p-6 text-center cursor-pointer group"
                 onClick={() => {
                   window.location.href = '/prix-medicaments';
                 }}
               >
-                <div className="mx-auto mb-6 relative w-24 h-24">
+                <div className="mx-auto mb-4 relative w-20 h-20">
                   <img 
                     src="/logos/price-check-logo.png" 
                     alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h4 className={`text-2xl font-bold text-slate-900 dark:text-foreground mb-3 ${isRTL ? 'font-arabic' : ''}`}>
+                <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
                 </h4>
-                <p className={`text-slate-600 dark:text-muted-foreground mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+                <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' 
                     ? 'تحقق من سعر أي دواء في المغرب'
                     : 'Vérifiez le prix de n\'importe quel médicament'}
                 </p>
                 <Button
-                  size="lg"
+                  size="default"
                   variant="outline"
                   className="w-full group-hover:shadow-xl transition-all duration-300"
                 >
                   <span className={isRTL ? 'font-arabic' : ''}>
                     {language === 'ar' ? 'تحقق من السعر' : 'Vérifier'}
                   </span>
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </EnhancedCard>
             </div>
 
           {/* Modern Trust Badges - Moved Below Cards */}
-          <div className="flex flex-wrap justify-center gap-8 mb-16">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {[
               { icon: CheckCircle2, text: t.hero.trustOfficial },
               { icon: CheckCircle2, text: t.hero.trustInstant },
               { icon: CheckCircle2, text: t.hero.trustFree }
             ].map((item, index) => (
-              <div key={index} className="group flex items-center gap-3 p-3 rounded-2xl glass-card hover-lift">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
-                  <item.icon className="w-5 h-5 text-success-600 dark:text-success-400" />
+              <div key={index} className="group flex items-center gap-2 p-2 md:p-3 rounded-xl glass-card hover-lift">
+                <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
+                  <item.icon className="w-4 h-4 md:w-5 md:h-5 text-success-600 dark:text-success-400" />
                 </div>
-                <span className={`text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
+                <span className={`text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
               </div>
             ))}
           </div>
-          </div>
-
-          {/* FAQ Quick Access Banner */}
-          <div className="max-w-2xl mx-auto mt-16">
-            <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/50 dark:to-blue-950/50 border-2 border-primary-200 dark:border-primary-800 rounded-xl p-6 shadow-md transition-colors duration-300">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <HelpCircle className="w-6 h-6 text-primary-700 dark:text-primary-400" />
-                <h3 className={`text-xl font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'هل لديك أسئلة؟' : 'Vous avez des questions ?'}
-                </h3>
-              </div>
-              <p className={`text-slate-600 dark:text-muted-foreground mb-4 text-center ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar'
-                  ? 'تصفح أسئلتنا الشائعة حول استرجاع مصاريف الأدوية'
-                  : 'Consultez notre FAQ sur le remboursement des médicaments'}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button asChild variant="default" size="sm">
-                  <Link to="/faq-cnops" className="flex items-center gap-2">
-                    <HelpCircle className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'أسئلة CNOPS' : 'FAQ CNOPS'}
-                    </span>
-                  </Link>
-                </Button>
-                <Button asChild variant="default" size="sm">
-                  <Link to="/faq-cnss" className="flex items-center gap-2">
-                    <HelpCircle className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'أسئلة CNSS' : 'FAQ CNSS'}
-                    </span>
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="sm">
-                  <Link to="/blog" className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4" />
-                    <span className={isRTL ? 'font-arabic' : ''}>
-                      {language === 'ar' ? 'المدونة' : 'Blog'}
-                    </span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
           </div>
           </div>
         </section>
@@ -437,9 +394,9 @@ export default function Index() {
 
       {/* Step 2: Medication Search */}
       {step === 2 && (
-        <section className="px-4 py-16 max-w-4xl mx-auto animate-fade-in">
+        <section className="px-4 py-10 max-w-4xl mx-auto animate-fade-in">
           {/* Progress Indicator */}
-          <div className="max-w-md mx-auto mb-8">
+          <div className="max-w-md mx-auto mb-6">
             <div className="flex items-center justify-center gap-2">
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
               <div className="h-2 w-full bg-slate-300 dark:border rounded-full transition-all duration-500"></div>
@@ -449,17 +406,17 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-6 md:p-10 transition-colors duration-300">
-            <div className="mb-8">
+          <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-6 md:p-8 transition-colors duration-300">
+            <div className="mb-6">
               <Button
                 variant="ghost"
                 onClick={() => setStep(1)}
-                className={`mb-4 hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}
+                className={`mb-3 hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}
               >
                 ← {t.calculator.back}
               </Button>
               
-              <h2 className={`text-3xl font-black text-slate-900 dark:text-foreground mb-6 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+              <h2 className={`text-2xl md:text-3xl font-black text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                 {t.calculator.searchMed}
               </h2>
             </div>
@@ -473,15 +430,15 @@ export default function Index() {
 
               {/* Selected Medications List */}
               {medications.length > 0 && (
-                <div className="mt-8 space-y-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className={`text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
-                      <ShoppingCart className="w-5 h-5" />
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className={`text-base md:text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                      <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
                       {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
                     </h3>
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     {medications.map((med, index) => (
                       <motion.div
                         key={med.id}
@@ -489,13 +446,13 @@ export default function Index() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 20 }}
                         transition={{ delay: index * 0.05 }}
-                        className="flex items-center justify-between p-4 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                        className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
                       >
                         <div className="flex-1">
-                          <p className={`font-bold text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                          <p className={`font-bold text-sm md:text-base text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
                             {med.name}
                           </p>
-                          <p className="text-sm text-slate-600 dark:text-muted-foreground">
+                          <p className="text-xs md:text-sm text-slate-600 dark:text-muted-foreground">
                             {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
                           </p>
                         </div>
@@ -505,7 +462,7 @@ export default function Index() {
                           onClick={() => removeMedication(med.id)}
                           className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
                         >
-                          <X className="w-5 h-5" />
+                          <X className="w-4 h-4 md:w-5 md:h-5" />
                         </Button>
                       </motion.div>
                     ))}
@@ -528,9 +485,9 @@ export default function Index() {
 
       {/* Step 3: Results */}
       {step === 3 && results.length > 0 && (
-        <section className="px-4 py-16 max-w-6xl mx-auto">
+        <section className="px-4 py-10 max-w-6xl mx-auto">
           {/* Progress Indicator */}
-          <div className="max-w-md mx-auto mb-8">
+          <div className="max-w-md mx-auto mb-6">
             <div className="flex items-center justify-center gap-2">
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
               <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
@@ -541,7 +498,7 @@ export default function Index() {
           </div>
 
           {/* Individual Results */}
-          <div className="space-y-6 mb-8">
+          <div className="space-y-4 mb-6">
             {results.map((result, index) => (
               <motion.div
                 key={index}
@@ -560,33 +517,33 @@ export default function Index() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: results.length * 0.1 + 0.2 }}
-              className="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-700 dark:to-blue-700 rounded-2xl p-8 shadow-2xl text-white mb-8"
+              className="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-700 dark:to-blue-700 rounded-2xl p-6 md:p-8 shadow-2xl text-white mb-6"
             >
-              <h3 className={`text-2xl font-black mb-6 ${isRTL ? 'font-arabic' : ''}`}>
+              <h3 className={`text-xl md:text-2xl font-black mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                 {language === 'ar' ? 'المجموع الكلي' : 'Total Général'}
               </h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'السعر الإجمالي' : 'Prix Total'}
                   </p>
-                  <p className="text-3xl font-black">
+                  <p className="text-2xl md:text-3xl font-black">
                     {results.reduce((sum, r) => sum + r.originalPrice, 0).toFixed(2)} MAD
                   </p>
                 </div>
-                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'التعويض الإجمالي' : 'Remboursement Total'}
                   </p>
-                  <p className="text-3xl font-black">
+                  <p className="text-2xl md:text-3xl font-black">
                     {results.reduce((sum, r) => sum + r.reimbursementAmount, 0).toFixed(2)} MAD
                   </p>
                 </div>
-                <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'المبلغ المتبقي' : 'Reste à Payer'}
                   </p>
-                  <p className="text-3xl font-black">
+                  <p className="text-2xl md:text-3xl font-black">
                     {results.reduce((sum, r) => sum + r.patientPays, 0).toFixed(2)} MAD
                   </p>
                 </div>
@@ -594,11 +551,11 @@ export default function Index() {
             </motion.div>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
             <Button
               onClick={reset}
-              size="lg"
-              className={`text-lg hover:scale-105 transition-all duration-200 hover:shadow-lg ${isRTL ? 'font-arabic' : ''}`}
+              size="default"
+              className={`hover:scale-105 transition-all duration-200 hover:shadow-lg ${isRTL ? 'font-arabic' : ''}`}
             >
               {t.calculator.newCalc}
             </Button>
@@ -608,8 +565,8 @@ export default function Index() {
                 setShowConfetti(false);
               }}
               variant="outline"
-              size="lg"
-              className={`text-lg hover:scale-105 hover:bg-slate-100 dark:hover:bg-muted transition-all duration-200 ${isRTL ? 'font-arabic' : ''}`}
+              size="default"
+              className={`hover:scale-105 hover:bg-slate-100 dark:hover:bg-muted transition-all duration-200 ${isRTL ? 'font-arabic' : ''}`}
             >
               {language === 'ar' ? 'إضافة المزيد من الأدوية' : 'Ajouter plus de médicaments'}
             </Button>
@@ -619,7 +576,7 @@ export default function Index() {
       </main>
 
       {/* Footer */}
-      <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-20 transition-colors duration-300">
+      <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-12 md:mt-16 transition-colors duration-300">
         {/* Legal Links */}
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
@@ -653,6 +610,18 @@ export default function Index() {
           <p className={`text-sm mb-4 ${isRTL ? 'font-arabic' : ''}`}>
             © 2025 TAAWIDATY • {language === 'ar' ? 'جميع الحقوق محفوظة' : 'Tous droits réservés'}
           </p>
+          
+          {/* 
+            🎉 Easter Egg for Developers 🎉
+            
+            Hey there, fellow developer! 👋
+            
+            Dev teams, legal team, anyone who is trying to get "taawidaty.ma" here is the link for it:
+            https://www.youtube.com/shorts/Qw4rPF8HR3o
+            
+            Found this? You're awesome! 🚀
+            - The Taawidaty Dev Team
+          */}
           
           {/* Official Disclaimer */}
           <div className={`max-w-4xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-200 dark:border-amber-800 rounded-lg mb-4 ${isRTL ? 'font-arabic' : ''}`}>
