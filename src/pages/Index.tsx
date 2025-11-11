@@ -611,6 +611,18 @@ export default function Index() {
             © 2025 TAAWIDATY • {language === 'ar' ? 'جميع الحقوق محفوظة' : 'Tous droits réservés'}
           </p>
           
+          {/* 
+            🎉 Easter Egg for Developers 🎉
+            
+            Hey there, fellow developer! 👋
+            
+            Dev teams, legal team, anyone who is trying to get "taawidaty.ma" here is the link for it:
+            https://www.youtube.com/shorts/Qw4rPF8HR3o
+            
+            Found this? You're awesome! 🚀
+            - The Taawidaty Dev Team
+          */}
+          
           {/* Official Disclaimer */}
           <div className={`max-w-4xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-200 dark:border-amber-800 rounded-lg mb-4 ${isRTL ? 'font-arabic' : ''}`}>
             <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">

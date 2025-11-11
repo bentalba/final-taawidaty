@@ -18,6 +18,94 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix-medicaments" />
   </url>
   <url>
+    <loc>https://taawidaty.ma/blog</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnss</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnss" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnops</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnops" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/difference-cnss-cnops</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/difference-cnss-cnops" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/privacy-policy</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/medical-disclaimer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/medical-disclaimer" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/medical-disclaimer" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/about-us</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/about-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/about-us" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/contact-us</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/contact-us" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/contact-us" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/terms-of-service</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/terms-of-service" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/editorial-policy</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/editorial-policy" />
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/cookie-preferences</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/cookie-preferences" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/cookie-preferences" />
+  </url>
+  <url>
     <loc>https://taawidaty.ma/prix/evrysdi-075-mg-ml-poudre-pour-solution-buvable</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -3912,93 +4000,5 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/zofran" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/zofran</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/zofran" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/zofran" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/epivir</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epivir" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/epivir" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/epivir</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/epivir" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/epivir" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/facteur-ix-de-coagulation-humain-cnts-50-uiml" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/pemetrexed-zenith-100-mg-poudre-pour-solution-a-diluer-pour-perfusion" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/myrin-100-mg-comprime-enrobe" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/prix/carboplatine-mylan</loc>
-    <lastmod>2025-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix/carboplatine-mylan" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix/carboplatine-mylan" />
   </url>
 </urlset>
