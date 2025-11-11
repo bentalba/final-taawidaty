@@ -86,8 +86,6 @@ def generate_sitemap_index():
     all_urls = [
         {'loc': f'{BASE_URL}/', 'changefreq': 'daily', 'priority': '1.0'},
         {'loc': f'{BASE_URL}/prix-medicaments', 'changefreq': 'weekly', 'priority': '0.9'},
-        {'loc': f'{BASE_URL}/faq-cnops', 'changefreq': 'monthly', 'priority': '0.7'},
-        {'loc': f'{BASE_URL}/faq-cnss', 'changefreq': 'monthly', 'priority': '0.7'},
     ]
     
     # Add medication URLs

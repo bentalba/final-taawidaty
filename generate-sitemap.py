@@ -89,20 +89,6 @@ def generate_sitemap():
     <xhtml:link rel="alternate" hreflang="ar" href="{base}/prix-medicaments" />
   </url>
   
-  <url>
-    <loc>{base}/faq-cnops</loc>
-    <lastmod>{date}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>{base}/faq-cnss</loc>
-    <lastmod>{date}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
   <!-- Medication Pages (Top {count}) -->
 '''.format(base=BASE_URL, date=today, count=min(len(medications), 5000))
     
@@ -146,8 +132,6 @@ def generate_url_list(medications):
     urls = [
         f"{BASE_URL}/",
         f"{BASE_URL}/prix-medicaments",
-        f"{BASE_URL}/faq-cnops",
-        f"{BASE_URL}/faq-cnss",
     ]
     
     for medication in medications:
