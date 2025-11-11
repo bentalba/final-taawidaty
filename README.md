@@ -1,404 +1,805 @@
-<div align="center"><div align="center">
-
-    <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200"/>
-
-  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200" style="border-radius: 20px;"/>  
-
-    # TAAWIDATY | تعويضاتي
-
-  # 🏥 TAAWIDATY | تعويضاتي  
-
-    ### 🏥 Calculateur de Remboursement des Médicaments - Maroc
-
-  ### Morocco's #1 Medication Price & Reimbursement Calculator  
-
-  ### حاسبة أسعار الأدوية والتعويضات في المغرب  **Designed & Developed by [BENTALBA ZAKARIA](https://github.com/salma1-create)**
-
-    
-
-  <p align="center">  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat&logo=react)](https://reactjs.org/)
-
-    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-
-  </p>  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat&logo=vite)](https://vitejs.dev/)
-
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-
-  [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
-
-  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)  [🌐 Demo](https://dawa-calcul-plus.vercel.app) • [📖 Documentation](#-features) • [🤝 Contributing](#-contributing)
+<div align="center"><div align="center"><div align="center">
 
   
 
-  <br/></div>
+  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200"/>    <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200"/>
+
+  
+
+  # TAAWIDATY | تعويضاتي  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200" style="border-radius: 20px;"/>  
+
+  
+
+  ### Morocco's #1 Medication Price & Reimbursement Calculator    # TAAWIDATY | تعويضاتي
+
+  
+
+  <p>  # 🏥 TAAWIDATY | تعويضاتي  
+
+    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>
+
+  </p>    ### 🏥 Calculateur de Remboursement des Médicaments - Maroc
 
 
 
-  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)---
+  [![Live Demo](https://img.shields.io/badge/🌐_Live-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  ### Morocco's #1 Medication Price & Reimbursement Calculator  
 
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
 
-  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)## 📋 Table of Contents
+  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)  ### حاسبة أسعار الأدوية والتعويضات في المغرب  **Designed & Developed by [BENTALBA ZAKARIA](https://github.com/salma1-create)**
 
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  
 
-  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.18.0-ff69b4?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)- [Overview](#-overview)
-
-- [Features](#-features)
-
-  <br/>- [Tech Stack](#-tech-stack)
-
-- [Getting Started](#-getting-started)
-
-  [![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Project Structure](#-project-structure)
-
-  [![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Usage](#-usage)
-
-  [![Lighthouse SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Bilingual Support](#-bilingual-support)
-
-  [![Core Web Vitals](https://img.shields.io/badge/Core_Web_Vitals-Passing-success?style=flat-square)](https://web.dev/vitals/)- [FAQ System](#-faq-system)
-
-- [Contributing](#-contributing)
-
-</div>- [License](#-license)
+  <br/>    
 
 
 
-------
+  ![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat-square&logo=react&logoColor=white)  <p align="center">  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat&logo=react)](https://reactjs.org/)
+
+  ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat-square&logo=typescript&logoColor=white)
+
+  ![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat-square&logo=vite&logoColor=white)    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat-square&logo=tailwind-css&logoColor=white)
+
+  </p>  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat&logo=vite)](https://vitejs.dev/)
+
+  <br/>
+
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+
+  ![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)
+
+  ![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=lighthouse)  [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+  ![Lighthouse SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)
+
+  ![Core Web Vitals](https://img.shields.io/badge/Core_Web_Vitals-Passing-success?style=flat-square)  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
 
 
 
-## 🌟 What is TAAWIDATY?## 🎯 Overview
+</div>  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)  [🌐 Demo](https://dawa-calcul-plus.vercel.app) • [📖 Documentation](#-features) • [🤝 Contributing](#-contributing)
 
 
 
-**TAAWIDATY** is Morocco's most comprehensive medication price checker and reimbursement calculator. Get instant access to official prices for **8,111+ medications** and calculate your exact reimbursement from **CNOPS** or **CNSS** insurance - all in under 2 seconds.**TAAWIDATY** (تعويضاتي) is a comprehensive web application designed to help Moroccan citizens calculate medication reimbursement rates for both **CNOPS** and **CNSS** insurance systems. With an extensive database of **5,709+ medications** and full bilingual support (French/Arabic), it provides instant, accurate reimbursement calculations.
+---  
 
 
 
-### 🎯 Perfect For:### 🎬 Why TAAWIDATY?
+## 🌟 What is TAAWIDATY?  <br/></div>
 
 
 
-- 💊 **Patients**: Check medication prices before visiting the pharmacy- **Transparency**: Know your reimbursement rates before visiting the pharmacy
-
-- 🏥 **Healthcare Professionals**: Quick reference for medication costs- **Comprehensive**: Access to complete medication databases for both insurance systems
-
-- 📊 **Insurance Holders**: Calculate exact reimbursement amounts (CNOPS/CNSS)- **Accessible**: Full bilingual support with RTL (Right-to-Left) for Arabic
-
-- 👨‍👩‍👧‍👦 **Families**: Budget healthcare expenses accurately- **User-Friendly**: Modern, responsive interface optimized for all devices
-
-- 🇲🇦 **Moroccan Citizens**: Access official government pricing data- **Educational**: Detailed FAQ sections to understand insurance processes
+**TAAWIDATY** (تعويضاتي - meaning "My Reimbursements" in Arabic) is Morocco's most comprehensive medication price checker and reimbursement calculator. Get instant access to official prices for **8,111+ medications** and calculate your exact reimbursement from **CNOPS** or **CNSS** insurance.
 
 
 
-------
+### 🎯 Perfect For  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)---
 
 
 
-## ✨ Key Features## ✨ Features
+- 💊 **Patients** - Check medication prices before visiting the pharmacy  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+- 🏥 **Healthcare Professionals** - Quick reference for medication costs
+
+- 📊 **Insurance Holders** - Calculate exact reimbursement amounts (CNOPS/CNSS)  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)## 📋 Table of Contents
+
+- 👨‍👩‍👧‍👦 **Families** - Budget healthcare expenses accurately
+
+- 🇲🇦 **Moroccan Citizens** - Access official government pricing data  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 
 
-<table>### 🔍 Medication Search
+---  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.18.0-ff69b4?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)- [Overview](#-overview)
 
-  <tr>- **Instant Search**: Real-time filtering across 5,709+ medications
 
-    <td width="50%">- **Dual Database**: Separate databases for CNOPS and CNSS
 
-      - **Smart Filtering**: Search by medication name with instant results
+## ✨ Key Features- [Features](#-features)
 
-### 🔍 **Smart Search**- **Detailed Information**: View medication codes, prices, and reimbursement rates
+
+
+<table>  <br/>- [Tech Stack](#-tech-stack)
+
+  <tr>
+
+    <td width="50%">- [Getting Started](#-getting-started)
+
+      
+
+### 🔍 **Smart Search**  [![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Project Structure](#-project-structure)
 
 - Search 8,111+ medications instantly
 
-- Autocomplete with fuzzy matching### 💰 Reimbursement Calculator
+- Autocomplete with fuzzy matching  [![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Usage](#-usage)
 
-- Search by brand name, generic name (DCI), or barcode- **Automatic Calculation**: Instant computation of reimbursement amounts
+- Search by brand name, DCI, or barcode
 
-- Multi-language support (French/Arabic)- **Clear Breakdown**: 
+- Multi-language support (FR/AR)  [![Lighthouse SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)](https://developers.google.com/web/tools/lighthouse)- [Bilingual Support](#-bilingual-support)
 
-  - Public Price (Prix Public)
 
-### 💰 **Accurate Pricing**  - Reimbursement Rate (Taux de Remboursement)
 
-- Official pharmacy prices (PPV)  - Reimbursed Amount (Montant Remboursé)
+### 💰 **Accurate Pricing**  [![Core Web Vitals](https://img.shields.io/badge/Core_Web_Vitals-Passing-success?style=flat-square)](https://web.dev/vitals/)- [FAQ System](#-faq-system)
 
-- Hospital prices (PH)  - Patient Responsibility (Reste à Charge)
+- Official pharmacy prices (PPV)
+
+- Hospital prices (PH)- [Contributing](#-contributing)
 
 - Public sector pricing
 
-- Real-time price database### 🌍 Bilingual Interface
+- Real-time database</div>- [License](#-license)
 
-- **Full Language Support**: Complete French and Arabic translations
 
-### 📊 **Reimbursement Calculator**- **RTL Support**: Proper Right-to-Left rendering for Arabic
 
-- CNOPS reimbursement (70%, 90%, 100%)- **Persistent Language**: Language preference saved across sessions
+### 📊 **Reimbursement Calculator**
 
-- CNSS reimbursement rates- **Seamless Switching**: Toggle between languages instantly
+- CNOPS rates (70%, 90%, 100%)
+
+- CNSS reimbursement------
 
 - Instant calculation
 
-- Detailed breakdown### ❓ Comprehensive FAQ
+- Detailed breakdown
 
-- **CNOPS FAQ**: 15 detailed questions covering all aspects of CNOPS insurance
 
-    </td>- **CNSS FAQ**: 15 detailed questions covering all aspects of CNSS insurance
 
-    <td width="50%">- **Bilingual Content**: All FAQs available in French and Arabic
+    </td>## 🌟 What is TAAWIDATY?## 🎯 Overview
 
-- **Easy Navigation**: Quick access from landing page with multiple entry points
+    <td width="50%">
+
+
 
 ### 🌍 **Bilingual Interface**
 
-- Full French & Arabic support### 📱 Responsive Design
+- Full French & Arabic**TAAWIDATY** is Morocco's most comprehensive medication price checker and reimbursement calculator. Get instant access to official prices for **8,111+ medications** and calculate your exact reimbursement from **CNOPS** or **CNSS** insurance - all in under 2 seconds.**TAAWIDATY** (تعويضاتي) is a comprehensive web application designed to help Moroccan citizens calculate medication reimbursement rates for both **CNOPS** and **CNSS** insurance systems. With an extensive database of **5,709+ medications** and full bilingual support (French/Arabic), it provides instant, accurate reimbursement calculations.
 
-- RTL (Right-to-Left) for Arabic- **Mobile-First**: Optimized for smartphones and tablets
+- RTL support for Arabic
 
-- Culturally adapted UI/UX- **Desktop Enhanced**: Rich experience on larger screens
+- Seamless switching
 
-- Seamless language switching- **Accessibility**: Built with a11y best practices using Radix UI
+- Culturally adapted
 
+### 🎯 Perfect For:### 🎬 Why TAAWIDATY?
 
+### 📱 **Mobile Optimized**
 
-### 📱 **Mobile Optimized**---
+- Responsive design
 
-- Responsive design (mobile-first)
+- PWA ready
 
-- Progressive Web App (PWA) ready## 🛠 Tech Stack
+- Works offline- 💊 **Patients**: Check medication prices before visiting the pharmacy- **Transparency**: Know your reimbursement rates before visiting the pharmacy
 
-- Works offline (service worker)
+- Fast loading (1.5s)
 
-- Fast loading (1.5s FCP)### Frontend Framework
+- 🏥 **Healthcare Professionals**: Quick reference for medication costs- **Comprehensive**: Access to complete medication databases for both insurance systems
 
-- **React 18.3.1**: Modern UI with hooks and context
+### 🎨 **Modern UI/UX**
 
-### 🎨 **Modern UI/UX**- **TypeScript 5.8.3**: Type-safe development
+- Gradient animations- 📊 **Insurance Holders**: Calculate exact reimbursement amounts (CNOPS/CNSS)- **Accessible**: Full bilingual support with RTL (Right-to-Left) for Arabic
 
-- Beautiful gradient animations- **Vite 5.4.19**: Lightning-fast build tool and dev server
+- Dark mode
 
-- Dark mode support
+- Smooth transitions- 👨‍👩‍👧‍👦 **Families**: Budget healthcare expenses accurately- **User-Friendly**: Modern, responsive interface optimized for all devices
 
-- Smooth transitions (Framer Motion)### UI & Styling
+- Glassmorphism
 
-- Glassmorphism design- **Tailwind CSS 3.4.17**: Utility-first styling
+- 🇲🇦 **Moroccan Citizens**: Access official government pricing data- **Educational**: Detailed FAQ sections to understand insurance processes
 
-- **shadcn/ui**: High-quality accessible components
+    </td>
 
-    </td>- **Radix UI**: Primitive components for accessibility
-
-  </tr>- **Lucide React**: Beautiful icon system
+  </tr>
 
 </table>
 
-### Routing & State
+------
 
----- **React Router DOM 6.30.1**: Client-side routing
-
-- **Context API**: Global state management for language
-
-## 🚀 Performance- **LocalStorage**: Persistent user preferences
+---
 
 
 
-<div align="center">### Development Tools
+## 🚀 Performance
 
-- **ESLint**: Code quality and consistency
+## ✨ Key Features## ✨ Features
 
-### Lighthouse Scores (Mobile)- **PostCSS**: CSS transformations
+<div align="center">
 
-- **Python 3.9+**: Data processing scripts
+
+
+### Lighthouse Scores (Mobile)
+
+<table>### 🔍 Medication Search
 
 | Metric | Score | Status |
 
-|--------|-------|--------|---
+|--------|-------|--------|  <tr>- **Instant Search**: Real-time filtering across 5,709+ medications
 
 | ⚡ Performance | 95+ | 🟢 Excellent |
 
-| ♿ Accessibility | 100 | 🟢 Perfect |## 🚀 Getting Started
+| ♿ Accessibility | 100 | 🟢 Perfect |    <td width="50%">- **Dual Database**: Separate databases for CNOPS and CNSS
 
 | 🎯 Best Practices | 100 | 🟢 Perfect |
 
-| 🔍 SEO | 100 | 🟢 Perfect |### Prerequisites
+| 🔍 SEO | 100 | 🟢 Perfect |      - **Smart Filtering**: Search by medication name with instant results
 
 
 
-### Core Web Vitals- **Node.js** (v18 or higher) - [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-- **npm** or **yarn** or **bun**
-
-| Metric | Value | Status |
-
-|--------|-------|--------|### Installation
-
-| LCP (Largest Contentful Paint) | 1.5s | 🟢 Good |
-
-| FID (First Input Delay) | 0ms | 🟢 Good |```bash
-
-| CLS (Cumulative Layout Shift) | 0.006 | 🟢 Good |# Clone the repository
-
-git clone https://github.com/salma1-create/dawa-calcul-plus.git
-
-**Speed Index**: 2.5s • **Time to Interactive**: 2.8s • **Total Size**: 87KB
-
-# Navigate to project directory
-
-</div>cd dawa-calcul-plus
+### Core Web Vitals### 🔍 **Smart Search**- **Detailed Information**: View medication codes, prices, and reimbursement rates
 
 
 
----# Install dependencies
+| Metric | Value | Status |- Search 8,111+ medications instantly
 
-npm install
+|--------|-------|--------|
 
-## 🛠️ Tech Stack# or
+| LCP (Largest Contentful Paint) | 1.5s | 🟢 Good |- Autocomplete with fuzzy matching### 💰 Reimbursement Calculator
 
-yarn install
+| FID (First Input Delay) | 0ms | 🟢 Good |
 
-### Frontend# or
+| CLS (Cumulative Layout Shift) | 0.006 | 🟢 Good |- Search by brand name, generic name (DCI), or barcode- **Automatic Calculation**: Instant computation of reimbursement amounts
 
-- **React 18.3** - UI librarybun install
 
-- **TypeScript 5.8** - Type safety```
 
-- **Vite 5.4** - Build tool (lightning fast ⚡)
+</div>- Multi-language support (French/Arabic)- **Clear Breakdown**: 
 
-- **Tailwind CSS 3.4** - Utility-first CSS### Development
 
-- **Framer Motion 11** - Smooth animations
 
-- **Radix UI** - Accessible components```bash
+---  - Public Price (Prix Public)
 
-- **Lucide React** - Beautiful icons# Start development server
+
+
+## 🛠️ Tech Stack### 💰 **Accurate Pricing**  - Reimbursement Rate (Taux de Remboursement)
+
+
+
+### Core- Official pharmacy prices (PPV)  - Reimbursed Amount (Montant Remboursé)
+
+- **React 18.3** - UI library
+
+- **TypeScript 5.8** - Type safety- Hospital prices (PH)  - Patient Responsibility (Reste à Charge)
+
+- **Vite 5.4** - Build tool
+
+- **Tailwind CSS 3.4** - Styling- Public sector pricing
+
+
+
+### UI/UX- Real-time price database### 🌍 Bilingual Interface
+
+- **Framer Motion** - Animations
+
+- **Radix UI** - Accessible components- **Full Language Support**: Complete French and Arabic translations
+
+- **Lucide React** - Icons
+
+### 📊 **Reimbursement Calculator**- **RTL Support**: Proper Right-to-Left rendering for Arabic
+
+### State & Forms
+
+- **React Hook Form** - Forms- CNOPS reimbursement (70%, 90%, 100%)- **Persistent Language**: Language preference saved across sessions
+
+- **Zod** - Validation
+
+- **React Router** - Routing- CNSS reimbursement rates- **Seamless Switching**: Toggle between languages instantly
+
+
+
+### Deployment- Instant calculation
+
+- **Cloudflare Pages** - CDN hosting
+
+- **GitHub Actions** - CI/CD- Detailed breakdown### ❓ Comprehensive FAQ
+
+
+
+---- **CNOPS FAQ**: 15 detailed questions covering all aspects of CNOPS insurance
+
+
+
+## 📊 Database    </td>- **CNSS FAQ**: 15 detailed questions covering all aspects of CNSS insurance
+
+
+
+- **Total Medications**: 8,111    <td width="50%">- **Bilingual Content**: All FAQs available in French and Arabic
+
+- **CNOPS Coverage**: Complete
+
+- **CNSS Coverage**: Complete- **Easy Navigation**: Quick access from landing page with multiple entry points
+
+- **Data Source**: Official Moroccan government databases
+
+- **Update Frequency**: Quarterly### 🌍 **Bilingual Interface**
+
+
+
+### Data Fields- Full French & Arabic support### 📱 Responsive Design
+
+- Brand & generic names
+
+- DCI (International Nonproprietary Name)- RTL (Right-to-Left) for Arabic- **Mobile-First**: Optimized for smartphones and tablets
+
+- PPV (Pharmacy Public Price)
+
+- PH (Hospital Price)- Culturally adapted UI/UX- **Desktop Enhanced**: Rich experience on larger screens
+
+- Reimbursement rates
+
+- Barcode / EAN- Seamless language switching- **Accessibility**: Built with a11y best practices using Radix UI
+
+
+
+---
+
+
+
+## 🚀 Getting Started### 📱 **Mobile Optimized**---
+
+
+
+### Prerequisites- Responsive design (mobile-first)
+
+- Node.js 18+ or Bun
+
+- Git- Progressive Web App (PWA) ready## 🛠 Tech Stack
+
+
+
+### Installation- Works offline (service worker)
+
+
+
+```bash- Fast loading (1.5s FCP)### Frontend Framework
+
+# Clone repository
+
+git clone https://github.com/bentalba/final-taawidaty.git- **React 18.3.1**: Modern UI with hooks and context
+
+cd final-taawidaty
+
+### 🎨 **Modern UI/UX**- **TypeScript 5.8.3**: Type-safe development
+
+# Install dependencies
+
+npm install- Beautiful gradient animations- **Vite 5.4.19**: Lightning-fast build tool and dev server
+
+# or
+
+bun install- Dark mode support
+
+
+
+# Start dev server- Smooth transitions (Framer Motion)### UI & Styling
 
 npm run dev
 
-### State Management & Forms# or
+# or- Glassmorphism design- **Tailwind CSS 3.4.17**: Utility-first styling
 
-- **React Hook Form** - Form managementyarn dev
+bun dev
 
-- **Zod** - Schema validation# or
-
-- **React Router DOM** - Client-side routingbun dev
+```- **shadcn/ui**: High-quality accessible components
 
 
 
-### Development Tools# Open http://localhost:5173 in your browser
+Visit `http://localhost:5173` 🎉    </td>- **Radix UI**: Primitive components for accessibility
 
-- **ESLint** - Code linting```
 
-- **PostCSS** - CSS processing
 
-- **TypeScript ESLint** - TS linting### Build for Production
+### Build for Production  </tr>- **Lucide React**: Beautiful icon system
 
-- **Autoprefixer** - CSS vendor prefixes
 
-```bash
 
-### Deployment & Hosting# Create optimized production build
+```bash</table>
 
-- **Cloudflare Pages** - Global CDNnpm run build
+# Build
 
-- **GitHub Actions** - CI/CD (automated)
+npm run build### Routing & State
 
-- **Cloudflare Analytics** - Privacy-first analytics# Preview production build locally
+
+
+# Preview---- **React Router DOM 6.30.1**: Client-side routing
 
 npm run preview
 
+```- **Context API**: Global state management for language
+
+
+
+---## 🚀 Performance- **LocalStorage**: Persistent user preferences
+
+
+
+## 📁 Project Structure
+
+
+
+```<div align="center">### Development Tools
+
+taawidaty/
+
+├── src/- **ESLint**: Code quality and consistency
+
+│   ├── components/          # React components
+
+│   │   ├── ui/             # Radix UI components### Lighthouse Scores (Mobile)- **PostCSS**: CSS transformations
+
+│   │   ├── SearchInput.tsx # Smart search
+
+│   │   └── ResultCard.tsx  # Results display- **Python 3.9+**: Data processing scripts
+
+│   ├── data/               # Medication databases
+
+│   │   ├── medications-cnops.json| Metric | Score | Status |
+
+│   │   └── medications-cnss.json
+
+│   ├── hooks/              # Custom hooks|--------|-------|--------|---
+
+│   ├── lib/                # Utilities
+
+│   ├── pages/              # Page components| ⚡ Performance | 95+ | 🟢 Excellent |
+
+│   └── App.tsx             # Main app
+
+├── public/                 # Static assets| ♿ Accessibility | 100 | 🟢 Perfect |## 🚀 Getting Started
+
+│   ├── logos/
+
+│   └── sitemap*.xml| 🎯 Best Practices | 100 | 🟢 Perfect |
+
+├── docs/                   # Documentation
+
+└── package.json| 🔍 SEO | 100 | 🟢 Perfect |### Prerequisites
+
+```
+
+
+
+---
+
+### Core Web Vitals- **Node.js** (v18 or higher) - [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+## 🌍 Bilingual Support
+
+- **npm** or **yarn** or **bun**
+
+| Feature | French | Arabic |
+
+|---------|--------|--------|| Metric | Value | Status |
+
+| **Interface** | ✅ Full | ✅ Full |
+
+| **Search** | ✅ | ✅ ||--------|-------|--------|### Installation
+
+| **Text Direction** | LTR | RTL ✅ |
+
+| **Font** | Latin | Arabic || LCP (Largest Contentful Paint) | 1.5s | 🟢 Good |
+
+| **SEO** | ✅ | ✅ |
+
+| FID (First Input Delay) | 0ms | 🟢 Good |```bash
+
+Switch languages instantly with the toggle button 🇫🇷/🇲🇦
+
+| CLS (Cumulative Layout Shift) | 0.006 | 🟢 Good |# Clone the repository
+
+---
+
+git clone https://github.com/salma1-create/dawa-calcul-plus.git
+
+## 🔍 SEO & Performance
+
+**Speed Index**: 2.5s • **Time to Interactive**: 2.8s • **Total Size**: 87KB
+
+### SEO Features
+
+- ✅ 100/100 Lighthouse SEO# Navigate to project directory
+
+- ✅ 8,124 URLs indexed
+
+- ✅ Proper H1 tags</div>cd dawa-calcul-plus
+
+- ✅ Meta descriptions
+
+- ✅ Schema.org markup
+
+- ✅ Sitemap (17 files)
+
+- ✅ robots.txt---# Install dependencies
+
+- ✅ Open Graph tags
+
+npm install
+
+### Performance Optimizations
+
+- ⚡ Code splitting## 🛠️ Tech Stack# or
+
+- ⚡ Image optimization (WebP)
+
+- ⚡ CSS optimizationyarn install
+
+- ⚡ JS minification
+
+- ⚡ Preconnect hints### Frontend# or
+
+- ⚡ Resource preloading
+
+- ⚡ Service worker- **React 18.3** - UI librarybun install
+
+
+
+---- **TypeScript 5.8** - Type safety```
+
+
+
+## 📱 Browser Support- **Vite 5.4** - Build tool (lightning fast ⚡)
+
+
+
+| Browser | Minimum Version |- **Tailwind CSS 3.4** - Utility-first CSS### Development
+
+|---------|----------------|
+
+| Chrome | 90+ ✅ |- **Framer Motion 11** - Smooth animations
+
+| Firefox | 88+ ✅ |
+
+| Safari | 14+ ✅ |- **Radix UI** - Accessible components```bash
+
+| Edge | 90+ ✅ |
+
+- **Lucide React** - Beautiful icons# Start development server
+
+**Mobile**: iOS 14+, Android 5.0+
+
+npm run dev
+
+---
+
+### State Management & Forms# or
+
+## 🤝 Contributing
+
+- **React Hook Form** - Form managementyarn dev
+
+This is a proprietary project. Please contact the owner before making changes.
+
+- **Zod** - Schema validation# or
+
+### Development Workflow
+
+- **React Router DOM** - Client-side routingbun dev
+
+1. Fork the repository
+
+2. Create feature branch (`git checkout -b feature/name`)
+
+3. Commit changes (`git commit -m 'Add feature'`)
+
+4. Push to branch (`git push origin feature/name`)### Development Tools# Open http://localhost:5173 in your browser
+
+5. Open Pull Request
+
+- **ESLint** - Code linting```
+
+### Code Style
+
+- Follow existing patterns- **PostCSS** - CSS processing
+
+- Use TypeScript
+
+- Test on desktop & mobile- **TypeScript ESLint** - TS linting### Build for Production
+
+- Test in both languages
+
+- **Autoprefixer** - CSS vendor prefixes
+
+---
+
+```bash
+
+## 📝 License
+
+### Deployment & Hosting# Create optimized production build
+
+**Proprietary and Confidential**
+
+- **Cloudflare Pages** - Global CDNnpm run build
+
+© 2024-2025 TAAWIDATY. All Rights Reserved.
+
+- **GitHub Actions** - CI/CD (automated)
+
+Unauthorized copying, distribution, or modification is strictly prohibited.
+
+- **Cloudflare Analytics** - Privacy-first analytics# Preview production build locally
+
+---
+
+npm run preview
+
+## 👨‍💻 Developer
+
 ---```
 
+<div align="center">
 
+
+
+### **BENTALBA ZAKARIA**
 
 ## 📊 Database### Linting
 
+[![GitHub](https://img.shields.io/badge/GitHub-@bentalba-181717?style=for-the-badge&logo=github)](https://github.com/bentalba)
 
+
+
+**Full-Stack Developer • React Specialist • Morocco 🇲🇦**
 
 ### Medication Data```bash
 
+*Designed & Developed with ❤️ in Morocco*
+
 - **Total Medications**: 8,111# Run ESLint
+
+</div>
 
 - **CNOPS Database**: 8,111 entriesnpm run lint
 
+---
+
 - **CNSS Database**: Comprehensive coverage```
+
+## 🙏 Acknowledgments
 
 - **Data Sources**: Official Moroccan government databases
 
-- **Update Frequency**: Quarterly---
+- **Moroccan Government** - Official medication data
 
+- **CNOPS** - Insurance guidelines- **Update Frequency**: Quarterly---
 
+- **CNSS** - Social security information
+
+- **Open Source Community** - Amazing tools
+
+- **Users** - Valuable feedback
 
 ### Data Fields## 📁 Project Structure
 
+---
+
 - Medication name (brand & generic)
+
+## 📞 Support
 
 - DCI (International Nonproprietary Name)```
 
-- PPV (Pharmacy Public Price)dawa-calcul-plus/
+### 🌐 Website
 
-- PH (Hospital Price)├── public/
+[https://taawidaty.ma](https://taawidaty.ma)- PPV (Pharmacy Public Price)dawa-calcul-plus/
 
-- Reimbursement rates (CNOPS/CNSS)│   ├── logos/
 
-- Barcode / EAN code│   │   └── TAAWIDATY.png          # Main logo
 
-- Presentation & dosage│   └── robots.txt                  # SEO configuration
+### 📧 Contact- PH (Hospital Price)├── public/
 
-├── src/
+- **Support**: support@taawidaty.ma
 
----│   ├── components/
+- **Business**: contact@taawidaty.ma- Reimbursement rates (CNOPS/CNSS)│   ├── logos/
 
-│   │   ├── ui/                     # shadcn/ui components
 
-## 🎨 Screenshots│   │   ├── AdBanner.tsx           # Advertisement component
 
-│   │   ├── LanguageToggle.tsx     # Language switcher
+### 🐛 Bug Reports- Barcode / EAN code│   │   └── TAAWIDATY.png          # Main logo
 
-<div align="center">│   │   ├── ResultCard.tsx         # Medication result display
+Found a bug? Open an issue with:
+
+- Description- Presentation & dosage│   └── robots.txt                  # SEO configuration
+
+- Steps to reproduce
+
+- Expected vs actual behavior├── src/
+
+- Screenshots
+
+- Browser & device info---│   ├── components/
+
+
+
+---│   │   ├── ui/                     # shadcn/ui components
+
+
+
+## 📊 Stats## 🎨 Screenshots│   │   ├── AdBanner.tsx           # Advertisement component
+
+
+
+<div align="center">│   │   ├── LanguageToggle.tsx     # Language switcher
+
+
+
+![GitHub repo size](https://img.shields.io/github/repo-size/bentalba/final-taawidaty?style=flat-square)<div align="center">│   │   ├── ResultCard.tsx         # Medication result display
+
+![GitHub code size](https://img.shields.io/github/languages/code-size/bentalba/final-taawidaty?style=flat-square)
 
 │   │   └── SearchInput.tsx        # Search component
 
+**⭐ Star this repository if you find it helpful!**
+
 ### 🏠 Landing Page│   ├── contexts/
+
+</div>
 
 ![Landing Page](docs/screenshots/landing-page.png)│   │   └── LanguageContext.tsx    # Global language state
 
+---
+
 *Modern hero section with gradient animations*│   ├── data/
+
+## 🗺️ Roadmap
 
 │   │   ├── medications-cnops.json # CNOPS medication database (5,709 entries)
 
-### 🔍 Smart Search│   │   ├── medications-cnss.json  # CNSS medication database (5,709 entries)
+### ✅ Completed
 
-![Search Interface](docs/screenshots/search.png)│   │   └── medicationsLoader.ts   # Async data loader
+- [x] 8,111 medication database### 🔍 Smart Search│   │   ├── medications-cnss.json  # CNSS medication database (5,709 entries)
 
-*Instant autocomplete with fuzzy matching*│   ├── hooks/
+- [x] Bilingual interface (FR/AR)
 
-│   │   ├── use-mobile.tsx         # Mobile detection hook
+- [x] CNOPS/CNSS calculators![Search Interface](docs/screenshots/search.png)│   │   └── medicationsLoader.ts   # Async data loader
 
-### 💰 Reimbursement Calculator│   │   ├── use-toast.ts           # Toast notifications
+- [x] Dark mode
 
-![Calculator](docs/screenshots/calculator.png)│   │   └── useLanguage.ts         # Language hook export
+- [x] Mobile optimization*Instant autocomplete with fuzzy matching*│   ├── hooks/
 
-*Calculate exact reimbursement in real-time*│   ├── lib/
+- [x] SEO optimization (100/100)
 
-│   │   ├── faqData.ts             # FAQ content (FR/AR)
+- [x] Performance optimization (95+)│   │   ├── use-mobile.tsx         # Mobile detection hook
 
-### 🌙 Dark Mode│   │   ├── translations.ts        # UI translations (FR/AR)
 
-![Dark Mode](docs/screenshots/dark-mode.png)│   │   └── utils.ts               # Utility functions
 
-*Beautiful dark theme for night usage*│   ├── pages/
+### 🔮 Future### 💰 Reimbursement Calculator│   │   ├── use-toast.ts           # Toast notifications
 
-│   │   ├── Index.tsx              # Landing page & calculator
+- [ ] User accounts
 
-### 📱 Mobile Responsive│   │   ├── FaqCnops.tsx           # CNOPS FAQ page
+- [ ] Medication comparison![Calculator](docs/screenshots/calculator.png)│   │   └── useLanguage.ts         # Language hook export
 
-![Mobile View](docs/screenshots/mobile.png)│   │   ├── FaqCnss.tsx            # CNSS FAQ page
+- [ ] Price alerts
 
-*Optimized for all screen sizes*│   │   └── NotFound.tsx           # 404 page
+- [ ] Pharmacy locator*Calculate exact reimbursement in real-time*│   ├── lib/
 
-│   ├── App.tsx                     # Root component & routing
+- [ ] Mobile app
+
+- [ ] API for developers│   │   ├── faqData.ts             # FAQ content (FR/AR)
+
+
+
+---### 🌙 Dark Mode│   │   ├── translations.ts        # UI translations (FR/AR)
+
+
+
+<div align="center">![Dark Mode](docs/screenshots/dark-mode.png)│   │   └── utils.ts               # Utility functions
+
+
+
+**Made with ❤️ by Moroccan developers, for Moroccans***Beautiful dark theme for night usage*│   ├── pages/
+
+
+
+**تعويضاتي - لأن صحتك تستحق الأفضل**│   │   ├── Index.tsx              # Landing page & calculator
+
+
+
+*Because your health deserves the best*### 📱 Mobile Responsive│   │   ├── FaqCnops.tsx           # CNOPS FAQ page
+
+
+
+---![Mobile View](docs/screenshots/mobile.png)│   │   ├── FaqCnss.tsx            # CNSS FAQ page
+
+
+
+[⬆ Back to Top](#taawidaty--تعويضاتي)*Optimized for all screen sizes*│   │   └── NotFound.tsx           # 404 page
+
+
+
+</div>│   ├── App.tsx                     # Root component & routing
+
 
 </div>│   └── main.tsx                    # Application entry point
 
