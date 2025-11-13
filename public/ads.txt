@@ -1,0 +1,20 @@
+# AdSense Ads.txt File for taawidaty.ma
+# Updated: November 14, 2025
+# 
+# This file authorizes Google AdSense to serve ads on this domain.
+# Replace "pub-XXXXXXXXXXXXXXXX" with your actual AdSense Publisher ID
+# You can find your Publisher ID in your AdSense account under Account > Account Information
+
+# Google AdSense - REPLACE WITH YOUR ACTUAL PUBLISHER ID
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Instructions to find your Publisher ID:
+# 1. Log into your AdSense account at https://www.google.com/adsense
+# 2. Click on "Account" in the left sidebar
+# 3. Click on "Account information"
+# 4. Your Publisher ID will be shown (format: pub-################)
+# 5. Replace "pub-XXXXXXXXXXXXXXXX" above with your actual ID
+# 6. Remove these instruction comments before deploying
+
+# Additional ad partners can be added below (optional)
+# Format: domain.com, publisherID, RELATIONSHIP, certificationID
