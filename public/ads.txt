@@ -2,11 +2,11 @@
 # Updated: November 14, 2025
 # 
 # This file authorizes Google AdSense to serve ads on this domain.
-# Replace "pub-XXXXXXXXXXXXXXXX" with your actual AdSense Publisher ID
-# You can find your Publisher ID in your AdSense account under Account > Account Information
+# Publisher ID: pub-8044601901131461
+# Payments Account: 7100-5938-6476-6102
 
-# Google AdSense - REPLACE WITH YOUR ACTUAL PUBLISHER ID
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Google AdSense - Official Publisher Authorization
+google.com, pub-8044601901131461, DIRECT, f08c47fec0942fa0
 
 # Instructions to find your Publisher ID:
 # 1. Log into your AdSense account at https://www.google.com/adsense
