@@ -244,7 +244,7 @@ Ce site est régi par les lois du Royaume du Maroc. Tout litige sera soumis aux 
 
 **Contact légal :**
 Pour toute question juridique concernant cet avertissement :
-Email : legal@taawidaty.ma`
+Email : contact@taawidaty.ma`
         },
         {
           title: 'Ressources Officielles',
@@ -503,7 +503,7 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
 
 **جهة الاتصال القانونية:**
 لأي أسئلة قانونية تتعلق بهذا التحذير:
-البريد الإلكتروني: legal@taawidaty.ma`
+البريد الإلكتروني: contact@taawidaty.ma`
         },
         {
           title: 'الموارد الرسمية',

@@ -36,20 +36,23 @@ Nous répondons à tous les emails dans les délais indiqués ci-dessous. Veuill
           title: 'Contact Général',
           icon: 'messageSquare',
           email: 'contact@taawidaty.ma',
-          content: `**Pour les questions générales sur Taawidaty**
+          content: `**Pour toutes vos questions sur Taawidaty**
 
 - Questions sur le fonctionnement du calculateur
 - Demandes d'information générales
 - Suggestions de nouvelles fonctionnalités
 - Commentaires sur le service
 - Demandes de partenariat
+- Signalement d'erreurs techniques ou de données
+- Questions sur la vie privée et les données personnelles
+- Questions juridiques
 
 **Délai de réponse :** 3-5 jours ouvrables`
         },
         {
-          title: 'Signaler une Erreur',
-          icon: 'bug',
-          email: 'bugs@taawidaty.ma',
+          title: 'Questions Techniques et Administratives',
+          icon: 'shield',
+          email: 'admin@taawidaty.ma',
           content: `**Pour signaler un problème technique ou une erreur de données**
 
 Veuillez inclure dans votre message :
@@ -68,56 +71,6 @@ Veuillez inclure dans votre message :
 - Lien ou page qui ne fonctionne pas
 - Problème d'affichage
 - Données manquantes ou obsolètes`
-        },
-        {
-          title: 'Suggestions et Feedback',
-          icon: 'lightbulb',
-          email: 'feedback@taawidaty.ma',
-          content: `**Pour partager vos idées d'amélioration**
-
-Nous aimerions connaître :
-- Fonctionnalités que vous aimeriez voir ajoutées
-- Améliorations de l'expérience utilisateur
-- Commentaires sur le design
-- Suggestions de contenu pour le blog
-- Idées pour de nouveaux services
-
-**Délai de réponse :** 5-7 jours ouvrables
-
-Toutes les suggestions sont prises en compte pour les futures mises à jour. Nous ne pouvons pas garantir que toutes seront implémentées, mais chaque idée est évaluée.`
-        },
-        {
-          title: 'Vie Privée et Données',
-          icon: 'shield',
-          email: 'privacy@taawidaty.ma',
-          content: `**Pour les questions concernant vos données personnelles**
-
-Utilisez cette adresse pour :
-- Exercer vos droits RGPD (accès, rectification, suppression)
-- Questions sur notre politique de confidentialité
-- Demandes de suppression de données
-- Inquiétudes sur la vie privée
-- Demandes de portabilité des données
-
-**Délai de réponse :** 3-5 jours ouvrables
-
-**Délégué à la Protection des Données (DPO) :**
-BENTALBA ZAKARIA
-Email : dpo@taawidaty.ma`
-        },
-        {
-          title: 'Questions Juridiques',
-          icon: 'scale',
-          email: 'legal@taawidaty.ma',
-          content: `**Pour les questions légales et juridiques**
-
-- Questions sur les conditions d'utilisation
-- Propriété intellectuelle
-- Licences et droits d'auteur
-- Conformité réglementaire
-- Litiges ou réclamations légales
-
-**Délai de réponse :** 5-7 jours ouvrables`
         },
         {
           title: 'Ce Que Nous Ne Pouvons PAS Faire',
@@ -228,29 +181,17 @@ Merci
           title: 'Délais de Réponse',
           content: `**Nos engagements de réponse :**
 
-🚨 **Erreurs critiques** (bugs@taawidaty.ma)
+🚨 **Questions urgentes** (admin@taawidaty.ma)
 Délai : 24-48 heures
-- Calculs incorrects affectant de nombreux médicaments
+- Erreurs de calcul affectant de nombreux médicaments
 - Site inaccessible
-- Faille de sécurité
+- Problèmes techniques critiques
 
 📧 **Questions générales** (contact@taawidaty.ma)
 Délai : 3-5 jours ouvrables
 - Fonctionnement du service
 - Questions diverses
-
-💡 **Suggestions** (feedback@taawidaty.ma)
-Délai : 5-7 jours ouvrables
-- Accusé de réception
-- Les suggestions sont évaluées pour les futures versions
-
-🔒 **Vie privée** (privacy@taawidaty.ma)
-Délai : 3-5 jours ouvrables (conforme RGPD)
-- Exercice de droits : 30 jours maximum
-
-⚖️ **Juridique** (legal@taawidaty.ma)
-Délai : 5-7 jours ouvrables
-- Selon la complexité du cas
+- Suggestions et feedback
 
 **Note :** Les délais sont des jours ouvrables (lundi-vendredi, hors jours fériés marocains).`
         },
@@ -358,9 +299,9 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
 **موعد الرد:** 3-5 أيام عمل`
         },
         {
-          title: 'الإبلاغ عن خطأ',
-          icon: 'bug',
-          email: 'bugs@taawidaty.ma',
+          title: 'الأسئلة التقنية والإدارية',
+          icon: 'shield',
+          email: 'admin@taawidaty.ma',
           content: `**للإبلاغ عن مشكلة تقنية أو خطأ في البيانات**
 
 يرجى تضمين في رسالتك:
@@ -379,56 +320,6 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
 - رابط أو صفحة لا تعمل
 - مشكلة في العرض
 - بيانات مفقودة أو قديمة`
-        },
-        {
-          title: 'الاقتراحات والملاحظات',
-          icon: 'lightbulb',
-          email: 'feedback@taawidaty.ma',
-          content: `**لمشاركة أفكارك للتحسين**
-
-نود أن نعرف:
-- الميزات التي ترغب في رؤيتها مضافة
-- تحسينات تجربة المستخدم
-- تعليقات على التصميم
-- اقتراحات محتوى للمدونة
-- أفكار لخدمات جديدة
-
-**موعد الرد:** 5-7 أيام عمل
-
-يتم أخذ جميع الاقتراحات في الاعتبار للتحديثات المستقبلية. لا يمكننا ضمان تنفيذ جميعها، لكن يتم تقييم كل فكرة.`
-        },
-        {
-          title: 'الخصوصية والبيانات',
-          icon: 'shield',
-          email: 'privacy@taawidaty.ma',
-          content: `**للأسئلة المتعلقة ببياناتك الشخصية**
-
-استخدم هذا العنوان لـ:
-- ممارسة حقوقك RGPD (الوصول، التصحيح، الحذف)
-- أسئلة حول سياسة الخصوصية لدينا
-- طلبات حذف البيانات
-- مخاوف بشأن الخصوصية
-- طلبات نقل البيانات
-
-**موعد الرد:** 3-5 أيام عمل
-
-**مندوب حماية البيانات:**
-بنطلبة زكرياء
-البريد الإلكتروني: dpo@taawidaty.ma`
-        },
-        {
-          title: 'أسئلة قانونية',
-          icon: 'scale',
-          email: 'legal@taawidaty.ma',
-          content: `**للأسئلة القانونية والقضائية**
-
-- أسئلة حول شروط الاستخدام
-- الملكية الفكرية
-- التراخيص وحقوق النشر
-- الامتثال التنظيمي
-- نزاعات أو مطالبات قانونية
-
-**موعد الرد:** 5-7 أيام عمل`
         },
         {
           title: 'ما لا يمكننا فعله',
@@ -539,29 +430,17 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
           title: 'مواعيد الرد',
           content: `**التزاماتنا بالرد:**
 
-🚨 **أخطاء حرجة** (bugs@taawidaty.ma)
+🚨 **أسئلة عاجلة** (admin@taawidaty.ma)
 الموعد: 24-48 ساعة
-- حسابات خاطئة تؤثر على العديد من الأدوية
+- أخطاء في الحسابات تؤثر على العديد من الأدوية
 - الموقع غير متاح
-- ثغرة أمنية
+- مشاكل تقنية حرجة
 
 📧 **أسئلة عامة** (contact@taawidaty.ma)
 الموعد: 3-5 أيام عمل
 - تشغيل الخدمة
 - أسئلة متنوعة
-
-💡 **اقتراحات** (feedback@taawidaty.ma)
-الموعد: 5-7 أيام عمل
-- إشعار استلام
-- تُقيَّم الاقتراحات للإصدارات المستقبلية
-
-🔒 **الخصوصية** (privacy@taawidaty.ma)
-الموعد: 3-5 أيام عمل (متوافق مع RGPD)
-- ممارسة الحقوق: 30 يوماً كحد أقصى
-
-⚖️ **قانوني** (legal@taawidaty.ma)
-الموعد: 5-7 أيام عمل
-- حسب تعقيد الحالة
+- اقتراحات وملاحظات
 
 **ملاحظة:** المواعيد هي أيام عمل (الاثنين-الجمعة، باستثناء العطل المغربية).`
         },

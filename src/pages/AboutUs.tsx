@@ -254,16 +254,16 @@ Consultez toujours un professionnel de santé.
 contact@taawidaty.ma
 
 🔒 **Questions sur la vie privée**
-privacy@taawidaty.ma
+admin@taawidaty.ma
 
 ⚖️ **Questions juridiques**
-legal@taawidaty.ma
+contact@taawidaty.ma
 
 💡 **Suggestions d'amélioration**
-feedback@taawidaty.ma
+contact@taawidaty.ma
 
 🐛 **Signaler une erreur**
-bugs@taawidaty.ma
+admin@taawidaty.ma
 
 **Délais de réponse :**
 - Erreurs critiques : 24-48 heures
@@ -598,16 +598,16 @@ LinkedIn: [قريباً]
 contact@taawidaty.ma
 
 🔒 **أسئلة حول الخصوصية**
-privacy@taawidaty.ma
+admin@taawidaty.ma
 
 ⚖️ **أسئلة قانونية**
-legal@taawidaty.ma
+contact@taawidaty.ma
 
 💡 **اقتراحات للتحسين**
-feedback@taawidaty.ma
+contact@taawidaty.ma
 
 🐛 **الإبلاغ عن خطأ**
-bugs@taawidaty.ma
+admin@taawidaty.ma
 
 **مواعيد الرد:**
 - أخطاء حرجة: 24-48 ساعة

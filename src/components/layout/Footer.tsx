@@ -130,9 +130,14 @@ export function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
-          <p className="text-neutral-400 text-sm text-center md:text-left">
-            © {currentYear} TAAWIDATY. {t('footer.copyright', 'Tous droits réservés.')}
-          </p>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p className="text-neutral-400 text-sm text-center md:text-left">
+              © {currentYear} TAAWIDATY. {t('footer.copyright', 'Tous droits réservés.')}
+            </p>
+            <p className="text-neutral-500 text-xs text-center md:text-left">
+              Designed and made by B.Z
+            </p>
+          </div>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">

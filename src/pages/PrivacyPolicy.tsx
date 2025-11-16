@@ -112,7 +112,7 @@ Nous ne partageons jamais vos données avec des tiers à des fins de marketing s
 **5.6 Droit de retirer votre consentement**
 - Vous pouvez retirer votre consentement à tout moment
 
-Pour exercer ces droits, contactez-nous à : privacy@taawidaty.ma`
+Pour exercer ces droits, contactez-nous à : admin@taawidaty.ma`
         },
         {
           title: '6. Conservation des données',
@@ -192,12 +192,12 @@ Les cookies de préférence améliorent votre expérience mais ne sont pas oblig
           title: '12. Contact et réclamations',
           content: `**Pour toute question concernant cette politique ou vos données :**
 
-📧 Email : privacy@taawidaty.ma  
+📧 Email : admin@taawidaty.ma  
 📱 Formulaire de contact : [À venir]
 
 **Délégué à la Protection des Données (DPO) :**  
 BENTALBA ZAKARIA  
-Email : dpo@taawidaty.ma
+Email : admin@taawidaty.ma
 
 **Autorité de contrôle au Maroc :**  
 Commission Nationale de contrôle de la protection des Données à Caractère Personnel (CNDP)  
@@ -327,7 +327,7 @@ Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.`
 **٥.٦ حق سحب الموافقة**
 - يمكنك سحب موافقتك في أي وقت
 
-لممارسة هذه الحقوق، اتصل بنا على: privacy@taawidaty.ma`
+لممارسة هذه الحقوق، اتصل بنا على: admin@taawidaty.ma`
         },
         {
           title: '٦. الاحتفاظ بالبيانات',
@@ -405,12 +405,12 @@ Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.`
           title: '١٢. الاتصال والشكاوى',
           content: `**لأي سؤال بخصوص هذه السياسة أو بياناتك:**
 
-📧 البريد الإلكتروني: privacy@taawidaty.ma  
+📧 البريد الإلكتروني: admin@taawidaty.ma  
 📱 نموذج الاتصال: [قريباً]
 
 **مندوب حماية البيانات:**  
 بنطلبة زكرياء  
-البريد الإلكتروني: dpo@taawidaty.ma
+البريد الإلكتروني: admin@taawidaty.ma
 
 **السلطة الرقابية في المغرب:**  
 اللجنة الوطنية لمراقبة حماية المعطيات ذات الطابع الشخصي (CNDP)  
