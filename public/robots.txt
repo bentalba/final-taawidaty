@@ -1,25 +1,16 @@
 # robots.txt for taawidaty.ma
-# Last updated: 2025-11-09
+# Last updated: 2025-11-16
+# CRITICAL FIX: Removed fake medication URLs that were causing indexing issues
 
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://taawidaty.ma/sitemap-index.xml
+# Block individual medication pages (these don't exist - SPA uses /prix-medicaments for search)
+# This prevents Google from trying to index non-existent /prix/[medication-name] URLs
+Disallow: /prix/
+
+# Allow the actual price checker page
+Allow: /prix-medicaments
+
+# Sitemap (CLEAN VERSION - Only 13 real URLs)
 Sitemap: https://taawidaty.ma/sitemap.xml
-Sitemap: https://taawidaty.ma/sitemap-2.xml
-Sitemap: https://taawidaty.ma/sitemap-3.xml
-Sitemap: https://taawidaty.ma/sitemap-4.xml
-Sitemap: https://taawidaty.ma/sitemap-5.xml
-Sitemap: https://taawidaty.ma/sitemap-6.xml
-Sitemap: https://taawidaty.ma/sitemap-7.xml
-Sitemap: https://taawidaty.ma/sitemap-8.xml
-Sitemap: https://taawidaty.ma/sitemap-9.xml
-Sitemap: https://taawidaty.ma/sitemap-10.xml
-Sitemap: https://taawidaty.ma/sitemap-11.xml
-Sitemap: https://taawidaty.ma/sitemap-12.xml
-Sitemap: https://taawidaty.ma/sitemap-13.xml
-Sitemap: https://taawidaty.ma/sitemap-14.xml
-Sitemap: https://taawidaty.ma/sitemap-15.xml
-Sitemap: https://taawidaty.ma/sitemap-16.xml
-Sitemap: https://taawidaty.ma/sitemap-17.xml
