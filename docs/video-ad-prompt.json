@@ -1,0 +1,572 @@
+{
+  "project_name": "TAAWIDATY - Medication Reimbursement Made Easy",
+  "tagline": "Don't guess. Know what you'll pay.",
+  "video_specifications": {
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "duration_seconds": 30,
+    "frame_rate": 30,
+    "format": "portrait_mobile_first",
+    "color_grading": "warm_realistic_moroccan_sunset",
+    "style": "contemporary_moroccan_lifestyle_with_digital_overlay"
+  },
+  "target_audience": {
+    "primary": "Moroccan citizens ages 25-55 with health insurance (CNOPS/CNSS)",
+    "pain_points": [
+      "Uncertainty about medication prices at pharmacy",
+      "Not knowing reimbursement amounts before purchase",
+      "Worrying about out-of-pocket costs",
+      "Feeling financially unprepared when visiting pharmacy"
+    ],
+    "emotional_journey": "anxiety → discovery → relief → confidence"
+  },
+  "brand_identity": {
+    "name": "TAAWIDATY (تعويضاتي)",
+    "meaning": "My Reimbursements (Arabic)",
+    "logo_colors": ["#0077be", "#40ffaa", "#4079ff"],
+    "brand_voice": "empowering, trustworthy, instant, modern",
+    "key_message": "Know your medication price and reimbursement before you walk into the pharmacy."
+  },
+  "character_description": {
+    "name": "Hassan",
+    "age": 38,
+    "appearance": {
+      "clothing": "Modern Moroccan djellaba (light beige/cream color) worn casually over jeans",
+      "accessories": "Wireless earbuds, smartphone (iPhone or Samsung in hand)",
+      "style": "Contemporary Moroccan professional - blend of tradition and modernity"
+    },
+    "personality": "Relatable everyman, health-conscious, tech-savvy, financially responsible",
+    "emotional_arc": "worried → curious → relieved → confident"
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "THE PROBLEM - Financial Anxiety",
+      "duration_seconds": 5,
+      "location": "Exterior - Moroccan street near pharmacy (late afternoon golden hour)",
+      "shots": [
+        {
+          "shot_number": "1A",
+          "camera_angle": "Low angle, slightly tilted up",
+          "camera_movement": "Slow push in",
+          "framing": "Medium close-up → Close-up",
+          "duration_seconds": 2.5,
+          "description": "Hassan walks toward camera on a typical Moroccan street (colorful building facades, terracotta walls visible). He slows down as he approaches a pharmacy (green cross sign visible in background, slightly out of focus). Expression: concerned, brow slightly furrowed.",
+          "lighting": "Golden hour warm sunlight from side, creating soft shadows",
+          "character_action": "Walking pace slows, hand moves unconsciously toward pocket",
+          "visual_details": [
+            "Pharmacy sign glows softly in background",
+            "Moroccan architectural details (zellige tiles, arched doorways)",
+            "Warm orange/golden ambient light"
+          ]
+        },
+        {
+          "shot_number": "1B",
+          "camera_angle": "Over-the-shoulder (from behind Hassan)",
+          "camera_movement": "Static",
+          "framing": "Medium shot",
+          "duration_seconds": 1.5,
+          "description": "Hassan stops 3 meters from pharmacy entrance. His hand reaches into his djellaba pocket and pulls out his wallet. Camera captures his back and the pharmacy entrance ahead.",
+          "character_action": "Pauses, pulls out wallet, looks down at it",
+          "visual_details": [
+            "Pharmacy entrance in focus in background",
+            "Other pedestrians passing by (slight motion blur)",
+            "Wallet is brown leather, slightly worn (relatable)"
+          ]
+        },
+        {
+          "shot_number": "1C",
+          "camera_angle": "Extreme close-up",
+          "camera_movement": "Slow zoom in",
+          "framing": "Insert shot - wallet interior",
+          "duration_seconds": 1,
+          "description": "Hassan opens wallet revealing modest cash (a few Moroccan dirham bills - 20, 50 DH visible). Expression implied through hands: slight hesitation, fingers hover over bills.",
+          "character_action": "Opens wallet slowly, fingers hesitate",
+          "visual_details": [
+            "Moroccan dirham bills in warm lighting",
+            "A debit card partially visible",
+            "Shallow depth of field (wallet in focus, background blurred)"
+          ],
+          "emotional_cue": "Moment of financial worry - will I have enough?"
+        }
+      ],
+      "audio": {
+        "ambient_sound": "Soft Moroccan street ambience (distant voices, light traffic)",
+        "music": "Minimal tension - low sustained string note",
+        "voiceover": null
+      }
+    },
+    {
+      "scene_number": 2,
+      "title": "THE DISCOVERY - Digital Solution",
+      "duration_seconds": 7,
+      "location": "Same exterior location",
+      "shots": [
+        {
+          "shot_number": "2A",
+          "camera_angle": "Medium shot, eye level",
+          "camera_movement": "Subtle push in",
+          "framing": "Medium shot → Medium close-up",
+          "duration_seconds": 2,
+          "description": "Hassan closes wallet, pauses thoughtfully. His expression shifts from worry to realization. He reaches for his smartphone instead. A soft 'aha moment' expression crosses his face.",
+          "character_action": "Closes wallet, pockets it, pulls out smartphone with purposeful movement",
+          "lighting": "Golden hour continues, soft rim light on phone screen",
+          "emotional_beat": "Shift from anxiety to proactive problem-solving"
+        },
+        {
+          "shot_number": "2B",
+          "camera_angle": "Over-the-shoulder (from side, 45-degree angle)",
+          "camera_movement": "Slow dolly in toward phone screen",
+          "framing": "Phone screen becomes prominent in frame",
+          "duration_seconds": 5,
+          "description": "Hassan unlocks phone and navigates to browser/app. Camera moves to favor phone screen which occupies lower third of frame. We see his hands typing 'taawidaty.ma' into the browser address bar, then the website loads.",
+          "character_action": "Unlocks phone, types URL, taps to open site",
+          "ui_specifications": {
+            "phone_model": "Modern smartphone (iPhone 14 Pro or Samsung S23 aesthetic)",
+            "screen_content": "Mobile browser or PWA",
+            "website_recreation": {
+              "accuracy": "Pixel-perfect match to actual taawidaty.ma mobile UI",
+              "elements_visible": [
+                "TAAWIDATY logo at top (gradient colors #0077be, #40ffaa, #4079ff)",
+                "Hero text in Arabic: 'تمن؟ التعويض؟ قلب و عرف دابا.'",
+                "Search bar with placeholder: 'ابحث عن دواء'",
+                "Insurance selector buttons: CNOPS | CNSS",
+                "Gradient background subtle animation"
+              ],
+              "animation": "Page loads smoothly, hero text animates in with gradient shimmer effect"
+            },
+            "screen_brightness": "High brightness (clearly visible in daylight)",
+            "reflections": "Subtle screen glare from sunlight (realistic)"
+          },
+          "visual_details": [
+            "Hassan's face partially visible in background (soft focus) showing concentration",
+            "Phone held at comfortable viewing angle (slightly tilted toward Hassan)",
+            "Fingers typing visible, natural hand position"
+          ]
+        }
+      ],
+      "audio": {
+        "ambient_sound": "Street ambience continues (slightly reduced volume)",
+        "sound_effects": [
+          "Soft phone unlock sound (subtle)",
+          "Keyboard tap sounds (light, modern)",
+          "Website load 'swoosh' (branded sound)"
+        ],
+        "music": "Uplifting progression - soft marimba/synth melody begins"
+      }
+    },
+    {
+      "scene_number": 3,
+      "title": "THE INTERACTION - Using the Tool",
+      "duration_seconds": 10,
+      "location": "Same exterior, Hassan standing aside from pharmacy entrance",
+      "shots": [
+        {
+          "shot_number": "3A",
+          "camera_angle": "Close-up, phone screen straight-on (simulated screen recording overlay)",
+          "camera_movement": "Static, locked on screen",
+          "framing": "Phone screen fills frame (portrait)",
+          "duration_seconds": 3,
+          "description": "Full-screen UI capture: Hassan selects 'CNOPS' insurance option (button highlights with smooth animation). Then taps the search bar.",
+          "ui_interaction_sequence": [
+            "User taps 'CNOPS' button → button fills with gradient color, checkmark appears",
+            "Search bar expands slightly (smooth micro-animation)",
+            "Cursor blinks in search field"
+          ],
+          "ui_specifications": {
+            "insurance_selector": {
+              "active_state": "CNOPS button filled with brand gradient",
+              "animation": "Smooth 0.3s ease-in-out transition"
+            },
+            "search_bar": {
+              "state": "Focused, keyboard visible at bottom",
+              "placeholder": "Example: 'Doliprane' or 'Paracetamol'"
+            }
+          },
+          "character_action": "Hassan's thumb taps screen (visible briefly at edge of frame)"
+        },
+        {
+          "shot_number": "3B",
+          "camera_angle": "Close-up, screen with hand visible",
+          "camera_movement": "Static",
+          "framing": "Phone screen + hand typing",
+          "duration_seconds": 2,
+          "description": "Hassan types medication name 'Doliprane 1000mg' into search bar. Auto-suggest dropdown appears showing matching medications.",
+          "ui_interaction_sequence": [
+            "Letters appear as typed: D-o-l-i-p-r-a-n-e",
+            "Dropdown list animates in from top showing 3 medication matches",
+            "First result highlighted: 'DOLIPRANE 1000MG - COMP PELL 8'"
+          ],
+          "ui_specifications": {
+            "search_results": {
+              "items_visible": 3,
+              "layout": "Clean white cards with subtle shadow",
+              "content_per_item": [
+                "Medication name (bold)",
+                "DCI (generic name in lighter text)",
+                "Price preview (PPV in DH)"
+              ]
+            }
+          }
+        },
+        {
+          "shot_number": "3C",
+          "camera_angle": "Medium close-up, angled over Hassan's shoulder",
+          "camera_movement": "Slight push in",
+          "framing": "Hassan's face + phone screen visible",
+          "duration_seconds": 2,
+          "description": "Hassan taps the first medication result. His expression: focused, engaged. Screen transitions to results page.",
+          "character_action": "Taps medication, eyes follow content on screen, slight nod",
+          "ui_specifications": {
+            "transition": "Smooth slide-left transition (0.4s)",
+            "destination": "Results/calculation page"
+          }
+        },
+        {
+          "shot_number": "3D",
+          "camera_angle": "Close-up, phone screen with subtle 3D tilt",
+          "camera_movement": "Slow 3D rotation (subtle, 5-degree tilt)",
+          "framing": "Phone screen fills 80% of frame",
+          "duration_seconds": 3,
+          "description": "Results page displayed in full detail. Clean card layout showing reimbursement breakdown. Key numbers prominently displayed with animated count-up effect.",
+          "ui_specifications": {
+            "results_card_layout": {
+              "medication_name": "DOLIPRANE 1000MG",
+              "insurance_badge": "CNOPS badge/logo visible",
+              "price_breakdown": [
+                {
+                  "label": "السعر الأصلي (Original Price)",
+                  "value": "22.50 DH",
+                  "style": "Large text, neutral color"
+                },
+                {
+                  "label": "المبلغ المسترد (Reimbursement)",
+                  "value": "15.75 DH",
+                  "style": "Large text, green color (#10b981)",
+                  "animation": "Count-up from 0.00 to 15.75 (0.8s duration)"
+                },
+                {
+                  "label": "أنت تدفع (You Pay)",
+                  "value": "6.75 DH",
+                  "style": "Extra large, bold, primary brand color",
+                  "animation": "Count-up from 0.00 to 6.75 (0.8s duration)"
+                },
+                {
+                  "label": "مغطى (Covered)",
+                  "value": "70%",
+                  "style": "Badge with green background",
+                  "icon": "Checkmark icon"
+                }
+              ],
+              "visual_hierarchy": "Clear separation between sections with subtle dividers",
+              "celebration_effect": "Subtle confetti animation (2-3 particles) when results appear"
+            }
+          },
+          "emotional_beat": "Relief and clarity - numbers are clear and reassuring"
+        }
+      ],
+      "audio": {
+        "ambient_sound": "Street ambience (low volume)",
+        "sound_effects": [
+          "Tap sounds for each interaction",
+          "Smooth 'whoosh' for page transition",
+          "Satisfying 'ding' when results appear",
+          "Subtle counting sound during number animation"
+        ],
+        "music": "Uplifting melody continues, adds light percussion"
+      }
+    },
+    {
+      "scene_number": 4,
+      "title": "THE RESOLUTION - Confident Action",
+      "duration_seconds": 5,
+      "location": "Exterior to interior transition - approaching pharmacy entrance",
+      "shots": [
+        {
+          "shot_number": "4A",
+          "camera_angle": "Medium shot, low angle (empowering perspective)",
+          "camera_movement": "Slow tilt up as Hassan rises/stands tall",
+          "framing": "Full body → Medium shot",
+          "duration_seconds": 2,
+          "description": "Hassan looks up from his phone with a confident smile. He pockets the phone in his djellaba with a satisfied, purposeful movement. His posture straightens, shoulders back.",
+          "character_action": "Looks up, smiles (genuine, relieved), pockets phone, stands tall",
+          "lighting": "Golden hour light catches his face, creating warm glow",
+          "emotional_beat": "Transformation complete - from worried to empowered",
+          "visual_details": [
+            "Pharmacy entrance visible in background (slightly out of focus)",
+            "Hassan's confident expression fills frame",
+            "Warm, optimistic lighting"
+          ]
+        },
+        {
+          "shot_number": "4B",
+          "camera_angle": "Wide shot, eye level",
+          "camera_movement": "Smooth tracking shot (follows Hassan)",
+          "framing": "Full body in motion",
+          "duration_seconds": 3,
+          "description": "Hassan walks confidently toward pharmacy entrance, head held high. Smooth, purposeful stride. He enters through the door (automatic door opens). Camera follows his movement fluidly.",
+          "character_action": "Walks with confidence, enters pharmacy, slight smile remains",
+          "lighting": "Exterior warm golden hour transitioning to interior pharmacy lighting (cooler, brighter whites)",
+          "visual_details": [
+            "Pharmacy interior partially visible as door opens (clean, modern)",
+            "Pharmacist visible in background (greeting gesture)",
+            "Hassan's djellaba flows naturally with movement",
+            "Green pharmacy cross sign visible above entrance"
+          ],
+          "emotional_payoff": "Problem solved. Confidence restored. Ready to proceed.",
+          "symbolic_meaning": "Knowledge empowers action"
+        }
+      ],
+      "audio": {
+        "ambient_sound": "Street to interior transition (exterior fades, interior pharmacy ambience fades in)",
+        "sound_effects": [
+          "Footsteps on pavement (confident pace)",
+          "Automatic door 'whoosh' sound",
+          "Subtle pharmacy interior ambience (soft AC hum, distant voices)"
+        ],
+        "music": "Music reaches pleasant resolution (major chord progression)"
+      }
+    },
+    {
+      "scene_number": 5,
+      "title": "THE BRAND REVEAL - Call to Action",
+      "duration_seconds": 3,
+      "location": "Abstract branded space (clean gradient background)",
+      "shots": [
+        {
+          "shot_number": "5A",
+          "camera_angle": "Straight-on, centered",
+          "camera_movement": "Subtle slow zoom in",
+          "framing": "Centered logo and text",
+          "duration_seconds": 3,
+          "description": "Clean branded end card. White/gradient background. TAAWIDATY logo animates in with smooth scale + fade. Arabic and French text below. Website URL prominently displayed.",
+          "animation_sequence": [
+            {
+              "timing": "0.0s - 0.5s",
+              "element": "Background gradient fade-in",
+              "effect": "Smooth gradient (#0077be to #40ffaa) fills screen from center"
+            },
+            {
+              "timing": "0.3s - 1.0s",
+              "element": "Logo appearance",
+              "effect": "TAAWIDATY logo scales from 0.8 to 1.0, fades from 0% to 100% opacity, subtle bounce easing"
+            },
+            {
+              "timing": "1.0s - 1.5s",
+              "element": "Tagline (Arabic)",
+              "effect": "Text fades in: 'تمن؟ التعويض؟ قلب و عرف دابا.' (slight stagger per word)"
+            },
+            {
+              "timing": "1.3s - 1.8s",
+              "element": "Tagline (French)",
+              "effect": "Text fades in below: 'Prix ? Remboursement ? La réponse instantanée.'"
+            },
+            {
+              "timing": "1.8s - 2.2s",
+              "element": "Website URL",
+              "effect": "Large bold 'taawidaty.ma' fades in at bottom, slight glow effect"
+            },
+            {
+              "timing": "2.2s - 3.0s",
+              "element": "All elements",
+              "effect": "Static hold with subtle gradient animation (colors shift smoothly)"
+            }
+          ],
+          "text_layout": {
+            "logo": {
+              "size": "Large (60% of screen width)",
+              "position": "Upper third of screen",
+              "style": "Official TAAWIDATY brand logo with gradient"
+            },
+            "tagline_arabic": {
+              "text": "تمن؟ التعويض؟ قلب و عرف دابا.",
+              "position": "Center screen",
+              "font": "Bold, modern Arabic font",
+              "size": "Medium-large",
+              "color": "White with subtle shadow"
+            },
+            "tagline_french": {
+              "text": "Prix ? Remboursement ? La réponse instantanée.",
+              "position": "Below Arabic tagline",
+              "font": "Bold sans-serif (similar weight to Arabic)",
+              "size": "Medium",
+              "color": "White 90% opacity"
+            },
+            "website_url": {
+              "text": "taawidaty.ma",
+              "position": "Lower third",
+              "font": "Extra bold, modern sans-serif",
+              "size": "Extra large",
+              "color": "White",
+              "effect": "Subtle glow/shadow for emphasis"
+            },
+            "optional_cta": {
+              "text": "مجاني 100% | 100% Gratuit",
+              "position": "Bottom (small)",
+              "style": "Light weight, small size"
+            }
+          }
+        }
+      ],
+      "audio": {
+        "music": "Musical signature - short branded audio logo (uplifting 2-note melody + soft chime)",
+        "voiceover": {
+          "language": "Bilingual (Arabic primary, French secondary) OR instrumental only",
+          "script_option_1": "تعويضاتي. (pause) Taawidaty.",
+          "script_option_2": null,
+          "delivery": "Warm, friendly, confident tone",
+          "note": "Optional - music alone may be sufficient for brand recall"
+        }
+      }
+    }
+  ],
+  "production_notes": {
+    "casting": {
+      "actor_requirements": [
+        "Moroccan or North African male actor, 35-45 years old",
+        "Natural, relatable appearance (not overly polished)",
+        "Comfortable wearing traditional Moroccan clothing in modern context",
+        "Capable of subtle emotional range (worry → relief → confidence)",
+        "Authentic Moroccan presence"
+      ]
+    },
+    "location_scouting": {
+      "ideal_location": "Authentic Moroccan urban neighborhood street",
+      "requirements": [
+        "Real pharmacy with visible green cross sign",
+        "Traditional Moroccan architectural elements (zellige, arches, terracotta)",
+        "Good natural light for golden hour shoot (late afternoon)",
+        "Low pedestrian traffic for clean shots (or use extras)"
+      ],
+      "backup_option": "Controlled set with authentic Moroccan street facade"
+    },
+    "ui_design_recreation": {
+      "critical_requirement": "Mobile UI must be PIXEL-PERFECT match to actual taawidaty.ma website",
+      "implementation_options": [
+        "Option A: Film actual website on real device (preferred for authenticity)",
+        "Option B: Screen recording overlay composited in post-production",
+        "Option C: High-fidelity UI animation created in After Effects matching exact design"
+      ],
+      "key_elements_to_match": [
+        "Exact logo and gradient colors",
+        "Hero text with gradient animation effect",
+        "Search bar design and interaction",
+        "Insurance selector buttons (CNOPS/CNSS)",
+        "Results card layout with price breakdown",
+        "Typography (Arabic and French fonts)",
+        "Spacing, padding, and visual hierarchy",
+        "Micro-animations (button states, transitions)"
+      ]
+    },
+    "cinematography": {
+      "camera": "High-end cinema camera or professional mirrorless (Sony FX3, Canon R5C, or similar)",
+      "lenses": "Prime lenses for shallow depth of field (35mm, 50mm, 85mm)",
+      "stabilization": "Gimbal for tracking shots (DJI RS3 or similar), tripod for locked shots",
+      "lighting": "Natural golden hour primary, subtle fill reflectors, practical pharmacy lighting"
+    },
+    "color_grading": {
+      "style": "Warm, inviting, authentic Moroccan aesthetic",
+      "palette": [
+        "Golden hour warmth (amber/orange tones)",
+        "Rich terracotta and earth tones",
+        "Vibrant but natural color saturation",
+        "Brand gradient colors (#0077be, #40ffaa, #4079ff) subtly integrated in UI shots"
+      ],
+      "reference": "Contemporary Moroccan cinema aesthetic (modern, not overly filtered)"
+    },
+    "post_production": {
+      "editing_style": "Clean, contemporary, purposeful pacing",
+      "transitions": "Smooth, motivated cuts; subtle motion graphics for UI",
+      "vfx_requirements": [
+        "Screen replacement/enhancement for UI clarity",
+        "Subtle confetti/celebration animation on results screen",
+        "Gradient animations on brand reveal",
+        "Optional: light grade enhancement for golden hour"
+      ],
+      "sound_design": [
+        "Clean dialogue/ambience recording",
+        "Custom UI sound effects (modern, satisfying)",
+        "Moroccan-inspired musical signature (optional oud or percussion elements)",
+        "Professional mix optimized for mobile playback"
+      ]
+    },
+    "distribution_strategy": {
+      "primary_platforms": [
+        "Instagram Stories/Reels (9:16 native)",
+        "TikTok (9:16 native)",
+        "Facebook Stories/Reels",
+        "YouTube Shorts"
+      ],
+      "cuts_recommended": [
+        "30-second full version (primary)",
+        "15-second teaser (scenes 1, 3D, 4B, 5A compressed)",
+        "6-second bumper (scene 5A only - brand reveal)"
+      ],
+      "captions": "Burned-in bilingual subtitles (Arabic + French) recommended for sound-off viewing"
+    }
+  },
+  "marketing_strategy": {
+    "core_message": "Stop worrying about medication costs. TAAWIDATY gives you instant clarity before you pay.",
+    "emotional_hook": "Transformation from financial anxiety to confident action through digital empowerment",
+    "unique_value_proposition": [
+      "Know exactly what you'll pay before entering the pharmacy",
+      "Official CNOPS & CNSS reimbursement data",
+      "Instant, free, no registration required",
+      "100% Moroccan-focused solution"
+    ],
+    "call_to_action": "Visit taawidaty.ma before your next pharmacy visit",
+    "success_metrics": [
+      "Brand awareness (memorability of 'TAAWIDATY' name)",
+      "Website visits from ad traffic",
+      "Social sharing/engagement",
+      "Emotional resonance (comment sentiment analysis)"
+    ]
+  },
+  "localization_notes": {
+    "primary_language": "Moroccan Darija (conversational Arabic)",
+    "secondary_language": "French (formal/official contexts)",
+    "cultural_authenticity": [
+      "Djellaba worn naturally (not costume-like)",
+      "Genuine Moroccan location (not generic Middle Eastern)",
+      "Real pharmacy context (Moroccan pharmacy aesthetic)",
+      "Relatable everyman character (not affluent or struggling - middle class)"
+    ],
+    "music_considerations": "Modern production with subtle Moroccan instrumentation (avoid cliché orientalist tropes)"
+  },
+  "brand_consistency": {
+    "logo_usage": "Official TAAWIDATY logo with gradient as per brand guidelines",
+    "color_palette": ["#0077be", "#40ffaa", "#4079ff"],
+    "typography": "Match website fonts (Arabic: bold modern sans-serif; French: clean sans-serif)",
+    "tone": "Empowering, trustworthy, modern, user-centric"
+  },
+  "alternative_concepts": {
+    "concept_2_family": {
+      "title": "Mother purchasing child's medication",
+      "hook": "Peace of mind for families",
+      "protagonist": "Moroccan mother in her 30s",
+      "scenario": "Child has fever, needs medication urgently, mother checks TAAWIDATY first"
+    },
+    "concept_3_elderly": {
+      "title": "Senior citizen managing chronic medication",
+      "hook": "Financial planning for ongoing care",
+      "protagonist": "Older Moroccan man (60s) with glasses",
+      "scenario": "Monthly prescription refill, checks multiple medications, sees total savings"
+    },
+    "concept_4_comparison": {
+      "title": "Split screen: with/without TAAWIDATY",
+      "hook": "Before and after contrast",
+      "structure": "Left side: confusion/worry | Right side: clarity/confidence"
+    }
+  },
+  "versioning": {
+    "version": "1.0",
+    "date_created": "2025-11-12",
+    "creative_brief_status": "Final - Ready for Production",
+    "approvals_required": [
+      "Creative Director",
+      "Brand Manager",
+      "Product Owner (TAAWIDATY)",
+      "Legal (for claims verification)"
+    ]
+  }
+}
