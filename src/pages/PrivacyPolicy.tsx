@@ -83,10 +83,39 @@ Vous pouvez retirer votre consentement à tout moment en modifiant vos paramètr
 - Notre site est hébergé par Cloudflare Pages
 - Cloudflare peut accéder à des données techniques pour assurer la disponibilité du service
 
-**4.3 Futurs partenaires publicitaires (le cas échéant)**
-- Nous pouvons à l'avenir afficher des publicités de tiers
-- Ces partenaires (comme Google AdSense) pourront utiliser des cookies publicitaires
-- Vous serez informé et pourrez gérer ces préférences avant toute implémentation
+**4.3 Google AdSense et publicités tierces**
+
+**Utilisation de cookies publicitaires**
+
+Des fournisseurs tiers, notamment Google, utilisent des cookies pour diffuser des annonces en fonction des visites antérieures des utilisateurs sur notre site Web et/ou d'autres sites Web.
+
+**Personnalisation des annonces**
+
+L'utilisation par Google de cookies publicitaires lui permet, ainsi qu'à ses partenaires, de diffuser des annonces aux utilisateurs en fonction de leur visite sur notre site et/ou d'autres sites sur Internet.
+
+**Vos options de désactivation**
+
+Vous pouvez désactiver la personnalisation des annonces de plusieurs manières :
+
+1. **Paramètres des annonces Google**  
+   Visitez https://www.google.com/settings/ads pour désactiver les annonces personnalisées de Google.
+
+2. **Désactivation des annonces tierces**  
+   Visitez http://www.aboutads.info/choices/ pour désactiver les cookies publicitaires d'autres fournisseurs tiers.
+
+3. **European Interactive Digital Advertising Alliance (EDAA)**  
+   Les utilisateurs européens peuvent également visiter http://www.youronlinechoices.eu/ pour gérer leurs préférences publicitaires.
+
+**Liste des partenaires publicitaires**
+
+Actuellement, nous utilisons uniquement :
+- **Google AdSense** (google.com) - Réseau publicitaire
+
+Si nous ajoutons d'autres partenaires publicitaires à l'avenir, cette liste sera mise à jour et vous serez informé.
+
+**Conformité IAB Transparency and Consent Framework (TCF)**
+
+Ce site respecte le Transparency and Consent Framework (TCF) v2.2 de l'IAB Europe. Vos choix de consentement sont stockés et respectés par tous nos partenaires publicitaires certifiés.
 
 Nous ne partageons jamais vos données avec des tiers à des fins de marketing sans votre consentement explicite.`
         },
@@ -298,10 +327,39 @@ Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.`
 - يتم استضافة موقعنا بواسطة Cloudflare Pages
 - قد تصل Cloudflare إلى بيانات تقنية لضمان توفر الخدمة
 
-**٤.٣ شركاء إعلانيون مستقبليون (إن وجدوا)**
-- قد نعرض مستقبلاً إعلانات من أطراف ثالثة
-- يمكن لهؤلاء الشركاء استخدام ملفات تعريف الارتباط الإعلانية
-- سيتم إعلامك وستتمكن من إدارة هذه التفضيلات قبل أي تنفيذ
+**٤.٣ Google AdSense والإعلانات من جهات خارجية**
+
+**استخدام ملفات تعريف الارتباط الإعلانية**
+
+يستخدم موردو الجهات الخارجية، بما في ذلك Google، ملفات تعريف الارتباط لعرض الإعلانات بناءً على زيارات المستخدمين السابقة لموقعنا على الويب و/أو مواقع ويب أخرى.
+
+**تخصيص الإعلانات**
+
+يتيح استخدام Google لملفات تعريف الارتباط الإعلانية لها ولشركائها عرض الإعلانات للمستخدمين بناءً على زيارتهم لموقعنا و/أو مواقع أخرى على الإنترنت.
+
+**خيارات إلغاء الاشتراك**
+
+يمكنك إلغاء تخصيص الإعلانات بعدة طرق:
+
+1. **إعدادات إعلانات Google**  
+   تفضل بزيارة https://www.google.com/settings/ads لإلغاء الاشتراك في الإعلانات المخصصة من Google.
+
+2. **إلغاء الاشتراك في إعلانات الجهات الخارجية**  
+   تفضل بزيارة http://www.aboutads.info/choices/ لإلغاء الاشتراك في ملفات تعريف الارتباط الإعلانية من موردي الجهات الخارجية الآخرين.
+
+3. **التحالف الأوروبي للإعلان الرقمي التفاعلي (EDAA)**  
+   يمكن للمستخدمين الأوروبيين أيضًا زيارة http://www.youronlinechoices.eu/ لإدارة تفضيلاتهم الإعلانية.
+
+**قائمة الشركاء الإعلانيين**
+
+حاليًا، نستخدم فقط:
+- **Google AdSense** (google.com) - شبكة إعلانية
+
+إذا أضفنا شركاء إعلانيين آخرين في المستقبل، فسيتم تحديث هذه القائمة وسيتم إعلامك.
+
+**الامتثال لإطار الشفافية والموافقة IAB (TCF)**
+
+يحترم هذا الموقع إطار الشفافية والموافقة (TCF) v2.2 من IAB Europe. يتم تخزين اختيارات موافقتك واحترامها من قبل جميع شركائنا الإعلانيين المعتمدين.
 
 لا نشارك أبداً بياناتك مع أطراف ثالثة لأغراض تسويقية دون موافقتك الصريحة.`
         },
