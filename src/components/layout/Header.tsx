@@ -27,18 +27,18 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-soft">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+        <div className="flex items-center justify-between h-16 gap-2">
+          {/* Logo - Responsive sizing */}
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3"
+              className="flex items-center gap-2 sm:gap-3"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-trust-blue to-trust-blue-dark rounded-xl flex items-center justify-center shadow-medium">
-                <span className="text-white font-black text-xl">T</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-trust-blue to-trust-blue-dark rounded-xl flex items-center justify-center shadow-medium">
+                <span className="text-white font-black text-lg sm:text-xl">T</span>
               </div>
-              <span className="text-xl font-black text-neutral-900 group-hover:text-trust-blue transition-colors">
+              <span className="text-base sm:text-xl font-black text-neutral-900 group-hover:text-trust-blue transition-colors hidden xs:inline">
                 TAAWIDATY
               </span>
             </motion.div>
@@ -58,16 +58,16 @@ export function Header() {
             ))}
           </div>
 
-          {/* Actions */}
-          <div className="flex items-center gap-4">
-            {/* Language Toggle */}
+          {/* Actions - Compact on mobile */}
+          <div className="flex items-center gap-1 sm:gap-4">
+            {/* Language Toggle - Icon only on mobile */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-trust-blue"
+              className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 rounded-lg hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-trust-blue"
               aria-label={t('nav.changeLanguage', 'Changer de langue')}
             >
               <Globe className="w-4 h-4 text-neutral-600" />
-              <span className="text-sm font-medium text-neutral-700">
+              <span className="text-xs sm:text-sm font-medium text-neutral-700 hidden sm:inline">
                 {i18n.language === 'fr' ? 'عربية' : 'Français'}
               </span>
             </button>
@@ -79,9 +79,9 @@ export function Header() {
               aria-label={t('nav.toggleMenu', 'Toggle menu')}
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-neutral-700" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-700" />
               ) : (
-                <Menu className="w-6 h-6 text-neutral-700" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-700" />
               )}
             </button>
           </div>
