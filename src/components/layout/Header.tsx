@@ -20,8 +20,9 @@ export function Header() {
   const navigation = [
     { name: t('nav.home', 'Accueil'), href: '/' },
     { name: t('nav.calculator', 'Calculateur'), href: '#calculator' },
+    { name: t('nav.blog', 'Blog'), href: '/blog' },
     { name: t('nav.faq', 'FAQ'), href: '#faq' },
-    { name: t('nav.about', 'À propos'), href: '/about' },
+    { name: t('nav.about', 'À propos'), href: '/about-us' },
   ];
 
   return (
@@ -47,14 +48,25 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-neutral-700 hover:text-trust-blue transition-colors relative group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-trust-blue group-hover:w-full transition-all duration-300" />
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm font-medium text-neutral-700 hover:text-trust-blue transition-colors relative group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-trust-blue group-hover:w-full transition-all duration-300" />
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm font-medium text-neutral-700 hover:text-trust-blue transition-colors relative group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-trust-blue group-hover:w-full transition-all duration-300" />
+                </Link>
+              )
             ))}
           </div>
 
@@ -97,14 +109,25 @@ export function Header() {
           >
             <div className="flex flex-col gap-2">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="px-4 py-3 rounded-lg text-neutral-700 hover:bg-neutral-100 hover:text-trust-blue transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="px-4 py-3 rounded-lg text-neutral-700 hover:bg-neutral-100 hover:text-trust-blue transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="px-4 py-3 rounded-lg text-neutral-700 hover:bg-neutral-100 hover:text-trust-blue transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </div>
           </motion.div>
