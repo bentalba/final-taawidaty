@@ -15,10 +15,11 @@ export function Footer() {
       { name: t('footer.blog', 'Blog'), href: '/blog' },
     ],
     company: [
-      { name: t('footer.about', 'À propos'), href: '/about' },
-      { name: t('footer.contact', 'Contact'), href: '/contact' },
-      { name: t('footer.privacy', 'Confidentialité'), href: '/privacy' },
-      { name: t('footer.terms', 'Conditions'), href: '/terms' },
+      { name: t('footer.about', 'À propos'), href: '/about-us' },
+      { name: t('footer.author', 'À propos de l\'auteur'), href: '/author' },
+      { name: t('footer.contact', 'Contact'), href: '/contact-us' },
+      { name: t('footer.privacy', 'Confidentialité'), href: '/privacy-policy' },
+      { name: t('footer.terms', 'Conditions'), href: '/terms-of-service' },
     ],
     resources: [
       { name: t('footer.cnopsGuide', 'Guide CNOPS'), href: '/blog/guide-remboursement-cnops' },

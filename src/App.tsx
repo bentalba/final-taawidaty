@@ -28,6 +28,8 @@ import Blog from "./pages/Blog";
 import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
 import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
 import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
+import ComprendrePpvPpm from "./pages/blog/comprendre-ppv-ppm-maroc";
+import MedicamentGenerique from "./pages/blog/medicament-generique-efficacite";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import MedicalDisclaimer from "./pages/MedicalDisclaimer";
 import AboutUs from "./pages/AboutUs";
@@ -35,6 +37,7 @@ import ContactUs from "./pages/ContactUs";
 import TermsOfService from "./pages/TermsOfService";
 import EditorialPolicy from "./pages/EditorialPolicy";
 import CookiePreferences from "./pages/CookiePreferences";
+import AuthorBio from "./pages/AuthorBio";
 import PriceChecker from "./pages/PriceChecker";
 import NotFound from "./pages/NotFound";
 
@@ -52,14 +55,17 @@ function AnimatedRoutes() {
         <Route path="/blog/guide-remboursement-cnss" element={<PageTransition><GuideRemboursementCnss /></PageTransition>} />
         <Route path="/blog/guide-remboursement-cnops" element={<PageTransition><GuideRemboursementCnops /></PageTransition>} />
         <Route path="/blog/difference-cnss-cnops" element={<PageTransition><DifferenceCnssCnops /></PageTransition>} />
+        <Route path="/blog/comprendre-ppv-ppm-maroc" element={<PageTransition><ComprendrePpvPpm /></PageTransition>} />
+        <Route path="/blog/medicament-generique-efficacite" element={<PageTransition><MedicamentGenerique /></PageTransition>} />
         <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
         <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
         <Route path="/contact-us" element={<PageTransition><ContactUs /></PageTransition>} />
         <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
         <Route path="/editorial-policy" element={<PageTransition><EditorialPolicy /></PageTransition>} />
-        <Route path="/cookie-preferences" element={<PageTransition><CookiePreferences /></PageTransition>} />
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="/author" element={<PageTransition><AuthorBio /></PageTransition>} />
+        <Route path="/cookies" element={<PageTransition><CookiePreferences /></PageTransition>} />
+        <Route path="/price-checker" element={<PageTransition><PriceChecker /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>

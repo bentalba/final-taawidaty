@@ -113,7 +113,64 @@ export const blogPosts: BlogPost[] = [
     image: '/blog-images/cnss-vs-cnops.svg',
     imageAlt: {
       fr: 'Comparaison CNSS vs CNOPS',
-      ar: 'مقارنة CNSS مقابل CNOPS'
+      ar: 'مقارنة CNSS و CNOPS'
+    }
+  },
+  {
+    id: 'comprendre-ppv-ppm-maroc',
+    title: {
+      fr: 'Comprendre la différence entre PPV et PPM au Maroc',
+      ar: 'فهم الفرق بين سعر البيع للعموم وسعر المستشفى في المغرب'
+    },
+    description: {
+      fr: 'Guide explicatif sur les prix des médicaments au Maroc : différence entre Prix Public de Vente (PPV) et Prix Public Hôpital (PPM) et leur impact sur votre remboursement.',
+      ar: 'دليل توضيحي حول أسعار الأدوية في المغرب: الفرق بين سعر البيع للعموم وسعر المستشفى وتأثيرهما على استرداد أموالك.'
+    },
+    keywords: [
+      'PPV maroc',
+      'PPM maroc',
+      'prix médicaments maroc',
+      'remboursement médicaments',
+      'prix public vente',
+      'prix hospitalier'
+    ],
+    author: 'BENTALBA ZAKARIA',
+    publishDate: '2025-11-24',
+    lastModified: '2025-11-24',
+    readTime: 6,
+    category: 'general',
+    image: '/blog-images/ppv-ppm-guide.svg',
+    imageAlt: {
+      fr: 'Différence PPV et PPM',
+      ar: 'الفرق بين PPV و PPM'
+    }
+  },
+  {
+    id: 'medicament-generique-efficacite',
+    title: {
+      fr: 'Médicaments génériques : Efficacité et Remboursement',
+      ar: 'الأدوية الجنيسة: الفعالية والاسترداد'
+    },
+    description: {
+      fr: 'Les médicaments génériques sont-ils aussi efficaces ? Tout savoir sur leur remboursement et pourquoi ils sont moins chers.',
+      ar: 'هل الأدوية الجنيسة فعالة بنفس القدر؟ كل ما تحتاج معرفته حول استردادها ولماذا هي أرخص.'
+    },
+    keywords: [
+      'médicament générique maroc',
+      'remboursement générique',
+      'efficacité générique',
+      'prix générique',
+      'médicament princeps'
+    ],
+    author: 'BENTALBA ZAKARIA',
+    publishDate: '2025-11-25',
+    lastModified: '2025-11-25',
+    readTime: 7,
+    category: 'general',
+    image: '/blog-images/generique-guide.svg',
+    imageAlt: {
+      fr: 'Médicaments génériques',
+      ar: 'الأدوية الجنيسة'
     }
   }
 ];
