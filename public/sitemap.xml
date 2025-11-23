@@ -20,6 +20,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/prix-medicaments"/>
   </url>
   <url>
+    <loc>https://taawidaty.ma/price-checker</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/price-checker"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/price-checker"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/price-checker"/>
+  </url>
+  <url>
     <loc>https://taawidaty.ma/blog</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -164,12 +173,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/editorial-policy"/>
   </url>
   <url>
-    <loc>https://taawidaty.ma/cookie-preferences</loc>
+    <loc>https://taawidaty.ma/cookies</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/cookie-preferences"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/cookie-preferences"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/cookie-preferences"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/cookies"/>
   </url>
 </urlset>

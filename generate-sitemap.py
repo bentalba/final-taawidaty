@@ -16,6 +16,7 @@ VALID_ROUTES = [
     # Core Pages
     "/",
     "/prix-medicaments",
+    "/price-checker",
     "/blog",
     "/about-us",
     "/contact-us",
@@ -36,7 +37,7 @@ VALID_ROUTES = [
     "/terms-of-service",
     "/medical-disclaimer",
     "/editorial-policy",
-    "/cookie-preferences"
+    "/cookies"
 ]
 
 def generate_sitemap():
@@ -56,7 +57,7 @@ def generate_sitemap():
         if route == "/":
             priority = "1.0"
             changefreq = "daily"
-        elif route == "/prix-medicaments":
+        elif route in ["/prix-medicaments", "/price-checker"]:
             priority = "0.9"
             changefreq = "weekly"
         elif route == "/blog":
@@ -71,7 +72,7 @@ def generate_sitemap():
         elif route in ["/about-us", "/contact-us"]:
             priority = "0.5"
             changefreq = "monthly"
-        elif route in ["/privacy-policy", "/terms-of-service", "/medical-disclaimer", "/editorial-policy", "/cookie-preferences"]:
+        elif route in ["/privacy-policy", "/terms-of-service", "/medical-disclaimer", "/editorial-policy", "/cookies"]:
             priority = "0.3"
             changefreq = "yearly"
 
