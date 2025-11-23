@@ -246,6 +246,23 @@ export default function Index() {
                   {t.app.title}
                 </div>
               </div>
+              
+              {/* Navigation Links */}
+              <nav className="hidden md:flex items-center gap-6">
+                <a href="#calculator" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
+                  {language === 'ar' ? 'الحاسبة' : 'Calculateur'}
+                </a>
+                <Link to="/blog" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
+                  Blog
+                </Link>
+                <a href="#faq" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
+                  FAQ
+                </a>
+                <Link to="/about-us" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
+                  {language === 'ar' ? 'معلومات عنا' : 'À propos'}
+                </Link>
+              </nav>
+              
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
                   <ThemeToggle />
