@@ -172,6 +172,90 @@ export const blogPosts: BlogPost[] = [
       fr: 'Médicaments génériques',
       ar: 'الأدوية الجنيسة'
     }
+  },
+  {
+    id: 'comprendre-ticket-moderateur',
+    title: {
+      fr: 'Le Ticket Modérateur : Pourquoi je paie une partie de mes médicaments ?',
+      ar: 'تذكرة التعديل: لماذا أدفع جزءاً من ثمن أدويتي؟'
+    },
+    description: {
+      fr: 'Comprendre pourquoi le remboursement n\'est jamais de 100%. Tout savoir sur le "Ticket Modérateur" et le reste à charge au Maroc.',
+      ar: 'فهم لماذا لا يكون التعويض 100٪ أبداً. كل ما تحتاج لمعرفته حول "تذكرة التعديل" والمبلغ المتبقي على عاتقك في المغرب.'
+    },
+    keywords: [
+      'ticket modérateur maroc',
+      'reste à charge',
+      'remboursement 70%',
+      'assurance maladie maroc',
+      'tarif national référence'
+    ],
+    author: 'BENTALBA ZAKARIA',
+    publishDate: '2025-11-25',
+    lastModified: '2025-11-25',
+    readTime: 5,
+    category: 'general',
+    image: '/blog-images/calculator-money.svg',
+    imageAlt: {
+      fr: 'Calcul reste à charge',
+      ar: 'حساب المبلغ المتبقي'
+    }
+  },
+  {
+    id: 'medicaments-non-remboursables',
+    title: {
+      fr: 'Vitamines et Compléments : Pourquoi certains médicaments ne sont pas remboursés ?',
+      ar: 'الفيتامينات والمكملات الغذائية: لماذا لا يتم تعويض بعض الأدوية؟'
+    },
+    description: {
+      fr: 'Votre dossier a été accepté mais le remboursement est faible ? C\'est peut-être à cause des médicaments "hors panier". Voici comment les identifier.',
+      ar: 'هل تم قبول ملفك ولكن التعويض ضعيف؟ قد يكون ذلك بسبب الأدوية "خارج سلة العلاجات". إليك كيفية التعرف عليها.'
+    },
+    keywords: [
+      'médicaments non remboursables',
+      'vitamine remboursement',
+      'complément alimentaire maroc',
+      'panier de soins',
+      'remboursement partiel'
+    ],
+    author: 'BENTALBA ZAKARIA',
+    publishDate: '2025-11-26',
+    lastModified: '2025-11-26',
+    readTime: 4,
+    category: 'general',
+    image: '/blog-images/vitamins.svg',
+    imageAlt: {
+      fr: 'Médicaments non remboursés',
+      ar: 'أدوية غير معوضة'
+    }
+  },
+  {
+    id: 'lire-ordonnance-maroc',
+    title: {
+      fr: 'Checklist : 5 points à vérifier sur votre ordonnance avant de quitter le médecin',
+      ar: 'قائمة التحقق: 5 نقاط يجب مراقبتها في وصفتك الطبية قبل مغادرة الطبيب'
+    },
+    description: {
+      fr: 'Une simple erreur de date ou de cachet peut bloquer tout votre remboursement. Voici comment valider votre ordonnance médicale.',
+      ar: 'خطأ بسيط في التاريخ أو الختم قد يوقف تعويضك بالكامل. إليك كيفية التحقق من صحة وصفتك الطبية.'
+    },
+    keywords: [
+      'ordonnance médicale maroc',
+      'validité ordonnance',
+      'INPE médecin',
+      'refus dossier maladie',
+      'cachet médecin'
+    ],
+    author: 'BENTALBA ZAKARIA',
+    publishDate: '2025-11-27',
+    lastModified: '2025-11-27',
+    readTime: 6,
+    category: 'general',
+    image: '/blog-images/prescription.svg',
+    imageAlt: {
+      fr: 'Ordonnance médicale',
+      ar: 'وصفة طبية'
+    }
   }
 ];
 

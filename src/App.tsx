@@ -30,6 +30,9 @@ import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
 import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
 import ComprendrePpvPpm from "./pages/blog/comprendre-ppv-ppm-maroc";
 import MedicamentGenerique from "./pages/blog/medicament-generique-efficacite";
+import ComprendreTicketModerateur from "./pages/blog/comprendre-ticket-moderateur";
+import MedicamentsNonRemboursables from "./pages/blog/medicaments-non-remboursables";
+import LireOrdonnance from "./pages/blog/lire-ordonnance-maroc";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import MedicalDisclaimer from "./pages/MedicalDisclaimer";
 import AboutUs from "./pages/AboutUs";
@@ -57,6 +60,9 @@ function AnimatedRoutes() {
         <Route path="/blog/difference-cnss-cnops" element={<PageTransition><DifferenceCnssCnops /></PageTransition>} />
         <Route path="/blog/comprendre-ppv-ppm-maroc" element={<PageTransition><ComprendrePpvPpm /></PageTransition>} />
         <Route path="/blog/medicament-generique-efficacite" element={<PageTransition><MedicamentGenerique /></PageTransition>} />
+        <Route path="/blog/comprendre-ticket-moderateur" element={<PageTransition><ComprendreTicketModerateur /></PageTransition>} />
+        <Route path="/blog/medicaments-non-remboursables" element={<PageTransition><MedicamentsNonRemboursables /></PageTransition>} />
+        <Route path="/blog/lire-ordonnance-maroc" element={<PageTransition><LireOrdonnance /></PageTransition>} />
         <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
         <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
