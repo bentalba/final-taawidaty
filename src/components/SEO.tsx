@@ -52,20 +52,29 @@ export const SEO = ({
   description = 'Calculez instantanément votre remboursement médicaments CNOPS et CNSS au Maroc. Base de données complète des médicaments remboursables 2025. Gratuit et rapide.',
   keywords = FALLBACK_KEYWORDS,
   lang,
-  canonical = FALLBACK_CANONICAL,
+  canonical,
   image = FALLBACK_IMAGE,
   alternates,
   noindex = false,
   structuredData = []
 }: SEOProps) => {
+  // INTELLIGENT CANONICAL FIX
+  // If no canonical prop is provided, use the current window location
+  // This prevents all pages from defaulting to the homepage URL
+  const currentUrl = typeof window !== 'undefined' 
+    ? window.location.origin + window.location.pathname 
+    : FALLBACK_CANONICAL;
+
+  // Use provided canonical OR fallback to the current page URL (not just homepage)
+  const effectiveCanonical = canonical || currentUrl;
   const normalizedKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   const normalizedAlternates = (alternates && alternates.length > 0
     ? alternates
     : [
-        { hreflang: 'fr', href: canonical },
-        { hreflang: 'ar', href: canonical },
-        { hreflang: 'x-default', href: canonical }
+        { hreflang: 'fr', href: effectiveCanonical },
+        { hreflang: 'ar', href: effectiveCanonical },
+        { hreflang: 'x-default', href: effectiveCanonical }
       ]).filter((alternate, index, array) =>
         alternate.href && alternate.hreflang &&
         array.findIndex((item) => item.hreflang === alternate.hreflang && item.href === alternate.href) === index
@@ -124,10 +133,10 @@ export const SEO = ({
       <meta name="description" content={description} />
       {normalizedKeywords && <meta name="keywords" content={normalizedKeywords} />}
       <meta name="robots" content={robotsValue} />
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={effectiveCanonical} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={effectiveCanonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -140,7 +149,7 @@ export const SEO = ({
       <meta property="og:locale:alternate" content="ar_MA" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:url" content={effectiveCanonical} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

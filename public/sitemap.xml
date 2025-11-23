@@ -1,81 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://taawidaty.ma/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://taawidaty.ma</loc>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/prix-medicaments</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/prix-medicaments"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/prix-medicaments"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/prix-medicaments"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/blog</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/blog/guide-remboursement-cnss</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/blog/guide-remboursement-cnops</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://taawidaty.ma/blog/difference-cnss-cnops</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/about-us</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/about-us"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/about-us"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/contact-us</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/contact-us"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnss</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnss"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnss"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/guide-remboursement-cnss"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/guide-remboursement-cnops</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/guide-remboursement-cnops"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/guide-remboursement-cnops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/guide-remboursement-cnops"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/difference-cnss-cnops</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/difference-cnss-cnops"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/difference-cnss-cnops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/difference-cnss-cnops"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/comprendre-ppv-ppm-maroc</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/comprendre-ppv-ppm-maroc"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/comprendre-ppv-ppm-maroc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/comprendre-ppv-ppm-maroc"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/medicament-generique-efficacite</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/medicament-generique-efficacite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/medicament-generique-efficacite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/medicament-generique-efficacite"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/comprendre-ticket-moderateur</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/comprendre-ticket-moderateur"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/comprendre-ticket-moderateur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/comprendre-ticket-moderateur"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/medicaments-non-remboursables</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/medicaments-non-remboursables"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/medicaments-non-remboursables"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/medicaments-non-remboursables"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/blog/lire-ordonnance-maroc</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/blog/lire-ordonnance-maroc"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/blog/lire-ordonnance-maroc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/blog/lire-ordonnance-maroc"/>
+  </url>
+  <url>
+    <loc>https://taawidaty.ma/author</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/author"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/author"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/author"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/privacy-policy</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/privacy-policy"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/terms-of-service</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/terms-of-service"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/medical-disclaimer</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/medical-disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/medical-disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/medical-disclaimer"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/editorial-policy</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/editorial-policy"/>
   </url>
   <url>
     <loc>https://taawidaty.ma/cookie-preferences</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taawidaty.ma/cookie-preferences"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taawidaty.ma/cookie-preferences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taawidaty.ma/cookie-preferences"/>
   </url>
 </urlset>

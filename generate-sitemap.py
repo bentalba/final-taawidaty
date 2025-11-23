@@ -1,148 +1,123 @@
 #!/usr/bin/env python3
 """
-Sitemap Generator for Taawidaty
-Generates sitemap.xml with all medication URLs for SEO
+FIXED Sitemap Generator for Taawidaty
+ACTION: Generates ONLY valid routes that exist in the React app.
+REMOVED: Medication database loop (caused 5000+ 404 errors).
 Run with: python3 generate-sitemap.py
 """
 
-import json
 from datetime import datetime
 from pathlib import Path
-import re
 
 BASE_URL = 'https://taawidaty.ma'
 
-def generate_medication_slug(name):
-    """Convert medication name to URL-friendly slug"""
-    # Lowercase
-    slug = name.lower()
-    # Remove diacritics
-    slug = slug.replace('é', 'e').replace('è', 'e').replace('ê', 'e')
-    slug = slug.replace('à', 'a').replace('â', 'a')
-    slug = slug.replace('ô', 'o').replace('ö', 'o')
-    slug = slug.replace('ù', 'u').replace('û', 'u')
-    slug = slug.replace('ç', 'c')
-    slug = slug.replace('î', 'i').replace('ï', 'i')
-    # Remove special characters except spaces and hyphens
-    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
-    # Replace spaces with hyphens
-    slug = re.sub(r'\s+', '-', slug)
-    # Remove duplicate hyphens
-    slug = re.sub(r'-+', '-', slug)
-    return slug.strip('-')
-
-def load_medications():
-    """Load medications from both JSON files"""
-    medications = []
-    existing_names = set()
+# The ONLY real routes in your application (verified from App.tsx)
+VALID_ROUTES = [
+    # Core Pages
+    "/",
+    "/prix-medicaments",
+    "/blog",
+    "/about-us",
+    "/contact-us",
     
-    # Load CNOPS medications
-    try:
-        with open('src/data/medications-cnops.json', 'r', encoding='utf-8') as f:
-            cnops_data = json.load(f)
-            medications.extend(cnops_data)
-            existing_names.update(m['name'] for m in cnops_data)
-            print(f"✅ Loaded {len(cnops_data)} CNOPS medications")
-    except Exception as e:
-        print(f"⚠️  Could not load CNOPS medications: {e}")
+    # Blog Posts (All 8 posts)
+    "/blog/guide-remboursement-cnss",
+    "/blog/guide-remboursement-cnops",
+    "/blog/difference-cnss-cnops",
+    "/blog/comprendre-ppv-ppm-maroc",
+    "/blog/medicament-generique-efficacite",
+    "/blog/comprendre-ticket-moderateur",
+    "/blog/medicaments-non-remboursables",
+    "/blog/lire-ordonnance-maroc",
     
-    # Load CNSS medications (avoid duplicates)
-    try:
-        with open('src/data/medications-cnss.json', 'r', encoding='utf-8') as f:
-            cnss_data = json.load(f)
-            unique_cnss = [m for m in cnss_data if m['name'] not in existing_names]
-            medications.extend(unique_cnss)
-            print(f"✅ Loaded {len(unique_cnss)} unique CNSS medications")
-    except Exception as e:
-        print(f"⚠️  Could not load CNSS medications: {e}")
-    
-    return medications
+    # Author & Legal Pages
+    "/author",
+    "/privacy-policy",
+    "/terms-of-service",
+    "/medical-disclaimer",
+    "/editorial-policy",
+    "/cookie-preferences"
+]
 
 def generate_sitemap():
-    """Generate complete sitemap.xml"""
-    medications = load_medications()
-    now = datetime.now().isoformat()
+    """Generate clean sitemap.xml with only valid routes"""
     today = datetime.now().strftime('%Y-%m-%d')
     
-    # Start XML
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Main Pages -->
-  <url>
-    <loc>{base}/</loc>
-    <lastmod>{date}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="{base}/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="{base}/" />
-  </url>
-  
-  <url>
-    <loc>{base}/prix-medicaments</loc>
-    <lastmod>{date}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="{base}/prix-medicaments" />
-    <xhtml:link rel="alternate" hreflang="ar" href="{base}/prix-medicaments" />
-  </url>
-  
-  <!-- Medication Pages (Top {count}) -->
-'''.format(base=BASE_URL, date=today, count=min(len(medications), 5000))
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+'''
     
-    # Sort medications by price (assuming higher price = more searched)
-    medications_sorted = sorted(medications, key=lambda m: m.get('ppv', 0), reverse=True)
-    
-    # Limit to 5000 for sitemap best practices
-    top_medications = medications_sorted[:5000]
-    
-    # Add medication URLs
-    for medication in top_medications:
-        slug = generate_medication_slug(medication['name'])
-        priority = '0.8' if medication.get('ppv', 0) > 100 else '0.6'
+    for route in VALID_ROUTES:
+        # Determine priority and frequency based on route type
+        priority = "0.5"
+        changefreq = "monthly"
+        
+        if route == "/":
+            priority = "1.0"
+            changefreq = "daily"
+        elif route == "/prix-medicaments":
+            priority = "0.9"
+            changefreq = "weekly"
+        elif route == "/blog":
+            priority = "0.8"
+            changefreq = "weekly"
+        elif route.startswith("/blog/"):
+            priority = "0.7"
+            changefreq = "weekly"
+        elif route == "/author":
+            priority = "0.6"
+            changefreq = "monthly"
+        elif route in ["/about-us", "/contact-us"]:
+            priority = "0.5"
+            changefreq = "monthly"
+        elif route in ["/privacy-policy", "/terms-of-service", "/medical-disclaimer", "/editorial-policy", "/cookie-preferences"]:
+            priority = "0.3"
+            changefreq = "yearly"
+
+        # Build full URL
+        full_url = f"{BASE_URL}{route}" if route != "/" else BASE_URL
         
         sitemap += f'''  <url>
-    <loc>{BASE_URL}/prix/{slug}</loc>
+    <loc>{full_url}</loc>
     <lastmod>{today}</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>{changefreq}</changefreq>
     <priority>{priority}</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="{BASE_URL}/prix/{slug}" />
-    <xhtml:link rel="alternate" hreflang="ar" href="{BASE_URL}/prix/{slug}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{full_url}"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="{full_url}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{full_url}"/>
   </url>
 '''
     
     sitemap += '</urlset>'
     
-    # Write sitemap
-    output_path = Path('public/sitemap.xml')
-    output_path.write_text(sitemap, encoding='utf-8')
+    # Write main sitemap
+    Path('public/sitemap.xml').write_text(sitemap, encoding='utf-8')
     
-    print(f"\n✅ Sitemap generated successfully!")
-    print(f"📊 Total URLs: {len(top_medications) + 4}")
-    print(f"📝 Medications indexed: {len(top_medications)}")
-    print(f"📄 File: {output_path.absolute()}")
-    
-    # Also generate URL list for Bing
-    generate_url_list(top_medications)
+    # Clean up old invalid sitemaps if they exist
+    deleted_count = 0
+    for i in range(1, 20):
+        old_file = Path(f'public/sitemap-{i}.xml')
+        if old_file.exists():
+            old_file.unlink()
+            deleted_count += 1
+            print(f"🗑️  Deleted invalid file: {old_file}")
 
-def generate_url_list(medications):
-    """Generate plain text URL list for Bing submission"""
-    urls = [
-        f"{BASE_URL}/",
-        f"{BASE_URL}/prix-medicaments",
-    ]
-    
-    for medication in medications:
-        slug = generate_medication_slug(medication['name'])
-        urls.append(f"{BASE_URL}/prix/{slug}")
-    
-    output_path = Path('public/urls.txt')
-    output_path.write_text('\n'.join(urls), encoding='utf-8')
-    
-    print(f"📄 URL list: {output_path.absolute()}")
+    print(f"\n✅ CLEAN Sitemap generated successfully!")
+    print(f"📊 Total Valid URLs: {len(VALID_ROUTES)}")
+    print(f"🚫 Fake medication URLs removed: ALL (5000+)")
+    if deleted_count > 0:
+        print(f"🗑️  Deleted {deleted_count} old sitemap files")
+    print(f"📄 File size: ~{len(sitemap)} bytes")
+    print(f"\n🔍 Next steps:")
+    print(f"   1. Deploy this sitemap")
+    print(f"   2. Submit to Google Search Console")
+    print(f"   3. Request removal of /prix/ prefix in GSC")
 
 if __name__ == '__main__':
-    print("🚀 Generating sitemap for Taawidaty...\n")
+    print("🚀 Generating FIXED sitemap for Taawidaty...\n")
     generate_sitemap()
+if __name__ == '__main__':
+    print("🚀 Generating FIXED sitemap for Taawidaty...\n")
+    generate_sitemap()
+
