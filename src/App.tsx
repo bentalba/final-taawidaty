@@ -22,6 +22,7 @@ import { SEO } from "@/components/SEO";
 import { PageTransition } from "@/components/transitions/PageTransition";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { PopunderAd } from "@/components/PopunderAd";
+import { SocialBarAd } from "@/components/ads/SocialBarAd";
 import { useEffect } from "react";
 import { initializeConsent } from "@/utils/consentManager";
 import Index from "./pages/Index";
@@ -97,6 +98,7 @@ const App = () => {
               <PopunderAd />
               <AnimatedRoutes />
               <ConsentBanner />
+              <SocialBarAd />
             </BrowserRouter>
           </TooltipProvider>
         </ThemeProvider>

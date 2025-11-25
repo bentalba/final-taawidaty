@@ -1,6 +1,7 @@
 /**
- * Popunder Ad Component
- * Loads popunder ad script on every page
+ * Social Bar Ad Component
+ * High CTR push-notification style ad
+ * Place before </body> tag
  * 
  * @author BENTALBA ZAKARIA
  * @copyright 2025 BENTALBA ZAKARIA
@@ -8,16 +9,16 @@
 
 import { useEffect } from 'react';
 
-export function PopunderAd() {
+export function SocialBarAd() {
   useEffect(() => {
-    // Load the popunder ad script (place before </head>)
+    // Load the social bar ad script (place before </body>)
     const script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = '//pl28133121.effectivegatecpm.com/ee/82/e8/ee82e87dec36e2b4263bbe2d476c53eb.js';
+    script.src = '//pl28133142.effectivegatecpm.com/8b/e7/9d/8be79d31b0cd24e80ac1ab8adf8f6905.js';
     
-    document.head.appendChild(script);
+    document.body.appendChild(script);
 
-    // Cleanup function to remove script when component unmounts
+    // Cleanup function
     return () => {
       if (script.parentNode) {
         script.parentNode.removeChild(script);

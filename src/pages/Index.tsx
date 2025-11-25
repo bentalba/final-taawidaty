@@ -28,6 +28,7 @@ import { ArrowRight, CheckCircle2, Sparkles, X, Plus, ShoppingCart, Search } fro
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
+import { AdUnit } from '@/components/ads/AdUnit';
 
 interface Medication {
   id: number;
@@ -668,6 +669,11 @@ export default function Index() {
           </p>
         </div>
       </footer>
+      
+      {/* Mobile Sticky Footer Ad - 320x50 */}
+      <div className="fixed bottom-0 left-0 w-full z-[100] bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-2px_10px_rgba(0,0,0,0.1)] md:hidden flex justify-center items-center py-2">
+        <AdUnit type="banner-320x50" />
+      </div>
       </div>
 
       {/* Confetti Celebration */}

@@ -6,7 +6,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
-import { BannerAd } from '@/components/BannerAd';
+import { AdUnit } from '@/components/ads/AdUnit';
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -55,7 +55,21 @@ export function PageTransition({ children }: PageTransitionProps) {
         <div className="flex-1">
           {children}
         </div>
-        <BannerAd />
+        
+        {/* Responsive Bottom Ad */}
+        <div className="w-full bg-gradient-to-r from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-6 px-4 my-8">
+          <div className="container mx-auto max-w-6xl">
+            {/* Mobile: 300x250 */}
+            <div className="block md:hidden">
+              <AdUnit type="banner-300x250" className="my-4" />
+            </div>
+            
+            {/* Desktop: 728x90 */}
+            <div className="hidden md:block">
+              <AdUnit type="banner-728x90" className="my-4" />
+            </div>
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

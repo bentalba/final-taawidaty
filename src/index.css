@@ -185,6 +185,13 @@
 }
 
 @layer utilities {
+  /* Prevent content from being hidden behind sticky mobile ad */
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 60px; /* Height of sticky ad banner */
+    }
+  }
+
   /* Modern gradient utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
