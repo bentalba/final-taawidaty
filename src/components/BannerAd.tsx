@@ -27,12 +27,15 @@ export function BannerAd() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center my-4">
-      <div 
-        id="container-e3c362a6fe79c57064310f672d050bef"
-        className="max-w-full overflow-hidden"
-        style={{ minHeight: '90px' }}
-      />
+    <div className="w-full bg-gradient-to-r from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-6 px-4 my-8">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col items-center gap-2">
+          <div 
+            id="container-e3c362a6fe79c57064310f672d050bef"
+            className="w-full flex justify-center items-center min-h-[90px] max-w-full overflow-hidden"
+          />
+        </div>
+      </div>
     </div>
   );
 }

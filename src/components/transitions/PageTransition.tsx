@@ -50,8 +50,11 @@ export function PageTransition({ children }: PageTransitionProps) {
         initial="initial"
         animate="enter"
         exit="exit"
+        className="flex flex-col min-h-screen"
       >
-        {children}
+        <div className="flex-1">
+          {children}
+        </div>
         <BannerAd />
       </motion.div>
     </AnimatePresence>
