@@ -28,7 +28,8 @@ import { ArrowRight, CheckCircle2, Sparkles, X, Plus, ShoppingCart, Search } fro
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
-import { AdUnit } from '@/components/ads/AdUnit';
+import { BannerAd } from '@/components/BannerAd';
+
 
 interface Medication {
   id: number;
@@ -50,7 +51,7 @@ interface CalculationResult {
 export default function Index() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
-  
+
   // Custom hero title rendering with animated words
   const renderHeroTitle = () => {
     if (language === 'ar') {
@@ -107,21 +108,21 @@ export default function Index() {
     : 'Calculez instantanément votre remboursement assurance santé ou consultez les prix officiels des médicaments au Maroc. +10,000 médicaments référencés. Rapide, précis et 100% gratuit !';
   const metaKeywords = language === 'ar'
     ? [
-        'حساب تعويض الأدوية',
-        'أسعار الأدوية المغرب',
-        'تعويض التأمين الصحي',
-        'صيدلية المغرب',
-        'حاسبة التعويض',
-        'تعويضاتي'
-      ]
+      'حساب تعويض الأدوية',
+      'أسعار الأدوية المغرب',
+      'تعويض التأمين الصحي',
+      'صيدلية المغرب',
+      'حاسبة التعويض',
+      'تعويضاتي'
+    ]
     : [
-        'calculateur remboursement médicaments',
-        'prix médicaments maroc',
-        'remboursement assurance santé',
-        'pharmacie maroc prix',
-        'base médicaments maroc',
-        'taawidaty'
-      ];
+      'calculateur remboursement médicaments',
+      'prix médicaments maroc',
+      'remboursement assurance santé',
+      'pharmacie maroc prix',
+      'base médicaments maroc',
+      'taawidaty'
+    ];
   const structuredData = useMemo(() => [
     {
       '@context': 'https://schema.org',
@@ -219,459 +220,349 @@ export default function Index() {
         canonical="https://taawidaty.ma"
         structuredData={structuredData}
       />
-      
+
       {/* CNSS Disclaimer Popup - Shows on first visit */}
       <CNSSDisclaimer />
-      
+
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
-      {/* Modern Header */}
-      <header role="banner" className={`sticky top-0 z-[200] transition-all duration-300 ${scrolled ? 'bg-white dark:bg-slate-900 shadow-lg' : 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md'}`}>
-        <div className={`border-b border-slate-200 dark:border-slate-800 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}>
-          <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2 md:gap-4">
-                <div className="relative group">
-                  <picture>
-                    <source srcSet="/logos/taawidaty-logo.webp" type="image/webp" />
-                    <img
-                      src="/logos/TAAWIDATY.png"
-                      alt="Taawidaty logo"
-                      width="40"
-                      height="40"
-                      className={`relative group-hover:scale-105 transition-all duration-300 aspect-square ${scrolled ? 'h-8 w-8' : 'h-10 w-10 md:h-12 md:w-12'}`}
-                    />
-                  </picture>
+        {/* Modern Header */}
+
+
+        {/* Main Content */}
+        <main role="main">
+          {/* Hero Section */}
+          {step === 1 && (
+            <section className="relative px-4 py-8 md:py-16 max-w-7xl mx-auto">
+              {/* Modern background with warm decorative elements - Smaller on mobile */}
+              <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
+              <div className="absolute top-10 md:top-20 left-5 md:left-10 w-40 h-40 md:w-72 md:h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
+              <div className="absolute top-20 md:top-40 right-5 md:right-10 w-40 h-40 md:w-72 md:h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+
+              <div className="relative z-10 text-center animate-slide-up">
+                {/* Modern badge */}
+                <div className="mb-4 md:mb-6 inline-flex items-center">
+                  <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-glow hover-lift">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
+                      <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
+                        {t.app.subtitle}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-base md:text-xl' : 'text-xl md:text-3xl'}`}>
-                  {t.app.title}
-                </div>
-              </div>
-              
-              {/* Navigation Links */}
-              <nav className="hidden md:flex items-center gap-6">
-                <a href="#calculator" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
-                  {language === 'ar' ? 'الحاسبة' : 'Calculateur'}
-                </a>
-                <Link to="/blog" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
-                  Blog
-                </Link>
-                <a href="#faq" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
-                  FAQ
-                </a>
-                <Link to="/about-us" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary transition-colors">
-                  {language === 'ar' ? 'معلومات عنا' : 'À propos'}
-                </Link>
-              </nav>
-              
-              <div className="flex items-center gap-1 md:gap-2">
-                <ThemeToggle />
-                <LanguageToggle />
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
 
-      {/* Main Content */}
-      <main role="main">
-      {/* Hero Section */}
-      {step === 1 && (
-        <section className="relative px-4 py-8 md:py-16 max-w-7xl mx-auto">
-          {/* Modern background with warm decorative elements - Smaller on mobile */}
-          <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
-          <div className="absolute top-10 md:top-20 left-5 md:left-10 w-40 h-40 md:w-72 md:h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-          <div className="absolute top-20 md:top-40 right-5 md:right-10 w-40 h-40 md:w-72 md:h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+                {/* Main heading - H1 for SEO - Better mobile sizing */}
+                <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight px-2 ${isRTL ? 'font-arabic' : ''}`}>
+                  {renderHeroTitle()}
+                </h1>
 
-          <div className="relative z-10 text-center animate-slide-up">
-            {/* Modern badge */}
-            <div className="mb-4 md:mb-6 inline-flex items-center">
-              <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-glow hover-lift">
-                <div className="flex items-center gap-2 md:gap-3">
-                  <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
-                  <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
-                    {t.app.subtitle}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Main heading - H1 for SEO - Better mobile sizing */}
-            <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight px-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {renderHeroTitle()}
-            </h1>
-
-            {/* Modern subtitle - Better mobile sizing */}
-            <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-              {t.hero.subtitle}
-            </p>
-
-          {/* Two Options Cards */}
-          <div className="max-w-5xl mx-auto mb-6 md:mb-8">
-            <h3 className={`text-2xl md:text-3xl font-bold text-slate-900 dark:text-foreground mb-6 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-              {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
-            </h3>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {/* Card 1: Reimbursement Calculator */}
-              <EnhancedCard
-                hoverable={true}
-                glowOnHover={true}
-                animateOnMount={true}
-                delay={0}
-                className="p-6 text-center cursor-pointer group"
-                onClick={() => setStep(2)}
-              >
-                <div className="mx-auto mb-4 relative w-20 h-20">
-                  <picture>
-                    <source srcSet="/logos/remboursement-logo.webp" type="image/webp" />
-                    <img 
-                      src="/logos/remboursement-logo.png" 
-                      alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
-                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                      width="80"
-                      height="80"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </picture>
-                </div>
-                <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
-                </h4>
-                <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' 
-                    ? 'احسب المبلغ الذي ستسترده من التأمين الصحي الخاص بك'
-                    : 'Calculez combien votre mutuelle va vous rembourser'}
+                {/* Modern subtitle - Better mobile sizing */}
+                <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                  {t.hero.subtitle}
                 </p>
-                <Button
-                  size="default"
-                  className="w-full group-hover:shadow-xl transition-all duration-300"
-                >
-                  <span className={isRTL ? 'font-arabic' : ''}>
-                    {language === 'ar' ? 'ابدأ الحساب' : 'Commencer'}
-                  </span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </EnhancedCard>
 
-              {/* Card 2: Price Checker */}
-              <EnhancedCard
-                hoverable={true}
-                glowOnHover={true}
-                animateOnMount={true}
-                delay={0.1}
-                className="p-6 text-center cursor-pointer group"
-                onClick={() => {
-                  window.location.href = '/prix-medicaments';
-                }}
-              >
-                <div className="mx-auto mb-4 relative w-20 h-20">
-                  <picture>
-                    <source srcSet="/logos/price-check-logo.webp" type="image/webp" />
-                    <img 
-                      src="/logos/price-check-logo.png" 
-                      alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
-                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                      width="80"
-                      height="80"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </picture>
-                </div>
-                <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
-                </h4>
-                <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' 
-                    ? 'تحقق من سعر أي دواء في المغرب'
-                    : 'Vérifiez le prix de n\'importe quel médicament'}
-                </p>
-                <Button
-                  size="default"
-                  variant="outline"
-                  className="w-full group-hover:shadow-xl transition-all duration-300"
-                >
-                  <span className={isRTL ? 'font-arabic' : ''}>
-                    {language === 'ar' ? 'تحقق من السعر' : 'Vérifier'}
-                  </span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </EnhancedCard>
-            </div>
+                {/* Two Options Cards */}
+                <div className="max-w-5xl mx-auto mb-6 md:mb-8">
+                  <h3 className={`text-2xl md:text-3xl font-bold text-slate-900 dark:text-foreground mb-6 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                    {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
+                  </h3>
 
-          {/* Modern Trust Badges - Moved Below Cards */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {[
-              { icon: CheckCircle2, text: t.hero.trustOfficial },
-              { icon: CheckCircle2, text: t.hero.trustInstant },
-              { icon: CheckCircle2, text: t.hero.trustFree }
-            ].map((item, index) => (
-              <div key={index} className="group flex items-center gap-2 p-2 md:p-3 rounded-xl glass-card hover-lift">
-                <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
-                  <item.icon className="w-4 h-4 md:w-5 md:h-5 text-success-600 dark:text-success-400" />
-                </div>
-                <span className={`text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
-              </div>
-            ))}
-          </div>
-          </div>
-          </div>
-        </section>
-      )}
+                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    {/* Card 1: Reimbursement Calculator */}
+                    <EnhancedCard
+                      hoverable={true}
+                      glowOnHover={true}
+                      animateOnMount={true}
+                      delay={0}
+                      className="p-6 text-center cursor-pointer group"
+                      onClick={() => setStep(2)}
+                    >
+                      <div className="mx-auto mb-4 relative w-20 h-20">
+                        <picture>
+                          <source srcSet="/logos/remboursement-logo.webp" type="image/webp" />
+                          <img
+                            src="/logos/remboursement-logo.png"
+                            alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                            width="80"
+                            height="80"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
+                      </div>
+                      <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
+                      </h4>
+                      <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar'
+                          ? 'احسب المبلغ الذي ستسترده من التأمين الصحي الخاص بك'
+                          : 'Calculez combien votre mutuelle va vous rembourser'}
+                      </p>
+                      <Button
+                        size="default"
+                        className="w-full group-hover:shadow-xl transition-all duration-300"
+                      >
+                        <span className={isRTL ? 'font-arabic' : ''}>
+                          {language === 'ar' ? 'ابدأ الحساب' : 'Commencer'}
+                        </span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </EnhancedCard>
 
-      {/* Step 2: Medication Search */}
-      {step === 2 && (
-        <section className="px-4 py-10 max-w-4xl mx-auto animate-fade-in">
-          {/* Progress Indicator */}
-          <div className="max-w-md mx-auto mb-6">
-            <div className="flex items-center justify-center gap-2">
-              <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
-              <div className="h-2 w-full bg-slate-300 dark:border rounded-full transition-all duration-500"></div>
-            </div>
-            <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'الخطوة 1 من 2' : 'Étape 1 sur 2'}
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-6 md:p-8 transition-colors duration-300">
-            <div className="mb-6">
-              <Button
-                variant="ghost"
-                onClick={() => setStep(1)}
-                className={`mb-3 hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}
-              >
-                ← {t.calculator.back}
-              </Button>
-              
-              <h2 className={`text-2xl md:text-3xl font-black text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                {t.calculator.searchMed}
-              </h2>
-            </div>
-
-            <>
-              <MedicationSearchEnhanced
-                placeholder={t.calculator.searchPlaceholder}
-                onSelect={(selected) => addMedication(selected as Medication)}
-                language={language}
-              />
-
-              {/* Selected Medications List */}
-              {medications.length > 0 && (
-                <div className="mt-6 space-y-3">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className={`text-base md:text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
-                      <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
-                      {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
-                    </h3>
+                    {/* Card 2: Price Checker */}
+                    <EnhancedCard
+                      hoverable={true}
+                      glowOnHover={true}
+                      animateOnMount={true}
+                      delay={0.1}
+                      className="p-6 text-center cursor-pointer group"
+                      onClick={() => {
+                        window.location.href = '/prix-medicaments';
+                      }}
+                    >
+                      <div className="mx-auto mb-4 relative w-20 h-20">
+                        <picture>
+                          <source srcSet="/logos/price-check-logo.webp" type="image/webp" />
+                          <img
+                            src="/logos/price-check-logo.png"
+                            alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                            width="80"
+                            height="80"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
+                      </div>
+                      <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
+                      </h4>
+                      <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar'
+                          ? 'تحقق من سعر أي دواء في المغرب'
+                          : 'Vérifiez le prix de n\'importe quel médicament'}
+                      </p>
+                      <Button
+                        size="default"
+                        variant="outline"
+                        className="w-full group-hover:shadow-xl transition-all duration-300"
+                      >
+                        <span className={isRTL ? 'font-arabic' : ''}>
+                          {language === 'ar' ? 'تحقق من السعر' : 'Vérifier'}
+                        </span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </EnhancedCard>
                   </div>
 
-                  <div className="space-y-2">
-                    {medications.map((med, index) => (
-                      <motion.div
-                        key={med.id}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 20 }}
-                        transition={{ delay: index * 0.05 }}
-                        className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
-                      >
-                        <div className="flex-1">
-                          <p className={`font-bold text-sm md:text-base text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                            {med.name}
-                          </p>
-                          <p className="text-xs md:text-sm text-slate-600 dark:text-muted-foreground">
-                            {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
-                          </p>
+                  {/* Modern Trust Badges - Moved Below Cards */}
+                  <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                    {[
+                      { icon: CheckCircle2, text: t.hero.trustOfficial },
+                      { icon: CheckCircle2, text: t.hero.trustInstant },
+                      { icon: CheckCircle2, text: t.hero.trustFree }
+                    ].map((item, index) => (
+                      <div key={index} className="group flex items-center gap-2 p-2 md:p-3 rounded-xl glass-card hover-lift">
+                        <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
+                          <item.icon className="w-4 h-4 md:w-5 md:h-5 text-success-600 dark:text-success-400" />
                         </div>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => removeMedication(med.id)}
-                          className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
-                        >
-                          <X className="w-4 h-4 md:w-5 md:h-5" />
-                        </Button>
-                      </motion.div>
+                        <span className={`text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
+                      </div>
                     ))}
                   </div>
-
-                  <Button
-                    onClick={calculateReimbursement}
-                    size="lg"
-                    className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
-                  >
-                    {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
-                    <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
-                  </Button>
-                </div>
-              )}
-            </>
-          </div>
-        </section>
-      )}
-
-      {/* Step 3: Results */}
-      {step === 3 && results.length > 0 && (
-        <section className="px-4 py-10 max-w-6xl mx-auto">
-          {/* Progress Indicator */}
-          <div className="max-w-md mx-auto mb-6">
-            <div className="flex items-center justify-center gap-2">
-              <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
-              <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
-            </div>
-            <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'الخطوة 2 من 2' : 'Étape 2 sur 2'}
-            </p>
-          </div>
-
-          {/* Individual Results */}
-          <div className="space-y-4 mb-6">
-            {results.map((result, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <ResultCard {...result} language={language} />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Total Summary */}
-          {results.length > 1 && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: results.length * 0.1 + 0.2 }}
-              className="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-700 dark:to-blue-700 rounded-2xl p-6 md:p-8 shadow-2xl text-white mb-6"
-            >
-              <h3 className={`text-xl md:text-2xl font-black mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' ? 'المجموع الكلي' : 'Total Général'}
-              </h3>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'السعر الإجمالي' : 'Prix Total'}
-                  </p>
-                  <p className="text-2xl md:text-3xl font-black">
-                    {results.reduce((sum, r) => sum + r.originalPrice, 0).toFixed(2)} MAD
-                  </p>
-                </div>
-                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'التعويض الإجمالي' : 'Remboursement Total'}
-                  </p>
-                  <p className="text-2xl md:text-3xl font-black">
-                    {results.reduce((sum, r) => sum + r.reimbursementAmount, 0).toFixed(2)} MAD
-                  </p>
-                </div>
-                <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                  <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'المبلغ المتبقي' : 'Reste à Payer'}
-                  </p>
-                  <p className="text-2xl md:text-3xl font-black">
-                    {results.reduce((sum, r) => sum + r.patientPays, 0).toFixed(2)} MAD
-                  </p>
                 </div>
               </div>
-            </motion.div>
+            </section>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-            <Button
-              onClick={reset}
-              size="default"
-              className={`hover:scale-105 transition-all duration-200 hover:shadow-lg ${isRTL ? 'font-arabic' : ''}`}
-            >
-              {t.calculator.newCalc}
-            </Button>
-            <Button
-              onClick={() => {
-                setStep(2);
-                setShowConfetti(false);
-              }}
-              variant="outline"
-              size="default"
-              className={`hover:scale-105 hover:bg-slate-100 dark:hover:bg-muted transition-all duration-200 ${isRTL ? 'font-arabic' : ''}`}
-            >
-              {language === 'ar' ? 'إضافة المزيد من الأدوية' : 'Ajouter plus de médicaments'}
-            </Button>
-          </div>
-        </section>
-      )}
-      </main>
+          <BannerAd />
 
-      {/* Footer */}
-      <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-12 md:mt-16 transition-colors duration-300">
-        {/* Legal Links */}
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-            <Link to="/privacy-policy" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de Confidentialité'}
-            </Link>
-            <span className="text-slate-400">•</span>
-            <Link to="/cookie-preferences" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'تفضيلات ملفات تعريف الارتباط' : 'Préférences Cookies'}
-            </Link>
-            <span className="text-slate-400">•</span>
-            <Link to="/medical-disclaimer" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors font-semibold ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement Médical'}
-            </Link>
-            <span className="text-slate-400">•</span>
-            <Link to="/terms-of-service" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'شروط الاستخدام' : 'Conditions d\'Utilisation'}
-            </Link>
-            <span className="text-slate-400">•</span>
-            <Link to="/about-us" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'من نحن' : 'À Propos'}
-            </Link>
-            <span className="text-slate-400">•</span>
-            <Link to="/contact-us" className={`text-slate-600 dark:text-muted-foreground hover:text-primary hover:underline transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' ? 'اتصل بنا' : 'Contact'}
-            </Link>
-          </div>
-        </div>
+          {/* Step 2: Medication Search */}
+          {step === 2 && (
+            <section className="px-4 py-10 max-w-4xl mx-auto animate-fade-in">
+              {/* Progress Indicator */}
+              <div className="max-w-md mx-auto mb-6">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
+                  <div className="h-2 w-full bg-slate-300 dark:border rounded-full transition-all duration-500"></div>
+                </div>
+                <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'الخطوة 1 من 2' : 'Étape 1 sur 2'}
+                </p>
+              </div>
 
-        <div className="container mx-auto px-4 py-8 text-center text-slate-600 dark:text-muted-foreground transition-colors duration-300">
-          <p className={`text-sm mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-            © 2025 TAAWIDATY • {language === 'ar' ? 'جميع الحقوق محفوظة' : 'Tous droits réservés'}
-          </p>
-          
-          {/* 
-            🎉 Easter Egg for Developers 🎉
-            
-            Hey there, fellow developer! 👋
-            
-            Dev teams, legal team, anyone who is trying to get "taawidaty.ma" here is the link for it:
-            https://www.youtube.com/shorts/Qw4rPF8HR3o
-            
-            Found this? You're awesome! 🚀
-            - The Taawidaty Dev Team
-          */}
-          
-          {/* Official Disclaimer */}
-          <div className={`max-w-4xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-200 dark:border-amber-800 rounded-lg mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              {language === 'ar' 
-                ? 'موقع taawidaty.ma هو خدمة خاصة ومستقلة، دون أي انتماء أو ارتباط بالصندوق الوطني للضمان الاجتماعي (CNSS) أو الصندوق الوطني لمنظمات الاحتياط الاجتماعي (CNOPS). نحن لسنا موقعًا رسميًا للـ CNSS أو CNOPS.'
-                : 'taawidaty.ma est un service privé et indépendant, sans aucune affiliation avec la CNSS ou la CNOPS. Nous ne sommes pas un site officiel de la CNSS ou de la CNOPS.'}
-            </p>
-          </div>
-          
-          <p className={`text-xs mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-            {t.disclaimer.text}
-          </p>
-        </div>
-      </footer>
-      
-      {/* Mobile Sticky Footer Ad - 320x50 */}
-      <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
-        <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
-          <AdUnit type="banner-320x50" />
-        </div>
-      </div>
+              <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-6 md:p-8 transition-colors duration-300">
+                <div className="mb-6">
+                  <Button
+                    variant="ghost"
+                    onClick={() => setStep(1)}
+                    className={`mb-3 hover:bg-slate-100 dark:hover:bg-muted transition-colors duration-200 ${isRTL ? 'font-arabic' : ''}`}
+                  >
+                    ← {t.calculator.back}
+                  </Button>
+
+                  <h2 className={`text-2xl md:text-3xl font-black text-slate-900 dark:text-foreground mb-4 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                    {t.calculator.searchMed}
+                  </h2>
+                </div>
+
+                <>
+                  <MedicationSearchEnhanced
+                    placeholder={t.calculator.searchPlaceholder}
+                    onSelect={(selected) => addMedication(selected as Medication)}
+                    language={language}
+                  />
+
+                  {/* Selected Medications List */}
+                  {medications.length > 0 && (
+                    <div className="mt-6 space-y-3">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className={`text-base md:text-lg font-bold text-slate-900 dark:text-foreground flex items-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                          <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
+                          {language === 'ar' ? `الأدوية المحددة (${medications.length})` : `Médicaments sélectionnés (${medications.length})`}
+                        </h3>
+                      </div>
+
+                      <div className="space-y-2">
+                        {medications.map((med, index) => (
+                          <motion.div
+                            key={med.id}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 20 }}
+                            transition={{ delay: index * 0.05 }}
+                            className="flex items-center justify-between p-3 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-950/30 dark:to-blue-950/30 border border-primary-200 dark:border-primary-800 rounded-xl"
+                          >
+                            <div className="flex-1">
+                              <p className={`font-bold text-sm md:text-base text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                                {med.name}
+                              </p>
+                              <p className="text-xs md:text-sm text-slate-600 dark:text-muted-foreground">
+                                {med.ppv} MAD • {med.taux_remb}% {language === 'ar' ? 'تعويض' : 'remboursement'}
+                              </p>
+                            </div>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => removeMedication(med.id)}
+                              className="hover:bg-red-100 dark:hover:bg-red-950 hover:text-red-600 dark:hover:text-red-400"
+                            >
+                              <X className="w-4 h-4 md:w-5 md:h-5" />
+                            </Button>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      <Button
+                        onClick={calculateReimbursement}
+                        size="lg"
+                        className={`w-full text-lg hover:scale-105 transition-transform duration-200 ${isRTL ? 'font-arabic' : ''}`}
+                      >
+                        {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
+                        <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2' : 'ml-2'} transition-transform duration-300 group-hover:translate-x-1`} />
+                      </Button>
+                    </div>
+                  )}
+                </>
+              </div>
+            </section>
+          )}
+
+          {/* Step 3: Results */}
+          {step === 3 && results.length > 0 && (
+            <section className="px-4 py-10 max-w-6xl mx-auto">
+              {/* Progress Indicator */}
+              <div className="max-w-md mx-auto mb-6">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
+                  <div className="h-2 w-full bg-primary-700 rounded-full transition-all duration-500"></div>
+                </div>
+                <p className={`text-center text-sm text-slate-600 dark:text-muted-foreground mt-2 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'الخطوة 2 من 2' : 'Étape 2 sur 2'}
+                </p>
+              </div>
+
+              {/* Individual Results */}
+              <div className="space-y-4 mb-6">
+                {results.map((result, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <ResultCard {...result} language={language} />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Total Summary */}
+              {results.length > 1 && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: results.length * 0.1 + 0.2 }}
+                  className="bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-700 dark:to-blue-700 rounded-2xl p-6 md:p-8 shadow-2xl text-white mb-6"
+                >
+                  <h3 className={`text-xl md:text-2xl font-black mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+                    {language === 'ar' ? 'المجموع الكلي' : 'Total Général'}
+                  </h3>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                      <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar' ? 'السعر الإجمالي' : 'Prix Total'}
+                      </p>
+                      <p className="text-2xl md:text-3xl font-black">
+                        {results.reduce((sum, r) => sum + r.originalPrice, 0).toFixed(2)} MAD
+                      </p>
+                    </div>
+                    <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                      <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar' ? 'التعويض الإجمالي' : 'Remboursement Total'}
+                      </p>
+                      <p className="text-2xl md:text-3xl font-black">
+                        {results.reduce((sum, r) => sum + r.reimbursementAmount, 0).toFixed(2)} MAD
+                      </p>
+                    </div>
+                    <div className="text-center p-3 md:p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                      <p className={`text-xs md:text-sm mb-2 opacity-90 ${isRTL ? 'font-arabic' : ''}`}>
+                        {language === 'ar' ? 'المبلغ المتبقي' : 'Reste à Payer'}
+                      </p>
+                      <p className="text-2xl md:text-3xl font-black">
+                        {results.reduce((sum, r) => sum + r.patientPays, 0).toFixed(2)} MAD
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+                <Button
+                  onClick={reset}
+                  size="default"
+                  className={`hover:scale-105 transition-all duration-200 hover:shadow-lg ${isRTL ? 'font-arabic' : ''}`}
+                >
+                  {t.calculator.newCalc}
+                </Button>
+                <Button
+                  onClick={() => {
+                    setStep(2);
+                    setShowConfetti(false);
+                  }}
+                  variant="outline"
+                  size="default"
+                  className={`hover:scale-105 hover:bg-slate-100 dark:hover:bg-muted transition-all duration-200 ${isRTL ? 'font-arabic' : ''}`}
+                >
+                  {language === 'ar' ? 'إضافة المزيد من الأدوية' : 'Ajouter plus de médicaments'}
+                </Button>
+              </div>
+            </section>
+          )}
+        </main>
+
+        {/* Footer */}
+
       </div>
 
       {/* Confetti Celebration */}

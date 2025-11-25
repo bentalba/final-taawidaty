@@ -24,11 +24,11 @@ import {
   generateFAQStructuredData,
   generateBreadcrumbStructuredData
 } from '@/lib/seo';
-import { 
-  ArrowLeft, 
-  Search, 
-  DollarSign, 
-  Building2, 
+import {
+  ArrowLeft,
+  Search,
+  DollarSign,
+  Building2,
   Barcode,
   Package,
   Info,
@@ -39,6 +39,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { BannerAd } from '@/components/BannerAd';
 
 interface Medication {
   id: number;
@@ -66,7 +67,7 @@ export default function PriceChecker() {
   const metaTitle = language === 'ar'
     ? 'التحقق من أسعار الأدوية في المغرب - تعويضاتي'
     : 'Vérifier Prix Médicaments Maroc 2025 | Taawidaty';
-  
+
   const metaDescription = language === 'ar'
     ? 'تحقق من أسعار الأدوية في المغرب. قاعدة بيانات شاملة محدثة 2025 مع أسعار الصيدليات والمستشفيات.'
     : 'Vérifiez les prix des médicaments au Maroc. Base de données complète et à jour 2025 avec prix pharmacie et hôpital.';
@@ -110,28 +111,28 @@ export default function PriceChecker() {
   const seoTitle = selectedMedication
     ? generatePageTitle(selectedMedication)
     : language === 'ar'
-    ? 'أسعار الأدوية في المغرب | تعويضاتي'
-    : 'Prix des Médicaments au Maroc | Taawidaty';
+      ? 'أسعار الأدوية في المغرب | تعويضاتي'
+      : 'Prix des Médicaments au Maroc | Taawidaty';
 
   const seoDescription = selectedMedication
     ? generateMetaDescription(selectedMedication)
     : language === 'ar'
-    ? 'ابحث عن أسعار الأدوية الرسمية في المغرب. قارن أسعار الصيدليات والمستشفيات. احسب التعويض من التأمين الصحي.'
-    : 'Recherchez les prix officiels des médicaments au Maroc. Comparez les prix pharmacie et hôpital. Calculez votre remboursement assurance santé.';
+      ? 'ابحث عن أسعار الأدوية الرسمية في المغرب. قارن أسعار الصيدليات والمستشفيات. احسب التعويض من التأمين الصحي.'
+      : 'Recherchez les prix officiels des médicaments au Maroc. Comparez les prix pharmacie et hôpital. Calculez votre remboursement assurance santé.';
 
   const seoKeywords = selectedMedication
     ? generateKeywords(selectedMedication)
     : language === 'ar'
-    ? 'أسعار الأدوية, أسعار الأدوية المغرب, سعر الدواء, صيدلية المغرب, التأمين الصحي'
-    : 'prix médicaments maroc, prix pharmacie, prix médicaments, doliprane prix, paracétamol prix, médicaments maroc, assurance santé';
+      ? 'أسعار الأدوية, أسعار الأدوية المغرب, سعر الدواء, صيدلية المغرب, التأمين الصحي'
+      : 'prix médicaments maroc, prix pharmacie, prix médicaments, doliprane prix, paracétamol prix, médicaments maroc, assurance santé';
 
   // Generate structured data for search engines
   const structuredData = selectedMedication
     ? [
-        generateMedicationStructuredData(selectedMedication),
-        generateFAQStructuredData(selectedMedication),
-        generateBreadcrumbStructuredData(selectedMedication)
-      ]
+      generateMedicationStructuredData(selectedMedication),
+      generateFAQStructuredData(selectedMedication),
+      generateBreadcrumbStructuredData(selectedMedication)
+    ]
     : [];
 
   return (
@@ -141,47 +142,16 @@ export default function PriceChecker() {
         description={seoDescription}
         keywords={seoKeywords}
         lang={language}
-        canonical={selectedMedication 
+        canonical={selectedMedication
           ? `https://taawidaty.ma/prix/${selectedMedication.name.toLowerCase().replace(/\s+/g, '-')}`
           : 'https://taawidaty.ma/prix-medicaments'
         }
         structuredData={structuredData}
       />
-      
+
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header role="banner" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-card/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
-          <div className={`glass border-b border-white/20 dark:border-gray-800/20 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
-            <div className="container mx-auto px-4">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-4">
-                  <Link to="/" className="relative group">
-                    <div className={`absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300 ${scrolled ? 'opacity-50' : 'opacity-100'}`}></div>
-                    <picture>
-                      <source srcSet="/logos/taawidaty-logo.webp" type="image/webp" />
-                      <img
-                        src="/logos/TAAWIDATY.png"
-                        alt="Taawidaty logo"
-                        width="48"
-                        height="48"
-                        className={`relative group-hover:scale-105 transition-all duration-300 aspect-square ${scrolled ? 'h-8 w-8' : 'h-12 w-12'}`}
-                      />
-                    </picture>
-                  </Link>
-                  <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
-                    {language === 'ar' ? 'التحقق من الأسعار' : 'Vérification Prix'}
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
-                    <ThemeToggle />
-                    <LanguageToggle />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+
 
         {/* Main Content */}
         <main role="main" className="container mx-auto px-4 py-12 max-w-4xl">
@@ -204,11 +174,13 @@ export default function PriceChecker() {
               {language === 'ar' ? 'التحقق من أسعار الأدوية' : 'Vérifier le prix des médicaments'}
             </h1>
             <p className={`text-base md:text-lg text-slate-600 dark:text-muted-foreground max-w-2xl mx-auto px-4 ${isRTL ? 'font-arabic' : ''}`}>
-              {language === 'ar' 
+              {language === 'ar'
                 ? 'ابحث عن أي دواء للحصول على سعره الرسمي في الصيدليات والمستشفيات المغربية'
                 : 'Recherchez n\'importe quel médicament pour connaître son prix officiel en pharmacie et à l\'hôpital'}
             </p>
           </div>
+
+          <BannerAd />
 
           {/* Search Card */}
           <EnhancedCard className="p-4 md:p-6 lg:p-8 mb-6 md:mb-8">
@@ -218,12 +190,12 @@ export default function PriceChecker() {
                 {language === 'ar' ? 'ابحث عن دواء' : 'Rechercher un médicament'}
               </h3>
               <p className={`text-xs md:text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' 
+                {language === 'ar'
                   ? 'يمكنك البحث بالاسم التجاري، الاسم العلمي، أو رمز الباركود'
                   : 'Vous pouvez rechercher par nom commercial, DCI ou code-barres'}
               </p>
             </div>
-            
+
             <MedicationSearchEnhanced
               placeholder={language === 'ar' ? 'ابحث عن دواء...' : 'Rechercher un médicament...'}
               onSelect={(med) => addMedication(med as Medication)}
@@ -258,11 +230,10 @@ export default function PriceChecker() {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 20 }}
                       transition={{ delay: index * 0.05 }}
-                      className={`flex items-center justify-between p-3 md:p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                        selectedMedication?.id === med.id
-                          ? 'bg-green-50 dark:bg-green-950/30 border-green-300 dark:border-green-700'
-                          : 'bg-slate-50 dark:bg-slate-900/30 border-slate-200 dark:border-slate-700 hover:border-green-200 dark:hover:border-green-800'
-                      }`}
+                      className={`flex items-center justify-between p-3 md:p-4 rounded-xl border-2 transition-all cursor-pointer ${selectedMedication?.id === med.id
+                        ? 'bg-green-50 dark:bg-green-950/30 border-green-300 dark:border-green-700'
+                        : 'bg-slate-50 dark:bg-slate-900/30 border-slate-200 dark:border-slate-700 hover:border-green-200 dark:hover:border-green-800'
+                        }`}
                       onClick={() => setSelectedMedication(med)}
                     >
                       <div className="flex-1 min-w-0 pr-2">
@@ -309,7 +280,7 @@ export default function PriceChecker() {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2 md:space-y-3">
                       <div className="flex justify-between items-center p-2 md:p-3 bg-white/50 dark:bg-slate-900/30 rounded-lg">
                         <span className={`text-sm md:text-base font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>
@@ -477,7 +448,7 @@ export default function PriceChecker() {
                   <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-slate-200 dark:border-border">
                     <div className="text-center">
                       <p className={`text-xs md:text-sm text-slate-600 dark:text-muted-foreground mb-3 md:mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                        {language === 'ar' 
+                        {language === 'ar'
                           ? 'هل تريد حساب التعويض من التأمين الصحي؟'
                           : 'Voulez-vous calculer votre remboursement mutuelle ?'}
                       </p>

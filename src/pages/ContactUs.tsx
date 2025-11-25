@@ -529,19 +529,19 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
     : 'Contactez Taawidaty pour obtenir un accompagnement personnalisé sur vos remboursements CNSS et CNOPS et des réponses rapides à vos questions.';
   const metaKeywords = language === 'ar'
     ? [
-        'اتصل تعويضاتي',
-        'دعم تعويض cnss',
-        'مساندة تعويض cnops',
-        'خدمة زبناء التعويضات',
-        'أسئلة تعويض CNSS CNOPS'
-      ]
+      'اتصل تعويضاتي',
+      'دعم تعويض cnss',
+      'مساندة تعويض cnops',
+      'خدمة زبناء التعويضات',
+      'أسئلة تعويض CNSS CNOPS'
+    ]
     : [
-        'contact taawidaty',
-        'assistance remboursement cnss',
-        'support remboursement cnops',
-        'contact assurance santé maroc',
-        'questions remboursement cnss cnops'
-      ];
+      'contact taawidaty',
+      'assistance remboursement cnss',
+      'support remboursement cnops',
+      'contact assurance santé maroc',
+      'questions remboursement cnss cnops'
+    ];
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -585,7 +585,7 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"
@@ -631,7 +631,7 @@ Nous apprécions tous vos retours et nous efforçons de répondre à chaque mess
                       {section.title}
                     </h2>
                     {section.email && (
-                      <a 
+                      <a
                         href={`mailto:${section.email}`}
                         className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline text-lg font-medium"
                       >

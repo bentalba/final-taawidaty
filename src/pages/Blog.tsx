@@ -13,17 +13,18 @@ import BlogBreadcrumb from '@/components/BlogBreadcrumb';
 import { SEO } from '@/components/SEO';
 import { BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { BannerAd } from '@/components/BannerAd';
 
 export default function Blog() {
   const { language, isRTL } = useLanguage();
 
   const breadcrumbItems = [
-    { 
+    {
       label: language === 'ar' ? 'المدونة' : 'Blog'
     }
   ];
 
-  const pageTitle = language === 'ar' 
+  const pageTitle = language === 'ar'
     ? 'مدونة Taawidaty - دليل الاسترداد CNSS و CNOPS'
     : 'Blog Taawidaty - Guide Remboursement CNSS & CNOPS';
 
@@ -49,29 +50,28 @@ export default function Blog() {
           <header className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-6">
               <BookOpen className="w-5 h-5 text-primary-700 dark:text-primary-300" />
-              <span className={`text-sm font-semibold text-primary-700 dark:text-primary-300 ${
-                isRTL ? 'font-arabic' : ''
-              }`}>
+              <span className={`text-sm font-semibold text-primary-700 dark:text-primary-300 ${isRTL ? 'font-arabic' : ''
+                }`}>
                 {language === 'ar' ? 'المدونة' : 'Blog'}
               </span>
             </div>
 
-            <h1 className={`text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 ${
-              isRTL ? 'font-arabic' : ''
-            }`}>
-              {language === 'ar' 
+            <h1 className={`text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 ${isRTL ? 'font-arabic' : ''
+              }`}>
+              {language === 'ar'
                 ? 'دليلك الشامل للاسترداد الطبي'
                 : 'Votre Guide Complet du Remboursement'}
             </h1>
 
-            <p className={`text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto ${
-              isRTL ? 'font-arabic' : ''
-            }`}>
+            <p className={`text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto ${isRTL ? 'font-arabic' : ''
+              }`}>
               {language === 'ar'
                 ? 'مقالات شاملة ونصائح عملية لفهم نظام استرداد الأدوية في المغرب'
                 : 'Articles complets et conseils pratiques pour comprendre le système de remboursement au Maroc'}
             </p>
           </header>
+
+          <BannerAd />
 
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

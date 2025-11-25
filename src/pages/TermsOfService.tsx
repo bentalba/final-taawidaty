@@ -39,19 +39,19 @@ export default function TermsOfService() {
     : 'Consultez les conditions d\'utilisation complètes de Taawidaty, la plateforme marocaine dédiée aux remboursements de médicaments.';
   const metaKeywords = language === 'ar'
     ? [
-        'شروط استخدام تعويضاتي',
-        'سياسة Taawidaty',
-        'قواعد موقع التعويضات',
-        'تعويضات الأدوية المغرب',
-        'خدمة Taawidaty CNSS CNOPS'
-      ]
+      'شروط استخدام تعويضاتي',
+      'سياسة Taawidaty',
+      'قواعد موقع التعويضات',
+      'تعويضات الأدوية المغرب',
+      'خدمة Taawidaty CNSS CNOPS'
+    ]
     : [
-        'conditions utilisation taawidaty',
-        'politique taawidaty',
-        'remboursement medicaments maroc',
-        'regles service cnss cnops',
-        'site remboursement taawidaty'
-      ];
+      'conditions utilisation taawidaty',
+      'politique taawidaty',
+      'remboursement medicaments maroc',
+      'regles service cnss cnops',
+      'site remboursement taawidaty'
+    ];
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -975,7 +975,7 @@ Taawidaty.ma هو موقع إعلامي بحت. نحن لا نبيع ولا نو
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"

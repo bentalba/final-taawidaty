@@ -844,19 +844,19 @@ Taawidaty.ma هي **قاعدة بيانات معلوماتية** تجمع الم
     : 'Découvrez la politique éditoriale de Taawidaty et notre approche de publication des contenus santé et remboursement.';
   const metaKeywords = language === 'ar'
     ? [
-        'سياسة تحرير تعويضاتي',
-        'مبادئ المحتوى الطبي',
-        'شفافية منصة Taawidaty',
-        'مصداقية محتوى CNSS CNOPS',
-        'قواعد التحرير الصحي'
-      ]
+      'سياسة تحرير تعويضاتي',
+      'مبادئ المحتوى الطبي',
+      'شفافية منصة Taawidaty',
+      'مصداقية محتوى CNSS CNOPS',
+      'قواعد التحرير الصحي'
+    ]
     : [
-        'politique editoriale taawidaty',
-        'lignes directrices contenu sante',
-        'transparence taawidaty',
-        'fiabilite contenu cnss cnops',
-        'charte editoriale sante'
-      ];
+      'politique editoriale taawidaty',
+      'lignes directrices contenu sante',
+      'transparence taawidaty',
+      'fiabilite contenu cnss cnops',
+      'charte editoriale sante'
+    ];
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -886,7 +886,7 @@ Taawidaty.ma هي **قاعدة بيانات معلوماتية** تجمع الم
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"

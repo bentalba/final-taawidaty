@@ -692,19 +692,19 @@ admin@taawidaty.ma
     : 'Découvrez l\'histoire de Taawidaty, notre mission et notre équipe qui simplifie les remboursements CNSS et CNOPS pour tous les Marocains.';
   const metaKeywords = language === 'ar'
     ? [
-        'منصة تعويضاتي',
-        'فريق Taawidaty',
-        'حول تعويضاتي',
-        'تعويض الأدوية المغرب',
-        'CNSS CNOPS معلومات'
-      ]
+      'منصة تعويضاتي',
+      'فريق Taawidaty',
+      'حول تعويضاتي',
+      'تعويض الأدوية المغرب',
+      'CNSS CNOPS معلومات'
+    ]
     : [
-        'taawidaty equipe',
-        'a propos taawidaty',
-        'calculateur remboursement maroc',
-        'mission taawidaty',
-        'cnss cnops informations'
-      ];
+      'taawidaty equipe',
+      'a propos taawidaty',
+      'calculateur remboursement maroc',
+      'mission taawidaty',
+      'cnss cnops informations'
+    ];
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -747,7 +747,7 @@ admin@taawidaty.ma
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"

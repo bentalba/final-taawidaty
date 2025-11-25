@@ -545,19 +545,19 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
     : 'Consultez l\'avertissement médical officiel de Taawidaty et comprenez les limites d\'usage des informations de santé fournies.';
   const metaKeywords = language === 'ar'
     ? [
-        'تحذير طبي تعويضاتي',
-        'سياسة طبية Taawidaty',
-        'مسؤولية تعويضات الأدوية',
-        'معلومات طبية المغرب',
-        'CNSS CNOPS تحذير'
-      ]
+      'تحذير طبي تعويضاتي',
+      'سياسة طبية Taawidaty',
+      'مسؤولية تعويضات الأدوية',
+      'معلومات طبية المغرب',
+      'CNSS CNOPS تحذير'
+    ]
     : [
-        'avertissement médical taawidaty',
-        'disclaimer médical maroc',
-        'responsabilite remboursement medicaments',
-        'politique sante taawidaty',
-        'cnss cnops avertissement'
-      ];
+      'avertissement médical taawidaty',
+      'disclaimer médical maroc',
+      'responsabilite remboursement medicaments',
+      'politique sante taawidaty',
+      'cnss cnops avertissement'
+    ];
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -587,7 +587,7 @@ En cas de doute sur votre santé ou vos médicaments, consultez toujours un prof
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-red-50/30 via-white to-orange-50/20 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"

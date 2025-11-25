@@ -176,7 +176,7 @@ export default function CookiePreferences() {
 
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
         {/* Header */}
-        <header className="bg-white dark:bg-card border-b dark:border-border sticky top-0 z-10 shadow-sm">
+        <header className="bg-white dark:bg-card border-b dark:border-border shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <Button
               variant="ghost"
@@ -191,214 +191,214 @@ export default function CookiePreferences() {
         </header>
 
         <div className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <Cookie className="w-16 h-16 text-purple-600" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              {t.title}
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
-              {t.subtitle}
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-              {t.description}
-            </p>
-          </div>
-
-          {/* Success message */}
-          {saved && (
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-6">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-                <p className="text-green-900 dark:text-green-100 font-semibold">
-                  {t.savedMessage}
-                </p>
+          <div className="container mx-auto px-4 max-w-4xl">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-4">
+                <Cookie className="w-16 h-16 text-purple-600" />
               </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                {t.title}
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                {t.subtitle}
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                {t.description}
+              </p>
             </div>
-          )}
 
-          {/* Current settings info */}
-          {currentState && (
-            <Card className="mb-6">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Info className="w-5 h-5" />
-                  {t.currentSettings}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {t.lastUpdated}: {new Date(currentState.timestamp || Date.now()).toLocaleDateString(language === 'fr' ? 'fr-FR' : 'ar-MA')}
-                </p>
-              </CardContent>
-            </Card>
-          )}
+            {/* Success message */}
+            {saved && (
+              <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-6">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <p className="text-green-900 dark:text-green-100 font-semibold">
+                    {t.savedMessage}
+                  </p>
+                </div>
+              </div>
+            )}
 
-          {/* Cookie categories */}
-          <div className="space-y-6">
-            {/* Essential Cookies */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-start gap-3">
-                    <Settings className="w-6 h-6 text-purple-600 mt-1" />
-                    <div>
-                      <CardTitle>{t.essentialTitle}</CardTitle>
-                      <CardDescription className="mt-2">
-                        {t.essentialDescription}
-                      </CardDescription>
+            {/* Current settings info */}
+            {currentState && (
+              <Card className="mb-6">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Info className="w-5 h-5" />
+                    {t.currentSettings}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {t.lastUpdated}: {new Date(currentState.timestamp || Date.now()).toLocaleDateString(language === 'fr' ? 'fr-FR' : 'ar-MA')}
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Cookie categories */}
+            <div className="space-y-6">
+              {/* Essential Cookies */}
+              <Card>
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-start gap-3">
+                      <Settings className="w-6 h-6 text-purple-600 mt-1" />
+                      <div>
+                        <CardTitle>{t.essentialTitle}</CardTitle>
+                        <CardDescription className="mt-2">
+                          {t.essentialDescription}
+                        </CardDescription>
+                      </div>
+                    </div>
+                    <div className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      {t.alwaysActive}
                     </div>
                   </div>
-                  <div className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    {t.alwaysActive}
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
+                </CardHeader>
+              </Card>
 
-            {/* Analytics Cookies */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-start gap-3 flex-1">
-                    <BarChart className="w-6 h-6 text-blue-600 mt-1" />
-                    <div className="flex-1">
-                      <CardTitle>{t.analyticsTitle}</CardTitle>
-                      <CardDescription className="mt-2">
-                        {t.analyticsDescription}
-                      </CardDescription>
-                      <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                        {t.analyticsDetails.map((detail, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-purple-600">•</span>
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
+              {/* Analytics Cookies */}
+              <Card>
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-start gap-3 flex-1">
+                      <BarChart className="w-6 h-6 text-blue-600 mt-1" />
+                      <div className="flex-1">
+                        <CardTitle>{t.analyticsTitle}</CardTitle>
+                        <CardDescription className="mt-2">
+                          {t.analyticsDescription}
+                        </CardDescription>
+                        <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                          {t.analyticsDetails.map((detail, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <span className="text-purple-600">•</span>
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
+                    <Switch
+                      checked={analyticsConsent}
+                      onCheckedChange={setAnalyticsConsent}
+                      className="mt-1"
+                    />
                   </div>
-                  <Switch
-                    checked={analyticsConsent}
-                    onCheckedChange={setAnalyticsConsent}
-                    className="mt-1"
-                  />
-                </div>
-              </CardHeader>
-            </Card>
+                </CardHeader>
+              </Card>
 
-            {/* Advertising Cookies */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-start gap-3 flex-1">
-                    <Target className="w-6 h-6 text-orange-600 mt-1" />
-                    <div className="flex-1">
-                      <CardTitle>{t.adsTitle}</CardTitle>
-                      <CardDescription className="mt-2">
-                        {t.adsDescription}
-                      </CardDescription>
-                      <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                        {t.adsDetails.map((detail, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-purple-600">•</span>
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
+              {/* Advertising Cookies */}
+              <Card>
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-start gap-3 flex-1">
+                      <Target className="w-6 h-6 text-orange-600 mt-1" />
+                      <div className="flex-1">
+                        <CardTitle>{t.adsTitle}</CardTitle>
+                        <CardDescription className="mt-2">
+                          {t.adsDescription}
+                        </CardDescription>
+                        <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                          {t.adsDetails.map((detail, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <span className="text-purple-600">•</span>
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
+                    <Switch
+                      checked={adsConsent}
+                      onCheckedChange={setAdsConsent}
+                      className="mt-1"
+                    />
                   </div>
-                  <Switch
-                    checked={adsConsent}
-                    onCheckedChange={setAdsConsent}
-                    className="mt-1"
-                  />
-                </div>
-              </CardHeader>
-            </Card>
+                </CardHeader>
+              </Card>
+            </div>
+
+            {/* Action buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <Button
+                onClick={handleSave}
+                className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg"
+              >
+                {t.saveButton}
+              </Button>
+              <Button
+                onClick={handleAcceptAll}
+                variant="outline"
+                className="flex-1 py-6 text-lg"
+              >
+                {t.acceptAllButton}
+              </Button>
+              <Button
+                onClick={handleRejectAll}
+                variant="ghost"
+                className="flex-1 py-6 text-lg"
+              >
+                {t.rejectAllButton}
+              </Button>
+            </div>
+
+            {/* Additional information */}
+            <div className="mt-12 space-y-6">
+              {/* IAB TCF */}
+              <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-blue-900 dark:text-blue-100">
+                    <Shield className="w-5 h-5" />
+                    {t.iabInfo}
+                  </CardTitle>
+                  <CardDescription className="text-blue-800 dark:text-blue-200">
+                    {t.iabDescription}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              {/* GDPR Rights */}
+              <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-green-900 dark:text-green-100">
+                    <AlertCircle className="w-5 h-5" />
+                    {t.gdprInfo}
+                  </CardTitle>
+                  <CardDescription className="text-green-800 dark:text-green-200">
+                    {t.gdprDescription}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              {/* Expiration info */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Info className="w-5 h-5" />
+                    {t.expirationInfo}
+                  </CardTitle>
+                  <CardDescription>
+                    {t.expirationDescription}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              {/* Partners info */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    {t.partnersInfo}
+                  </CardTitle>
+                  <CardDescription>
+                    {t.partnersDescription}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
           </div>
-
-          {/* Action buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <Button
-              onClick={handleSave}
-              className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg"
-            >
-              {t.saveButton}
-            </Button>
-            <Button
-              onClick={handleAcceptAll}
-              variant="outline"
-              className="flex-1 py-6 text-lg"
-            >
-              {t.acceptAllButton}
-            </Button>
-            <Button
-              onClick={handleRejectAll}
-              variant="ghost"
-              className="flex-1 py-6 text-lg"
-            >
-              {t.rejectAllButton}
-            </Button>
-          </div>
-
-          {/* Additional information */}
-          <div className="mt-12 space-y-6">
-            {/* IAB TCF */}
-            <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-blue-900 dark:text-blue-100">
-                  <Shield className="w-5 h-5" />
-                  {t.iabInfo}
-                </CardTitle>
-                <CardDescription className="text-blue-800 dark:text-blue-200">
-                  {t.iabDescription}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            {/* GDPR Rights */}
-            <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-900 dark:text-green-100">
-                  <AlertCircle className="w-5 h-5" />
-                  {t.gdprInfo}
-                </CardTitle>
-                <CardDescription className="text-green-800 dark:text-green-200">
-                  {t.gdprDescription}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            {/* Expiration info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Info className="w-5 h-5" />
-                  {t.expirationInfo}
-                </CardTitle>
-                <CardDescription>
-                  {t.expirationDescription}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            {/* Partners info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Target className="w-5 h-5" />
-                  {t.partnersInfo}
-                </CardTitle>
-                <CardDescription>
-                  {t.partnersDescription}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
         </div>
       </div>
     </>
