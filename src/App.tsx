@@ -25,9 +25,6 @@ import { PopunderAd } from "@/components/PopunderAd";
 import { SocialBarAd } from "@/components/ads/SocialBarAd";
 import { useEffect } from "react";
 import { initializeConsent } from "@/utils/consentManager";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { AdUnit } from "@/components/ads/AdUnit";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
@@ -99,16 +96,7 @@ const App = () => {
             <Sonner />
             <BrowserRouter>
               <PopunderAd />
-              <Header />
-              <main className="min-h-screen pt-16">
-                <AnimatedRoutes />
-              </main>
-              <Footer />
-              <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
-                <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
-                  <AdUnit type="banner-320x50" />
-                </div>
-              </div>
+              <AnimatedRoutes />
               <ConsentBanner />
               <SocialBarAd />
             </BrowserRouter>
