@@ -225,25 +225,24 @@ export default function Index() {
       
       <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
       {/* Modern Header */}
-      <header role="banner" className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-card/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
-        <div className={`glass border-b border-white/20 dark:border-gray-800/20 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+      <header role="banner" className={`sticky top-0 z-[200] transition-all duration-300 ${scrolled ? 'bg-white dark:bg-slate-900 shadow-lg' : 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md'}`}>
+        <div className={`border-b border-slate-200 dark:border-slate-800 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}>
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 md:gap-4">
                 <div className="relative group">
-                  <div className={`absolute inset-0 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300 ${scrolled ? 'opacity-50' : 'opacity-100'}`}></div>
                   <picture>
                     <source srcSet="/logos/taawidaty-logo.webp" type="image/webp" />
                     <img
                       src="/logos/TAAWIDATY.png"
                       alt="Taawidaty logo"
-                      width="48"
-                      height="48"
-                      className={`relative group-hover:scale-105 transition-all duration-300 aspect-square ${scrolled ? 'h-8 w-8' : 'h-12 w-12'}`}
+                      width="40"
+                      height="40"
+                      className={`relative group-hover:scale-105 transition-all duration-300 aspect-square ${scrolled ? 'h-8 w-8' : 'h-10 w-10 md:h-12 md:w-12'}`}
                     />
                   </picture>
                 </div>
-                <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl'}`}>
+                <div className={`font-black text-gradient-modern ${isRTL ? 'font-arabic' : ''} transition-all duration-300 ${scrolled ? 'text-base md:text-xl' : 'text-xl md:text-3xl'}`}>
                   {t.app.title}
                 </div>
               </div>
@@ -264,11 +263,9 @@ export default function Index() {
                 </Link>
               </nav>
               
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2 p-2 rounded-xl glass-card">
-                  <ThemeToggle />
-                  <LanguageToggle />
-                </div>
+              <div className="flex items-center gap-1 md:gap-2">
+                <ThemeToggle />
+                <LanguageToggle />
               </div>
             </div>
           </div>
@@ -279,38 +276,37 @@ export default function Index() {
       <main role="main">
       {/* Hero Section */}
       {step === 1 && (
-        <section className="relative px-4 py-12 md:py-16 max-w-7xl mx-auto">
-          {/* Modern background with warm decorative elements */}
+        <section className="relative px-4 py-8 md:py-16 max-w-7xl mx-auto">
+          {/* Modern background with warm decorative elements - Smaller on mobile */}
           <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-amber-100/25 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-10 md:top-20 left-5 md:left-10 w-40 h-40 md:w-72 md:h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
+          <div className="absolute top-20 md:top-40 right-5 md:right-10 w-40 h-40 md:w-72 md:h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
 
           <div className="relative z-10 text-center animate-slide-up">
             {/* Modern badge */}
-            <div className="mb-6 inline-flex items-center">
-              <div className="glass px-6 py-3 rounded-full shadow-glow hover-lift">
-                <div className="flex items-center gap-3">
-                  <Sparkles className="w-5 h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
-                  <span className={`text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
+            <div className="mb-4 md:mb-6 inline-flex items-center">
+              <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-glow hover-lift">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
+                  <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
                     {t.app.subtitle}
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Main heading - H1 for SEO */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+            {/* Main heading - H1 for SEO - Better mobile sizing */}
+            <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight px-2 ${isRTL ? 'font-arabic' : ''}`}>
               {renderHeroTitle()}
             </h1>
 
-            {/* Modern subtitle */}
-            <p className={`text-lg md:text-xl text-slate-600 dark:text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+            {/* Modern subtitle - Better mobile sizing */}
+            <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
               {t.hero.subtitle}
             </p>
 
           {/* Two Options Cards */}
-          <div className="max-w-5xl mx-auto mb-8">
+          <div className="max-w-5xl mx-auto mb-6 md:mb-8">
             <h3 className={`text-2xl md:text-3xl font-bold text-slate-900 dark:text-foreground mb-6 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
               {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
             </h3>
@@ -671,8 +667,10 @@ export default function Index() {
       </footer>
       
       {/* Mobile Sticky Footer Ad - 320x50 */}
-      <div className="fixed bottom-0 left-0 w-full z-[100] bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-[0_-2px_10px_rgba(0,0,0,0.1)] md:hidden flex justify-center items-center py-2">
-        <AdUnit type="banner-320x50" />
+      <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
+        <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
+          <AdUnit type="banner-320x50" />
+        </div>
       </div>
       </div>
 
