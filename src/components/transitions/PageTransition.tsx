@@ -6,6 +6,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
+import { BannerAd } from '@/components/BannerAd';
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -51,6 +52,7 @@ export function PageTransition({ children }: PageTransitionProps) {
         exit="exit"
       >
         {children}
+        <BannerAd />
       </motion.div>
     </AnimatePresence>
   );
