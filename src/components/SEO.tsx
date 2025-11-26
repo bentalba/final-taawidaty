@@ -159,7 +159,7 @@ export const SEO = ({
         <link
           key={`${alternate.hreflang}-${alternate.href}`}
           rel="alternate"
-          hreflang={alternate.hreflang}
+          hrefLang={alternate.hreflang}
           href={alternate.href}
         />
       ))}
