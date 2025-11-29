@@ -12,10 +12,22 @@
 
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from 'react-helmet-async';
+import { StatusBar, Style } from '@capacitor/status-bar';
 import App from "./App.tsx";
 import "./index.css";
 
 const isDev = import.meta.env.DEV;
+
+// Initialize native features (Status Bar for Android)
+const initNative = async () => {
+  try {
+    await StatusBar.setStyle({ style: Style.Dark });
+    await StatusBar.setBackgroundColor({ color: '#7C3AED' }); // Matches theme-color from index.html
+  } catch (e) {
+    // Web browser mode, ignore
+  }
+};
+initNative();
 
 if (isDev) {
   console.log("=== TAAWIDATY App Starting ===");

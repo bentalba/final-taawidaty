@@ -25,6 +25,7 @@ import { PopunderAd } from "@/components/PopunderAd";
 import { SocialBarAd } from "@/components/ads/SocialBarAd";
 import { useEffect } from "react";
 import { initializeConsent } from "@/utils/consentManager";
+import { App as CapacitorApp } from '@capacitor/app';
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
@@ -84,6 +85,21 @@ const App = () => {
   // Initialize consent management on app mount
   useEffect(() => {
     initializeConsent();
+  }, []);
+
+  // Handle Android hardware back button
+  useEffect(() => {
+    CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+      if (!canGoBack) {
+        CapacitorApp.exitApp();
+      } else {
+        window.history.back();
+      }
+    });
+
+    return () => {
+      CapacitorApp.removeAllListeners();
+    };
   }, []);
 
   return (

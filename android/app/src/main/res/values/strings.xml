@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Taawidaty</string>
+    <string name="title_activity_main">Taawidaty</string>
+    <string name="package_name">com.taawidaty.app</string>
+    <string name="custom_url_scheme">com.taawidaty.app</string>
+</resources>
