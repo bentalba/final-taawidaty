@@ -1,15 +1,21 @@
 /**
  * Popunder Ad Component
- * Loads popunder ad script on every page
+ * Loads popunder ad script on every page (WEB ONLY - disabled in native app)
  * 
  * @author BENTALBA ZAKARIA
  * @copyright 2025 BENTALBA ZAKARIA
  */
 
 import { useEffect } from 'react';
+import { isNativeApp } from '@/utils/platform';
 
 export function PopunderAd() {
   useEffect(() => {
+    // Don't load popunder ads in native app - too intrusive
+    if (isNativeApp()) {
+      return;
+    }
+
     // Load the popunder ad script (place before </head>)
     const script = document.createElement('script');
     script.type = 'text/javascript';

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import { AdUnit } from '@/components/ads/AdUnit';
+import { isNativeApp } from '@/utils/platform';
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -56,22 +57,24 @@ export function PageTransition({ children }: PageTransitionProps) {
           {children}
         </div>
         
-        {/* Responsive Bottom Ad - Mobile Optimized */}
-        <div className="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-4 px-4 mt-8">
-          <div className="container mx-auto max-w-6xl">
-            <p className="text-xs text-center text-slate-400 mb-3">Advertisement</p>
-            
-            {/* Mobile: 300x250 */}
-            <div className="flex justify-center md:hidden">
-              <AdUnit type="banner-300x250" className="w-full" />
-            </div>
-            
-            {/* Desktop: 728x90 */}
-            <div className="hidden md:flex md:justify-center">
-              <AdUnit type="banner-728x90" className="w-full" />
+        {/* Responsive Bottom Ad - Web only, hidden in native app */}
+        {!isNativeApp() && (
+          <div className="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-4 px-4 mt-8">
+            <div className="container mx-auto max-w-6xl">
+              <p className="text-xs text-center text-slate-400 mb-3">Advertisement</p>
+              
+              {/* Mobile: 300x250 */}
+              <div className="flex justify-center md:hidden">
+                <AdUnit type="banner-300x250" className="w-full" />
+              </div>
+              
+              {/* Desktop: 728x90 */}
+              <div className="hidden md:flex md:justify-center">
+                <AdUnit type="banner-728x90" className="w-full" />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </motion.div>
     </AnimatePresence>
   );

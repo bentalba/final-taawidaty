@@ -4,12 +4,19 @@ const config: CapacitorConfig = {
   appId: 'com.taawidaty.app',
   appName: 'Taawidaty',
   webDir: 'dist',
-  // Enable live reload during development
-  // Comment out server block for production builds
-  server: {
-    url: 'http://172.20.10.2:8080', // Your Mac's IP (run: ipconfig getifaddr en0)
-    cleartext: true
+  android: {
+    backgroundColor: '#0D7490'
+  },
+  plugins: {
+    StatusBar: {
+      backgroundColor: '#0B6177'
+    }
   }
+  // Uncomment below for live reload during development:
+  // server: {
+  //   url: 'http://YOUR_MAC_IP:8080',
+  //   cleartext: true
+  // }
 };
 
 export default config;

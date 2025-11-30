@@ -1,0 +1,157 @@
+/**
+ * TAAWIDATY Native App Design System
+ * Based on Material Design 3 & Healthcare App Best Practices
+ * 
+ * This design system applies ONLY to the native mobile app (Capacitor)
+ * The website retains its original styling
+ * 
+ * Color theme: Medical Blue (matching the website)
+ */
+
+/* ============================================
+   COLOR PALETTE - Medical/Healthcare Theme
+   ============================================ */
+
+:root {
+  /* Primary Colors - Medical Blue (matching website HSL 199) */
+  --app-primary-50: #E3F2FD;
+  --app-primary-100: #BBDEFB;
+  --app-primary-200: #90CAF9;
+  --app-primary-300: #64B5F6;
+  --app-primary-400: #42A5F5;
+  --app-primary-500: #0D7490;  /* Main Primary - Medical Blue */
+  --app-primary-600: #0B6177;
+  --app-primary-700: #094E5F;
+  --app-primary-800: #073B47;
+  --app-primary-900: #052830;
+
+  /* Secondary Colors - Teal Accent */
+  --app-secondary-50: #E0F2F1;
+  --app-secondary-100: #B2DFDB;
+  --app-secondary-200: #80CBC4;
+  --app-secondary-300: #4DB6AC;
+  --app-secondary-400: #26A69A;
+  --app-secondary-500: #009688;  /* Main Secondary */
+  --app-secondary-600: #00897B;
+  --app-secondary-700: #00796B;
+  --app-secondary-800: #00695C;
+  --app-secondary-900: #004D40;
+
+  /* Accent Colors - Health Red (for alerts/errors) */
+  --app-accent-error: #D32F2F;
+  --app-accent-warning: #FFA726;
+  --app-accent-success: #4CAF50;
+  --app-accent-info: #29B6F6;
+
+  /* Neutral Colors */
+  --app-neutral-50: #FAFAFA;
+  --app-neutral-100: #F5F5F5;
+  --app-neutral-200: #EEEEEE;
+  --app-neutral-300: #E0E0E0;
+  --app-neutral-400: #BDBDBD;
+  --app-neutral-500: #9E9E9E;
+  --app-neutral-600: #757575;
+  --app-neutral-700: #616161;
+  --app-neutral-800: #424242;
+  --app-neutral-900: #212121;
+
+  /* Surface Colors */
+  --app-surface-primary: #FFFFFF;
+  --app-surface-secondary: #F8FAF9;
+  --app-surface-elevated: #FFFFFF;
+
+  /* Text Colors */
+  --app-text-primary: #1A1A1A;
+  --app-text-secondary: #5F6368;
+  --app-text-disabled: #9E9E9E;
+  --app-text-on-primary: #FFFFFF;
+  --app-text-on-secondary: #FFFFFF;
+
+  /* Spacing Scale (4dp base) */
+  --app-space-1: 4px;
+  --app-space-2: 8px;
+  --app-space-3: 12px;
+  --app-space-4: 16px;
+  --app-space-5: 20px;
+  --app-space-6: 24px;
+  --app-space-8: 32px;
+  --app-space-10: 40px;
+  --app-space-12: 48px;
+  --app-space-16: 64px;
+
+  /* Border Radius */
+  --app-radius-sm: 4px;
+  --app-radius-md: 8px;
+  --app-radius-lg: 12px;
+  --app-radius-xl: 16px;
+  --app-radius-2xl: 24px;
+  --app-radius-full: 9999px;
+
+  /* Shadows (Material Design 3) */
+  --app-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --app-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --app-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --app-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Typography */
+  --app-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --app-font-family-arabic: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+
+  /* Font Sizes */
+  --app-text-xs: 12px;
+  --app-text-sm: 14px;
+  --app-text-base: 16px;
+  --app-text-lg: 18px;
+  --app-text-xl: 20px;
+  --app-text-2xl: 24px;
+  --app-text-3xl: 30px;
+  --app-text-4xl: 36px;
+
+  /* Line Heights */
+  --app-leading-tight: 1.25;
+  --app-leading-normal: 1.5;
+  --app-leading-relaxed: 1.75;
+
+  /* Animation Durations */
+  --app-duration-fast: 150ms;
+  --app-duration-normal: 200ms;
+  --app-duration-slow: 300ms;
+  --app-duration-slower: 500ms;
+
+  /* Easing Functions */
+  --app-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --app-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --app-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --app-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Component Heights */
+  --app-button-height: 56px;
+  --app-input-height: 56px;
+  --app-search-height: 56px;
+  --app-navbar-height: 64px;
+  --app-bottomnav-height: 80px;
+  --app-touch-target: 48px;
+}
+
+/* Dark Mode Variables - Using .dark class from next-themes */
+.dark .native-app,
+.native-app.dark,
+[data-app-theme="dark"] {
+  --app-surface-primary: #121212;
+  --app-surface-secondary: #1E1E1E;
+  --app-surface-elevated: #2D2D2D;
+  --app-text-primary: #FFFFFF;
+  --app-text-secondary: #B0B0B0;
+  --app-text-disabled: #6B6B6B;
+  --app-neutral-50: #1A1A1A;
+  --app-neutral-100: #2D2D2D;
+  --app-neutral-200: #3D3D3D;
+  --app-neutral-300: #4D4D4D;
+  --app-neutral-400: #6B6B6B;
+  --app-neutral-500: #8B8B8B;
+  
+  /* Dark shadows */
+  --app-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --app-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --app-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}

@@ -1,12 +1,13 @@
 /**
  * Professional Ad Unit Component
- * Handles multiple ad sizes with responsive placement
+ * Handles multiple ad sizes with responsive placement (WEB ONLY)
  * 
  * @author BENTALBA ZAKARIA
  * @copyright 2025 BENTALBA ZAKARIA
  */
 
 import React, { useEffect, useRef } from 'react';
+import { isNativeApp } from '@/utils/platform';
 
 // Define all available ad types based on approved sizes
 type AdType = 
@@ -24,6 +25,11 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
   const adContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Don't load any ads in native app
+    if (isNativeApp()) {
+      return;
+    }
+
     if (adContainerRef.current) {
       // Clear previous content to prevent duplicates
       adContainerRef.current.innerHTML = '';
@@ -115,6 +121,11 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
       }
     };
   }, [type]);
+
+  // Don't render anything in native app
+  if (isNativeApp()) {
+    return null;
+  }
 
   // Dimensions for container to prevent layout shift (CLS)
   const dimensions = {

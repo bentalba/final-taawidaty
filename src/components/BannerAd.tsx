@@ -1,15 +1,21 @@
 /**
  * Banner Ad Component
- * Displays banner ad on every page without disrupting layout
+ * Displays banner ad on every page without disrupting layout (WEB ONLY)
  * 
  * @author BENTALBA ZAKARIA
  * @copyright 2025 BENTALBA ZAKARIA
  */
 
 import { useEffect } from 'react';
+import { isNativeApp } from '@/utils/platform';
 
 export function BannerAd() {
   useEffect(() => {
+    // Don't load banner ads in native app
+    if (isNativeApp()) {
+      return;
+    }
+
     // Load the banner ad script
     const script = document.createElement('script');
     script.async = true;
@@ -25,6 +31,11 @@ export function BannerAd() {
       }
     };
   }, []);
+
+  // Don't render anything in native app
+  if (isNativeApp()) {
+    return null;
+  }
 
   return (
     <div className="w-full bg-transparent py-4 px-4 my-4">

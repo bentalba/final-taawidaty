@@ -13,18 +13,26 @@
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from 'react-helmet-async';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { Capacitor } from '@capacitor/core';
 import App from "./App.tsx";
 import "./index.css";
+// App-specific styles (only applied in native app via CSS selectors)
+import "./styles/app-design-system.css";
+import "./styles/app-native.css";
 
 const isDev = import.meta.env.DEV;
 
 // Initialize native features (Status Bar for Android)
 const initNative = async () => {
+  if (!Capacitor.isNativePlatform()) return;
+  
   try {
-    await StatusBar.setStyle({ style: Style.Dark });
-    await StatusBar.setBackgroundColor({ color: '#7C3AED' }); // Matches theme-color from index.html
+    await StatusBar.setStyle({ style: Style.Light });
+    await StatusBar.setBackgroundColor({ color: '#1B7D47' }); // Medical Green
+    // Add native class to body for CSS targeting
+    document.body.classList.add('native-app');
   } catch (e) {
-    // Web browser mode, ignore
+    console.warn('StatusBar not available:', e);
   }
 };
 initNative();

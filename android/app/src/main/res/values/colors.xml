@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Medical Blue Theme - matching website -->
+    <color name="colorPrimary">#0D7490</color>
+    <color name="colorPrimaryDark">#0B6177</color>
+    <color name="colorAccent">#009688</color>
+    
+    <!-- Status bar color -->
+    <color name="statusBarColor">#0B6177</color>
+</resources>

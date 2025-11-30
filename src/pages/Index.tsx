@@ -30,6 +30,8 @@ import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { loadMedications } from '@/data/medicationsLoader';
 import { BannerAd } from '@/components/BannerAd';
 import { AdUnit } from '@/components/ads/AdUnit';
+import { isNativeApp } from '@/utils/platform';
+import { AppHome } from '@/components/app/AppHome';
 
 
 interface Medication {
@@ -52,6 +54,11 @@ interface CalculationResult {
 export default function Index() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
+
+  // For native app, render the app-specific home screen
+  if (isNativeApp()) {
+    return <AppHome />;
+  }
 
   // Custom hero title rendering with animated words
   const renderHeroTitle = () => {
@@ -635,12 +642,14 @@ export default function Index() {
         </div>
       </footer>
       
-      {/* Mobile Sticky Footer Ad - 320x50 */}
-      <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
-        <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
-          <AdUnit type="banner-320x50" />
+      {/* Mobile Sticky Footer Ad - 320x50 (Web only) */}
+      {!isNativeApp() && (
+        <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
+          <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
+            <AdUnit type="banner-320x50" />
+          </div>
         </div>
-      </div>
+      )}
       </div>
 
       {/* Confetti Celebration */}
