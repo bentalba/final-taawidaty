@@ -21,7 +21,6 @@ import { ThemeProvider } from "next-themes";
 import { SEO } from "@/components/SEO";
 import { PageTransition } from "@/components/transitions/PageTransition";
 import { ConsentBanner } from "@/components/ConsentBanner";
-import { PopunderAd } from "@/components/PopunderAd";
 import { SocialBarAd } from "@/components/ads/SocialBarAd";
 import { BottomNavigation } from "@/components/app/BottomNavigation";
 import { useEffect } from "react";
@@ -47,6 +46,8 @@ import EditorialPolicy from "./pages/EditorialPolicy";
 import CookiePreferences from "./pages/CookiePreferences";
 import AuthorBio from "./pages/AuthorBio";
 import PriceChecker from "./pages/PriceChecker";
+import FaqCnops from "./pages/FaqCnops";
+import FaqCnss from "./pages/FaqCnss";
 import NotFound from "./pages/NotFound";
 import FavoritesPage from "./pages/app/FavoritesPage";
 import SettingsPage from "./pages/app/SettingsPage";
@@ -90,6 +91,8 @@ function AnimatedRoutes() {
           <Route path="/author" element={<PageTransition><AuthorBio /></PageTransition>} />
           <Route path="/cookies" element={<PageTransition><CookiePreferences /></PageTransition>} />
           <Route path="/price-checker" element={<PageTransition><PriceChecker /></PageTransition>} />
+          <Route path="/faq-cnops" element={<PageTransition><FaqCnops /></PageTransition>} />
+          <Route path="/faq-cnss" element={<PageTransition><FaqCnss /></PageTransition>} />
           <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
         </Routes>
       </AnimatePresence>
@@ -104,12 +107,17 @@ const App = () => {
     initializeConsent();
   }, []);
 
-  // Handle Android hardware back button
+  // Handle Android hardware back button - synced with React Router
   useEffect(() => {
     CapacitorApp.addListener('backButton', ({ canGoBack }) => {
-      if (!canGoBack) {
+      // Get current path from window.location since we're outside Router context
+      const currentPath = window.location.pathname;
+      
+      // If on home screen, confirm exit
+      if (currentPath === '/' || currentPath === '/home') {
         CapacitorApp.exitApp();
       } else {
+        // Let React Router handle the back logic visually
         window.history.back();
       }
     });
@@ -128,7 +136,6 @@ const App = () => {
             <Toaster />
             <Sonner />
             <BrowserRouter>
-              <PopunderAd />
               <AnimatedRoutes />
               <ConsentBanner />
               <SocialBarAd />

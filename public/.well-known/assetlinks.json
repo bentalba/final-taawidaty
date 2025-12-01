@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.taawidaty.app",
+    "sha256_cert_fingerprints": [
+      "59:EA:3A:92:62:C7:DA:06:47:BE:A1:33:B7:54:35:21:A8:58:B0:1C:B5:90:1D:27:F3:69:3F:D2:38:26:C2:0F"
+    ]
+  }
+}]

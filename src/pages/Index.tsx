@@ -10,7 +10,7 @@
  * in derivative works without explicit permission.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
@@ -24,14 +24,18 @@ import { SuccessCelebration } from '@/components/ui/Confetti';
 import { EnhancedCard } from '@/components/ui/EnhancedComponents';
 import GradientText from '@/components/ui/GradientText';
 import { CNSSDisclaimer } from '@/components/ui/CNSSDisclaimer';
-import { ArrowRight, CheckCircle2, Sparkles, X, Plus, ShoppingCart, Search } from 'lucide-react';
+import { PopunderAd } from '@/components/PopunderAd';
+import { SavingsCounter } from '@/components/SavingsCounter';
+import { SocialProofBadge } from '@/components/SocialProofBadge';
+import { ArrowRight, CheckCircle2, Sparkles, X, Plus, ShoppingCart, Search, Clock, Calculator, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
-import { loadMedications } from '@/data/medicationsLoader';
+import { loadMedications, preloadAllMedications } from '@/data/medicationsLoader';
 import { BannerAd } from '@/components/BannerAd';
 import { AdUnit } from '@/components/ads/AdUnit';
 import { isNativeApp } from '@/utils/platform';
 import { AppHome } from '@/components/app/AppHome';
+import { useCalculationHistory } from '@/hooks/useCalculationHistory';
 
 
 interface Medication {
@@ -150,6 +154,11 @@ export default function Index() {
   const [medications, setMedications] = useState<Medication[]>([]);
   const [results, setResults] = useState<CalculationResult[]>([]);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [showPopunder, setShowPopunder] = useState(false);
+  const { getRecentCalculations, addCalculation } = useCalculationHistory();
+  
+  // Get recent searches for quick re-calculate
+  const recentCalculations = getRecentCalculations(3);
 
   const addMedication = (medication: Medication) => {
     // Check if medication already added
@@ -157,6 +166,10 @@ export default function Index() {
       return;
     }
     setMedications(prev => [...prev, medication]);
+    // Auto-advance to step 2 when medication is added from hero search
+    if (step === 1) {
+      setStep(2);
+    }
   };
 
   const removeMedication = (medicationId: number) => {
@@ -182,8 +195,24 @@ export default function Index() {
     setResults(calculatedResults);
     setStep(3);
 
+    // Save to history
+    addCalculation(
+      medications.map(med => ({
+        id: med.id,
+        name: med.name,
+        ppv: med.ppv,
+        reimbursement: (med.base_remb * med.taux_remb) / 100,
+        patientPays: Math.max(0, med.ppv - (med.base_remb * med.taux_remb) / 100),
+        taux_remb: med.taux_remb
+      })),
+      'cnops'
+    );
+
     // Show confetti celebration
     setShowConfetti(true);
+    
+    // Trigger PopunderAd AFTER user receives value (delayed ad)
+    setShowPopunder(true);
   };
 
   const reset = () => {
@@ -192,6 +221,12 @@ export default function Index() {
     setResults([]);
     setShowConfetti(false);
   };
+
+  // Preload medications for offline support (Moroccan market optimization)
+  useEffect(() => {
+    // Preload all medications in background for offline use
+    preloadAllMedications().catch(console.error);
+  }, []);
 
   useEffect(() => {
     if (step !== 2) {
@@ -241,15 +276,13 @@ export default function Index() {
           {/* Hero Section */}
           {step === 1 && (
             <section className="relative px-4 py-8 md:py-16 max-w-7xl mx-auto">
-              {/* Modern background with warm decorative elements - Smaller on mobile */}
-              <div className="absolute inset-0 bg-gradient-modern -z-10"></div>
-              <div className="absolute top-10 md:top-20 left-5 md:left-10 w-40 h-40 md:w-72 md:h-72 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-              <div className="absolute top-20 md:top-40 right-5 md:right-10 w-40 h-40 md:w-72 md:h-72 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+              {/* Clean background - reduced gradient for medical trust */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-primary-50/30 to-white dark:from-background dark:via-primary-950/20 dark:to-background -z-10"></div>
 
               <div className="relative z-10 text-center animate-slide-up">
                 {/* Modern badge */}
                 <div className="mb-4 md:mb-6 inline-flex items-center">
-                  <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-glow hover-lift">
+                  <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-soft hover-lift">
                     <div className="flex items-center gap-2 md:gap-3">
                       <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
                       <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
@@ -265,57 +298,95 @@ export default function Index() {
                 </h1>
 
                 {/* Modern subtitle - Better mobile sizing */}
-                <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.hero.subtitle}
                 </p>
 
-                {/* Two Options Cards */}
+                {/* Social Proof & Savings - Moroccan Market Hooks */}
+                <div className="flex flex-wrap items-center justify-center gap-3 mb-6 md:mb-8">
+                  <SocialProofBadge language={language} />
+                  <SavingsCounter language={language} variant="compact" />
+                </div>
+
+                {/* SEARCH-FIRST HERO - Immediate Value Delivery */}
+                <div className="max-w-2xl mx-auto mb-8">
+                  <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-4 md:p-6">
+                    <h2 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-foreground mb-4 flex items-center justify-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                      <Search className="w-5 h-5 text-primary-600" />
+                      {language === 'ar' ? 'ابحث عن دوائك' : 'Recherchez votre médicament'}
+                    </h2>
+                    
+                    <MedicationSearchEnhanced
+                      placeholder={t.calculator.searchPlaceholder}
+                      onSelect={(selected) => addMedication(selected as Medication)}
+                      language={language}
+                    />
+
+                    {/* Recent Searches - Quick Re-calculate */}
+                    {recentCalculations.length > 0 && (
+                      <div className="mt-4 pt-4 border-t border-slate-200 dark:border-border">
+                        <p className={`text-xs text-slate-500 dark:text-muted-foreground mb-2 flex items-center gap-1 ${isRTL ? 'font-arabic' : ''}`}>
+                          <Clock className="w-3 h-3" />
+                          {language === 'ar' ? 'البحث الأخير:' : 'Récent:'}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {recentCalculations.slice(0, 3).map((calc, idx) => (
+                            <button
+                              key={calc.id}
+                              onClick={() => {
+                                // Re-populate medications from history
+                                const meds = calc.medications.map(m => ({
+                                  id: m.id,
+                                  name: m.name,
+                                  ppv: m.ppv,
+                                  base_remb: m.reimbursement / (m.taux_remb / 100),
+                                  taux_remb: m.taux_remb
+                                }));
+                                setMedications(meds);
+                                setStep(2);
+                              }}
+                              className={`text-xs px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary-100 dark:hover:bg-primary-900 rounded-full transition-colors ${isRTL ? 'font-arabic' : ''}`}
+                            >
+                              {calc.medications[0]?.name?.substring(0, 20)}
+                              {calc.medications.length > 1 && ` +${calc.medications.length - 1}`}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Secondary Options - Other Tools */}
                 <div className="max-w-5xl mx-auto mb-6 md:mb-8">
-                  <h3 className={`text-2xl md:text-3xl font-bold text-slate-900 dark:text-foreground mb-6 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
-                    {language === 'ar' ? 'اختر ما تحتاج' : 'Choisissez ce dont vous avez besoin'}
+                  <h3 className={`text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-300 mb-4 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                    {language === 'ar' ? 'أو اختر خدمة' : 'Ou choisissez un service'}
                   </h3>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 mb-8">
                     {/* Card 1: Reimbursement Calculator */}
                     <EnhancedCard
                       hoverable={true}
                       glowOnHover={true}
                       animateOnMount={true}
                       delay={0}
-                      className="p-6 text-center cursor-pointer group"
+                      className="p-5 text-center cursor-pointer group border-2 border-transparent hover:border-primary-200 dark:hover:border-primary-800"
                       onClick={() => setStep(2)}
                     >
-                      <div className="mx-auto mb-4 relative w-20 h-20">
-                        <picture>
-                          <source srcSet="/logos/remboursement-logo.webp" type="image/webp" />
-                          <img
-                            src="/logos/remboursement-logo.png"
-                            alt={language === 'ar' ? 'حساب التعويض' : 'Calcul remboursement'}
-                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                            width="80"
-                            height="80"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </picture>
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-xl bg-primary-100 dark:bg-primary-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Calculator className="w-7 h-7 text-primary-600 dark:text-primary-400" />
+                        </div>
+                        <div className="text-left flex-1">
+                          <h4 className={`text-base font-bold text-slate-900 dark:text-foreground mb-1 ${isRTL ? 'font-arabic text-right' : ''}`}>
+                            {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
+                          </h4>
+                          <p className={`text-xs text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
+                            {language === 'ar' ? 'اعرف كم ستسترد' : 'Découvrez combien vous serez remboursé'}
+                          </p>
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
                       </div>
-                      <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                        {language === 'ar' ? 'حساب التعويض من التأمين' : 'Calculer le remboursement'}
-                      </h4>
-                      <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                        {language === 'ar'
-                          ? 'احسب المبلغ الذي ستسترده من التأمين الصحي الخاص بك'
-                          : 'Calculez combien votre mutuelle va vous rembourser'}
-                      </p>
-                      <Button
-                        size="default"
-                        className="w-full group-hover:shadow-xl transition-all duration-300"
-                      >
-                        <span className={isRTL ? 'font-arabic' : ''}>
-                          {language === 'ar' ? 'ابدأ الحساب' : 'Commencer'}
-                        </span>
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </Button>
                     </EnhancedCard>
 
                     {/* Card 2: Price Checker */}
@@ -324,58 +395,38 @@ export default function Index() {
                       glowOnHover={true}
                       animateOnMount={true}
                       delay={0.1}
-                      className="p-6 text-center cursor-pointer group"
+                      className="p-5 text-center cursor-pointer group border-2 border-transparent hover:border-orange-200 dark:hover:border-orange-800"
                       onClick={() => {
                         window.location.href = '/prix-medicaments';
                       }}
                     >
-                      <div className="mx-auto mb-4 relative w-20 h-20">
-                        <picture>
-                          <source srcSet="/logos/price-check-logo.webp" type="image/webp" />
-                          <img
-                            src="/logos/price-check-logo.png"
-                            alt={language === 'ar' ? 'التحقق من السعر' : 'Vérification prix'}
-                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                            width="80"
-                            height="80"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </picture>
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <DollarSign className="w-7 h-7 text-orange-600 dark:text-orange-400" />
+                        </div>
+                        <div className="text-left flex-1">
+                          <h4 className={`text-base font-bold text-slate-900 dark:text-foreground mb-1 ${isRTL ? 'font-arabic text-right' : ''}`}>
+                            {language === 'ar' ? 'التحقق من السعر' : 'Vérifier le prix'}
+                          </h4>
+                          <p className={`text-xs text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
+                            {language === 'ar' ? 'أسعار الأدوية الرسمية' : 'Prix officiels des médicaments'}
+                          </p>
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
                       </div>
-                      <h4 className={`text-xl font-bold text-slate-900 dark:text-foreground mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                        {language === 'ar' ? 'التحقق من سعر الدواء' : 'Vérifier le prix'}
-                      </h4>
-                      <p className={`text-sm text-slate-600 dark:text-muted-foreground mb-4 ${isRTL ? 'font-arabic' : ''}`}>
-                        {language === 'ar'
-                          ? 'تحقق من سعر أي دواء في المغرب'
-                          : 'Vérifiez le prix de n\'importe quel médicament'}
-                      </p>
-                      <Button
-                        size="default"
-                        variant="outline"
-                        className="w-full group-hover:shadow-xl transition-all duration-300"
-                      >
-                        <span className={isRTL ? 'font-arabic' : ''}>
-                          {language === 'ar' ? 'تحقق من السعر' : 'Vérifier'}
-                        </span>
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </Button>
                     </EnhancedCard>
                   </div>
 
-                  {/* Modern Trust Badges - Moved Below Cards */}
-                  <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                  {/* Modern Trust Badges */}
+                  <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                     {[
                       { icon: CheckCircle2, text: t.hero.trustOfficial },
                       { icon: CheckCircle2, text: t.hero.trustInstant },
                       { icon: CheckCircle2, text: t.hero.trustFree }
                     ].map((item, index) => (
-                      <div key={index} className="group flex items-center gap-2 p-2 md:p-3 rounded-xl glass-card hover-lift">
-                        <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-success-100 dark:bg-success-950 group-hover:bg-success-200 dark:group-hover:bg-success-900 transition-colors">
-                          <item.icon className="w-4 h-4 md:w-5 md:h-5 text-success-600 dark:text-success-400" />
-                        </div>
-                        <span className={`text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
+                      <div key={index} className="flex items-center gap-2 p-2 rounded-lg bg-white/60 dark:bg-slate-800/60">
+                        <item.icon className="w-4 h-4 text-success-600 dark:text-success-400" />
+                        <span className={`text-xs font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -658,6 +709,9 @@ export default function Index() {
         message={language === 'ar' ? '🎉 تم الحساب بنجاح!' : '🎉 Calcul terminé !'}
         onComplete={() => setShowConfetti(false)}
       />
+
+      {/* PopunderAd - Triggered only after calculation (value delivered) */}
+      {showPopunder && <PopunderAd />}
     </>
   );
 }
