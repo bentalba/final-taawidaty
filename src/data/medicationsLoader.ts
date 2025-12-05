@@ -56,12 +56,12 @@ export async function loadMedications(insuranceType: 'cnops' | 'cnss' = 'cnops')
       return cnopsCacheData;
     }
   } catch (error) {
-    console.error(`Failed to load ${insuranceType} medications:`, error);
+    if (import.meta.env.DEV) console.error(`Failed to load ${insuranceType} medications:`, error);
     
     // Fallback to offline cache even if expired
     const fallbackCache = getCachedMedications();
     if (fallbackCache) {
-      console.log('[Loader] Using fallback offline cache');
+      if (import.meta.env.DEV) console.log('[Loader] Using fallback offline cache');
       if (insuranceType === 'cnss') {
         return fallbackCache.cnss || [];
       }
@@ -88,7 +88,7 @@ export async function preloadAllMedications() {
     loadMedications('cnops'),
     loadMedications('cnss')
   ]);
-  console.log('[Loader] All medications preloaded');
+  if (import.meta.env.DEV) console.log('[Loader] All medications preloaded');
 }
 
 // Check if offline cache is available

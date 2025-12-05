@@ -24,6 +24,8 @@ export interface MedicationCache {
   cnss: CachedMedication[];
 }
 
+const isDev = import.meta.env.DEV;
+
 /**
  * Save medications to cache
  */
@@ -31,15 +33,15 @@ export const cacheMedications = (data: MedicationCache): void => {
   try {
     localStorage.setItem(CACHE_KEY, JSON.stringify(data));
     localStorage.setItem(CACHE_TIMESTAMP_KEY, Date.now().toString());
-    console.log('[Cache] Medications cached successfully');
+    if (isDev) console.log('[Cache] Medications cached successfully');
   } catch (error) {
-    console.error('[Cache] Failed to cache medications:', error);
+    if (isDev) console.error('[Cache] Failed to cache medications:', error);
     // Try to free up space by clearing old data
     try {
       localStorage.removeItem(CACHE_KEY);
       localStorage.setItem(CACHE_KEY, JSON.stringify(data));
     } catch {
-      console.error('[Cache] Storage quota exceeded');
+      if (isDev) console.error('[Cache] Storage quota exceeded');
     }
   }
 };
@@ -59,14 +61,14 @@ export const getCachedMedications = (): MedicationCache | null => {
     // Check if cache is still valid
     const cacheAge = Date.now() - parseInt(timestamp, 10);
     if (cacheAge > CACHE_DURATION) {
-      console.log('[Cache] Cache expired, clearing...');
+      if (isDev) console.log('[Cache] Cache expired, clearing...');
       clearMedicationCache();
       return null;
     }
 
     return JSON.parse(cached);
   } catch (error) {
-    console.error('[Cache] Failed to read cache:', error);
+    if (isDev) console.error('[Cache] Failed to read cache:', error);
     return null;
   }
 };
