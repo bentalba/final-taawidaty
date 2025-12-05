@@ -1,254 +1,506 @@
-<div align="center"><div align="center"><div align="center"><div align="center"><div align="center">
+<div align="center"><div align="center"><div align="center"><div align="center"><div align="center"><div align="center">
 
 
+
+<!-- Logo & Branding -->
+
+<img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY" width="120"/>
 
 <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="150" style="border-radius: 20px;"/>
 
+# TAAWIDATY
 
+
+
+### تعويضاتي
 
 # TAAWIDATY | تعويضاتي<img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="180"/>  
 
+<p align="center">
 
+  <strong>🇲🇦 Morocco's Premier Medication Price & Reimbursement Calculator</strong>
+
+</p>
 
 **Morocco's #1 Medication Reimbursement Calculator**
 
+<p align="center">
 
+  Know your medication costs. Know your reimbursement. Save money.
+
+</p>
 
 *Check medication prices & calculate your CNOPS/CNSS reimbursement instantly*# TAAWIDATY | تعويضاتي  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200"/>    <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200"/>
 
+<!-- Badges Row 1 - Links -->
 
+<p align="center">
 
-[![Live](https://img.shields.io/badge/🌐_Live-taawidaty.ma-0D7490?style=for-the-badge)](https://taawidaty.ma)
+  <a href="https://taawidaty.ma"><img src="https://img.shields.io/badge/🌐_Website-taawidaty.ma-0D7490?style=for-the-badge" alt="Website"/></a>
+
+  <a href="https://play.google.com/store/apps/details?id=com.taawidaty.app"><img src="https://img.shields.io/badge/📱_Download-Play_Store-34A853?style=for-the-badge" alt="Play Store"/></a>[![Live](https://img.shields.io/badge/🌐_Live-taawidaty.ma-0D7490?style=for-the-badge)](https://taawidaty.ma)
+
+</p>
 
 [![Android](https://img.shields.io/badge/📱_Android-Play_Store-34A853?style=for-the-badge)](https://play.google.com/store/apps/details?id=com.taawidaty.app)
 
-### 🏥 Morocco's #1 Medication Reimbursement Calculator  
+<!-- Badges Row 2 - Tech -->
 
-![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
+<p align="center">### 🏥 Morocco's #1 Medication Reimbursement Calculator  
 
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)
+  <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React"/>
 
-![Capacitor](https://img.shields.io/badge/Capacitor-7-119EFF?style=flat-square&logo=capacitor)
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
 
-![Tailwind](https://img.shields.io/badge/Tailwind-3-38bdf8?style=flat-square&logo=tailwind-css)**Instant pricing • Accurate reimbursement • 8,111+ medications**  # TAAWIDATY | تعويضاتي  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200" style="border-radius: 20px;"/>  
+  <img src="https://img.shields.io/badge/Capacitor-7.0-119EFF?style=flat-square&logo=capacitor&logoColor=white" alt="Capacitor"/>
+
+  <img src="https://img.shields.io/badge/Tailwind-3.4-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)
+
+  <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"/>
+
+</p>![Capacitor](https://img.shields.io/badge/Capacitor-7-119EFF?style=flat-square&logo=capacitor)
 
 
 
-</div>
+<!-- Badges Row 3 - Status -->![Tailwind](https://img.shields.io/badge/Tailwind-3-38bdf8?style=flat-square&logo=tailwind-css)**Instant pricing • Accurate reimbursement • 8,111+ medications**  # TAAWIDATY | تعويضاتي  <img src="public/logos/TAAWIDATY.png" alt="TAAWIDATY Logo" width="200" style="border-radius: 20px;"/>  
+
+<p align="center">
+
+  <img src="https://img.shields.io/badge/Version-2.0.0-success?style=flat-square" alt="Version"/>
+
+  <img src="https://img.shields.io/badge/Medications-8,111+-blue?style=flat-square" alt="Medications"/>
+
+  <img src="https://img.shields.io/badge/License-Proprietary-red?style=flat-square" alt="License"/></div>
+
+</p>
 
 
+
+---
 
 ---[![Live Demo](https://img.shields.io/badge/🌐_Live-taawidaty.ma-0D7490?style=for-the-badge)](https://taawidaty.ma)  
 
+<!-- Hero Screenshot -->
 
-
-## What is TAAWIDATY?[![Play Store](https://img.shields.io/badge/📱_Android-Play_Store-34A853?style=for-the-badge)](https://play.google.com/store/apps/details?id=com.taawidaty.app)
-
-
-
-**TAAWIDATY** (تعويضاتي - "My Reimbursements") helps Moroccans check medication prices and calculate insurance reimbursements from **CNOPS** and **CNSS**.[![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)  ### Morocco's #1 Medication Price & Reimbursement Calculator    # TAAWIDATY | تعويضاتي
+<img src="https://raw.githubusercontent.com/bentalba/final-taawidaty/main/assets/screenshot-hero.png" alt="TAAWIDATY App Screenshot" width="800"/>
 
 
 
-### Features
+</div>## What is TAAWIDATY?[![Play Store](https://img.shields.io/badge/📱_Android-Play_Store-34A853?style=for-the-badge)](https://play.google.com/store/apps/details?id=com.taawidaty.app)
 
 
+
+---
+
+
+
+## 🎯 The Problem**TAAWIDATY** (تعويضاتي - "My Reimbursements") helps Moroccans check medication prices and calculate insurance reimbursements from **CNOPS** and **CNSS**.[![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)  ### Morocco's #1 Medication Price & Reimbursement Calculator    # TAAWIDATY | تعويضاتي
+
+
+
+Every day, millions of Moroccans visit pharmacies without knowing:
+
+- **How much their medications will cost**
+
+- **How much their insurance (CNOPS/CNSS) will reimburse**### Features
+
+- **Whether there's a cheaper generic alternative**
+
+
+
+This leads to **budget surprises** and **delayed healthcare decisions**.
 
 - 🔍 **Search** - Find 8,111+ medications by name or active ingredient---  
 
+## 💡 The Solution
+
 - 💰 **Prices** - Official PPV prices displayed clearly
 
-- 🧮 **Calculator** - Instant CNOPS & CNSS reimbursement calculations
+**TAAWIDATY** gives you instant access to:
 
-- 📱 **Mobile App** - Native Android app on Google Play
+- ✅ Official prices for **8,111+ medications**- 🧮 **Calculator** - Instant CNOPS & CNSS reimbursement calculations
+
+- ✅ Exact reimbursement calculations for **CNOPS** and **CNSS**
+
+- ✅ Search by medication name or active ingredient (DCI)- 📱 **Mobile App** - Native Android app on Google Play
+
+- ✅ Works **offline** - no internet required after first load
 
 - 🌙 **Dark Mode** - Easy on the eyes![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)  <p>  # 🏥 TAAWIDATY | تعويضاتي  
 
+---
+
 - 🌐 **Bilingual** - Arabic & French support
+
+## ✨ Features
 
 - ⚡ **Offline** - Works without internet![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript)
 
+<table>
 
+<tr>
+
+<td width="50%">
 
 ---![Capacitor](https://img.shields.io/badge/Capacitor-7.0-119EFF?style=flat-square&logo=capacitor)    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>
 
+### 🔍 Smart Search
+
+Find any medication instantly by name or DCI (active ingredient). Fuzzy search handles typos.
 
 
-## Quick Start![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwind-css)
+
+### 💰 Price Transparency## Quick Start![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwind-css)
+
+See official PPV prices in **bold, clear text**. No surprises at the pharmacy.
 
 
 
-```bash  </p>    ### 🏥 Calculateur de Remboursement des Médicaments - Maroc
+### 🧮 Instant Calculator
 
-# Install
+Select your insurance (CNOPS/CNSS), add medications, get your exact reimbursement.```bash  </p>    ### 🏥 Calculateur de Remboursement des Médicaments - Maroc
+
+
+
+### 📊 Calculation History# Install
+
+Track all your past calculations. Export and share results.
 
 git clone https://github.com/bentalba/final-taawidaty.git</div>
 
-cd final-taawidaty
+</td>
 
-bun install
+<td width="50%">cd final-taawidaty
 
 
 
-# Run---
+### 🌙 Dark Modebun install
 
-bun run dev
+Easy on the eyes, day or night. Automatic theme detection.
+
+
+
+### 🌐 Bilingual
+
+Full **Arabic (RTL)** and **French** support. Switch with one tap.# Run---
+
+
+
+### ⚡ Offline Modebun run dev
+
+Medications cached locally. Calculate without internet.
 
   [![Live Demo](https://img.shields.io/badge/🌐_Live-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  ### Morocco's #1 Medication Price & Reimbursement Calculator  
 
-# Build
+### 📱 Native Mobile App
 
-bun run build## 🌟 What is TAAWIDATY?
+Smooth, fast Android app. Available on Google Play.# Build
 
-```
 
-  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
 
-### Android Build
+</td>bun run build## 🌟 What is TAAWIDATY?
 
-**TAAWIDATY** (تعويضاتي - "My Reimbursements" in Arabic) is Morocco's most comprehensive medication price checker and reimbursement calculator. Instantly access official prices for **8,111+ medications** and calculate exact reimbursement from **CNOPS** or **CNSS** insurance.
+</tr>
 
-```bash
+</table>```
+
+
+
+---  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
+
+
+
+## 🚀 Quick Start### Android Build
+
+
+
+### Prerequisites**TAAWIDATY** (تعويضاتي - "My Reimbursements" in Arabic) is Morocco's most comprehensive medication price checker and reimbursement calculator. Instantly access official prices for **8,111+ medications** and calculate exact reimbursement from **CNOPS** or **CNSS** insurance.
+
+
+
+- [Bun](https://bun.sh/) (recommended) or Node.js 18+```bash
+
+- [Android Studio](https://developer.android.com/studio) (for mobile builds)
 
 bun run build  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)  ### حاسبة أسعار الأدوية والتعويضات في المغرب  **Designed & Developed by [BENTALBA ZAKARIA](https://github.com/salma1-create)**
 
+### Installation
+
 bunx cap sync android
 
-cd android && ./gradlew assembleDebug### 🎯 Perfect For
+```bash
+
+# Clone the repositorycd android && ./gradlew assembleDebug### 🎯 Perfect For
+
+git clone https://github.com/bentalba/final-taawidaty.git
+
+cd final-taawidaty```
+
+
+
+# Install dependencies  
+
+bun install
+
+---
+
+# Start development server
+
+bun run dev| User | Benefit |
 
 ```
 
-  
-
----
-
-| User | Benefit |
-
 ## Tech Stack
+
+### Build Commands
 
 |------|---------|  <br/>    
 
-- **Frontend**: React 18, TypeScript, Tailwind CSS
+```bash
+
+# Production build (web)- **Frontend**: React 18, TypeScript, Tailwind CSS
+
+bun run build
 
 - **Build**: Vite, Bun| 💊 **Patients** | Check medication prices before visiting the pharmacy |
 
-- **Mobile**: Capacitor 7
+# Preview production build
 
-- **Animation**: Framer Motion| 🏥 **Healthcare Professionals** | Quick reference for medication costs |
+bun run preview- **Mobile**: Capacitor 7
 
 
+
+# Android build- **Animation**: Framer Motion| 🏥 **Healthcare Professionals** | Quick reference for medication costs |
+
+bun run build
+
+bunx cap sync android
+
+cd android && ./gradlew assembleDebug
 
 ---| 📊 **Insurance Holders** | Calculate exact CNOPS/CNSS reimbursement |
 
+# Release APK (requires signing key)
 
+cd android && ./gradlew assembleRelease
+
+```
 
 ## Data| 👨‍👩‍👧‍👦 **Families** | Budget healthcare expenses accurately |  ![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat-square&logo=react&logoColor=white)  <p align="center">  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat&logo=react)](https://reactjs.org/)
 
+---
 
+
+
+## 🏗️ Architecture
 
 | Insurance | Medications |
 
-|-----------|-------------|
+```
 
-| CNOPS | 4,200+ |---  ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat-square&logo=typescript&logoColor=white)
+taawidaty/|-----------|-------------|
 
-| CNSS | 3,900+ |
+├── 📁 src/
 
+│   ├── 📁 components/      # Reusable UI components| CNOPS | 4,200+ |---  ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat-square&logo=typescript&logoColor=white)
 
+│   │   ├── ui/             # shadcn/ui components
 
-*Official government data, updated periodically.*
+│   │   ├── ads/            # Ad components| CNSS | 3,900+ |
 
-## ✨ Features  ![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat-square&logo=vite&logoColor=white)    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+│   │   └── app/            # App-specific components
 
----
+│   ├── 📁 pages/           # Route pages
 
+│   │   ├── app/            # Mobile app pages
 
+│   │   └── blog/           # Blog articles*Official government data, updated periodically.*
 
-## License
+│   ├── 📁 hooks/           # Custom React hooks
+
+│   ├── 📁 utils/           # Helper functions## ✨ Features  ![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat-square&logo=vite&logoColor=white)    <strong>Instant pricing • Accurate reimbursement • 8,111+ medications</strong>  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+
+│   ├── 📁 data/            # Medication databases (JSON)
+
+│   ├── 📁 contexts/        # React contexts---
+
+│   └── 📁 lib/             # Shared utilities
+
+├── 📁 public/              # Static assets
+
+├── 📁 android/             # Capacitor Android project
+
+└── 📁 docs/                # Documentation## License
+
+```
 
 ### Core Functionality  ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat-square&logo=tailwind-css&logoColor=white)
 
+---
+
 Proprietary. Code available for reference. **TAAWIDATY** brand is protected.
+
+## 📊 Data Sources
 
 - 🔍 **Smart Search** - Find medications by name or active ingredient (DCI)
 
----
+| Insurance | Medications | Update Frequency |
 
-- 💰 **Price Display** - Official PPV prices in bold, easy to read  </p>  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat&logo=vite)](https://vitejs.dev/)
+|-----------|-------------|------------------|---
 
-## Author
+| **CNOPS** | 4,200+ | Quarterly |
 
-- 🧮 **Reimbursement Calculator** - Instant CNOPS & CNSS calculations
-
-**BENTALBA ZAKARIA** - [taawidaty.ma](https://taawidaty.ma)
-
-- 📱 **Native Android App** - Available on Google Play Store  <br/>
-
-<div align="center">
+| **CNSS** | 3,900+ | Quarterly |- 💰 **Price Display** - Official PPV prices in bold, easy to read  </p>  [![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=flat&logo=vite)](https://vitejs.dev/)
 
 
 
-Made with ❤️ in Morocco 🇲🇦
-
-### User Experience  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-
-</div>
-
-- 🌙 **Dark Mode** - Easy on the eyes, day or night
-
-- 🌐 **Bilingual** - Full Arabic (RTL) and French support  ![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)
-
-- ⚡ **Offline Mode** - Works without internet (cached data)
-
-- 📊 **Calculation History** - Track past calculations  ![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=lighthouse)  [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+> 📌 Data sourced from official Moroccan government databases. Prices reflect current PPV (Prix Public de Vente).## Author
 
 
 
-### Technical  ![Lighthouse SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)
+---- 🧮 **Reimbursement Calculator** - Instant CNOPS & CNSS calculations
 
-- 🚀 **Lightning Fast** - Optimized for Moroccan networks
 
-- 📱 **Mobile First** - Touch-optimized, smooth scrolling  ![Core Web Vitals](https://img.shields.io/badge/Core_Web_Vitals-Passing-success?style=flat-square)  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
+
+## 🛠️ Tech Stack**BENTALBA ZAKARIA** - [taawidaty.ma](https://taawidaty.ma)
+
+
+
+| Layer | Technology |- 📱 **Native Android App** - Available on Google Play Store  <br/>
+
+|-------|------------|
+
+| **Framework** | React 18 with TypeScript |<div align="center">
+
+| **Styling** | Tailwind CSS + shadcn/ui |
+
+| **Build** | Vite 5 + Bun |
+
+| **Mobile** | Capacitor 7 (Android) |
+
+| **Animation** | Framer Motion |Made with ❤️ in Morocco 🇲🇦
+
+| **State** | React Context + TanStack Query |
+
+| **Icons** | Lucide React |### User Experience  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+
+
+
+---</div>
+
+
+
+## 🤝 Contributing- 🌙 **Dark Mode** - Easy on the eyes, day or night
+
+
+
+We welcome contributions! Here's how:- 🌐 **Bilingual** - Full Arabic (RTL) and French support  ![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)
+
+
+
+1. **Fork** the repository- ⚡ **Offline Mode** - Works without internet (cached data)
+
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)- 📊 **Calculation History** - Track past calculations  ![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=lighthouse)  [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-taawidaty.ma-0077be?style=for-the-badge)](https://taawidaty.ma)  [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+4. **Push** to branch (`git push origin feature/amazing-feature`)
+
+5. **Open** a Pull Request
+
+
+
+### Development Guidelines### Technical  ![Lighthouse SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)
+
+
+
+- Follow existing code style- 🚀 **Lightning Fast** - Optimized for Moroccan networks
+
+- Write meaningful commit messages
+
+- Test on both web and Android- 📱 **Mobile First** - Touch-optimized, smooth scrolling  ![Core Web Vitals](https://img.shields.io/badge/Core_Web_Vitals-Passing-success?style=flat-square)  [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/bentalba/final-taawidaty)
+
+- Update documentation as needed
 
 - ♿ **Accessible** - WCAG 2.1 compliant
 
+---
+
 - 🔒 **Privacy First** - No account required, local storage only
 
+## 📄 License
 
+
+
+This project is **proprietary software**.
 
 ---</div>  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)  [🌐 Demo](https://dawa-calcul-plus.vercel.app) • [📖 Documentation](#-features) • [🤝 Contributing](#-contributing)
 
+- ✅ Code structure available for **educational reference**
+
+- ❌ **TAAWIDATY** brand, logo, and name are protected trademarks
+
+- ❌ Medication database cannot be redistributed
+
+- ❌ Commercial use requires written permission## 🛠️ Tech Stack
 
 
-## 🛠️ Tech Stack
+
+See [LICENSE](LICENSE) for full details.
 
 
 
-| Category | Technology |---  
+---| Category | Technology |---  
 
-|----------|------------|
 
-| **Frontend** | React 18, TypeScript, Tailwind CSS |
 
-| **Build** | Vite 5, Bun |
+## 👨‍💻 Author|----------|------------|
 
-| **Mobile** | Capacitor 7 (Android) |## 🌟 What is TAAWIDATY?  <br/></div>
+
+
+<div align="center">| **Frontend** | React 18, TypeScript, Tailwind CSS |
+
+
+
+**BENTALBA ZAKARIA**| **Build** | Vite 5, Bun |
+
+
+
+[![GitHub](https://img.shields.io/badge/GitHub-bentalba-181717?style=flat-square&logo=github)](https://github.com/bentalba)| **Mobile** | Capacitor 7 (Android) |## 🌟 What is TAAWIDATY?  <br/></div>
+
+[![Website](https://img.shields.io/badge/Website-taawidaty.ma-0D7490?style=flat-square&logo=safari)](https://taawidaty.ma)
 
 | **Animation** | Framer Motion |
 
+</div>
+
 | **Icons** | Lucide React |
 
+---
 
+
+
+<div align="center">
 
 ---**TAAWIDATY** (تعويضاتي - meaning "My Reimbursements" in Arabic) is Morocco's most comprehensive medication price checker and reimbursement calculator. Get instant access to official prices for **8,111+ medications** and calculate your exact reimbursement from **CNOPS** or **CNSS** insurance.
 
+### 🌟 Star this repo if TAAWIDATY helped you!
 
+
+
+<br/>
 
 ## 🚀 Quick Start
 
+**Made with ❤️ in Morocco 🇲🇦**
 
+
+
+<sub>© 2025 BENTALBA ZAKARIA. All rights reserved.</sub>
 
 ### Prerequisites### 🎯 Perfect For  [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)---
+
+</div>
 
 - [Bun](https://bun.sh/) (recommended) or Node.js 18+
 
