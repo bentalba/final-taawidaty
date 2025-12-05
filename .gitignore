@@ -7,7 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.venv/
+
+# Build outputs
 dist
 dist-ssr
 *.local
@@ -29,3 +33,21 @@ android/app/*.jks
 android/app/*.keystore
 *.jks
 *.keystore
+
+# APK builds (too large for git)
+*.apk
+*.aab
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Misc
+*.backup
+*.bak
+Thumbs.db
