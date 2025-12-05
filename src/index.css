@@ -630,10 +630,23 @@
     -webkit-touch-callout: none;
   }
   
-  /* Optimize touch scrolling */
-  body {
+  /* Optimize touch scrolling - FIX SCROLL SHIFTING */
+  html, body {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #root {
+    overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
   
   /* Better focus states for touch devices */

@@ -27,8 +27,9 @@ const initNative = async () => {
   if (!Capacitor.isNativePlatform()) return;
   
   try {
-    await StatusBar.setStyle({ style: Style.Light });
-    await StatusBar.setBackgroundColor({ color: '#1B7D47' }); // Medical Green
+    // Use Dark style (white icons) with transparent/matching background
+    await StatusBar.setStyle({ style: Style.Dark });
+    await StatusBar.setBackgroundColor({ color: '#FFFFFF' }); // White to match app background
     // Add native class to body for CSS targeting
     document.body.classList.add('native-app');
   } catch (e) {

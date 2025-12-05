@@ -5,11 +5,12 @@ const config: CapacitorConfig = {
   appName: 'Taawidaty',
   webDir: 'dist',
   android: {
-    backgroundColor: '#0D7490'
+    backgroundColor: '#FFFFFF'
   },
   plugins: {
     StatusBar: {
-      backgroundColor: '#0B6177'
+      backgroundColor: '#FFFFFF',
+      style: 'DARK' // Dark icons on light background
     }
   }
   // Uncomment below for live reload during development:

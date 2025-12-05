@@ -255,14 +255,26 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
                 dir === 'rtl' && 'text-right'
               )}
             >
-              <div className={`font-bold text-slate-900 dark:text-card-foreground mb-1 ${language === 'ar' ? 'font-arabic' : ''}`}>
-                {result.name}
-              </div>
-              {result.dci && (
-                <div className="text-sm text-slate-500 dark:text-muted-foreground">
-                  {result.dci} {result.dosage && `• ${result.dosage}`}
+              <div className={cn("flex items-start justify-between gap-3", dir === 'rtl' && 'flex-row-reverse')}>
+                <div className="flex-1 min-w-0">
+                  <div className={`font-semibold text-slate-900 dark:text-card-foreground mb-1 ${language === 'ar' ? 'font-arabic' : ''}`}>
+                    {result.name}
+                  </div>
+                  {result.dci && (
+                    <div className="text-sm text-slate-500 dark:text-muted-foreground truncate">
+                      {result.dci} {result.dosage && `• ${result.dosage}`}
+                    </div>
+                  )}
                 </div>
-              )}
+                <div className={cn("flex-shrink-0 text-right", dir === 'rtl' && 'text-left')}>
+                  <div className="text-lg font-bold text-primary-700 dark:text-primary">
+                    {result.ppv.toFixed(2)} <span className="text-sm">DH</span>
+                  </div>
+                  <div className="text-xs text-slate-400 dark:text-muted-foreground">
+                    {language === 'ar' ? 'الثمن' : 'Prix'}
+                  </div>
+                </div>
+              </div>
             </motion.button>
           ))}
         </motion.div>

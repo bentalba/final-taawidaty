@@ -5,6 +5,6 @@
     <color name="colorPrimaryDark">#0B6177</color>
     <color name="colorAccent">#009688</color>
     
-    <!-- Status bar color -->
-    <color name="statusBarColor">#0B6177</color>
+    <!-- Status bar color - white to match app background -->
+    <color name="statusBarColor">#FFFFFF</color>
 </resources>
