@@ -4,6 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* RTL Direction Transition */
 .direction-transition * {
   transition: margin 0.3s ease, padding 0.3s ease !important;

@@ -46,10 +46,9 @@ export const OfflineIndicator = ({ language }: OfflineIndicatorProps) => {
   const { isOnline, wasOffline } = useNetworkStatus();
   const [showReconnected, setShowReconnected] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const _isNativeApp = isNativeApp();
 
-  // Only show in native app
-  if (!isNativeApp()) return null;
-
+  // Move useEffect before early return
   useEffect(() => {
     if (isOnline && wasOffline) {
       setShowReconnected(true);
@@ -60,6 +59,9 @@ export const OfflineIndicator = ({ language }: OfflineIndicatorProps) => {
       return () => clearTimeout(timer);
     }
   }, [isOnline, wasOffline]);
+
+  // Only show in native app
+  if (!_isNativeApp) return null;
 
   // Show "back online" message briefly
   if (showReconnected && !dismissed) {

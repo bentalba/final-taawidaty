@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Medical Blue Theme - matching website -->
-    <color name="colorPrimary">#0D7490</color>
-    <color name="colorPrimaryDark">#0B6177</color>
-    <color name="colorAccent">#009688</color>
+    <!-- Medical Blue Theme - Professional gradient colors -->
+    <color name="colorPrimary">#1e40af</color>
+    <color name="colorPrimaryDark">#1e3a8a</color>
+    <color name="colorAccent">#3b82f6</color>
     
-    <!-- Status bar color - white to match app background -->
-    <color name="statusBarColor">#FFFFFF</color>
+    <!-- Status bar color - matches header gradient -->
+    <color name="statusBarColor">#1e40af</color>
 </resources>

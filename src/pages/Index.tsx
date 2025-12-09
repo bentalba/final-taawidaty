@@ -58,9 +58,102 @@ interface CalculationResult {
 export default function Index() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
+  const _isNativeApp = isNativeApp();
+  
+  // All hooks must be called before any conditional returns
+  const scrollPosition = useScrollPosition();
+  const [selectedInsurance, setSelectedInsurance] = useState<'cnops' | 'cnss'>('cnops');
+  const [calculationResult, setCalculationResult] = useState<CalculationResult | null>(null);
+  const [medication, setMedication] = useState<Medication | null>(null);
+  const [showCelebration, setShowCelebration] = useState(false);
+  const [selectedMedication, setSelectedMedication] = useState<Medication | null>(null);
+  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [medications, setMedications] = useState<Medication[]>([]);
+  const [results, setResults] = useState<CalculationResult[]>([]);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [showPopunder, setShowPopunder] = useState(false);
+  const { getRecentCalculations, addCalculation } = useCalculationHistory();
+  
+  // Moved hooks before early return
+  const heroTitleSegments = useMemo(() => {
+    const words = t.hero.title.split(' ');
+    return {
+      leading: words.slice(0, -1).join(' '),
+      trailing: words.slice(-1)[0] ?? ''
+    };
+  }, [t.hero.title]);
+  
+  const metaTitle = language === 'ar'
+    ? 'حاسبة تعويض وأسعار الأدوية في المغرب - تعويضاتي'
+    : 'Calculateur Remboursement & Prix Médicaments Maroc 2025 | Taawidaty';
+  const metaDescription = language === 'ar'
+    ? 'احسب تعويض أدويتك من التأمين الصحي الإجباري فوراً أو تحقق من أسعار الأدوية الرسمية. قاعدة بيانات شاملة +10,000 دواء. حساب دقيق، مجاني 100٪!'
+    : 'Calculez instantanément votre remboursement assurance santé ou consultez les prix officiels des médicaments au Maroc. +10,000 médicaments référencés. Rapide, précis et 100% gratuit !';
+  const metaKeywords = language === 'ar'
+    ? [
+      'حساب تعويض الأدوية',
+      'أسعار الأدوية المغرب',
+      'تعويض التأمين الصحي',
+      'صيدلية المغرب',
+      'حاسبة التعويض',
+      'تعويضاتي'
+    ]
+    : [
+      'calculateur remboursement médicaments',
+      'prix médicaments maroc',
+      'remboursement assurance santé',
+      'pharmacie maroc prix',
+      'base médicaments maroc',
+      'taawidaty'
+    ];
+  const structuredData = useMemo(() => [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Taawidaty',
+      url: 'https://taawidaty.ma',
+      inLanguage: language === 'ar' ? 'ar-MA' : 'fr-MA',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://taawidaty.ma/?query={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    }
+  ], [language]);
+  
+  // Preload medications for offline support (Moroccan market optimization)
+  useEffect(() => {
+    // Preload all medications in background for offline use
+    preloadAllMedications().catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    if (step !== 2) {
+      return;
+    }
+
+    let isCancelled = false;
+
+    const prefetch = async () => {
+      try {
+        // Load medications data (CNSS and CNOPS have same rates)
+        await loadMedications('cnops');
+      } catch (error) {
+        if (!isCancelled) {
+          console.error('Failed to prefetch medications', error);
+        }
+      }
+    };
+
+    prefetch();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [step]);
 
   // For native app, render the app-specific home screen
-  if (isNativeApp()) {
+  if (_isNativeApp) {
     return <AppHome />;
   }
 
@@ -105,57 +198,7 @@ export default function Index() {
     }
   };
 
-  const heroTitleSegments = useMemo(() => {
-    const words = t.hero.title.split(' ');
-    return {
-      leading: words.slice(0, -1).join(' '),
-      trailing: words.slice(-1)[0] ?? ''
-    };
-  }, [t.hero.title]);
-  const metaTitle = language === 'ar'
-    ? 'حاسبة تعويض وأسعار الأدوية في المغرب - تعويضاتي'
-    : 'Calculateur Remboursement & Prix Médicaments Maroc 2025 | Taawidaty';
-  const metaDescription = language === 'ar'
-    ? 'احسب تعويض أدويتك من التأمين الصحي الإجباري فوراً أو تحقق من أسعار الأدوية الرسمية. قاعدة بيانات شاملة +10,000 دواء. حساب دقيق، مجاني 100٪!'
-    : 'Calculez instantanément votre remboursement assurance santé ou consultez les prix officiels des médicaments au Maroc. +10,000 médicaments référencés. Rapide, précis et 100% gratuit !';
-  const metaKeywords = language === 'ar'
-    ? [
-      'حساب تعويض الأدوية',
-      'أسعار الأدوية المغرب',
-      'تعويض التأمين الصحي',
-      'صيدلية المغرب',
-      'حاسبة التعويض',
-      'تعويضاتي'
-    ]
-    : [
-      'calculateur remboursement médicaments',
-      'prix médicaments maroc',
-      'remboursement assurance santé',
-      'pharmacie maroc prix',
-      'base médicaments maroc',
-      'taawidaty'
-    ];
-  const structuredData = useMemo(() => [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Taawidaty',
-      url: 'https://taawidaty.ma',
-      inLanguage: language === 'ar' ? 'ar-MA' : 'fr-MA',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://taawidaty.ma/?query={search_term_string}',
-        'query-input': 'required name=search_term_string'
-      }
-    }
-  ], [language]);
-  const scrolled = useScrollPosition();
-  const [step, setStep] = useState<1 | 2 | 3>(1);
-  const [medications, setMedications] = useState<Medication[]>([]);
-  const [results, setResults] = useState<CalculationResult[]>([]);
-  const [showConfetti, setShowConfetti] = useState(false);
-  const [showPopunder, setShowPopunder] = useState(false);
-  const { getRecentCalculations, addCalculation } = useCalculationHistory();
+  const scrolled = scrollPosition; // Use the hook result from earlier
   
   // Get recent searches for quick re-calculate
   const recentCalculations = getRecentCalculations(3);
@@ -221,37 +264,6 @@ export default function Index() {
     setResults([]);
     setShowConfetti(false);
   };
-
-  // Preload medications for offline support (Moroccan market optimization)
-  useEffect(() => {
-    // Preload all medications in background for offline use
-    preloadAllMedications().catch(console.error);
-  }, []);
-
-  useEffect(() => {
-    if (step !== 2) {
-      return;
-    }
-
-    let isCancelled = false;
-
-    const prefetch = async () => {
-      try {
-        // Load medications data (CNSS and CNOPS have same rates)
-        await loadMedications('cnops');
-      } catch (error) {
-        if (!isCancelled) {
-          console.error('Failed to prefetch medications', error);
-        }
-      }
-    };
-
-    prefetch();
-
-    return () => {
-      isCancelled = true;
-    };
-  }, [step]);
 
   return (
     <>

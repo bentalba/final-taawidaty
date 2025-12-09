@@ -14,6 +14,7 @@ import { createRoot } from "react-dom/client";
 import { HelmetProvider } from 'react-helmet-async';
 import { StatusBar, Style } from '@capacitor/status-bar';
 import { Capacitor } from '@capacitor/core';
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import App from "./App.tsx";
 import "./index.css";
 // App-specific styles (only applied in native app via CSS selectors)
@@ -27,9 +28,10 @@ const initNative = async () => {
   if (!Capacitor.isNativePlatform()) return;
   
   try {
-    // Use Dark style (white icons) with transparent/matching background
-    await StatusBar.setStyle({ style: Style.Dark });
-    await StatusBar.setBackgroundColor({ color: '#FFFFFF' }); // White to match app background
+    // Use Light style (dark icons on light background) - matches the app theme
+    await StatusBar.setStyle({ style: Style.Light });
+    // Make status bar transparent to blend with header gradient
+    await StatusBar.setBackgroundColor({ color: '#1e40af' }); // Primary blue to match header
     // Add native class to body for CSS targeting
     document.body.classList.add('native-app');
   } catch (e) {
@@ -58,9 +60,11 @@ if (!rootElement) {
       console.log("Rendering App component");
     }
     root.render(
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
+      <ErrorBoundary>
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      </ErrorBoundary>
     );
     if (isDev) {
       console.log("✓ App rendered successfully");

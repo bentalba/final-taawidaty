@@ -1,9 +1,10 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { Search, Loader2 } from 'lucide-react';
+import { Search, Loader2, Sparkles } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { loadMedications } from '@/data/medicationsLoader';
+import { haptics } from '@/utils/haptics';
 
 interface SearchResult {
   id: number;
@@ -54,12 +55,13 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
     if (query.length < 2) {
       setResults([]);
       setIsOpen(false);
+      setIsLoading(false);
       return;
     }
 
     setIsLoading(true);
     
-    // Search through database with async loading based on insurance type
+    // Optimized debounce: 200ms for faster feedback
     const searchTimer = setTimeout(async () => {
       try {
         // Get the appropriate cache for this insurance type
@@ -106,7 +108,7 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
       } finally {
         setIsLoading(false);
       }
-    }, 300);
+    }, 200); // Reduced from 300ms to 200ms for snappier feel
 
     return () => clearTimeout(searchTimer);
   }, [query, insuranceType]);
@@ -153,6 +155,7 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
   };
 
   const handleSelect = (result: SearchResult) => {
+    haptics.light(); // Haptic feedback on selection
     setQuery(result.name);
     setIsOpen(false);
     onSelect(result);
@@ -206,17 +209,12 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
           "absolute top-1/2 -translate-y-1/2 text-slate-400 dark:text-muted-foreground",
           dir === 'rtl' ? 'right-4' : 'left-4'
         )}>
-          <Search className="w-6 h-6" />
+          {isLoading ? (
+            <Sparkles className="w-6 h-6 text-primary-600 dark:text-primary animate-pulse" />
+          ) : (
+            <Search className="w-6 h-6" />
+          )}
         </div>
-
-        {isLoading && (
-          <div className={cn(
-            "absolute top-1/2 -translate-y-1/2",
-            dir === 'rtl' ? 'left-4' : 'right-4'
-          )}>
-            <Loader2 className="w-6 h-6 text-primary-700 dark:text-primary animate-spin" />
-          </div>
-        )}
       </div>
 
       {isOpen && results.length > 0 && (
@@ -278,6 +276,32 @@ export default function SearchInput({ placeholder, onSelect, language, insurance
             </motion.button>
           ))}
         </motion.div>
+      )}
+
+      {/* Loading skeleton */}
+      {isLoading && isOpen && query.length >= 2 && (
+        <div
+          dir={dir}
+          className={cn(
+            "absolute z-50 w-full mt-2 bg-white dark:bg-card rounded-xl shadow-strong border-2 border-slate-200 dark:border-border",
+            dir === 'rtl' && 'text-right'
+          )}
+        >
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="px-5 py-4 border-b border-slate-100 dark:border-border last:border-b-0">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1 space-y-2">
+                  <div className="h-5 bg-slate-200 dark:bg-slate-700 rounded animate-pulse w-3/4" />
+                  <div className="h-4 bg-slate-100 dark:bg-slate-800 rounded animate-pulse w-1/2" />
+                </div>
+                <div className="space-y-1 text-right">
+                  <div className="h-6 w-20 bg-slate-200 dark:bg-slate-700 rounded animate-pulse" />
+                  <div className="h-3 w-12 bg-slate-100 dark:bg-slate-800 rounded animate-pulse ml-auto" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
 
       {isOpen && !isLoading && query.length >= 2 && results.length === 0 && (
