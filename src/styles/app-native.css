@@ -201,6 +201,7 @@
 
 .app-content {
   flex: 1;
+  padding-top: var(--app-space-4); /* Add top padding to prevent content being cut off */
   padding-bottom: calc(var(--app-bottomnav-height) + env(safe-area-inset-bottom) + var(--app-space-4));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -927,6 +928,7 @@
 .app-home {
   min-height: 100vh;
   background: var(--app-surface-secondary);
+  padding-top: var(--app-space-4); /* Add top padding to prevent trimming */
 }
 
 /* Welcome Section */
@@ -1060,7 +1062,11 @@
 .app-page {
   min-height: 100vh;
   background: var(--app-surface-secondary);
-  padding-top: env(safe-area-inset-top);
+  padding-top: calc(env(safe-area-inset-top) + var(--app-space-4)); /* Add spacing below header */
+}
+
+.app-page-content {
+  padding-top: var(--app-space-4); /* Additional padding for content */
 }
 
 .app-page-header {
