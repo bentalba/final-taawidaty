@@ -58,11 +58,11 @@ export function PageTransition({ children }: PageTransitionProps) {
           {children}
         </div>
 
-        {/* Responsive Bottom Ad - Web only, hidden in native app */}
+        {/* Responsive Ad — Web only, subtle integration */}
         {!isNativeApp() && (
-          <div className="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-4 px-4 mt-8">
-            <div className="container mx-auto max-w-6xl">
-              <p className="text-xs text-center text-slate-400 mb-3">Advertisement</p>
+          <div className="w-full py-6 px-4 mt-6">
+            <div className="container mx-auto max-w-4xl">
+              <p className="text-[10px] text-center text-slate-300 dark:text-slate-600 mb-2 uppercase tracking-wider">Publicité</p>
 
               {/* Mobile: 300x250 */}
               <div className="flex justify-center md:hidden">

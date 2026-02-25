@@ -36,6 +36,7 @@ import { AdUnit } from '@/components/ads/AdUnit';
 import { isNativeApp } from '@/utils/platform';
 import { AppHome } from '@/components/app/AppHome';
 import { useCalculationHistory } from '@/hooks/useCalculationHistory';
+import { Header } from '@/components/layout/Header';
 
 
 interface Medication {
@@ -279,55 +280,52 @@ export default function Index() {
       {/* CNSS Disclaimer Popup - Shows on first visit */}
       <CNSSDisclaimer />
 
-      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-orange-50 dark:from-background dark:via-card dark:to-accent/30 transition-colors duration-300">
-        {/* Modern Header */}
-
+      <div dir={isRTL ? 'rtl' : 'ltr'} className="min-h-screen bg-mesh-gradient transition-colors duration-300">
+        {/* Premium Header */}
+        <Header />
 
         {/* Main Content */}
         <main role="main">
           {/* Hero Section */}
           {step === 1 && (
-            <section className="relative px-4 py-8 md:py-16 max-w-7xl mx-auto">
-              {/* Clean background - reduced gradient for medical trust */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-primary-50/30 to-white dark:from-background dark:via-primary-950/20 dark:to-background -z-10"></div>
+            <section className="relative px-4 pt-8 pb-12 md:pt-20 md:pb-16 max-w-7xl mx-auto">
 
               <div className="relative z-10 text-center animate-slide-up">
-                {/* Modern badge */}
-                <div className="mb-4 md:mb-6 inline-flex items-center">
-                  <div className="glass px-4 py-2 md:px-6 md:py-3 rounded-full shadow-soft hover-lift">
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-600 dark:text-primary animate-bounce-gentle" />
-                      <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary ${isRTL ? 'font-arabic' : ''}`}>
+                {/* Pill badge */}
+                <div className="mb-5 md:mb-8 inline-flex items-center">
+                  <div className="shimmer-border bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-sm">
+                    <div className="flex items-center gap-2.5">
+                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-500 dark:text-primary-400" />
+                      <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary-300 ${isRTL ? 'font-arabic' : ''}`}>
                         {t.app.subtitle}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Main heading - H1 for SEO - Better mobile sizing */}
-                <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight px-2 ${isRTL ? 'font-arabic' : ''}`}>
+                {/* Main heading - H1 for SEO */}
+                <h1 className={`text-balance text-4xl md:text-5xl lg:text-6xl font-black mb-5 md:mb-7 leading-[1.1] tracking-tight ${isRTL ? 'font-arabic' : ''}`}>
                   {renderHeroTitle()}
                 </h1>
 
-                {/* Modern subtitle - Better mobile sizing */}
-                <p className={`text-base md:text-xl text-slate-600 dark:text-muted-foreground mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed font-medium px-2 ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                {/* Subtitle */}
+                <p className={`text-base md:text-lg text-slate-500 dark:text-slate-400 mb-5 md:mb-7 max-w-2xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.hero.subtitle}
                 </p>
 
-                {/* Social Proof & Savings - Moroccan Market Hooks */}
-                <div className="flex flex-wrap items-center justify-center gap-3 mb-6 md:mb-8">
+                {/* Social Proof & Savings */}
+                <div className="flex flex-wrap items-center justify-center gap-3 mb-8 md:mb-10">
                   <SocialProofBadge language={language} />
                   <SavingsCounter language={language} variant="compact" />
                 </div>
 
-                {/* SEARCH-FIRST HERO - Immediate Value Delivery */}
-                <div className="max-w-2xl mx-auto mb-8">
-                  <div className="bg-white dark:bg-card rounded-2xl shadow-strong border border-slate-200 dark:border-border p-4 md:p-6">
-                    <h2 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-foreground mb-4 flex items-center justify-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
-                      <Search className="w-5 h-5 text-primary-600" />
+                {/* Search Card - Premium Frosted Glass */}
+                <div className="max-w-2xl mx-auto mb-10">
+                  <div className="shimmer-border bg-white/90 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl shadow-xl shadow-primary-500/5 dark:shadow-black/20 p-5 md:p-7">
+                    <h2 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center justify-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
+                      <Search className="w-5 h-5 text-primary-500" />
                       {language === 'ar' ? 'ابحث عن دوائك' : 'Recherchez votre médicament'}
                     </h2>
-
                     <MedicationSearchEnhanced
                       placeholder={t.calculator.searchPlaceholder}
                       onSelect={(selected) => addMedication(selected as Medication)}
@@ -370,8 +368,8 @@ export default function Index() {
                 </div>
 
                 {/* Secondary Options - Other Tools */}
-                <div className="max-w-5xl mx-auto mb-6 md:mb-8">
-                  <h3 className={`text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-300 mb-4 text-center ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                <div className="max-w-5xl mx-auto mb-8 md:mb-10">
+                  <h3 className={`text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-5 text-center ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'أو اختر خدمة' : 'Ou choisissez un service'}
                   </h3>
 
@@ -382,7 +380,7 @@ export default function Index() {
                       glowOnHover={true}
                       animateOnMount={true}
                       delay={0}
-                      className="p-5 text-center cursor-pointer group border-2 border-transparent hover:border-primary-200 dark:hover:border-primary-800"
+                      className="shimmer-border p-5 text-center cursor-pointer group bg-white dark:bg-slate-800/50 hover:shadow-lg hover:shadow-primary-500/5 transition-shadow duration-300"
                       onClick={() => setStep(2)}
                     >
                       <div className="flex items-center gap-4">
@@ -404,10 +402,10 @@ export default function Index() {
                     {/* Card 2: Price Checker */}
                     <EnhancedCard
                       hoverable={true}
-                      glowOnHover={true}
+                      glowOnHover={false}
                       animateOnMount={true}
                       delay={0.1}
-                      className="p-5 text-center cursor-pointer group border-2 border-transparent hover:border-orange-200 dark:hover:border-orange-800"
+                      className="shimmer-border p-5 text-center cursor-pointer group bg-white dark:bg-slate-800/50 hover:shadow-lg hover:shadow-orange-500/5 transition-shadow duration-300"
                       onClick={() => {
                         window.location.href = '/prix-medicaments';
                       }}
@@ -429,16 +427,16 @@ export default function Index() {
                     </EnhancedCard>
                   </div>
 
-                  {/* Modern Trust Badges */}
-                  <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
                     {[
                       { icon: CheckCircle2, text: t.hero.trustOfficial },
                       { icon: CheckCircle2, text: t.hero.trustInstant },
                       { icon: CheckCircle2, text: t.hero.trustFree }
                     ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-2 rounded-lg bg-white/60 dark:bg-slate-800/60">
-                        <item.icon className="w-4 h-4 text-success-600 dark:text-success-400" />
-                        <span className={`text-xs font-medium text-slate-700 dark:text-slate-300 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
+                      <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/30">
+                        <item.icon className="w-3.5 h-3.5 text-emerald-500" />
+                        <span className={`text-xs font-medium text-slate-600 dark:text-slate-400 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -447,7 +445,7 @@ export default function Index() {
             </section>
           )}
 
-          <BannerAd />
+          {/* BannerAd moved to footer area for cleaner UX */}
 
           {/* Step 2: Medication Search */}
           {step === 2 && (
@@ -633,15 +631,25 @@ export default function Index() {
         </main>
 
         {/* Footer */}
-        <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-12 md:mt-16 transition-colors duration-300">
-          <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              {/* Column 1: About */}
-              <div>
-                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                  {language === 'ar' ? 'عن تعويضاتي' : 'À propos'}
-                </h3>
-                <p className={`text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+        <footer role="contentinfo" className="mt-16 md:mt-20 border-t border-slate-200/70 dark:border-slate-800/50 bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-colors duration-300">
+          {/* Non-intrusive ad placement */}
+          <div className="border-b border-slate-100 dark:border-slate-800/40">
+            <div className="container mx-auto max-w-6xl px-4 py-4">
+              <BannerAd />
+            </div>
+          </div>
+
+          <div className="container mx-auto px-4 py-10 md:py-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-10">
+              {/* Column 1: Brand */}
+              <div className="md:col-span-1">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-black text-base">T</span>
+                  </div>
+                  <span className="font-extrabold text-slate-900 dark:text-white tracking-tight">TAAWIDATY</span>
+                </div>
+                <p className={`text-sm text-slate-500 dark:text-slate-400 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar'
                     ? 'منصة مجانية لحساب استرداد الأدوية من CNSS و CNOPS في المغرب'
                     : 'Plateforme gratuite pour calculer le remboursement des médicaments CNSS et CNOPS au Maroc'}
@@ -650,22 +658,22 @@ export default function Index() {
 
               {/* Column 2: Links */}
               <div>
-                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                <h3 className={`text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'روابط مهمة' : 'Liens utiles'}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   <li>
-                    <Link to="/blog" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                    <Link to="/blog" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'ar' ? 'المدونة' : 'Blog'}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about-us" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                    <Link to="/about-us" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'ar' ? 'معلومات عنا' : 'À propos'}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/privacy-policy" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                    <Link to="/privacy-policy" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de confidentialité'}
                     </Link>
                   </li>
@@ -674,18 +682,32 @@ export default function Index() {
 
               {/* Column 3: Legal */}
               <div>
-                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                <h3 className={`text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                   {language === 'ar' ? 'قانوني' : 'Légal'}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   <li>
-                    <Link to="/medical-disclaimer" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                    <Link to="/medical-disclaimer" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement médical'}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/terms-of-service" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                    <Link to="/terms-of-service" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'ar' ? 'شروط الاستخدام' : 'Conditions d\'utilisation'}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 4: Tools */}
+              <div>
+                <h3 className={`text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'الأدوات' : 'Outils'}
+                </h3>
+                <ul className="space-y-2.5">
+                  <li>
+                    <Link to="/prix-medicaments" className={`text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'أسعار الأدوية' : 'Prix des médicaments'}
                     </Link>
                   </li>
                 </ul>
@@ -693,12 +715,11 @@ export default function Index() {
             </div>
 
             {/* Copyright */}
-            <div className="border-t border-slate-200 dark:border-slate-800 pt-6 text-center">
-              <p className={`text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+            <div className="border-t border-slate-200/70 dark:border-slate-800/50 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <p className={`text-xs text-slate-400 dark:text-slate-500 ${isRTL ? 'font-arabic' : ''}`}>
                 © 2025 TAAWIDATY. {language === 'ar' ? 'جميع الحقوق محفوظة.' : 'Tous droits réservés.'}
               </p>
-
-              <p className={`text-xs mt-2 ${isRTL ? 'font-arabic' : ''}`}>
+              <p className={`text-[11px] text-slate-400 dark:text-slate-600 text-center sm:text-right max-w-md ${isRTL ? 'font-arabic' : ''}`}>
                 {t.disclaimer.text}
               </p>
             </div>
