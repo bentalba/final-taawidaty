@@ -26,10 +26,12 @@ interface ConfettiProps {
   pieceCount?: number;
 }
 
+const DEFAULT_COLORS = ['#0077be', '#4caf50', '#d4af37', '#ff6b6b', '#4ecdc4'];
+
 export function Confetti({
   active,
   duration = 3000,
-  colors = ['#0077be', '#4caf50', '#d4af37', '#ff6b6b', '#4ecdc4'],
+  colors = DEFAULT_COLORS,
   pieceCount = 50,
 }: ConfettiProps) {
   const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
