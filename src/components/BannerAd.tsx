@@ -38,12 +38,13 @@ export function BannerAd() {
   }
 
   return (
-    <div className="w-full bg-transparent py-4 px-4 my-4">
-      <div className="container mx-auto max-w-6xl">
+    <div className="w-full bg-transparent py-3 px-4 my-2">
+      <div className="container mx-auto max-w-4xl">
+        <p className="text-[10px] text-center text-slate-300 dark:text-slate-600 mb-1.5 uppercase tracking-widest">Publicité</p>
         <div className="flex flex-col items-center gap-2">
           <div
             id="container-e3c362a6fe79c57064310f672d050bef"
-            className="w-full flex justify-center items-center min-h-[90px] max-w-full overflow-hidden"
+            className="w-full flex justify-center items-center min-h-[90px] max-h-[200px] max-w-full overflow-hidden rounded-lg"
           />
         </div>
       </div>

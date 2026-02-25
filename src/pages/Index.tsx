@@ -169,8 +169,8 @@ export default function Index() {
             تمن؟ التعويض؟ قلب و عرف{' '}
           </span>
           <GradientText
-            colors={['#0077be', '#40ffaa', '#4079ff', '#40ffaa', '#0077be']}
-            animationSpeed={3}
+            colors={['#4F6AFF', '#06B6D4', '#818CF8', '#06B6D4', '#4F6AFF']}
+            animationSpeed={4}
             showBorder={false}
             className="inline-block"
           >
@@ -187,8 +187,8 @@ export default function Index() {
             Prix ? Remboursement ? La réponse{' '}
           </span>
           <GradientText
-            colors={['#0077be', '#40ffaa', '#4079ff', '#40ffaa', '#0077be']}
-            animationSpeed={3}
+            colors={['#4F6AFF', '#06B6D4', '#818CF8', '#06B6D4', '#4F6AFF']}
+            animationSpeed={4}
             showBorder={false}
             className="inline-block"
           >
@@ -367,80 +367,88 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Secondary Options - Other Tools */}
-                <div className="max-w-5xl mx-auto mb-8 md:mb-10">
-                  <h3 className={`text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-5 text-center ${isRTL ? 'font-arabic' : ''}`}>
+                {/* Service Cards */}
+                <div className="max-w-3xl mx-auto mb-10 md:mb-14">
+                  <p className={`text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-5 text-center ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'أو اختر خدمة' : 'Ou choisissez un service'}
-                  </h3>
+                  </p>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-8">
-                    {/* Card 1: Reimbursement Calculator */}
-                    <EnhancedCard
-                      hoverable={true}
-                      glowOnHover={true}
-                      animateOnMount={true}
-                      delay={0}
-                      className="shimmer-border p-5 text-center cursor-pointer group bg-white dark:bg-slate-800/50 hover:shadow-lg hover:shadow-primary-500/5 transition-shadow duration-300"
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {/* Reimbursement Calculator Card */}
+                    <motion.div
+                      whileHover={{ y: -4 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="group cursor-pointer"
                       onClick={() => setStep(2)}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-xl bg-primary-100 dark:bg-primary-900 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Calculator className="w-7 h-7 text-primary-600 dark:text-primary-400" />
+                      <div className="shimmer-border bg-white dark:bg-slate-800/60 rounded-2xl p-5 md:p-6 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow">
+                            <Calculator className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                          </div>
+                          <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+                            <h4 className={`text-base font-bold text-slate-900 dark:text-white mb-0.5 ${isRTL ? 'font-arabic' : ''}`}>
+                              {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
+                            </h4>
+                            <p className={`text-xs text-slate-500 dark:text-slate-400 ${isRTL ? 'font-arabic' : ''}`}>
+                              {language === 'ar' ? 'CNSS و CNOPS - نتائج فورية دقيقة' : 'CNSS & CNOPS — Résultats instantanés et précis'}
+                            </p>
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-slate-300 dark:text-slate-600 group-hover:text-primary-500 group-hover:translate-x-1 transition-all" />
                         </div>
-                        <div className="text-left flex-1">
-                          <h4 className={`text-base font-bold text-slate-900 dark:text-foreground mb-1 ${isRTL ? 'font-arabic text-right' : ''}`}>
-                            {language === 'ar' ? 'حساب التعويض' : 'Calculer le remboursement'}
-                          </h4>
-                          <p className={`text-xs text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
-                            {language === 'ar' ? 'اعرف كم ستسترد' : 'Découvrez combien vous serez remboursé'}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
                       </div>
-                    </EnhancedCard>
+                    </motion.div>
 
-                    {/* Card 2: Price Checker */}
-                    <EnhancedCard
-                      hoverable={true}
-                      glowOnHover={false}
-                      animateOnMount={true}
-                      delay={0.1}
-                      className="shimmer-border p-5 text-center cursor-pointer group bg-white dark:bg-slate-800/50 hover:shadow-lg hover:shadow-orange-500/5 transition-shadow duration-300"
-                      onClick={() => {
-                        window.location.href = '/prix-medicaments';
-                      }}
+                    {/* Price Checker Card */}
+                    <motion.div
+                      whileHover={{ y: -4 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="group cursor-pointer"
+                      onClick={() => { window.location.href = '/prix-medicaments'; }}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <DollarSign className="w-7 h-7 text-orange-600 dark:text-orange-400" />
+                      <div className="shimmer-border bg-white dark:bg-slate-800/60 rounded-2xl p-5 md:p-6 hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-shadow">
+                            <DollarSign className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                          </div>
+                          <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+                            <h4 className={`text-base font-bold text-slate-900 dark:text-white mb-0.5 ${isRTL ? 'font-arabic' : ''}`}>
+                              {language === 'ar' ? 'التحقق من السعر' : 'Vérifier le prix'}
+                            </h4>
+                            <p className={`text-xs text-slate-500 dark:text-slate-400 ${isRTL ? 'font-arabic' : ''}`}>
+                              {language === 'ar' ? 'أسعار رسمية لأكثر من 10,000 دواء' : 'Prix officiels de +10 000 médicaments'}
+                            </p>
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-slate-300 dark:text-slate-600 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
                         </div>
-                        <div className="text-left flex-1">
-                          <h4 className={`text-base font-bold text-slate-900 dark:text-foreground mb-1 ${isRTL ? 'font-arabic text-right' : ''}`}>
-                            {language === 'ar' ? 'التحقق من السعر' : 'Vérifier le prix'}
-                          </h4>
-                          <p className={`text-xs text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
-                            {language === 'ar' ? 'أسعار الأدوية الرسمية' : 'Prix officiels des médicaments'}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
                       </div>
-                    </EnhancedCard>
+                    </motion.div>
                   </div>
+                </div>
 
-                  {/* Trust Badges */}
-                  <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
+                {/* Stats Ribbon */}
+                <div className="max-w-3xl mx-auto mb-6">
+                  <div className="grid grid-cols-3 gap-3 md:gap-4">
                     {[
-                      { icon: CheckCircle2, text: t.hero.trustOfficial },
-                      { icon: CheckCircle2, text: t.hero.trustInstant },
-                      { icon: CheckCircle2, text: t.hero.trustFree }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/30">
-                        <item.icon className="w-3.5 h-3.5 text-emerald-500" />
-                        <span className={`text-xs font-medium text-slate-600 dark:text-slate-400 ${isRTL ? 'font-arabic' : ''}`}>{item.text}</span>
-                      </div>
+                      { value: '10 000+', label: language === 'ar' ? 'دواء مرجعي' : 'Médicaments', icon: '💊' },
+                      { value: 'CNSS & CNOPS', label: language === 'ar' ? 'تغطية كاملة' : 'Couverture', icon: '🏥' },
+                      { value: '100%', label: language === 'ar' ? 'مجاني' : 'Gratuit', icon: '✨' },
+                    ].map((stat, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 + i * 0.1 }}
+                        className="text-center p-3 md:p-4 rounded-xl bg-white/60 dark:bg-slate-800/30 border border-slate-200/40 dark:border-slate-700/20"
+                      >
+                        <span className="text-lg md:text-xl mb-1 block">{stat.icon}</span>
+                        <p className="text-sm md:text-base font-bold text-slate-900 dark:text-white">{stat.value}</p>
+                        <p className={`text-[11px] text-slate-400 dark:text-slate-500 ${isRTL ? 'font-arabic' : ''}`}>{stat.label}</p>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
+
               </div>
             </section>
           )}
@@ -631,7 +639,7 @@ export default function Index() {
         </main>
 
         {/* Footer */}
-        <footer role="contentinfo" className="mt-16 md:mt-20 border-t border-slate-200/70 dark:border-slate-800/50 bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-colors duration-300">
+        <footer role="contentinfo" className="mt-8 md:mt-12 border-t border-slate-200/70 dark:border-slate-800/50 bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-colors duration-300">
           {/* Non-intrusive ad placement */}
           <div className="border-b border-slate-100 dark:border-slate-800/40">
             <div className="container mx-auto max-w-6xl px-4 py-4">
@@ -726,12 +734,13 @@ export default function Index() {
           </div>
         </footer>
 
-      </div>
+      </div >
 
       {/* Confetti Celebration */}
-      <SuccessCelebration
+      < SuccessCelebration
         show={showConfetti}
-        message={language === 'ar' ? '🎉 تم الحساب بنجاح!' : '🎉 Calcul terminé !'}
+        message={language === 'ar' ? '🎉 تم الحساب بنجاح!' : '🎉 Calcul terminé !'
+        }
         onComplete={() => setShowConfetti(false)}
       />
 

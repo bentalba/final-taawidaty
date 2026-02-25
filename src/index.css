@@ -14,6 +14,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -91,7 +92,7 @@ html {
     --border: 220 20% 91%;
     --input: 220 20% 91%;
     --ring: 220 80% 55%;
-    
+
     --radius: 0.875rem;
 
     --sidebar-background: 0 0% 98%;
@@ -169,9 +170,10 @@ html {
   /* Font Families */
   .font-arabic {
     font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.9; /* Higher line-height for Arabic script readability */
+    line-height: 1.9;
+    /* Higher line-height for Arabic script readability */
   }
-  
+
   .font-french {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
@@ -193,38 +195,51 @@ html {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
     line-height: 1.2;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @layer utilities {
   /* ===== NATURAL EASING CURVES ===== */
   /* Physics-based animations that feel "expensive" and smooth */
-  
+
   /* Ease-out-quart: Fast start, slow end (mimics real physics) */
   .ease-out-smooth {
     transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   }
-  
+
   /* Ease-out-expo: Very fast start, very slow end (premium feel) */
   .ease-out-premium {
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   /* Spring-like bounce (like iOS) */
   .ease-spring {
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  
+
   /* Smooth for colors and opacity */
   .ease-smooth {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -237,10 +252,13 @@ html {
     will-change: transform;
     backface-visibility: hidden;
   }
-  
+
   /* Reduce motion for accessibility & battery saving */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -249,7 +267,10 @@ html {
 
   /* ===== LITE MODE (for slow connections) ===== */
   @media (prefers-reduced-data: reduce) {
-    .blur, .glass, .glass-card {
+
+    .blur,
+    .glass,
+    .glass-card {
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
     }
@@ -258,16 +279,18 @@ html {
   /* Prevent content from being hidden behind sticky mobile ad */
   @media (max-width: 768px) {
     body {
-      padding-bottom: 70px; /* Height of sticky ad banner + buffer */
+      padding-bottom: 70px;
+      /* Height of sticky ad banner + buffer */
     }
   }
 
   /* Safe area support for notched phones (iPhone X+, Android notch devices) */
   @supports (padding-bottom: env(safe-area-inset-bottom)) {
     .mobile-safe-spacing {
-      padding-bottom: calc(70px + env(safe-area-inset-bottom)); /* Ad height + notch */
+      padding-bottom: calc(70px + env(safe-area-inset-bottom));
+      /* Ad height + notch */
     }
-    
+
     @media (max-width: 768px) {
       body {
         padding-bottom: calc(70px + env(safe-area-inset-bottom));
@@ -335,6 +358,18 @@ html {
   /* Text Balance for Headlines */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Banner ad image containment */
+  #container-e3c362a6fe79c57064310f672d050bef img {
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+
+  #container-e3c362a6fe79c57064310f672d050bef {
+    max-height: 200px;
+    overflow: hidden;
   }
 
   /* Enhanced shadow system */
@@ -417,13 +452,13 @@ html {
   /* Modern hover effects */
   .hover-lift {
     transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
-                box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   .hover-lift:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2),
-                0 0 30px -5px hsl(var(--primary) / 0.3);
+      0 0 30px -5px hsl(var(--primary) / 0.3);
   }
 
   .hover-glow {
@@ -435,7 +470,8 @@ html {
   }
 
   /* Enhanced button interactions */
-  button, [role="button"] {
+  button,
+  [role="button"] {
     transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -443,13 +479,13 @@ html {
   .border-gradient {
     position: relative;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, hsl(var(--primary) / 0.5), hsl(var(--primary) / 0.2)) border-box;
+      linear-gradient(135deg, hsl(var(--primary) / 0.5), hsl(var(--primary) / 0.2)) border-box;
     border: 2px solid transparent;
   }
 
   .dark .border-gradient {
     background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--primary) / 0.7), hsl(var(--primary) / 0.3)) border-box;
+      linear-gradient(135deg, hsl(var(--primary) / 0.7), hsl(var(--primary) / 0.3)) border-box;
   }
 
   /* Smooth transitions for theme switching */
@@ -465,6 +501,7 @@ html {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -476,6 +513,7 @@ html {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -487,6 +525,7 @@ html {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -498,6 +537,7 @@ html {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -509,6 +549,7 @@ html {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -520,6 +561,7 @@ html {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -527,24 +569,36 @@ html {
 }
 
 @keyframes bounceGentle {
-  0%, 20%, 53%, 80%, 100% {
+
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%, 43% {
+
+  40%,
+  43% {
     transform: translateY(-8px);
   }
+
   70% {
     transform: translateY(-4px);
   }
+
   90% {
     transform: translateY(-2px);
   }
 }
 
 @keyframes pulseSlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -552,6 +606,7 @@ html {
 
 /* Modern mobile optimizations */
 @media (max-width: 768px) {
+
   /* Enhanced touch targets */
   button,
   [role="button"],
@@ -655,6 +710,7 @@ html {
 
 /* Reduced motion support for accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -666,23 +722,24 @@ html {
 
 /* Mobile Touch Target Optimization - Add to end of file */
 @media (max-width: 768px) {
+
   /* Ensure all interactive elements meet 44x44px minimum touch target */
-  button, 
-  a, 
-  input, 
+  button,
+  a,
+  input,
   select,
   [role="button"],
   [role="link"] {
     min-height: 44px;
     min-width: 44px;
   }
-  
+
   /* Prevent automatic text size adjustment on mobile */
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  
+
   /* Remove tap highlight for cleaner mobile UX on interactive elements */
   button,
   a,
@@ -691,16 +748,17 @@ html {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
-  
+
   /* Optimize touch scrolling - FIX SCROLL SHIFTING */
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
     overscroll-behavior: none;
     position: fixed;
     width: 100%;
     height: 100%;
   }
-  
+
   #root {
     overflow-y: auto;
     overflow-x: hidden;
@@ -710,7 +768,7 @@ html {
     width: 100%;
     position: relative;
   }
-  
+
   /* Better focus states for touch devices */
   input:focus,
   select:focus,
@@ -749,9 +807,26 @@ html {
 }
 
 /* Staggered delays for search results */
-.search-result-item:nth-child(1) { animation-delay: 0ms; }
-.search-result-item:nth-child(2) { animation-delay: 30ms; }
-.search-result-item:nth-child(3) { animation-delay: 60ms; }
-.search-result-item:nth-child(4) { animation-delay: 90ms; }
-.search-result-item:nth-child(5) { animation-delay: 120ms; }
-.search-result-item:nth-child(n+6) { animation-delay: 150ms; }
+.search-result-item:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.search-result-item:nth-child(2) {
+  animation-delay: 30ms;
+}
+
+.search-result-item:nth-child(3) {
+  animation-delay: 60ms;
+}
+
+.search-result-item:nth-child(4) {
+  animation-delay: 90ms;
+}
+
+.search-result-item:nth-child(5) {
+  animation-delay: 120ms;
+}
+
+.search-result-item:nth-child(n+6) {
+  animation-delay: 150ms;
+}
