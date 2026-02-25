@@ -42,6 +42,7 @@ const pageVariants = {
 
 export function PageTransition({ children }: PageTransitionProps) {
   const location = useLocation();
+  const paddingBottomClass = isNativeApp() ? "pb-16 md:pb-0" : "pb-24 md:pb-0";
 
   return (
     <AnimatePresence mode="wait">
@@ -51,23 +52,23 @@ export function PageTransition({ children }: PageTransitionProps) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="flex flex-col min-h-screen pb-16 md:pb-0"
+        className={`flex flex-col min-h-screen ${paddingBottomClass}`}
       >
         <div className="flex-1">
           {children}
         </div>
-        
+
         {/* Responsive Bottom Ad - Web only, hidden in native app */}
         {!isNativeApp() && (
           <div className="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-4 px-4 mt-8">
             <div className="container mx-auto max-w-6xl">
               <p className="text-xs text-center text-slate-400 mb-3">Advertisement</p>
-              
+
               {/* Mobile: 300x250 */}
               <div className="flex justify-center md:hidden">
                 <AdUnit type="banner-300x250" className="w-full" />
               </div>
-              
+
               {/* Desktop: 728x90 */}
               <div className="hidden md:flex md:justify-center">
                 <AdUnit type="banner-728x90" className="w-full" />

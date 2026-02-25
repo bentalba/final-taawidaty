@@ -11,8 +11,7 @@ import { useCalculationHistory } from '@/hooks/useCalculationHistory';
 import { haptics } from '@/utils/haptics';
 import { shareMultipleMedicationResults, MedicationShareData } from '@/utils/share';
 import { useLanguage } from '@/hooks/useLanguage';
-import medicationsCnopsData from '@/data/medications-cnops.json';
-import medicationsCnssData from '@/data/medications-cnss.json';
+import { getAllMedications } from '@/data/medicationsLoader';
 
 interface Medication {
   id: number;
@@ -39,11 +38,25 @@ const CalculatorPage: React.FC = () => {
   const { addCalculation } = useCalculationHistory();
   const { language } = useLanguage();
 
-  // Combined medications from both sources
-  const allMedications = useMemo(() => {
-    const cnops = (medicationsCnopsData as Medication[]).map(m => ({ ...m, source: 'cnops' as const }));
-    const cnss = (medicationsCnssData as Medication[]).map(m => ({ ...m, source: 'cnss' as const }));
-    return [...cnops, ...cnss];
+  const [allMedications, setAllMedications] = useState<Medication[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch medications asynchronously
+  useEffect(() => {
+    let mounted = true;
+    const fetchMeds = async () => {
+      try {
+        const meds = await getAllMedications();
+        if (mounted) setAllMedications(meds as Medication[]);
+      } catch (error) {
+        console.error("Failed to load medications:", error);
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    };
+
+    fetchMeds();
+    return () => { mounted = false; };
   }, []);
 
   // Check for pre-selected medication from Search page
@@ -72,11 +85,11 @@ const CalculatorPage: React.FC = () => {
     haptics.success();
     const reimbursement = (med.ppv * med.taux_remb) / 100;
     const patientPays = med.ppv - reimbursement;
-    
+
     setSelectedMeds(prev => {
       const existing = prev.find(m => m.id === med.id && m.source === med.source);
       if (existing) {
-        return prev.map(m => 
+        return prev.map(m =>
           (m.id === med.id && m.source === med.source)
             ? { ...m, quantity: m.quantity + 1, reimbursement: reimbursement * (m.quantity + 1), patientPays: patientPays * (m.quantity + 1) }
             : m
@@ -118,7 +131,7 @@ const CalculatorPage: React.FC = () => {
   const handleCalculate = useCallback(() => {
     if (selectedMeds.length === 0) return;
     haptics.success();
-    
+
     // Save to history
     addCalculation(
       selectedMeds.map(m => ({
@@ -131,7 +144,7 @@ const CalculatorPage: React.FC = () => {
       })),
       selectedMeds[0]?.source || 'cnops'
     );
-    
+
     setShowResults(true);
   }, [selectedMeds, addCalculation]);
 
@@ -156,8 +169,8 @@ const CalculatorPage: React.FC = () => {
   if (showResults) {
     return (
       <div className="app-page">
-        <AppHeader 
-          title={language === 'ar' ? 'نتائج الحساب' : 'Résultats'} 
+        <AppHeader
+          title={language === 'ar' ? 'نتائج الحساب' : 'Résultats'}
           language={language}
           showBack
         />
@@ -167,8 +180,8 @@ const CalculatorPage: React.FC = () => {
             <div className="native-card-header">
               <h3 className="native-card-title">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                  <path d="m9 12 2 2 4-4"/>
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                  <path d="m9 12 2 2 4-4" />
                 </svg>
                 {language === 'ar' ? 'ملخص التعويض' : 'Récapitulatif'}
               </h3>
@@ -213,7 +226,7 @@ const CalculatorPage: React.FC = () => {
               {/* Medication List */}
               <div className="result-medication-list">
                 {selectedMeds.map((med, index) => (
-                  <div 
+                  <div
                     key={`${med.id}-${med.source}`}
                     className="result-medication-item animate-slide-up"
                     style={{ animationDelay: `${index * 50}ms` }}
@@ -244,15 +257,15 @@ const CalculatorPage: React.FC = () => {
           <div className="action-buttons-row">
             <button onClick={handleShare} className="btn-secondary">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
-                <polyline points="16 6 12 2 8 6"/>
-                <line x1="12" y1="2" x2="12" y2="15"/>
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                <polyline points="16 6 12 2 8 6" />
+                <line x1="12" y1="2" x2="12" y2="15" />
               </svg>
               {language === 'ar' ? 'مشاركة' : 'Partager'}
             </button>
             <button onClick={handleNewCalculation} className="btn-primary">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 5v14M5 12h14"/>
+                <path d="M12 5v14M5 12h14" />
               </svg>
               {language === 'ar' ? 'حساب جديد' : 'Nouveau calcul'}
             </button>
@@ -271,17 +284,17 @@ const CalculatorPage: React.FC = () => {
         <div className="calculator-search-header">
           {/* Search Input */}
           <div className="search-input-container">
-            <svg 
+            <svg
               className="search-input-icon"
-              width="20" 
-              height="20" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
               strokeWidth="2"
             >
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
             </svg>
             <input
               type="text"
@@ -293,7 +306,7 @@ const CalculatorPage: React.FC = () => {
             {searchQuery && (
               <button onClick={() => setSearchQuery('')} className="search-clear-btn">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 6L6 18M6 6l12 12"/>
+                  <path d="M18 6L6 18M6 6l12 12" />
                 </svg>
               </button>
             )}
@@ -321,7 +334,7 @@ const CalculatorPage: React.FC = () => {
                     </div>
                   </div>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2">
-                    <path d="M12 5v14M5 12h14"/>
+                    <path d="M12 5v14M5 12h14" />
                   </svg>
                 </button>
               ))}
@@ -331,14 +344,21 @@ const CalculatorPage: React.FC = () => {
 
         {/* Selected Medications */}
         <div className="calculator-medications-container">
-          {selectedMeds.length === 0 ? (
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center py-12 animate-fade-in">
+              <div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin mb-4"></div>
+              <p className="text-gray-500">
+                {language === 'ar' ? 'جاري تحميل الأدوية...' : 'Chargement des médicaments...'}
+              </p>
+            </div>
+          ) : selectedMeds.length === 0 ? (
             <div className="empty-state animate-fade-in">
               <div className="empty-state-icon">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-                  <line x1="8" y1="6" x2="16" y2="6"/>
-                  <line x1="8" y1="10" x2="16" y2="10"/>
-                  <line x1="8" y1="14" x2="12" y2="14"/>
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                  <line x1="8" y1="6" x2="16" y2="6" />
+                  <line x1="8" y1="10" x2="16" y2="10" />
+                  <line x1="8" y1="14" x2="12" y2="14" />
                 </svg>
               </div>
               <h3 className="empty-state-title">
@@ -350,7 +370,7 @@ const CalculatorPage: React.FC = () => {
                   : 'Recherchez et ajoutez des médicaments pour calculer le remboursement'
                 }
               </p>
-              
+
               {/* Quick Add from Favorites */}
               {favorites.length > 0 && (
                 <div className="quick-add-section">
@@ -371,7 +391,7 @@ const CalculatorPage: React.FC = () => {
                         style={{ animationDelay: `${index * 50}ms` }}
                       >
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M12 5v14M5 12h14"/>
+                          <path d="M12 5v14M5 12h14" />
                         </svg>
                         {fav.name.length > 20 ? fav.name.slice(0, 20) + '...' : fav.name}
                       </button>
@@ -405,7 +425,7 @@ const CalculatorPage: React.FC = () => {
                       className="remove-medication-btn"
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
+                        <path d="M18 6L6 18M6 6l12 12" />
                       </svg>
                     </button>
                   </div>
@@ -419,7 +439,7 @@ const CalculatorPage: React.FC = () => {
                         className="quantity-btn minus"
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M5 12h14"/>
+                          <path d="M5 12h14" />
                         </svg>
                       </button>
                       <span className="quantity-value">{med.quantity}</span>
@@ -428,7 +448,7 @@ const CalculatorPage: React.FC = () => {
                         className="quantity-btn plus"
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M12 5v14M5 12h14"/>
+                          <path d="M12 5v14M5 12h14" />
                         </svg>
                       </button>
                     </div>

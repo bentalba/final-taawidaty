@@ -59,7 +59,7 @@ export default function Index() {
   const { language, isRTL } = useLanguage();
   const t = translations[language];
   const _isNativeApp = isNativeApp();
-  
+
   // All hooks must be called before any conditional returns
   const scrollPosition = useScrollPosition();
   const [selectedInsurance, setSelectedInsurance] = useState<'cnops' | 'cnss'>('cnops');
@@ -73,7 +73,7 @@ export default function Index() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [showPopunder, setShowPopunder] = useState(false);
   const { getRecentCalculations, addCalculation } = useCalculationHistory();
-  
+
   // Moved hooks before early return
   const heroTitleSegments = useMemo(() => {
     const words = t.hero.title.split(' ');
@@ -82,7 +82,7 @@ export default function Index() {
       trailing: words.slice(-1)[0] ?? ''
     };
   }, [t.hero.title]);
-  
+
   const metaTitle = language === 'ar'
     ? 'حاسبة تعويض وأسعار الأدوية في المغرب - تعويضاتي'
     : 'Calculateur Remboursement & Prix Médicaments Maroc 2025 | Taawidaty';
@@ -120,7 +120,7 @@ export default function Index() {
       }
     }
   ], [language]);
-  
+
   // Preload medications for offline support (Moroccan market optimization)
   useEffect(() => {
     // Preload all medications in background for offline use
@@ -199,7 +199,7 @@ export default function Index() {
   };
 
   const scrolled = scrollPosition; // Use the hook result from earlier
-  
+
   // Get recent searches for quick re-calculate
   const recentCalculations = getRecentCalculations(3);
 
@@ -253,7 +253,7 @@ export default function Index() {
 
     // Show confetti celebration
     setShowConfetti(true);
-    
+
     // Trigger PopunderAd AFTER user receives value (delayed ad)
     setShowPopunder(true);
   };
@@ -327,7 +327,7 @@ export default function Index() {
                       <Search className="w-5 h-5 text-primary-600" />
                       {language === 'ar' ? 'ابحث عن دوائك' : 'Recherchez votre médicament'}
                     </h2>
-                    
+
                     <MedicationSearchEnhanced
                       placeholder={t.calculator.searchPlaceholder}
                       onSelect={(selected) => addMedication(selected as Medication)}
@@ -634,85 +634,77 @@ export default function Index() {
 
         {/* Footer */}
         <footer role="contentinfo" className="border-t bg-white dark:bg-card mt-12 md:mt-16 transition-colors duration-300">
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Column 1: About */}
-            <div>
-              <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' ? 'عن تعويضاتي' : 'À propos'}
-              </h3>
+          <div className="container mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Column 1: About */}
+              <div>
+                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'عن تعويضاتي' : 'À propos'}
+                </h3>
+                <p className={`text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar'
+                    ? 'منصة مجانية لحساب استرداد الأدوية من CNSS و CNOPS في المغرب'
+                    : 'Plateforme gratuite pour calculer le remboursement des médicaments CNSS et CNOPS au Maroc'}
+                </p>
+              </div>
+
+              {/* Column 2: Links */}
+              <div>
+                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'روابط مهمة' : 'Liens utiles'}
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/blog" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'المدونة' : 'Blog'}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about-us" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'معلومات عنا' : 'À propos'}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/privacy-policy" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de confidentialité'}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 3: Legal */}
+              <div>
+                <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {language === 'ar' ? 'قانوني' : 'Légal'}
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/medical-disclaimer" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement médical'}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/terms-of-service" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                      {language === 'ar' ? 'شروط الاستخدام' : 'Conditions d\'utilisation'}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-6 text-center">
               <p className={`text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' 
-                  ? 'منصة مجانية لحساب استرداد الأدوية من CNSS و CNOPS في المغرب'
-                  : 'Plateforme gratuite pour calculer le remboursement des médicaments CNSS et CNOPS au Maroc'}
+                © 2025 TAAWIDATY. {language === 'ar' ? 'جميع الحقوق محفوظة.' : 'Tous droits réservés.'}
+              </p>
+
+              <p className={`text-xs mt-2 ${isRTL ? 'font-arabic' : ''}`}>
+                {t.disclaimer.text}
               </p>
             </div>
-
-            {/* Column 2: Links */}
-            <div>
-              <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' ? 'روابط مهمة' : 'Liens utiles'}
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/blog" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'المدونة' : 'Blog'}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about-us" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'معلومات عنا' : 'À propos'}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy-policy" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'سياسة الخصوصية' : 'Politique de confidentialité'}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 3: Legal */}
-            <div>
-              <h3 className={`text-lg font-bold mb-4 text-slate-900 dark:text-foreground ${isRTL ? 'font-arabic' : ''}`}>
-                {language === 'ar' ? 'قانوني' : 'Légal'}
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/medical-disclaimer" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'إخلاء المسؤولية الطبية' : 'Avertissement médical'}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms-of-service" className={`text-sm text-slate-600 dark:text-muted-foreground hover:text-primary-600 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
-                    {language === 'ar' ? 'شروط الاستخدام' : 'Conditions d\'utilisation'}
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
+        </footer>
 
-          {/* Copyright */}
-          <div className="border-t border-slate-200 dark:border-slate-800 pt-6 text-center">
-            <p className={`text-sm text-slate-600 dark:text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
-              © 2025 TAAWIDATY. {language === 'ar' ? 'جميع الحقوق محفوظة.' : 'Tous droits réservés.'}
-            </p>
-            
-            <p className={`text-xs mt-2 ${isRTL ? 'font-arabic' : ''}`}>
-              {t.disclaimer.text}
-            </p>
-          </div>
-        </div>
-      </footer>
-      
-      {/* Mobile Sticky Footer Ad - 320x50 (Web only) */}
-      {!isNativeApp() && (
-        <div className="fixed bottom-0 left-0 right-0 z-[150] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg md:hidden">
-          <div className="flex justify-center items-center py-1.5 px-2 min-h-[54px]">
-            <AdUnit type="banner-320x50" />
-          </div>
-        </div>
-      )}
       </div>
 
       {/* Confetti Celebration */}

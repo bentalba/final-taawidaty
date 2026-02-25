@@ -23,39 +23,48 @@ import { PageTransition } from "@/components/transitions/PageTransition";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { SocialBarAd } from "@/components/ads/SocialBarAd";
 import { BottomNavigation } from "@/components/app/BottomNavigation";
-import { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { initializeConsent } from "@/utils/consentManager";
 import { App as CapacitorApp } from '@capacitor/app';
 import { useLanguage } from "@/hooks/useLanguage";
-import Index from "./pages/Index";
-import Blog from "./pages/Blog";
-import GuideRemboursementCnss from "./pages/blog/guide-remboursement-cnss";
-import GuideRemboursementCnops from "./pages/blog/guide-remboursement-cnops";
-import DifferenceCnssCnops from "./pages/blog/difference-cnss-cnops";
-import ComprendrePpvPpm from "./pages/blog/comprendre-ppv-ppm-maroc";
-import MedicamentGenerique from "./pages/blog/medicament-generique-efficacite";
-import ComprendreTicketModerateur from "./pages/blog/comprendre-ticket-moderateur";
-import MedicamentsNonRemboursables from "./pages/blog/medicaments-non-remboursables";
-import LireOrdonnance from "./pages/blog/lire-ordonnance-maroc";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import MedicalDisclaimer from "./pages/MedicalDisclaimer";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import TermsOfService from "./pages/TermsOfService";
-import EditorialPolicy from "./pages/EditorialPolicy";
-import CookiePreferences from "./pages/CookiePreferences";
-import AuthorBio from "./pages/AuthorBio";
-import PriceChecker from "./pages/PriceChecker";
-import FaqCnops from "./pages/FaqCnops";
-import FaqCnss from "./pages/FaqCnss";
-import NotFound from "./pages/NotFound";
-import FavoritesPage from "./pages/app/FavoritesPage";
-import SettingsPage from "./pages/app/SettingsPage";
-import HistoryPage from "./pages/app/HistoryPage";
-import SearchPage from "./pages/app/SearchPage";
-import CalculatorPage from "./pages/app/CalculatorPage";
+
+// Lazy load route components for better performance
+const Index = React.lazy(() => import('./pages/Index'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const GuideRemboursementCnss = React.lazy(() => import('./pages/blog/guide-remboursement-cnss'));
+const GuideRemboursementCnops = React.lazy(() => import('./pages/blog/guide-remboursement-cnops'));
+const DifferenceCnssCnops = React.lazy(() => import('./pages/blog/difference-cnss-cnops'));
+const ComprendrePpvPpm = React.lazy(() => import('./pages/blog/comprendre-ppv-ppm-maroc'));
+const MedicamentGenerique = React.lazy(() => import('./pages/blog/medicament-generique-efficacite'));
+const ComprendreTicketModerateur = React.lazy(() => import('./pages/blog/comprendre-ticket-moderateur'));
+const MedicamentsNonRemboursables = React.lazy(() => import('./pages/blog/medicaments-non-remboursables'));
+const LireOrdonnance = React.lazy(() => import('./pages/blog/lire-ordonnance-maroc'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const MedicalDisclaimer = React.lazy(() => import('./pages/MedicalDisclaimer'));
+const AboutUs = React.lazy(() => import('./pages/AboutUs'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs'));
+const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
+const EditorialPolicy = React.lazy(() => import('./pages/EditorialPolicy'));
+const CookiePreferences = React.lazy(() => import('./pages/CookiePreferences'));
+const AuthorBio = React.lazy(() => import('./pages/AuthorBio'));
+const PriceChecker = React.lazy(() => import('./pages/PriceChecker'));
+const FaqCnops = React.lazy(() => import('./pages/FaqCnops'));
+const FaqCnss = React.lazy(() => import('./pages/FaqCnss'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+const FavoritesPage = React.lazy(() => import('./pages/app/FavoritesPage'));
+const SettingsPage = React.lazy(() => import('./pages/app/SettingsPage'));
+const HistoryPage = React.lazy(() => import('./pages/app/HistoryPage'));
+const SearchPage = React.lazy(() => import('./pages/app/SearchPage'));
+const CalculatorPage = React.lazy(() => import('./pages/app/CalculatorPage'));
 
 const queryClient = new QueryClient();
+
+// Simple loading fallback
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-50/50">
+    <div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
+  </div>
+);
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -64,42 +73,46 @@ function AnimatedRoutes() {
   return (
     <>
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageTransition><Index /></PageTransition>} />
-          <Route path="/search" element={<PageTransition><SearchPage /></PageTransition>} />
-          <Route path="/calculator" element={<PageTransition><CalculatorPage /></PageTransition>} />
-          <Route path="/favorites" element={<PageTransition><FavoritesPage /></PageTransition>} />
-          <Route path="/history" element={<PageTransition><HistoryPage /></PageTransition>} />
-          <Route path="/profile" element={<PageTransition><SettingsPage /></PageTransition>} />
-          <Route path="/settings" element={<PageTransition><SettingsPage /></PageTransition>} />
-          <Route path="/prix-medicaments" element={<PageTransition><PriceChecker /></PageTransition>} />
-          <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
-          <Route path="/blog/guide-remboursement-cnss" element={<PageTransition><GuideRemboursementCnss /></PageTransition>} />
-          <Route path="/blog/guide-remboursement-cnops" element={<PageTransition><GuideRemboursementCnops /></PageTransition>} />
-          <Route path="/blog/difference-cnss-cnops" element={<PageTransition><DifferenceCnssCnops /></PageTransition>} />
-          <Route path="/blog/comprendre-ppv-ppm-maroc" element={<PageTransition><ComprendrePpvPpm /></PageTransition>} />
-          <Route path="/blog/medicament-generique-efficacite" element={<PageTransition><MedicamentGenerique /></PageTransition>} />
-          <Route path="/blog/comprendre-ticket-moderateur" element={<PageTransition><ComprendreTicketModerateur /></PageTransition>} />
-          <Route path="/blog/medicaments-non-remboursables" element={<PageTransition><MedicamentsNonRemboursables /></PageTransition>} />
-          <Route path="/blog/lire-ordonnance-maroc" element={<PageTransition><LireOrdonnance /></PageTransition>} />
-          <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
-          <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
-          <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
-          <Route path="/contact-us" element={<PageTransition><ContactUs /></PageTransition>} />
-          <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
-          <Route path="/editorial-policy" element={<PageTransition><EditorialPolicy /></PageTransition>} />
-          <Route path="/author" element={<PageTransition><AuthorBio /></PageTransition>} />
-          <Route path="/cookies" element={<PageTransition><CookiePreferences /></PageTransition>} />
-          <Route path="/price-checker" element={<PageTransition><PriceChecker /></PageTransition>} />
-          <Route path="/faq-cnops" element={<PageTransition><FaqCnops /></PageTransition>} />
-          <Route path="/faq-cnss" element={<PageTransition><FaqCnss /></PageTransition>} />
-          <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
-        </Routes>
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<PageTransition><Index /></PageTransition>} />
+            <Route path="/search" element={<PageTransition><SearchPage /></PageTransition>} />
+            <Route path="/calculator" element={<PageTransition><CalculatorPage /></PageTransition>} />
+            <Route path="/favorites" element={<PageTransition><FavoritesPage /></PageTransition>} />
+            <Route path="/history" element={<PageTransition><HistoryPage /></PageTransition>} />
+            <Route path="/profile" element={<PageTransition><SettingsPage /></PageTransition>} />
+            <Route path="/settings" element={<PageTransition><SettingsPage /></PageTransition>} />
+            <Route path="/prix-medicaments" element={<PageTransition><PriceChecker /></PageTransition>} />
+            <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
+            <Route path="/blog/guide-remboursement-cnss" element={<PageTransition><GuideRemboursementCnss /></PageTransition>} />
+            <Route path="/blog/guide-remboursement-cnops" element={<PageTransition><GuideRemboursementCnops /></PageTransition>} />
+            <Route path="/blog/difference-cnss-cnops" element={<PageTransition><DifferenceCnssCnops /></PageTransition>} />
+            <Route path="/blog/comprendre-ppv-ppm-maroc" element={<PageTransition><ComprendrePpvPpm /></PageTransition>} />
+            <Route path="/blog/medicament-generique-efficacite" element={<PageTransition><MedicamentGenerique /></PageTransition>} />
+            <Route path="/blog/comprendre-ticket-moderateur" element={<PageTransition><ComprendreTicketModerateur /></PageTransition>} />
+            <Route path="/blog/medicaments-non-remboursables" element={<PageTransition><MedicamentsNonRemboursables /></PageTransition>} />
+            <Route path="/blog/lire-ordonnance-maroc" element={<PageTransition><LireOrdonnance /></PageTransition>} />
+            <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+            <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
+            <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
+            <Route path="/contact-us" element={<PageTransition><ContactUs /></PageTransition>} />
+            <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
+            <Route path="/editorial-policy" element={<PageTransition><EditorialPolicy /></PageTransition>} />
+            <Route path="/author" element={<PageTransition><AuthorBio /></PageTransition>} />
+            <Route path="/cookies" element={<PageTransition><CookiePreferences /></PageTransition>} />
+            <Route path="/price-checker" element={<PageTransition><PriceChecker /></PageTransition>} />
+            <Route path="/faq-cnops" element={<PageTransition><FaqCnops /></PageTransition>} />
+            <Route path="/faq-cnss" element={<PageTransition><FaqCnss /></PageTransition>} />
+            <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+          </Routes>
+        </Suspense>
       </AnimatePresence>
       <BottomNavigation language={language} />
     </>
   );
 }
+
+import { StickyBottomAd } from "@/components/ads/StickyBottomAd";
 
 const App = () => {
   // Initialize consent management on app mount
@@ -112,7 +125,7 @@ const App = () => {
     CapacitorApp.addListener('backButton', ({ canGoBack }) => {
       // Get current path from window.location since we're outside Router context
       const currentPath = window.location.pathname;
-      
+
       // If on home screen, confirm exit
       if (currentPath === '/' || currentPath === '/home') {
         CapacitorApp.exitApp();
@@ -139,6 +152,7 @@ const App = () => {
               <AnimatedRoutes />
               <ConsentBanner />
               <SocialBarAd />
+              <StickyBottomAd />
             </BrowserRouter>
           </TooltipProvider>
         </ThemeProvider>

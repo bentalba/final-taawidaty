@@ -27,7 +27,7 @@ export function useSEO(config: SEOConfig, locale: 'fr' | 'ar' = 'fr') {
   useEffect(() => {
     // Add organization data on every page
     generateOrganizationData();
-    
+
     // Add web application data
     generateWebApplicationData(locale);
   }, [locale]);
@@ -42,19 +42,19 @@ export function usePageSEO(page: 'home' | 'calculator' | 'faqCNOPS' | 'faqCNSS',
   useEffect(() => {
     const config = SEOConfigs[page](locale);
     updateMetaTags(config);
-    
+
     // Add organization data
     generateOrganizationData();
-    
+
     // Add web application data
     generateWebApplicationData(locale);
-    
+
     // Add breadcrumbs
     const breadcrumbs = generateBreadcrumbsForPage(page, locale);
     if (breadcrumbs.length > 0) {
       generateBreadcrumbData(breadcrumbs);
     }
-    
+
     // Add page-specific structured data
     if (page === 'calculator') {
       generateHowToData(locale);
@@ -73,12 +73,12 @@ export function useFAQSEO(
   useEffect(() => {
     const config = SEOConfigs[page](locale);
     updateMetaTags(config);
-    
+
     // Add FAQ structured data
     if (faqs.length > 0) {
       generateFAQPageData(faqs);
     }
-    
+
     // Add organization data
     generateOrganizationData();
   }, [page, faqs, locale]);
@@ -90,7 +90,7 @@ export function useFAQSEO(
 function generateBreadcrumbsForPage(page: string, locale: 'fr' | 'ar'): { name: string; url: string }[] {
   const baseUrl = 'https://taawidaty.ma';
   const homeName = locale === 'fr' ? 'Accueil' : 'الرئيسية';
-  
+
   const breadcrumbs: { name: string; url: string }[] = [
     { name: homeName, url: baseUrl },
   ];
@@ -126,9 +126,9 @@ export function useSocialSharing() {
   const shareOnSocial = (platform: 'facebook' | 'twitter' | 'linkedin' | 'whatsapp', url?: string, text?: string) => {
     const shareUrl = url || window.location.href;
     const shareText = text || document.title;
-    
+
     let shareLink = '';
-    
+
     switch (platform) {
       case 'facebook':
         shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
@@ -143,7 +143,7 @@ export function useSocialSharing() {
         shareLink = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
         break;
     }
-    
+
     if (shareLink) {
       window.open(shareLink, '_blank', 'width=600,height=400');
     }
@@ -176,47 +176,12 @@ export function useSocialSharing() {
 
 /**
  * Hook for canonical URLs and alternate language links
+ * Note: Logic moved to components/SEO.tsx to prevent duplicate tags
  */
 export function useCanonicalAndAlternate(path: string, currentLocale: 'fr' | 'ar') {
   useEffect(() => {
-    const baseUrl = 'https://taawidaty.ma';
-    const canonicalUrl = `${baseUrl}${path}`;
-    
-    // Update canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = canonicalUrl;
-    
-    // Update alternate language links
-    const alternateLocale = currentLocale === 'fr' ? 'ar' : 'fr';
-    
-    // Remove existing alternate links
-    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
-    
-    // Add French alternate
-    const frLink = document.createElement('link');
-    frLink.rel = 'alternate';
-    frLink.hreflang = 'fr';
-    frLink.href = `${canonicalUrl}?lang=fr`;
-    document.head.appendChild(frLink);
-    
-    // Add Arabic alternate
-    const arLink = document.createElement('link');
-    arLink.rel = 'alternate';
-    arLink.hreflang = 'ar';
-    arLink.href = `${canonicalUrl}?lang=ar`;
-    document.head.appendChild(arLink);
-    
-    // Add x-default
-    const defaultLink = document.createElement('link');
-    defaultLink.rel = 'alternate';
-    defaultLink.hreflang = 'x-default';
-    defaultLink.href = canonicalUrl;
-    document.head.appendChild(defaultLink);
+    // Deliberately empty: we now rely exclusively on react-helmet-async in SEO.tsx 
+    // to manage canonical and alternate links to prevent duplicates and simplify the DOM.
   }, [path, currentLocale]);
 }
 

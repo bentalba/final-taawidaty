@@ -11,8 +11,7 @@ import { SearchFiltersSheet, SearchFilters, defaultFilters, FilterButton } from 
 import { useFavorites, useRecentSearches } from '@/hooks/useFavorites';
 import { haptics } from '@/utils/haptics';
 import { useLanguage } from '@/hooks/useLanguage';
-import medicationsCnopsData from '@/data/medications-cnops.json';
-import medicationsCnssData from '@/data/medications-cnss.json';
+import { getAllMedications } from '@/data/medicationsLoader';
 
 interface Medication {
   id: number;
@@ -22,6 +21,7 @@ interface Medication {
   base_remb?: number;
   code?: string;
   lab?: string;
+  source?: 'cnops' | 'cnss';
 }
 
 const ITEMS_PER_PAGE = 30;
@@ -37,17 +37,36 @@ const SearchPage: React.FC = () => {
   const { language } = useLanguage();
   const listRef = useRef<HTMLDivElement>(null);
 
-  // Combine both databases and deduplicate by name
-  const medications = useMemo(() => {
-    const allMeds = [...medicationsCnopsData, ...medicationsCnssData] as Medication[];
-    // Deduplicate by name (keep first occurrence)
-    const seen = new Set<string>();
-    return allMeds.filter(med => {
-      const key = med.name.toLowerCase();
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+  const [medications, setMedications] = useState<Medication[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch medications asynchronously
+  useEffect(() => {
+    let mounted = true;
+    const fetchMeds = async () => {
+      try {
+        const allMeds = await getAllMedications();
+        if (!mounted) return;
+
+        // Deduplicate by name (keep first occurrence)
+        const seen = new Set<string>();
+        const uniqueMeds = (allMeds as Medication[]).filter(med => {
+          const key = med.name.toLowerCase();
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+
+        setMedications(uniqueMeds);
+      } catch (error) {
+        console.error("Failed to load medications:", error);
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    };
+
+    fetchMeds();
+    return () => { mounted = false; };
   }, []);
 
   // Reset display count when filters change
@@ -62,7 +81,7 @@ const SearchPage: React.FC = () => {
     // Text search (optional)
     if (searchQuery.length >= 2) {
       const query = searchQuery.toLowerCase();
-      results = results.filter(med => 
+      results = results.filter(med =>
         med.name.toLowerCase().includes(query) ||
         med.code?.toLowerCase().includes(query)
       );
@@ -161,17 +180,17 @@ const SearchPage: React.FC = () => {
           {/* Search Input */}
           <div className="search-input-row">
             <div className="search-input-container">
-              <svg 
+              <svg
                 className="search-input-icon"
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
                 strokeWidth="2"
               >
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.35-4.35"/>
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
               </svg>
               <input
                 type="text"
@@ -186,14 +205,14 @@ const SearchPage: React.FC = () => {
                   className="search-clear-btn"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
+                    <path d="M18 6L6 18M6 6l12 12" />
                   </svg>
                 </button>
               )}
             </div>
 
             {/* Filter Button */}
-            <FilterButton 
+            <FilterButton
               onClick={() => setShowFilters(true)}
               activeCount={activeFiltersCount}
               language={language}
@@ -214,14 +233,21 @@ const SearchPage: React.FC = () => {
 
         {/* Results */}
         <div className="search-results-container">
-          {filteredMedications.length === 0 ? (
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center py-12 animate-fade-in">
+              <div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin mb-4"></div>
+              <p className="text-gray-500">
+                {language === 'ar' ? 'جاري تحميل الأدوية...' : 'Chargement des médicaments...'}
+              </p>
+            </div>
+          ) : filteredMedications.length === 0 ? (
             <div className="empty-state animate-fade-in">
               <div className="empty-state-icon">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
-                  <line x1="9" y1="9" x2="9.01" y2="9"/>
-                  <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M16 16s-1.5-2-4-2-4 2-4 2" />
+                  <line x1="9" y1="9" x2="9.01" y2="9" />
+                  <line x1="15" y1="9" x2="15.01" y2="9" />
                 </svg>
               </div>
               <h3 className="empty-state-title">
@@ -247,7 +273,7 @@ const SearchPage: React.FC = () => {
                   index={index}
                 />
               ))}
-              
+
               {/* Load more indicator */}
               {displayCount < filteredMedications.length && (
                 <div className="load-more-indicator">
@@ -325,15 +351,15 @@ const MedicationCard: React.FC<MedicationCardProps> = ({
           }}
           className={`favorite-btn ${isFavorite ? 'active' : ''}`}
         >
-          <svg 
-            width="22" 
-            height="22" 
-            viewBox="0 0 24 24" 
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
             fill={isFavorite ? 'currentColor' : 'none'}
             stroke="currentColor"
             strokeWidth="2"
           >
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
           </svg>
         </button>
       </div>

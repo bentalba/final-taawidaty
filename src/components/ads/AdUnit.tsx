@@ -10,7 +10,7 @@ import React, { useEffect, useRef } from 'react';
 import { isNativeApp } from '@/utils/platform';
 
 // Define all available ad types based on approved sizes
-type AdType = 
+type AdType =
   | 'banner-300x250'   // Medium Rectangle - High CPM
   | 'banner-728x90'    // Leaderboard - Desktop standard
   | 'banner-320x50'    // Mobile banner - Sticky footer
@@ -52,7 +52,7 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
             };
           `;
           adContainerRef.current.appendChild(script);
-          
+
           const script300x250 = document.createElement('script');
           script300x250.type = 'text/javascript';
           script300x250.src = '//www.topcreativeformat.com/609c413c4d8ec77697f52b90a389e2e1/invoke.js';
@@ -71,7 +71,7 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
             };
           `;
           adContainerRef.current.appendChild(script);
-          
+
           const script728x90 = document.createElement('script');
           script728x90.type = 'text/javascript';
           script728x90.src = '//www.topcreativeformat.com/73248a225bc650e298feffb4ef3b8c55/invoke.js';
@@ -90,7 +90,7 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
             };
           `;
           adContainerRef.current.appendChild(script);
-          
+
           const script320x50 = document.createElement('script');
           script320x50.type = 'text/javascript';
           script320x50.src = '//www.topcreativeformat.com/69dd9fc783ee58ca28a59e87b005c014/invoke.js';
@@ -103,7 +103,7 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
           script.setAttribute('data-cfasync', 'false');
           script.src = '//pl28129907.effectivegatecpm.com/e3c362a6fe79c57064310f672d050bef/invoke.js';
           adContainerRef.current.appendChild(script);
-          
+
           const nativeDiv = document.createElement('div');
           nativeDiv.id = 'container-e3c362a6fe79c57064310f672d050bef';
           adContainerRef.current.appendChild(nativeDiv);
@@ -129,18 +129,18 @@ export const AdUnit: React.FC<AdUnitProps> = ({ type, className = '' }) => {
 
   // Dimensions for container to prevent layout shift (CLS)
   const dimensions = {
-    'banner-300x250': { width: 300, height: 250 },
-    'banner-728x90': { width: 728, height: 90 },
-    'banner-320x50': { width: 320, height: 50 },
-    'native-strip': { width: '100%', height: 'auto' },
+    'banner-300x250': { width: 300, height: 250, maxWidth: '100%' },
+    'banner-728x90': { width: 728, height: 90, maxWidth: '100%' },
+    'banner-320x50': { width: 320, height: 50, maxWidth: '100%' },
+    'native-strip': { width: '100%', height: 'auto', maxWidth: '100%' },
   }[type];
 
   return (
-    <div className={`flex justify-center items-center overflow-hidden ${className}`}>
-      <div 
-        ref={adContainerRef} 
-        style={dimensions} 
-        className="flex items-center justify-center relative"
+    <div className={`flex justify-center items-center overflow-hidden w-full max-w-full ${className}`}>
+      <div
+        ref={adContainerRef}
+        style={dimensions}
+        className="flex items-center justify-center relative max-w-full overflow-hidden"
       />
     </div>
   );
