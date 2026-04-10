@@ -288,14 +288,14 @@ export default function Index() {
         <main role="main">
           {/* Hero Section */}
           {step === 1 && (
-            <section className="relative px-4 pt-8 pb-12 md:pt-20 md:pb-16 max-w-7xl mx-auto">
+            <section className="relative px-4 pt-12 pb-16 md:pt-28 md:pb-24 max-w-5xl mx-auto">
 
               <div className="relative z-10 text-center animate-slide-up">
                 {/* Pill badge */}
-                <div className="mb-5 md:mb-8 inline-flex items-center">
-                  <div className="shimmer-border bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-sm">
-                    <div className="flex items-center gap-2.5">
-                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-500 dark:text-primary-400" />
+                <div className="mb-6 md:mb-10 inline-flex items-center">
+                  <div className="shimmer-border bg-white/90 dark:bg-white/[0.06] backdrop-blur-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full">
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-primary-500 dark:text-primary-400" />
                       <span className={`text-xs md:text-sm font-semibold text-primary-700 dark:text-primary-300 ${isRTL ? 'font-arabic' : ''}`}>
                         {t.app.subtitle}
                       </span>
@@ -304,12 +304,12 @@ export default function Index() {
                 </div>
 
                 {/* Main heading - H1 for SEO */}
-                <h1 className={`text-balance text-4xl md:text-5xl lg:text-6xl font-black mb-5 md:mb-7 leading-[1.1] tracking-tight ${isRTL ? 'font-arabic' : ''}`}>
+                <h1 className={`text-balance text-4xl md:text-5xl lg:text-[3.5rem] font-black mb-5 md:mb-8 leading-[1.08] tracking-[-0.025em] ${isRTL ? 'font-arabic' : ''}`}>
                   {renderHeroTitle()}
                 </h1>
 
                 {/* Subtitle */}
-                <p className={`text-base md:text-lg text-slate-500 dark:text-slate-400 mb-5 md:mb-7 max-w-2xl mx-auto leading-relaxed font-medium ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
+                <p className={`text-base md:text-lg text-neutral-500 dark:text-neutral-400 mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed ${isRTL ? 'font-arabic' : ''} transition-colors duration-300`}>
                   {t.hero.subtitle}
                 </p>
 
@@ -320,8 +320,8 @@ export default function Index() {
                 </div>
 
                 {/* Search Card - Premium Frosted Glass */}
-                <div className="max-w-2xl mx-auto mb-10">
-                  <div className="shimmer-border bg-white/90 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl shadow-xl shadow-primary-500/5 dark:shadow-black/20 p-5 md:p-7">
+                <div className="relative z-20 max-w-2xl mx-auto mb-10">
+                  <div className="bg-white dark:bg-white/[0.06] backdrop-blur-xl rounded-2xl shadow-strong p-5 md:p-7 border border-black/[0.04] dark:border-white/[0.08]">
                     <h2 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center justify-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
                       <Search className="w-5 h-5 text-primary-500" />
                       {language === 'ar' ? 'ابحث عن دوائك' : 'Recherchez votre médicament'}
@@ -368,7 +368,7 @@ export default function Index() {
                 </div>
 
                 {/* Service Cards */}
-                <div className="max-w-3xl mx-auto mb-10 md:mb-14">
+                <div className="relative z-0 max-w-3xl mx-auto mb-10 md:mb-14">
                   <p className={`text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-5 text-center ${isRTL ? 'font-arabic' : ''}`}>
                     {language === 'ar' ? 'أو اختر خدمة' : 'Ou choisissez un service'}
                   </p>
@@ -381,9 +381,9 @@ export default function Index() {
                       className="group cursor-pointer"
                       onClick={() => setStep(2)}
                     >
-                      <div className="shimmer-border bg-white dark:bg-slate-800/60 rounded-2xl p-5 md:p-6 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300">
+                      <div className="bg-white dark:bg-white/[0.06] rounded-2xl p-5 md:p-6 shadow-soft border border-black/[0.04] dark:border-white/[0.08] hover:shadow-strong transition-all duration-300">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary-500 flex items-center justify-center">
                             <Calculator className="w-6 h-6 md:w-7 md:h-7 text-white" />
                           </div>
                           <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -406,9 +406,9 @@ export default function Index() {
                       className="group cursor-pointer"
                       onClick={() => { window.location.href = '/prix-medicaments'; }}
                     >
-                      <div className="shimmer-border bg-white dark:bg-slate-800/60 rounded-2xl p-5 md:p-6 hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
+                      <div className="bg-white dark:bg-white/[0.06] rounded-2xl p-5 md:p-6 shadow-soft border border-black/[0.04] dark:border-white/[0.08] hover:shadow-strong transition-all duration-300">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-shadow">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-orange-500 flex items-center justify-center">
                             <DollarSign className="w-6 h-6 md:w-7 md:h-7 text-white" />
                           </div>
                           <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -439,7 +439,7 @@ export default function Index() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 + i * 0.1 }}
-                        className="text-center p-3 md:p-4 rounded-xl bg-white/60 dark:bg-slate-800/30 border border-slate-200/40 dark:border-slate-700/20"
+                        className="text-center p-3 md:p-4 rounded-xl bg-white/80 dark:bg-white/[0.04] border border-black/[0.04] dark:border-white/[0.06]"
                       >
                         <span className="text-lg md:text-xl mb-1 block">{stat.icon}</span>
                         <p className="text-sm md:text-base font-bold text-slate-900 dark:text-white">{stat.value}</p>

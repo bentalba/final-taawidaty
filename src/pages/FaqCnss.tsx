@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from '@/components/SEO';
+import DOMPurify from 'dompurify';
 
 const STRIP_HTML_REGEX = /<[^>]+>/g;
 
@@ -14,7 +15,7 @@ const stripHtmlSafely = (html: string): string => {
     return html.replace(STRIP_HTML_REGEX, '');
   }
   const tmp = window.document.createElement('div');
-  tmp.innerHTML = html;
+  tmp.innerHTML = DOMPurify.sanitize(html);
   return tmp.textContent || tmp.innerText || '';
 };
 
@@ -174,7 +175,7 @@ const FaqCnss = () => {
               <AccordionContent className="px-6 pb-6">
                 <div
                   className={`prose prose-sm max-w-none text-slate-700 dark:text-muted-foreground leading-relaxed ${isRTL ? 'font-arabic' : ''}`}
-                  dangerouslySetInnerHTML={{ __html: faqItem.answer }}
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(faqItem.answer) }}
                 />
               </AccordionContent>
             </AccordionItem>

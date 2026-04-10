@@ -137,16 +137,16 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        arabic: ['Cairo', 'Tajawal', 'system-ui', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'SF Pro Text', 'Inter', 'Segoe UI', 'system-ui', 'sans-serif'],
+        arabic: ['SF Arabic', 'Cairo', 'Tajawal', '-apple-system', 'system-ui', 'sans-serif'],
       },
       
       boxShadow: {
-        soft: '0 2px 8px rgba(0, 0, 0, 0.04)',
-        medium: '0 4px 12px rgba(0, 0, 0, 0.08)',
-        strong: '0 8px 24px rgba(0, 0, 0, 0.12)',
-        'glow-blue': '0 0 20px rgba(0, 119, 190, 0.3)',
-        'glow-green': '0 0 20px rgba(76, 175, 80, 0.3)',
+        soft: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06)',
+        medium: '0 2px 8px rgba(0, 0, 0, 0.06)',
+        strong: '0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04)',
+        'glow-blue': '0 4px 16px rgba(0, 119, 190, 0.12)',
+        'glow-green': '0 4px 16px rgba(76, 175, 80, 0.12)',
       },
       
       borderRadius: {

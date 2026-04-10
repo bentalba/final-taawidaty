@@ -50,8 +50,8 @@ export function Header() {
         className={cn(
           'sticky top-0 z-[200] transition-all duration-300',
           scrolled
-            ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg shadow-black/[0.04] dark:shadow-black/20 border-b border-white/50 dark:border-white/5'
-            : 'bg-white/60 dark:bg-slate-900/50 backdrop-blur-md border-b border-transparent'
+            ? 'bg-white/72 dark:bg-black/72 backdrop-blur-xl backdrop-saturate-[180%] border-b border-black/[0.04] dark:border-white/[0.06]'
+            : 'bg-transparent border-b border-transparent'
         )}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

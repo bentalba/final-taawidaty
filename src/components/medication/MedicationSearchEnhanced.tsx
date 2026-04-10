@@ -208,31 +208,24 @@ export function MedicationSearchEnhanced({
   return (
     <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto" dir={dir}>
       {/* Search Input */}
-      <motion.div
-        animate={{
-          scale: isFocused ? 1.02 : 1,
-          borderColor: isFocused ? 'rgb(0, 119, 190)' : 'rgb(229, 229, 229)',
-        }}
-        whileHover={{ scale: 1.01 }}
-        className="relative bg-white dark:bg-card rounded-2xl border-2 border-neutral-200 dark:border-border transition-colors duration-200 shadow-medium hover:shadow-strong"
+      <div
+        className={cn(
+          "relative bg-neutral-100 dark:bg-white/[0.08] rounded-xl transition-all duration-200",
+          isFocused
+            ? "ring-2 ring-primary-500/40 bg-white dark:bg-white/[0.06]"
+            : "hover:bg-neutral-50 dark:hover:bg-white/[0.06]"
+        )}
       >
-        {/* Search Icon with Animation */}
-        <motion.div
-          animate={{
-            rotate: isSearching ? 360 : 0,
-            scale: isSearching ? [1, 1.2, 1] : 1,
-          }}
-          transition={{
-            rotate: { duration: 1, repeat: isSearching ? Infinity : 0, ease: 'linear' },
-            scale: { duration: 0.5, repeat: isSearching ? Infinity : 0 },
-          }}
+        {/* Search Icon */}
+        <div
           className={cn(
             "absolute top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500",
+            isSearching && "animate-spin",
             language === 'ar' ? 'right-4' : 'left-4'
           )}
         >
           <Search className="w-5 h-5" />
-        </motion.div>
+        </div>
 
         <input
           ref={inputRef}
@@ -244,7 +237,7 @@ export function MedicationSearchEnhanced({
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           className={cn(
-            "w-full py-4 text-lg bg-transparent border-none outline-none rounded-2xl text-slate-900 dark:text-foreground placeholder:text-slate-400 dark:placeholder:text-muted-foreground",
+            "w-full py-3.5 text-base bg-transparent border-none outline-none rounded-xl text-neutral-900 dark:text-foreground placeholder:text-neutral-400 dark:placeholder:text-muted-foreground",
             language === 'ar' ? 'pr-12 pl-4 font-arabic text-right' : 'pl-12 pr-4'
           )}
           aria-label={placeholder}
@@ -277,7 +270,7 @@ export function MedicationSearchEnhanced({
             </motion.button>
           )}
         </AnimatePresence>
-      </motion.div>
+      </div>
 
       <div id="search-help" className="sr-only">
         {language === 'ar' ? 'البحث عن الأدوية' : 'Rechercher un médicament'}
@@ -292,7 +285,7 @@ export function MedicationSearchEnhanced({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-            className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-2xl border border-neutral-100 dark:border-border overflow-hidden z-50 max-h-96 overflow-y-auto"
+            className="absolute top-full mt-2 w-full bg-white dark:bg-neutral-900 rounded-xl shadow-floating border border-black/[0.04] dark:border-white/[0.08] overflow-hidden z-50 max-h-96 overflow-y-auto"
             role="listbox"
             aria-label={placeholder}
           >
@@ -300,45 +293,26 @@ export function MedicationSearchEnhanced({
               <motion.button
                 key={medication.id}
                 id={`medication-${index}`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05, type: 'spring', stiffness: 300 }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.03, duration: 0.2 }}
                 onClick={() => handleSelect(medication, index)}
-                whileHover={{
-                  x: 6,
-                  backgroundColor: 'rgb(230, 242, 248)',
-                  transition: { type: 'spring', stiffness: 400, damping: 17 },
-                }}
-                whileTap={{ scale: 0.98 }}
                 className={cn(
-                  'w-full px-6 py-4 flex items-center gap-4 text-left transition-colors',
-                  'focus:bg-trust-blue-light outline-none cursor-pointer relative overflow-hidden',
-                  index === selectedIndex && 'bg-trust-blue-light'
+                  'w-full px-6 py-4 flex items-center gap-4 text-left transition-colors duration-150',
+                  'hover:bg-primary-50 dark:hover:bg-primary-900/30 focus:bg-primary-50 dark:focus:bg-primary-900/30 outline-none cursor-pointer',
+                  index === selectedIndex && 'bg-primary-50 dark:bg-primary-900/30'
                 )}
                 role="option"
                 aria-selected={index === selectedIndex}
                 tabIndex={-1}
               >
-                {/* Hover Shine Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                  initial={{ x: '-100%' }}
-                  whileHover={{
-                    x: '100%',
-                    transition: { duration: 0.6, ease: 'linear' },
-                  }}
-                />
-
                 {/* Medication Icon */}
-                <motion.div
-                  className="flex-shrink-0 relative z-10"
-                  whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
-                >
+                <div className="flex-shrink-0">
                   <Pill className="w-6 h-6 text-trust-blue" />
-                </motion.div>
+                </div>
 
                 {/* Medication Info */}
-                <div className="flex-1 min-w-0 relative z-10">
+                <div className="flex-1 min-w-0">
                   <p className={cn(
                     "font-semibold text-neutral-900 dark:text-foreground truncate mb-1",
                     language === 'ar' && 'font-arabic'
@@ -361,22 +335,14 @@ export function MedicationSearchEnhanced({
                 </div>
 
                 {/* Price & Coverage */}
-                <div className="flex-shrink-0 text-right relative z-10">
-                  <motion.p
-                    className="font-semibold text-trust-blue dark:text-primary"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    {medication.ppv} MAD
-                  </motion.p>
-                  <motion.div
-                    className="flex items-center gap-1 text-sm text-success-green justify-end"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.05 + 0.2 }}
-                  >
+                <div className="flex-shrink-0 text-right">
+                  <p className="font-semibold text-trust-blue dark:text-primary">
+                    {Number(medication.ppv).toFixed(2)} MAD
+                  </p>
+                  <div className="flex items-center gap-1 text-sm text-success-green justify-end">
                     <TrendingUp className="w-3 h-3" />
                     <span>{medication.taux_remb}%</span>
-                  </motion.div>
+                  </div>
                 </div>
               </motion.button>
             ))}
@@ -389,7 +355,7 @@ export function MedicationSearchEnhanced({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute top-full mt-3 w-full bg-white rounded-2xl shadow-xl border border-neutral-100 p-4 z-40"
+          className="absolute top-full mt-2 w-full bg-white rounded-xl shadow-floating border border-black/[0.04] p-4 z-40"
         >
           <div className="space-y-3">
             {[...Array(3)].map((_, i) => (
@@ -412,7 +378,7 @@ export function MedicationSearchEnhanced({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-xl border border-neutral-100 dark:border-border p-4 z-40"
+          className="absolute top-full mt-2 w-full bg-white dark:bg-neutral-900 rounded-xl shadow-floating border border-black/[0.04] dark:border-white/[0.08] p-4 z-40"
         >
           <p className={cn(
             "text-sm font-medium text-neutral-600 dark:text-muted-foreground mb-3 flex items-center gap-2",
@@ -436,7 +402,7 @@ export function MedicationSearchEnhanced({
                   handleQueryChange(med);
                 }}
                 className={cn(
-                  "px-3 py-2 text-sm bg-neutral-100 dark:bg-neutral-800 hover:bg-trust-blue-light dark:hover:bg-primary-900/50 rounded-lg transition-colors text-neutral-700 dark:text-neutral-300",
+                  "px-3 py-2 text-sm bg-neutral-100 dark:bg-white/[0.06] hover:bg-neutral-200 dark:hover:bg-white/[0.1] rounded-lg transition-colors text-neutral-600 dark:text-neutral-300",
                   language === 'ar' ? 'text-right font-arabic' : 'text-left'
                 )}
               >
@@ -452,7 +418,7 @@ export function MedicationSearchEnhanced({
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full mt-3 w-full bg-white dark:bg-card rounded-2xl shadow-xl border border-neutral-100 dark:border-border p-6 z-40 text-center"
+          className="absolute top-full mt-2 w-full bg-white dark:bg-neutral-900 rounded-xl shadow-floating border border-black/[0.04] dark:border-white/[0.08] p-6 z-40 text-center"
         >
           <motion.div
             initial={{ scale: 0 }}
