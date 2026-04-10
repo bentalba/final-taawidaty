@@ -321,7 +321,7 @@ export default function Index() {
 
                 {/* Search Card - Premium Frosted Glass */}
                 <div className="max-w-2xl mx-auto mb-10">
-                  <div className="shimmer-border bg-white/90 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl shadow-xl shadow-primary-500/5 dark:shadow-black/20 p-5 md:p-7">
+                  <div className="shimmer-border bg-white/90 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl shadow-xl shadow-primary-500/5 dark:shadow-black/20 p-5 md:p-7">
                     <h2 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center justify-center gap-2 ${isRTL ? 'font-arabic' : ''}`}>
                       <Search className="w-5 h-5 text-primary-500" />
                       {language === 'ar' ? 'ابحث عن دوائك' : 'Recherchez votre médicament'}

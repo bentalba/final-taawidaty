@@ -208,31 +208,24 @@ export function MedicationSearchEnhanced({
   return (
     <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto" dir={dir}>
       {/* Search Input */}
-      <motion.div
-        animate={{
-          scale: isFocused ? 1.02 : 1,
-          borderColor: isFocused ? 'rgb(0, 119, 190)' : 'rgb(229, 229, 229)',
-        }}
-        whileHover={{ scale: 1.01 }}
-        className="relative bg-white dark:bg-card rounded-2xl border-2 border-neutral-200 dark:border-border transition-colors duration-200 shadow-medium hover:shadow-strong"
+      <div
+        className={cn(
+          "relative bg-white dark:bg-card rounded-2xl border-2 transition-colors duration-200 shadow-md",
+          isFocused
+            ? "border-primary-500 dark:border-primary-400 shadow-lg"
+            : "border-neutral-200 dark:border-border hover:shadow-lg"
+        )}
       >
-        {/* Search Icon with Animation */}
-        <motion.div
-          animate={{
-            rotate: isSearching ? 360 : 0,
-            scale: isSearching ? [1, 1.2, 1] : 1,
-          }}
-          transition={{
-            rotate: { duration: 1, repeat: isSearching ? Infinity : 0, ease: 'linear' },
-            scale: { duration: 0.5, repeat: isSearching ? Infinity : 0 },
-          }}
+        {/* Search Icon */}
+        <div
           className={cn(
             "absolute top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500",
+            isSearching && "animate-spin",
             language === 'ar' ? 'right-4' : 'left-4'
           )}
         >
           <Search className="w-5 h-5" />
-        </motion.div>
+        </div>
 
         <input
           ref={inputRef}
@@ -277,7 +270,7 @@ export function MedicationSearchEnhanced({
             </motion.button>
           )}
         </AnimatePresence>
-      </motion.div>
+      </div>
 
       <div id="search-help" className="sr-only">
         {language === 'ar' ? 'البحث عن الأدوية' : 'Rechercher un médicament'}
@@ -300,45 +293,26 @@ export function MedicationSearchEnhanced({
               <motion.button
                 key={medication.id}
                 id={`medication-${index}`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05, type: 'spring', stiffness: 300 }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.03, duration: 0.2 }}
                 onClick={() => handleSelect(medication, index)}
-                whileHover={{
-                  x: 6,
-                  backgroundColor: 'rgb(230, 242, 248)',
-                  transition: { type: 'spring', stiffness: 400, damping: 17 },
-                }}
-                whileTap={{ scale: 0.98 }}
                 className={cn(
-                  'w-full px-6 py-4 flex items-center gap-4 text-left transition-colors',
-                  'focus:bg-trust-blue-light outline-none cursor-pointer relative overflow-hidden',
-                  index === selectedIndex && 'bg-trust-blue-light'
+                  'w-full px-6 py-4 flex items-center gap-4 text-left transition-colors duration-150',
+                  'hover:bg-primary-50 dark:hover:bg-primary-900/30 focus:bg-primary-50 dark:focus:bg-primary-900/30 outline-none cursor-pointer',
+                  index === selectedIndex && 'bg-primary-50 dark:bg-primary-900/30'
                 )}
                 role="option"
                 aria-selected={index === selectedIndex}
                 tabIndex={-1}
               >
-                {/* Hover Shine Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                  initial={{ x: '-100%' }}
-                  whileHover={{
-                    x: '100%',
-                    transition: { duration: 0.6, ease: 'linear' },
-                  }}
-                />
-
                 {/* Medication Icon */}
-                <motion.div
-                  className="flex-shrink-0 relative z-10"
-                  whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
-                >
+                <div className="flex-shrink-0">
                   <Pill className="w-6 h-6 text-trust-blue" />
-                </motion.div>
+                </div>
 
                 {/* Medication Info */}
-                <div className="flex-1 min-w-0 relative z-10">
+                <div className="flex-1 min-w-0">
                   <p className={cn(
                     "font-semibold text-neutral-900 dark:text-foreground truncate mb-1",
                     language === 'ar' && 'font-arabic'
@@ -361,22 +335,14 @@ export function MedicationSearchEnhanced({
                 </div>
 
                 {/* Price & Coverage */}
-                <div className="flex-shrink-0 text-right relative z-10">
-                  <motion.p
-                    className="font-semibold text-trust-blue dark:text-primary"
-                    whileHover={{ scale: 1.1 }}
-                  >
+                <div className="flex-shrink-0 text-right">
+                  <p className="font-semibold text-trust-blue dark:text-primary">
                     {medication.ppv} MAD
-                  </motion.p>
-                  <motion.div
-                    className="flex items-center gap-1 text-sm text-success-green justify-end"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.05 + 0.2 }}
-                  >
+                  </p>
+                  <div className="flex items-center gap-1 text-sm text-success-green justify-end">
                     <TrendingUp className="w-3 h-3" />
                     <span>{medication.taux_remb}%</span>
-                  </motion.div>
+                  </div>
                 </div>
               </motion.button>
             ))}

@@ -22,9 +22,9 @@ html {
   }
 }
 
-/* RTL Direction Transition */
-.direction-transition * {
-  transition: margin 0.3s ease, padding 0.3s ease !important;
+/* RTL Direction Transition - scoped to direct layout children only */
+.direction-transition > * {
+  transition: margin 0.3s ease, padding 0.3s ease;
 }
 
 @layer base {
@@ -338,7 +338,8 @@ html {
   /* Shimmer Border Effect */
   .shimmer-border {
     position: relative;
-    overflow: hidden;
+    /* NOTE: Do NOT set overflow:hidden here — it clips child dropdowns/popovers.
+       The ::before pseudo-element handles the border effect with pointer-events:none. */
   }
 
   .shimmer-border::before {
@@ -369,7 +370,7 @@ html {
 
   #container-e3c362a6fe79c57064310f672d050bef {
     max-height: 200px;
-    overflow: hidden;
+    overflow: auto;
   }
 
   /* Enhanced shadow system */
@@ -488,12 +489,8 @@ html {
       linear-gradient(135deg, hsl(var(--primary) / 0.7), hsl(var(--primary) / 0.3)) border-box;
   }
 
-  /* Smooth transitions for theme switching */
-  * {
-    transition-property: background-color, border-color, color, fill, stroke, transform, box-shadow;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-duration: 200ms;
-  }
+  /* Smooth transitions for theme switching — scoped to common interactive elements only */
+  /* Avoid wildcard * rule which triggers transitions on every element (including SVGs, pseudo-elements, etc.) */
 }
 
 @keyframes fadeIn {
@@ -663,10 +660,15 @@ html {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
 
-  /* Mobile glass adjustments */
+  /* Mobile glass adjustments — reduced blur for performance */
   .glass {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
 
   /* Mobile shadow optimization */
@@ -708,31 +710,8 @@ html {
   }
 }
 
-/* Reduced motion support for accessibility */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Mobile Touch Target Optimization - Add to end of file */
+/* Mobile Touch Target Optimization */
 @media (max-width: 768px) {
-
-  /* Ensure all interactive elements meet 44x44px minimum touch target */
-  button,
-  a,
-  input,
-  select,
-  [role="button"],
-  [role="link"] {
-    min-height: 44px;
-    min-width: 44px;
-  }
 
   /* Prevent automatic text size adjustment on mobile */
   html {
@@ -749,45 +728,34 @@ html {
     -webkit-touch-callout: none;
   }
 
-  /* Optimize touch scrolling - FIX SCROLL SHIFTING */
+  /* Prevent horizontal overflow without breaking scroll.
+     Previous approach used position:fixed on body which broke:
+     - sticky headers, scroll performance, viewport on keyboard open,
+       and dropdowns/popovers that depend on document flow. */
   html,
   body {
     overflow-x: hidden;
-    overscroll-behavior: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-  }
-
-  #root {
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-    height: 100%;
-    width: 100%;
-    position: relative;
+    overscroll-behavior-x: none;
   }
 
   /* Better focus states for touch devices */
   input:focus,
   select:focus,
   textarea:focus {
-    outline: 2px solid #7C3AED;
+    outline: 2px solid hsl(var(--primary));
     outline-offset: 2px;
   }
 }
 
 /* Accessibility - Better focus indicators */
 *:focus-visible {
-  outline: 2px solid #7C3AED;
+  outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
 }
 
-/* Performance - GPU acceleration for animations */
+/* Performance - GPU acceleration for animated elements only */
 .animate-fade-in,
-.animate-slide-up,
-.glass-card {
+.animate-slide-up {
   transform: translateZ(0);
   will-change: transform, opacity;
 }
