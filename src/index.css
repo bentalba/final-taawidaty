@@ -24,7 +24,7 @@ html {
 
 /* RTL Direction Transition - scoped to direct layout children only */
 .direction-transition > * {
-  transition: margin 0.3s ease, padding 0.3s ease;
+  transition: margin 0.3s ease !important, padding 0.3s ease !important;
 }
 
 @layer base {
@@ -489,8 +489,9 @@ html {
       linear-gradient(135deg, hsl(var(--primary) / 0.7), hsl(var(--primary) / 0.3)) border-box;
   }
 
-  /* Smooth transitions for theme switching — scoped to common interactive elements only */
-  /* Avoid wildcard * rule which triggers transitions on every element (including SVGs, pseudo-elements, etc.) */
+  /* Theme switching transitions were previously applied via a wildcard * rule that
+     triggered transitions on every element (SVGs, pseudo-elements, etc.), causing lag.
+     Interactive elements already have their own transition rules via component classes. */
 }
 
 @keyframes fadeIn {

@@ -210,7 +210,7 @@ export function MedicationSearchEnhanced({
       {/* Search Input */}
       <div
         className={cn(
-          "relative bg-white dark:bg-card rounded-2xl border-2 transition-colors duration-200 shadow-md",
+          "relative bg-white dark:bg-card rounded-2xl border-2 transition-all duration-200 shadow-md",
           isFocused
             ? "border-primary-500 dark:border-primary-400 shadow-lg"
             : "border-neutral-200 dark:border-border hover:shadow-lg"
