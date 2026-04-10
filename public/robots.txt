@@ -33,5 +33,5 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-# Sitemap (CLEAN VERSION - Only 13 real URLs)
+# Sitemap
 Sitemap: https://taawidaty.ma/sitemap.xml

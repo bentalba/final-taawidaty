@@ -337,7 +337,7 @@ export function MedicationSearchEnhanced({
                 {/* Price & Coverage */}
                 <div className="flex-shrink-0 text-right">
                   <p className="font-semibold text-trust-blue dark:text-primary">
-                    {medication.ppv} MAD
+                    {Number(medication.ppv).toFixed(2)} MAD
                   </p>
                   <div className="flex items-center gap-1 text-sm text-success-green justify-end">
                     <TrendingUp className="w-3 h-3" />

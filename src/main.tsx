@@ -16,6 +16,7 @@ import { StatusBar, Style } from '@capacitor/status-bar';
 import { Capacitor } from '@capacitor/core';
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import App from "./App.tsx";
+import "./i18n/config"; // Initialize i18next before rendering (used by Header, FAQ, etc.)
 import "./index.css";
 // App-specific styles (only applied in native app via CSS selectors)
 import "./styles/app-design-system.css";
