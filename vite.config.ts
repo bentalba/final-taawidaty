@@ -24,12 +24,22 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     minify: 'esbuild' as const,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['lucide-react', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
-          'form-vendor': ['react-hook-form', 'zod'],
-          'animation-vendor': ['framer-motion'],
-          'i18n-vendor': ['react-i18next', 'i18next'],
+        manualChunks(id: string) {
+          // Use a function to avoid circular chunk dependencies
+          // (static object configs can cause react-vendor <-> ui-vendor cycles)
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+            return 'react-vendor';
+          }
+          if (id.includes('node_modules/react-router-dom') || id.includes('node_modules/react-router/')) {
+            return 'react-vendor';
+          }
+          if (id.includes('node_modules/framer-motion') || id.includes('node_modules/motion')) {
+            return 'animation-vendor';
+          }
+          if (id.includes('node_modules/react-i18next') || id.includes('node_modules/i18next')) {
+            return 'i18n-vendor';
+          }
+          // Let Vite handle all other chunks automatically to prevent cycles
         },
         assetFileNames: (assetInfo: any) => {
           const name = assetInfo.name || '';
