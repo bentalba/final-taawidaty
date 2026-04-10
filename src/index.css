@@ -492,9 +492,8 @@ html {
       linear-gradient(135deg, hsl(var(--primary) / 0.7), hsl(var(--primary) / 0.3)) border-box;
   }
 
-  /* Theme switching transitions were previously applied via a wildcard * rule that
-     triggered transitions on every element (SVGs, pseudo-elements, etc.), causing lag.
-     Interactive elements already have their own transition rules via component classes. */
+  /* Interactive elements use specific transition rules in their component classes
+     rather than global wildcards to avoid performance issues. */
 }
 
 @keyframes fadeIn {
@@ -732,10 +731,8 @@ html {
     -webkit-touch-callout: none;
   }
 
-  /* Prevent horizontal overflow without breaking scroll.
-     Previous approach used position:fixed on body which broke:
-     - sticky headers, scroll performance, viewport on keyboard open,
-       and dropdowns/popovers that depend on document flow. */
+  /* Prevent horizontal overflow while preserving vertical scroll
+     and document flow for sticky elements and popovers. */
   html,
   body {
     overflow-x: hidden;
